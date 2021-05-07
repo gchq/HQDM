@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suppressions PUBLIC "-//Checkstyle//DTD Suppressions 1.2//EN" "https://checkstyle.org/dtds/suppressions_1_2.dtd">
+
+<suppressions>
+  <suppress checks="Indentation|HiddenField" files=".java" />
+  <suppress checks="MethodName" files="impl/*" />
+  <suppress checks="ConstantName" files="HQDM.java" />
+  <suppress checks="AbbreviationAsWordInName" files="IRI.java|HQDM.java|RDFS.java" />
+  <suppress checks="TypeName" files="Function_.java" />
+
+  <!-- Javadoc Suppressions -->
+  <suppress checks="SummaryJavadoc|JavadocParagraph|SingleLineJavadoc|AtclauseOrder|NonEmptyAtclauseDescription" files=".java" />
+</suppressions>
