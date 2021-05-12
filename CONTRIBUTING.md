@@ -8,7 +8,7 @@ When contributing to this repository, please first discuss the change you wish t
 
 Before your contributions can be accepted, you must:
 
-- Sign the [GCHQ Contributor Licence Agreement](https://cla-assistant.io/gchq/MagmaCore).
+- Sign the [GCHQ Contributor Licence Agreement](https://cla-assistant.io/gchq/HQDM).
 - Push your changes to new branch.
 - Submit a pull request.
 
@@ -20,7 +20,7 @@ We have adopted the [Git Flow](https://guides.github.com/introduction/flow/) bra
 
 Pull requests will undergo an in depth review by a project contributor to check the code changes are compliant with our coding style. This is a community so please be respectful of other members - offer encouragement, support and suggestions.
 
-Please agree to the [GCHQ OSS Contributor License Agreement](https://cla-assistant.io/gchq/MagmaCore) before submitting a pull request.
+Please agree to the [GCHQ OSS Contributor License Agreement](https://cla-assistant.io/gchq/HQDM) before submitting a pull request.
 
 ## Issues
 

@@ -21,7 +21,7 @@ We welcome contributions to the project. Detailed information on our ways of wor
 
 In brief:
 
-- Sign the [GCHQ Contributor Licence Agreement](https://cla-assistant.io/gchq/MagmaCore).
+- Sign the [GCHQ Contributor Licence Agreement](https://cla-assistant.io/gchq/HQDM).
 - Push your changes to new branch.
 - Submit a pull request.
 
