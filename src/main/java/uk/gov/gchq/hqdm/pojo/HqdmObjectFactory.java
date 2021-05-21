@@ -14,7 +14,8 @@
 
 package uk.gov.gchq.hqdm.pojo;
 
-import static uk.gov.gchq.hqdm.iri.RDFS.TYPE;
+import static uk.gov.gchq.hqdm.iri.HQDM.ENTITY_CLASS_NAME;
+import static uk.gov.gchq.hqdm.iri.RDFS.RDF_TYPE;
 
 import java.lang.reflect.Constructor;
 import java.util.ArrayList;
@@ -69,21 +70,18 @@ public final class HqdmObjectFactory {
      */
     public static HqdmObject create(final String key, final List<Pair<String, String>> pairs)
             throws HqdmException {
-        final String rdfType = TYPE.toString();
-        final String classNameIri = Top.CLASS_NAME.toString();
-
         try {
             final List<IRI> iris = new ArrayList<>();
             for (final Pair<String, String> pair : pairs
                     .stream()
-                    .filter(pair -> pair.getLeft().equals(rdfType))
+                    .filter(pair -> pair.getLeft().equals(RDF_TYPE.toString()))
                     .collect(Collectors.toList())) {
                 iris.add(new IRI(pair.getRight()));
             }
 
             final List<String> classNames = pairs
                     .stream()
-                    .filter(pair -> pair.getLeft().equals(classNameIri))
+                    .filter(pair -> pair.getLeft().equals(ENTITY_CLASS_NAME.toString()))
                     .map(Pair::getRight).collect(Collectors.toList());
 
             if (!iris.isEmpty()) {

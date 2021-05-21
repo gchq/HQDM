@@ -19,19 +19,11 @@ import java.util.Set;
 
 import uk.gov.gchq.hqdm.exception.HqdmException;
 import uk.gov.gchq.hqdm.iri.IRI;
-import uk.gov.gchq.hqdm.iri.IriBase;
 
 /**
  *
  */
 public interface Top {
-    /**
-     *
-     */
-    IRI CLASS_NAME = new IRI(
-            new IriBase("universe", "http://www.semanticweb.org/magma-core/ontologies/universe/"),
-            "class_name");
-
     /**
      *
      * @return class IRI

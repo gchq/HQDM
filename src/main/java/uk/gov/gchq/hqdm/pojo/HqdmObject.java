@@ -14,8 +14,9 @@
 
 package uk.gov.gchq.hqdm.pojo;
 
+import static uk.gov.gchq.hqdm.iri.HQDM.ENTITY_CLASS_NAME;
 import static uk.gov.gchq.hqdm.iri.HQDM.ENTITY_NAME;
-import static uk.gov.gchq.hqdm.iri.RDFS.TYPE;
+import static uk.gov.gchq.hqdm.iri.RDFS.RDF_TYPE;
 
 import java.util.HashMap;
 import java.util.HashSet;
@@ -53,9 +54,9 @@ public abstract class HqdmObject implements Thing {
      * @param rdfType
      */
     public HqdmObject(final Class clazz, final IRI iri, final IRI rdfType) {
-        addStringValue(Top.CLASS_NAME, clazz.getName());
+        addStringValue(ENTITY_CLASS_NAME, clazz.getName());
         this.iri = iri;
-        addValue(TYPE, rdfType);
+        addValue(RDF_TYPE, rdfType);
     }
 
     /**

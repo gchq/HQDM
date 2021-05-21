@@ -24,7 +24,7 @@ public class IriBase {
     private String prefix;
 
     /** */
-    private String value;
+    private String namespace;
 
     /**
      *
@@ -33,7 +33,7 @@ public class IriBase {
      */
     public IriBase(final String prefix, final String value) {
         this.prefix = prefix;
-        this.value = value;
+        this.namespace = value;
     }
 
     /**
@@ -61,16 +61,16 @@ public class IriBase {
      *
      * @return
      */
-    public String getValue() {
-        return value;
+    public String getNamespace() {
+        return namespace;
     }
 
     /**
      *
-     * @param value
+     * @param namespace
      */
-    public void setValue(final String value) {
-        this.value = value;
+    public void setNamespace(final String namespace) {
+        this.namespace = namespace;
     }
 
     /**
@@ -87,7 +87,7 @@ public class IriBase {
             return false;
         }
         final IriBase iri = (IriBase) object;
-        return Objects.equals(value, iri.value);
+        return Objects.equals(namespace, iri.namespace);
     }
 
     /**
@@ -96,6 +96,6 @@ public class IriBase {
      */
     @Override
     public int hashCode() {
-        return Objects.hash(value);
+        return Objects.hash(namespace);
     }
 }

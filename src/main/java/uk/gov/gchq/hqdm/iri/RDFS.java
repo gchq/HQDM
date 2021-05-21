@@ -21,13 +21,16 @@ public final class RDFS {
     private RDFS() {}
 
     /** */
-    public static final IriBase RDF_PREFIX =
+    public static final IriBase RDF =
             new IriBase("rdf", "http://www.w3.org/1999/02/22-rdf-syntax-ns#");
 
     /** */
-    public static final IriBase RDFS_PREFIX =
+    public static final IRI RDF_TYPE = new IRI(RDF, "type");
+
+    /** */
+    public static final IriBase RDFS =
             new IriBase("rdfs", "http://www.w3.org/2000/01/rdf-schema#");
 
     /** */
-    public static final IRI TYPE = new IRI(RDF_PREFIX, "type");
+    public static final IRI RDFS_LITERAL = new IRI(RDFS, "Literal");
 }

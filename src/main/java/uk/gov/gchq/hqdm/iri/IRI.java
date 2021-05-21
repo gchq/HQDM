@@ -39,7 +39,7 @@ public class IRI {
     public IRI(final IriBase base, final String value) {
         this.base = base;
         this.value = value;
-        this.iri = base.getValue() + value;
+        this.iri = base.getNamespace() + value;
     }
 
     /**
@@ -115,7 +115,7 @@ public class IRI {
             final String baseString = iri.substring(0, index + 1);
             base = new IriBase(baseString, baseString);
             value = iri.substring(index + 1);
-            this.iri = base.getValue() + value;
+            this.iri = base.getNamespace() + value;
         }
     }
 
@@ -125,7 +125,7 @@ public class IRI {
      */
     @Override
     public String toString() {
-        return iri;
+        return getIri();
     }
 
     /**
