@@ -33,9 +33,6 @@ public final class HQDM {
     public static final HqdmIri ENTITY_CLASS_NAME = new HqdmIri(HQDM, "class_name");
 
     /** */
-    public static final HqdmIri COMPONENT_BY_CLASS = new HqdmIri(HQDM, "component_by_class");
-
-    /** */
     public static final HqdmIri SUPERCLASS = new HqdmIri(HQDM, "superclass");
 
     /** */
@@ -333,9 +330,6 @@ public final class HQDM {
 
     /** */
     public static final HqdmIri PART_OF_BY_CLASS_ = new HqdmIri(HQDM, "part_of_by_class_");
-
-    /** */
-    public static final HqdmIri CONSISTS_OF_BY_CLASS_ = new HqdmIri(HQDM, "consists_of_by_class_");
 
     /** */
     public static final HqdmIri CLASS_OF_STATE_OF_SOCIALLY_CONSTRUCTED_ACTIVITY =
@@ -724,9 +718,6 @@ public final class HQDM {
     public static final HqdmIri AGGREGATED_INTO = new HqdmIri(HQDM, "aggregated_into");
 
     /** */
-    public static final HqdmIri AGGREGATE_OF_PART = new HqdmIri(HQDM, "aggregate_of");
-
-    /** */
     public static final HqdmIri BEGINNING = new HqdmIri(HQDM, "beginning");
 
     /** */
@@ -736,19 +727,10 @@ public final class HQDM {
     public static final HqdmIri CONSISTS_OF = new HqdmIri(HQDM, "consists_of");
 
     /** */
-    public static final HqdmIri CONSISTS_OF_PART = new HqdmIri(HQDM, "consists_of_part");
-
-    /** */
     public static final HqdmIri ENDING = new HqdmIri(HQDM, "ending");
 
     /** */
     public static final HqdmIri HAS_CLASS_MEMBER = new HqdmIri(HQDM, "has_class_member");
-
-    /** */
-    public static final HqdmIri HAS_KIND_MEMBER = new HqdmIri(HQDM, "has_kind_member");
-
-    /** */
-    public static final HqdmIri HAS_SUBCLASS = new HqdmIri(HQDM, "has_subclass");
 
     /** */
     public static final HqdmIri HAS_SUPERCLASS = new HqdmIri(HQDM, "has_superclass");
@@ -773,19 +755,10 @@ public final class HQDM {
             new HqdmIri(HQDM, "part_of_possible_world");
 
     /** */
-    public static final HqdmIri POSSIBLE_WORLD_PART = new HqdmIri(HQDM, "possible_world_part");
-
-    /** */
     public static final HqdmIri REFERENCES = new HqdmIri(HQDM, "references");
 
     /** */
     public static final HqdmIri REPRESENTS = new HqdmIri(HQDM, "represents");
-
-    /** */
-    public static final HqdmIri SIGN_VALUE = new HqdmIri(HQDM, "sign_value");
-
-    /** */
-    public static final HqdmIri TEMPORAL_CONSISTS_OF = new HqdmIri(HQDM, "temporal_consists_of");
 
     /** */
     public static final HqdmIri TEMPORAL_PART_OF = new HqdmIri(HQDM, "temporal_part_of");
