@@ -15,9 +15,11 @@
 package uk.gov.gchq.hqdm.model.impl;
 
 import static uk.gov.gchq.hqdm.iri.HQDM.CLASS_OF_REPRESENTATION;
+import static uk.gov.gchq.hqdm.iri.HQDM.HAS_SUPERCLASS;
 
 import uk.gov.gchq.hqdm.exception.HqdmException;
 import uk.gov.gchq.hqdm.iri.IRI;
+import uk.gov.gchq.hqdm.model.Class;
 import uk.gov.gchq.hqdm.model.ClassOfRepresentation;
 import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
@@ -50,10 +52,24 @@ public class ClassOfRepresentationImpl extends HqdmObject implements ClassOfRepr
 
         /**
          *
+         * @param clazz
+         * @return
+         */
+        public final Builder has_Superclass(final Class clazz) {
+            classOfRepresentationImpl.addValue(HAS_SUPERCLASS, clazz.getIri());
+            return this;
+        }
+
+        /**
+         *
          * @return
          * @throws HqdmException
          */
         public ClassOfRepresentation build() throws HqdmException {
+            if (classOfRepresentationImpl.hasValue(HAS_SUPERCLASS)
+                    && classOfRepresentationImpl.value(HAS_SUPERCLASS).isEmpty()) {
+                throw new HqdmException("Property Not Set: has_superclass");
+            }
             return classOfRepresentationImpl;
         }
     }

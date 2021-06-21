@@ -15,7 +15,8 @@
 package uk.gov.gchq.hqdm.model;
 
 /**
- * A {@link ClassOfAssociation} that is {@link RepresentationBySign} or any of its subsets.
+ * A {@link ClassOfAssociation} that is {@link ClassOfRepresentation} or any of
+ * its subsets. This is omitted, in error, in the original HQDM documentation.
  */
-public interface ClassOfRepresentation extends Class {
+public interface ClassOfRepresentation extends ClassOfAssociation {
 }
