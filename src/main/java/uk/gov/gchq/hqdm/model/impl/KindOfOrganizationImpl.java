@@ -14,7 +14,6 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.COMPONENT_BY_CLASS;
 import static uk.gov.gchq.hqdm.iri.HQDM.CONSISTS__OF_BY_CLASS;
 import static uk.gov.gchq.hqdm.iri.HQDM.HAS_COMPONENT_BY_CLASS;
 import static uk.gov.gchq.hqdm.iri.HQDM.HAS_SUPERCLASS;
@@ -32,7 +31,6 @@ import uk.gov.gchq.hqdm.model.ClassOfClassOfSpatioTemporalExtent;
 import uk.gov.gchq.hqdm.model.ClassOfSpatioTemporalExtent;
 import uk.gov.gchq.hqdm.model.KindOfOrganization;
 import uk.gov.gchq.hqdm.model.KindOfOrganizationComponent;
-import uk.gov.gchq.hqdm.model.KindOfSystemComponent;
 import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
@@ -64,18 +62,6 @@ public class KindOfOrganizationImpl extends HqdmObject implements KindOfOrganiza
 
         /**
          *
-         * @param kindOfOrganizationComponent
-         * @return
-         */
-        public final Builder component_By_Class_M(
-                final KindOfOrganizationComponent kindOfOrganizationComponent) {
-            kindOfOrganizationImpl.addValue(COMPONENT_BY_CLASS,
-                    kindOfOrganizationComponent.getIri());
-            return this;
-        }
-
-        /**
-         *
          * @param classOfSpatioTemporalExtent
          * @return
          */
@@ -88,12 +74,13 @@ public class KindOfOrganizationImpl extends HqdmObject implements KindOfOrganiza
 
         /**
          *
-         * @param kindOfSystemComponent
+         * @param kindOfOrganizationComponent
          * @return
          */
         public final Builder has_Component_By_Class_M(
-                final KindOfSystemComponent kindOfSystemComponent) {
-            kindOfOrganizationImpl.addValue(HAS_COMPONENT_BY_CLASS, kindOfSystemComponent.getIri());
+                final KindOfOrganizationComponent kindOfOrganizationComponent) {
+            kindOfOrganizationImpl.addValue(HAS_COMPONENT_BY_CLASS,
+                    kindOfOrganizationComponent.getIri());
             return this;
         }
 
@@ -157,9 +144,6 @@ public class KindOfOrganizationImpl extends HqdmObject implements KindOfOrganiza
          * @throws HqdmException
          */
         public KindOfOrganization build() throws HqdmException {
-            if (!kindOfOrganizationImpl.hasValue(COMPONENT_BY_CLASS)) {
-                throw new HqdmException("Property Not Set: component_by_class");
-            }
             if (!kindOfOrganizationImpl.hasValue(HAS_COMPONENT_BY_CLASS)) {
                 throw new HqdmException("Property Not Set: has_component_by_class");
             }
