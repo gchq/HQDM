@@ -15,7 +15,7 @@
 package uk.gov.gchq.hqdm.model;
 
 /**
- * A {@link RepresentationByPattern} that is a surrogate for the thing represented.
+ * A {@link RepresentationByPattern} that is a surrogate for the {@link Thing} {@code represented}.
  */
 public interface Identification extends RepresentationByPattern {
 }

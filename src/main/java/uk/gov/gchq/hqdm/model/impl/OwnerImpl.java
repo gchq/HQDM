@@ -46,32 +46,40 @@ import uk.gov.gchq.hqdm.pojo.HqdmObject;
  */
 public class OwnerImpl extends HqdmObject implements Owner {
     /**
+     * Constructs a new Owner.
      *
-     * @param iri
+     * @param iri IRI of the Owner.
      */
     public OwnerImpl(final IRI iri) {
         super(OwnerImpl.class, iri, OWNER);
     }
 
     /**
-     * Builder for OwnerImpl.
+     * Builder for constructing instances of Owner.
      */
     public static class Builder {
-        /** */
+
         private final OwnerImpl ownerImpl;
 
         /**
+         * Constructs a Builder for a new Owner.
          *
-         * @param iri
+         * @param iri IRI of the Owner.
          */
         public Builder(final IRI iri) {
             ownerImpl = new OwnerImpl(iri);
         }
 
         /**
+         * A relationship type where a {@link SpatioTemporalExtent} may be aggregated into one or
+         * more others.
+         * <p>
+         * Note: This has the same meaning as, but different representation to, the
+         * {@link uk.gov.gchq.hqdm.model.Aggregation} entity type.
+         * </p>
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder aggregated_Into(final SpatioTemporalExtent spatioTemporalExtent) {
             ownerImpl.addValue(AGGREGATED_INTO, spatioTemporalExtent.getIri());
@@ -79,9 +87,11 @@ public class OwnerImpl extends HqdmObject implements Owner {
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} has exactly one {@link Event} that is its beginning.
          *
-         * @param event
-         * @return
+         * @param event The Event.
+         * @return This builder.
          */
         public final Builder beginning(final Event event) {
             ownerImpl.addValue(BEGINNING, event.getIri());
@@ -89,9 +99,15 @@ public class OwnerImpl extends HqdmObject implements Owner {
         }
 
         /**
+         * A relationship type where a {@link SpatioTemporalExtent} may consist of one or more
+         * others.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * <p>
+         * Note: This is the inverse of {@link uk.gov.gchq.hqdm.iri.HQDM#PART__OF}.
+         * </p>
+         *
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder consists__Of(final SpatioTemporalExtent spatioTemporalExtent) {
             ownerImpl.addValue(CONSISTS__OF, spatioTemporalExtent.getIri());
@@ -99,9 +115,11 @@ public class OwnerImpl extends HqdmObject implements Owner {
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} has exactly one {@link Event} that is its ending.
          *
-         * @param event
-         * @return
+         * @param event The Event.
+         * @return This builder.
          */
         public final Builder ending(final Event event) {
             ownerImpl.addValue(ENDING, event.getIri());
@@ -109,9 +127,11 @@ public class OwnerImpl extends HqdmObject implements Owner {
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.model.Thing} may be a member of one
+         * or more {@link Class}.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder member__Of(final Class clazz) {
             ownerImpl.addValue(MEMBER__OF, clazz.getIri());
@@ -119,9 +139,12 @@ public class OwnerImpl extends HqdmObject implements Owner {
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a
+         * {@link uk.gov.gchq.hqdm.model.StateOfParty} may be a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one or more {@link ClassOfStateOfParty}.
          *
-         * @param classOfStateOfParty
-         * @return
+         * @param classOfStateOfParty The ClassOfStateOfParty.
+         * @return This builder.
          */
         public final Builder member_Of(final ClassOfStateOfParty classOfStateOfParty) {
             ownerImpl.addValue(MEMBER_OF, classOfStateOfParty.getIri());
@@ -129,9 +152,12 @@ public class OwnerImpl extends HqdmObject implements Owner {
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF_KIND} relationship type where each
+         * {@link uk.gov.gchq.hqdm.model.Participant} is a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one or more {@link Role}.
          *
-         * @param role
-         * @return
+         * @param role The Role.
+         * @return This builder.
          */
         public final Builder member_Of_Kind_M(final Role role) {
             ownerImpl.addValue(MEMBER_OF_KIND, role.getIri());
@@ -139,9 +165,12 @@ public class OwnerImpl extends HqdmObject implements Owner {
         }
 
         /**
+         * An {@link uk.gov.gchq.hqdm.iri.HQDM#AGGREGATED_INTO} relationship type where a
+         * {@link SpatioTemporalExtent} may be part of another and the whole has emergent properties
+         * and is more than just the sum of its parts.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder part__Of(final SpatioTemporalExtent spatioTemporalExtent) {
             ownerImpl.addValue(PART__OF, spatioTemporalExtent.getIri());
@@ -149,9 +178,17 @@ public class OwnerImpl extends HqdmObject implements Owner {
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} may be {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} one or more
+         * {@link PossibleWorld}.
          *
-         * @param possibleWorld
-         * @return
+         * <p>
+         * Note: The relationship is optional because a {@link PossibleWorld} is not
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} any other {@link SpatioTemporalExtent}.
+         * </p>
+         *
+         * @param possibleWorld The PossibleWorld.
+         * @return This builder.
          */
         public final Builder part_Of_Possible_World_M(final PossibleWorld possibleWorld) {
             ownerImpl.addValue(PART_OF_POSSIBLE_WORLD, possibleWorld.getIri());
@@ -159,11 +196,11 @@ public class OwnerImpl extends HqdmObject implements Owner {
         }
 
         /**
-         * A participant_in relationship type where an owner is a participant_in exactly one
-         * {@link Ownership}.
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PARTICIPANT_IN} relationship type where an owner is a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#PARTICIPANT_IN} exactly one {@link Ownership}.
          *
-         * @param ownership
-         * @return
+         * @param ownership The Ownership.
+         * @return This builder.
          */
         public final Builder participant_In_M(final Ownership ownership) {
             ownerImpl.addValue(PARTICIPANT_IN, ownership.getIri());
@@ -171,9 +208,12 @@ public class OwnerImpl extends HqdmObject implements Owner {
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} may be a temporal part of one or more other
+         * {@link SpatioTemporalExtent}.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder temporal__Part_Of(final SpatioTemporalExtent spatioTemporalExtent) {
             ownerImpl.addValue(TEMPORAL__PART_OF, spatioTemporalExtent.getIri());
@@ -181,9 +221,12 @@ public class OwnerImpl extends HqdmObject implements Owner {
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} relationship type where a
+         * {@link uk.gov.gchq.hqdm.model.StateOfParty} may be a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} one or more {@link Party}.
          *
-         * @param party
-         * @return
+         * @param party The Party.
+         * @return This builder.
          */
         public final Builder temporal_Part_Of(final Party party) {
             ownerImpl.addValue(TEMPORAL_PART_OF, party.getIri());
@@ -191,9 +234,10 @@ public class OwnerImpl extends HqdmObject implements Owner {
         }
 
         /**
+         * Returns an instance of Owner created from the properties set on this builder.
          *
-         * @return
-         * @throws HqdmException
+         * @return The built Owner.
+         * @throws HqdmException If the Owner is missing any mandatory properties.
          */
         public Owner build() throws HqdmException {
             if (ownerImpl.hasValue(AGGREGATED_INTO)

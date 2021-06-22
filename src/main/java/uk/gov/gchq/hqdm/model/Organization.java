@@ -15,8 +15,8 @@
 package uk.gov.gchq.hqdm.model;
 
 /**
- * A {@link StateOfOrganization}, that is also a party, and a {@link SociallyConstructedObject} that
- * is an organized body of people.
+ * A {@link StateOfOrganization}, that is also a {@link Party}, and a
+ * {@link SociallyConstructedObject} that is an organized body of people.
  */
 public interface Organization extends
         StateOfOrganization,

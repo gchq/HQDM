@@ -15,7 +15,7 @@
 package uk.gov.gchq.hqdm.model;
 
 /**
- * A {@link RepresentationByPattern} that defines a class.
+ * A {@link RepresentationByPattern} that defines a {@link Class}.
  */
 public interface Definition extends RepresentationByPattern {
 }

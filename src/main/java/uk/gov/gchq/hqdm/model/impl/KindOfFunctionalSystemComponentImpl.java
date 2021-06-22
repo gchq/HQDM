@@ -37,32 +37,38 @@ import uk.gov.gchq.hqdm.pojo.HqdmObject;
 public class KindOfFunctionalSystemComponentImpl extends HqdmObject
         implements KindOfFunctionalSystemComponent {
     /**
+     * Constructs a new KindOfFunctionalSystemComponent.
      *
-     * @param iri
+     * @param iri IRI of the KindOfFunctionalSystemComponent.
      */
     public KindOfFunctionalSystemComponentImpl(final IRI iri) {
         super(KindOfFunctionalSystemComponentImpl.class, iri, KIND_OF_FUNCTIONAL_SYSTEM_COMPONENT);
     }
 
     /**
-     * Builder for KindOfFunctionalSystemComponentImpl.
+     * Builder for constructing instances of KindOfFunctionalSystemComponent.
      */
     public static class Builder {
-        /** */
+
         private final KindOfFunctionalSystemComponentImpl kindOfFunctionalSystemComponentImpl;
 
         /**
+         * Constructs a Builder for a new KindOfFunctionalSystemComponent.
          *
-         * @param iri
+         * @param iri IRI of the KindOfFunctionalSystemComponent.
          */
         public Builder(final IRI iri) {
             kindOfFunctionalSystemComponentImpl = new KindOfFunctionalSystemComponentImpl(iri);
         }
 
         /**
+         * An inverse {@link uk.gov.gchq.hqdm.iri.HQDM#PART__OF_BY_CLASS} relationship type where a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one {@link ClassOfSpatioTemporalExtent}
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#CONSISTS_OF} another
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} a {@link ClassOfSpatioTemporalExtent}.
          *
-         * @param classOfSpatioTemporalExtent
-         * @return
+         * @param classOfSpatioTemporalExtent The ClassOfSpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder consists__Of_By_Class(
                 final ClassOfSpatioTemporalExtent classOfSpatioTemporalExtent) {
@@ -72,9 +78,11 @@ public class KindOfFunctionalSystemComponentImpl extends HqdmObject
         }
 
         /**
+         * A relationship type where each {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the
+         * {@link Class} is a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the superclass.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder has_Superclass(final Class clazz) {
             kindOfFunctionalSystemComponentImpl.addValue(HAS_SUPERCLASS, clazz.getIri());
@@ -82,9 +90,11 @@ public class KindOfFunctionalSystemComponentImpl extends HqdmObject
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.model.Thing} may be a member of one
+         * or more {@link Class}.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder member__Of(final Class clazz) {
             kindOfFunctionalSystemComponentImpl.addValue(MEMBER__OF, clazz.getIri());
@@ -92,9 +102,11 @@ public class KindOfFunctionalSystemComponentImpl extends HqdmObject
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a {@link Class} may
+         * be a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one or more {@link ClassOfClass}.
          *
-         * @param classOfClass
-         * @return
+         * @param classOfClass The ClassOfClass.
+         * @return This builder.
          */
         public final Builder member_Of(final ClassOfClass classOfClass) {
             kindOfFunctionalSystemComponentImpl.addValue(MEMBER_OF, classOfClass.getIri());
@@ -102,9 +114,12 @@ public class KindOfFunctionalSystemComponentImpl extends HqdmObject
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a
+         * {@link ClassOfSpatioTemporalExtent} may be a member of one or more
+         * {@link ClassOfClassOfSpatioTemporalExtent}.
          *
-         * @param classOfClassOfSpatioTemporalExtent
-         * @return
+         * @param classOfClassOfSpatioTemporalExtent The ClassOfClassOfSpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder member_Of_(
                 final ClassOfClassOfSpatioTemporalExtent classOfClassOfSpatioTemporalExtent) {
@@ -114,9 +129,12 @@ public class KindOfFunctionalSystemComponentImpl extends HqdmObject
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} a
+         * {@link ClassOfSpatioTemporalExtent} is {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} some {@link ClassOfSpatioTemporalExtent}.
          *
-         * @param classOfSpatioTemporalExtent
-         * @return
+         * @param classOfSpatioTemporalExtent The ClassOfSpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder part__Of_By_Class(
                 final ClassOfSpatioTemporalExtent classOfSpatioTemporalExtent) {
@@ -126,9 +144,12 @@ public class KindOfFunctionalSystemComponentImpl extends HqdmObject
         }
 
         /**
+         * Returns an instance of KindOfFunctionalSystemComponent created from the properties set on
+         * this builder.
          *
-         * @return
-         * @throws HqdmException
+         * @return The built KindOfFunctionalSystemComponent.
+         * @throws HqdmException If the KindOfFunctionalSystemComponent is missing any mandatory
+         *         properties.
          */
         public KindOfFunctionalSystemComponent build() throws HqdmException {
             if (kindOfFunctionalSystemComponentImpl.hasValue(HAS_SUPERCLASS)

@@ -16,7 +16,7 @@ package uk.gov.gchq.hqdm.model;
 
 /**
  * A {@link StateOfBiologicalSystem} and {@link StateOfParty} that is a {@link Person} or a
- * temporal_part_of a {@link Person}.
+ * {@code temporal_part_of} a {@link Person}.
  */
 public interface StateOfPerson extends
         StateOfBiologicalSystem,

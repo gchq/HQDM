@@ -34,34 +34,37 @@ import uk.gov.gchq.hqdm.pojo.HqdmObject;
  */
 public class DefinedRelationshipImpl extends HqdmObject implements DefinedRelationship {
     /**
+     * Constructs a new DefinedRelationship.
      *
-     * @param iri
+     * @param iri IRI of the DefinedRelationship.
      */
     public DefinedRelationshipImpl(final IRI iri) {
         super(DefinedRelationshipImpl.class, iri, DEFINED_RELATIONSHIP);
     }
 
     /**
-     * Builder for DefinedRelationshipImpl.
+     * Builder for constructing instances of DefinedRelationship.
      */
     public static class Builder {
-        /** */
+
         private final DefinedRelationshipImpl definedRelationshipImpl;
 
         /**
+         * Constructs a Builder for a new DefinedRelationship.
          *
-         * @param iri
+         * @param iri IRI of the DefinedRelationship.
          */
         public Builder(final IRI iri) {
             definedRelationshipImpl = new DefinedRelationshipImpl(iri);
         }
 
         /**
-         * A meta-relationship type where the {@link Classification} of some thing in a role is
-         * involved in a relationship.
+         * A meta-relationship type where the {@link Classification} of some
+         * {@link uk.gov.gchq.hqdm.model.Thing} in a role is involved in a
+         * {@link uk.gov.gchq.hqdm.model.Relationship}.
          *
-         * @param classification
-         * @return
+         * @param classification The Classification.
+         * @return This builder.
          */
         public final Builder involves_M(final Classification classification) {
             definedRelationshipImpl.addValue(INVOLVES, classification.getIri());
@@ -69,9 +72,11 @@ public class DefinedRelationshipImpl extends HqdmObject implements DefinedRelati
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.model.Thing} may be a member of one
+         * or more {@link Class}.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder member__Of(final Class clazz) {
             definedRelationshipImpl.addValue(MEMBER__OF, clazz.getIri());
@@ -79,9 +84,11 @@ public class DefinedRelationshipImpl extends HqdmObject implements DefinedRelati
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a relationship is a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} a {@link ClassOfRelationship}.
          *
-         * @param classOfRelationship
-         * @return
+         * @param classOfRelationship The ClassOfRelationship.
+         * @return This builder.
          */
         public final Builder member_Of(final ClassOfRelationship classOfRelationship) {
             definedRelationshipImpl.addValue(MEMBER_OF, classOfRelationship.getIri());
@@ -89,11 +96,12 @@ public class DefinedRelationshipImpl extends HqdmObject implements DefinedRelati
         }
 
         /**
-         * A member_of relationship type where each defined_relationship is a member_of exactly one
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where each
+         * {@link DefinedRelationship} is a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} exactly one
          * {@link KindOfRelationshipWithSignature}.
          *
-         * @param kindOfRelationshipWithSignature
-         * @return
+         * @param kindOfRelationshipWithSignature The KindOfRelationshipWithSignature.
+         * @return This builder.
          */
         public final Builder member_Of_Kind_M(
                 final KindOfRelationshipWithSignature kindOfRelationshipWithSignature) {
@@ -103,9 +111,11 @@ public class DefinedRelationshipImpl extends HqdmObject implements DefinedRelati
         }
 
         /**
+         * Returns an instance of DefinedRelationship created from the properties set on this
+         * builder.
          *
-         * @return
-         * @throws HqdmException
+         * @return The built DefinedRelationship.
+         * @throws HqdmException If the DefinedRelationship is missing any mandatory properties.
          */
         public DefinedRelationship build() throws HqdmException {
             if (!definedRelationshipImpl.hasValue(INVOLVES)) {

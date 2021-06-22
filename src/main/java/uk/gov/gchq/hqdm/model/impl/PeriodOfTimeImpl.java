@@ -43,32 +43,40 @@ import uk.gov.gchq.hqdm.pojo.HqdmObject;
  */
 public class PeriodOfTimeImpl extends HqdmObject implements PeriodOfTime {
     /**
+     * Constructs a new PeriodOfTime.
      *
-     * @param iri
+     * @param iri IRI of the PeriodOfTime.
      */
     public PeriodOfTimeImpl(final IRI iri) {
         super(PeriodOfTimeImpl.class, iri, PERIOD_OF_TIME);
     }
 
     /**
-     * Builder for PeriodOfTimeImpl.
+     * Builder for constructing instances of PeriodOfTime.
      */
     public static class Builder {
-        /** */
+
         private final PeriodOfTimeImpl periodOfTimeImpl;
 
         /**
+         * Constructs a Builder for a new PeriodOfTime.
          *
-         * @param iri
+         * @param iri IRI of the PeriodOfTime.
          */
         public Builder(final IRI iri) {
             periodOfTimeImpl = new PeriodOfTimeImpl(iri);
         }
 
         /**
+         * A relationship type where a {@link SpatioTemporalExtent} may be aggregated into one or
+         * more others.
+         * <p>
+         * Note: This has the same meaning as, but different representation to, the
+         * {@link uk.gov.gchq.hqdm.model.Aggregation} entity type.
+         * </p>
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder aggregated_Into(final SpatioTemporalExtent spatioTemporalExtent) {
             periodOfTimeImpl.addValue(AGGREGATED_INTO, spatioTemporalExtent.getIri());
@@ -76,9 +84,11 @@ public class PeriodOfTimeImpl extends HqdmObject implements PeriodOfTime {
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} has exactly one {@link Event} that is its beginning.
          *
-         * @param event
-         * @return
+         * @param event The Event.
+         * @return This builder.
          */
         public final Builder beginning(final Event event) {
             periodOfTimeImpl.addValue(BEGINNING, event.getIri());
@@ -86,9 +96,15 @@ public class PeriodOfTimeImpl extends HqdmObject implements PeriodOfTime {
         }
 
         /**
+         * A relationship type where a {@link SpatioTemporalExtent} may consist of one or more
+         * others.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * <p>
+         * Note: This is the inverse of {@link uk.gov.gchq.hqdm.iri.HQDM#PART__OF}.
+         * </p>
+         *
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder consists__Of(final SpatioTemporalExtent spatioTemporalExtent) {
             periodOfTimeImpl.addValue(CONSISTS__OF, spatioTemporalExtent.getIri());
@@ -96,9 +112,11 @@ public class PeriodOfTimeImpl extends HqdmObject implements PeriodOfTime {
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} has exactly one {@link Event} that is its ending.
          *
-         * @param event
-         * @return
+         * @param event The Event.
+         * @return This builder.
          */
         public final Builder ending(final Event event) {
             periodOfTimeImpl.addValue(ENDING, event.getIri());
@@ -106,9 +124,11 @@ public class PeriodOfTimeImpl extends HqdmObject implements PeriodOfTime {
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.model.Thing} may be a member of one
+         * or more {@link Class}.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder member__Of(final Class clazz) {
             periodOfTimeImpl.addValue(MEMBER__OF, clazz.getIri());
@@ -116,11 +136,12 @@ public class PeriodOfTimeImpl extends HqdmObject implements PeriodOfTime {
         }
 
         /**
-         * A member_of relationship type where a period_of_time may be a member_of one or more
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a
+         * {@link PeriodOfTime} may be a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one or more
          * {@link ClassOfPeriodOfTime}.
          *
-         * @param classOfPeriodOfTime
-         * @return
+         * @param classOfPeriodOfTime The ClassOfPeriodOfTime.
+         * @return This builder.
          */
         public final Builder member_Of(final ClassOfPeriodOfTime classOfPeriodOfTime) {
             periodOfTimeImpl.addValue(MEMBER_OF, classOfPeriodOfTime.getIri());
@@ -128,9 +149,12 @@ public class PeriodOfTimeImpl extends HqdmObject implements PeriodOfTime {
         }
 
         /**
+         * An {@link uk.gov.gchq.hqdm.iri.HQDM#AGGREGATED_INTO} relationship type where a
+         * {@link SpatioTemporalExtent} may be part of another and the whole has emergent properties
+         * and is more than just the sum of its parts.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder part__Of(final SpatioTemporalExtent spatioTemporalExtent) {
             periodOfTimeImpl.addValue(PART__OF, spatioTemporalExtent.getIri());
@@ -138,9 +162,17 @@ public class PeriodOfTimeImpl extends HqdmObject implements PeriodOfTime {
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} may be {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} one or more
+         * {@link PossibleWorld}.
          *
-         * @param possibleWorld
-         * @return
+         * <p>
+         * Note: The relationship is optional because a {@link PossibleWorld} is not
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} any other {@link SpatioTemporalExtent}.
+         * </p>
+         *
+         * @param possibleWorld The PossibleWorld.
+         * @return This builder.
          */
         public final Builder part_Of_Possible_World_M(final PossibleWorld possibleWorld) {
             periodOfTimeImpl.addValue(PART_OF_POSSIBLE_WORLD, possibleWorld.getIri());
@@ -148,9 +180,12 @@ public class PeriodOfTimeImpl extends HqdmObject implements PeriodOfTime {
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} may be a temporal part of one or more other
+         * {@link SpatioTemporalExtent}.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder temporal__Part_Of(final SpatioTemporalExtent spatioTemporalExtent) {
             periodOfTimeImpl.addValue(TEMPORAL__PART_OF, spatioTemporalExtent.getIri());
@@ -158,9 +193,21 @@ public class PeriodOfTimeImpl extends HqdmObject implements PeriodOfTime {
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} relationship type where a
+         * {@link uk.gov.gchq.hqdm.model.State} may be a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} one or more {@link Individual}.
          *
-         * @param individual
-         * @return
+         * <p>
+         * Note: The relationship is optional because an {@link Individual} is not necessarily a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} another {@link Individual}, yet is a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} {@link uk.gov.gchq.hqdm.model.State} as well
+         * as {@link Individual}. This applies to all subtypes of
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} that are between a {@code state_of_X}
+         * and {@code X}.
+         * </p>
+         *
+         * @param individual The Individual.
+         * @return This builder.
          */
         public final Builder temporal_Part_Of(final Individual individual) {
             periodOfTimeImpl.addValue(TEMPORAL_PART_OF, individual.getIri());
@@ -168,11 +215,12 @@ public class PeriodOfTimeImpl extends HqdmObject implements PeriodOfTime {
         }
 
         /**
-         * A temporal_part_of relationship type where a period_of_time may be a temporal_part_of one
-         * or more {@link PossibleWorld}.
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} relationship type where a
+         * {@link PeriodOfTime} may be a {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} one or
+         * more {@link PossibleWorld}.
          *
-         * @param possibleWorld
-         * @return
+         * @param possibleWorld The PossibleWorld.
+         * @return This builder.
          */
         public final Builder temporal_Part_Of_(final PossibleWorld possibleWorld) {
             periodOfTimeImpl.addValue(TEMPORAL_PART_OF_, possibleWorld.getIri());
@@ -180,9 +228,10 @@ public class PeriodOfTimeImpl extends HqdmObject implements PeriodOfTime {
         }
 
         /**
+         * Returns an instance of PeriodOfTime created from the properties set on this builder.
          *
-         * @return
-         * @throws HqdmException
+         * @return The built PeriodOfTime.
+         * @throws HqdmException If the PeriodOfTime is missing any mandatory properties.
          */
         public PeriodOfTime build() throws HqdmException {
             if (periodOfTimeImpl.hasValue(AGGREGATED_INTO)

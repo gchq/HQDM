@@ -31,27 +31,29 @@ import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.Thing;
 
 /**
- *
+ * Basic implementation of a HQDM object.
  */
 public abstract class HqdmObject implements Thing {
 
     private static final Pattern DATE_PATTERN = Pattern.compile("\\d{4}-\\d{2}-\\d{2}");
     private static final Pattern DATE_TIME_PATTERN = Pattern
             .compile("\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}.*");
+
     private IRI iri;
 
     private final Map<IRI, Set<Object>> predicates = new HashMap<>();
 
     /**
-     *
+     * Constructs a new instance of a {@code HqdmObject}.
      */
     public HqdmObject() {}
 
     /**
+     * Constructs a new {@code HqdmObject}.
      *
-     * @param clazz
-     * @param iri
-     * @param rdfType
+     * @param clazz Class of HQDM object.
+     * @param iri IRI of the HQDM object.
+     * @param rdfType IRI definition of HQDM object type.
      */
     public HqdmObject(final Class clazz, final IRI iri, final IRI rdfType) {
         addStringValue(ENTITY_CLASS_NAME, clazz.getName());
@@ -71,6 +73,19 @@ public abstract class HqdmObject implements Thing {
      */
     public void setIri(final IRI iri) {
         this.iri = iri;
+    }
+
+    /**
+     * Return the {@link uk.gov.gchq.hqdm.iri.HQDM#ENTITY_NAME} value of the entity.
+     *
+     * @return Name of the entity.
+     */
+    public String getName() {
+        final Set<Object> names = value(ENTITY_NAME);
+        if (names != null && !names.isEmpty()) {
+            return (String) names.iterator().next();
+        }
+        return null;
     }
 
     /**
@@ -103,18 +118,6 @@ public abstract class HqdmObject implements Thing {
     }
 
     /**
-     *
-     * @return
-     */
-    public String getName() {
-        final Set<Object> names = value(ENTITY_NAME);
-        if (names != null && !names.isEmpty()) {
-            return (String) names.iterator().next();
-        }
-        return null;
-    }
-
-    /**
      * {@inheritDoc}
      */
     public void addValue(final IRI predicateIri, final IRI value) {
@@ -141,15 +144,15 @@ public abstract class HqdmObject implements Thing {
     /**
      * {@inheritDoc}
      */
-    public boolean hasValue(final IRI value) {
-        return predicates.containsKey(value);
+    public Set<Object> value(final IRI iri) {
+        return predicates.get(iri);
     }
 
     /**
      * {@inheritDoc}
      */
-    public Set<Object> value(final IRI iri) {
-        return predicates.get(iri);
+    public boolean hasValue(final IRI value) {
+        return predicates.containsKey(value);
     }
 
     /**
@@ -239,8 +242,9 @@ public abstract class HqdmObject implements Thing {
     }
 
     /**
+     * Output HQDM object and predicate values as collection of string values including predicates.
      *
-     * @return
+     * @return Formatted string output of HQDM object.
      */
     @Override
     public String toString() {
@@ -259,9 +263,10 @@ public abstract class HqdmObject implements Thing {
     }
 
     /**
+     * Indicates whether some other object is "equal to" this one.
      *
-     * @param object
-     * @return
+     * @param object The reference object with which to compare.
+     * @return {@code true} if this object is the same as the obj argument; false otherwise.
      */
     @Override
     public boolean equals(final Object object) {
@@ -279,8 +284,9 @@ public abstract class HqdmObject implements Thing {
     }
 
     /**
+     * Returns a hash code value for the object.
      *
-     * @return
+     * @return A hash code value for this object.
      */
     @Override
     public int hashCode() {

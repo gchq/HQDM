@@ -43,8 +43,9 @@ import uk.gov.gchq.hqdm.pojo.HqdmObject;
 public class StateOfIntentionallyConstructedObjectImpl extends HqdmObject
         implements StateOfIntentionallyConstructedObject {
     /**
+     * Constructs a new StateOfIntentionallyConstructedObject.
      *
-     * @param iri
+     * @param iri IRI of the StateOfIntentionallyConstructedObject.
      */
     public StateOfIntentionallyConstructedObjectImpl(final IRI iri) {
         super(StateOfIntentionallyConstructedObjectImpl.class, iri,
@@ -52,16 +53,17 @@ public class StateOfIntentionallyConstructedObjectImpl extends HqdmObject
     }
 
     /**
-     * Builder for StateOfIntentionallyConstructedObjectImpl.
+     * Builder for constructing instances of StateOfIntentionallyConstructedObject.
      */
     public static class Builder {
-        /** */
+
         @SuppressWarnings("LineLength")
         private final StateOfIntentionallyConstructedObjectImpl stateOfIntentionallyConstructedObjectImpl;
 
         /**
+         * Constructs a Builder for a new StateOfIntentionallyConstructedObject.
          *
-         * @param iri
+         * @param iri IRI of the StateOfIntentionallyConstructedObject.
          */
         public Builder(final IRI iri) {
             stateOfIntentionallyConstructedObjectImpl =
@@ -69,9 +71,15 @@ public class StateOfIntentionallyConstructedObjectImpl extends HqdmObject
         }
 
         /**
+         * A relationship type where a {@link SpatioTemporalExtent} may be aggregated into one or
+         * more others.
+         * <p>
+         * Note: This has the same meaning as, but different representation to, the
+         * {@link uk.gov.gchq.hqdm.model.Aggregation} entity type.
+         * </p>
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder aggregated_Into(final SpatioTemporalExtent spatioTemporalExtent) {
             stateOfIntentionallyConstructedObjectImpl.addValue(AGGREGATED_INTO,
@@ -80,9 +88,11 @@ public class StateOfIntentionallyConstructedObjectImpl extends HqdmObject
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} has exactly one {@link Event} that is its beginning.
          *
-         * @param event
-         * @return
+         * @param event The Event.
+         * @return This builder.
          */
         public final Builder beginning(final Event event) {
             stateOfIntentionallyConstructedObjectImpl.addValue(BEGINNING, event.getIri());
@@ -90,9 +100,15 @@ public class StateOfIntentionallyConstructedObjectImpl extends HqdmObject
         }
 
         /**
+         * A relationship type where a {@link SpatioTemporalExtent} may consist of one or more
+         * others.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * <p>
+         * Note: This is the inverse of {@link uk.gov.gchq.hqdm.iri.HQDM#PART__OF}.
+         * </p>
+         *
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder consists__Of(final SpatioTemporalExtent spatioTemporalExtent) {
             stateOfIntentionallyConstructedObjectImpl.addValue(CONSISTS__OF,
@@ -101,9 +117,11 @@ public class StateOfIntentionallyConstructedObjectImpl extends HqdmObject
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} has exactly one {@link Event} that is its ending.
          *
-         * @param event
-         * @return
+         * @param event The Event.
+         * @return This builder.
          */
         public final Builder ending(final Event event) {
             stateOfIntentionallyConstructedObjectImpl.addValue(ENDING, event.getIri());
@@ -111,9 +129,11 @@ public class StateOfIntentionallyConstructedObjectImpl extends HqdmObject
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.model.Thing} may be a member of one
+         * or more {@link Class}.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder member__Of(final Class clazz) {
             stateOfIntentionallyConstructedObjectImpl.addValue(MEMBER__OF, clazz.getIri());
@@ -121,11 +141,14 @@ public class StateOfIntentionallyConstructedObjectImpl extends HqdmObject
         }
 
         /**
-         * A member_of relationship type where a state_of_intentionally_constructed_object may be a
-         * member_of one or more {@link ClassOfStateOfIntentionallyConstructedObject}.
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a
+         * {@link StateOfIntentionallyConstructedObject} may be a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one or more
+         * {@link ClassOfStateOfIntentionallyConstructedObject}.
          *
          * @param classOfStateOfIntentionallyConstructedObject
-         * @return
+         *        classOfStateOfIntentionallyConstructedObject.
+         * @return This builder.
          */
         @SuppressWarnings("LineLength")
         public final Builder member_Of(
@@ -136,9 +159,12 @@ public class StateOfIntentionallyConstructedObjectImpl extends HqdmObject
         }
 
         /**
+         * An {@link uk.gov.gchq.hqdm.iri.HQDM#AGGREGATED_INTO} relationship type where a
+         * {@link SpatioTemporalExtent} may be part of another and the whole has emergent properties
+         * and is more than just the sum of its parts.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder part__Of(final SpatioTemporalExtent spatioTemporalExtent) {
             stateOfIntentionallyConstructedObjectImpl.addValue(PART__OF,
@@ -147,9 +173,17 @@ public class StateOfIntentionallyConstructedObjectImpl extends HqdmObject
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} may be {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} one or more
+         * {@link PossibleWorld}.
          *
-         * @param possibleWorld
-         * @return
+         * <p>
+         * Note: The relationship is optional because a {@link PossibleWorld} is not
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} any other {@link SpatioTemporalExtent}.
+         * </p>
+         *
+         * @param possibleWorld The PossibleWorld.
+         * @return This builder.
          */
         public final Builder part_Of_Possible_World_M(final PossibleWorld possibleWorld) {
             stateOfIntentionallyConstructedObjectImpl.addValue(PART_OF_POSSIBLE_WORLD,
@@ -158,9 +192,12 @@ public class StateOfIntentionallyConstructedObjectImpl extends HqdmObject
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} may be a temporal part of one or more other
+         * {@link SpatioTemporalExtent}.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder temporal__Part_Of(final SpatioTemporalExtent spatioTemporalExtent) {
             stateOfIntentionallyConstructedObjectImpl.addValue(TEMPORAL__PART_OF,
@@ -169,11 +206,13 @@ public class StateOfIntentionallyConstructedObjectImpl extends HqdmObject
         }
 
         /**
-         * A temporal_part_of relationship type where a state_of_intentionally_constructed_object
-         * may be a temporal_part_of one or more {@link IntentionallyConstructedObject}.
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} relationship type where a
+         * {@link StateOfIntentionallyConstructedObject} may be a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} one or more
+         * {@link IntentionallyConstructedObject}.
          *
-         * @param intentionallyConstructedObject
-         * @return
+         * @param intentionallyConstructedObject The IntentionallyConstructedObject.
+         * @return This builder.
          */
         public final Builder temporal_Part_Of(
                 final IntentionallyConstructedObject intentionallyConstructedObject) {
@@ -183,9 +222,12 @@ public class StateOfIntentionallyConstructedObjectImpl extends HqdmObject
         }
 
         /**
+         * Returns an instance of StateOfIntentionallyConstructedObject created from the properties
+         * set on this builder.
          *
-         * @return
-         * @throws HqdmException
+         * @return The built StateOfIntentionallyConstructedObject.
+         * @throws HqdmException If the StateOfIntentionallyConstructedObject is missing any
+         *         mandatory properties.
          */
         public StateOfIntentionallyConstructedObject build() throws HqdmException {
             if (stateOfIntentionallyConstructedObjectImpl.hasValue(AGGREGATED_INTO)

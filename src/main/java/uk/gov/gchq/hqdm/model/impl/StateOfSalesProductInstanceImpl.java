@@ -43,32 +43,40 @@ import uk.gov.gchq.hqdm.pojo.HqdmObject;
 public class StateOfSalesProductInstanceImpl extends HqdmObject
         implements StateOfSalesProductInstance {
     /**
+     * Constructs a new StateOfSalesProductInstance.
      *
-     * @param iri
+     * @param iri IRI of the StateOfSalesProductInstance.
      */
     public StateOfSalesProductInstanceImpl(final IRI iri) {
         super(StateOfSalesProductInstanceImpl.class, iri, STATE_OF_SALES_PRODUCT_INSTANCE);
     }
 
     /**
-     * Builder for StateOfSalesProductInstanceImpl.
+     * Builder for constructing instances of StateOfSalesProductInstance.
      */
     public static class Builder {
-        /** */
+
         private final StateOfSalesProductInstanceImpl stateOfSalesProductInstanceImpl;
 
         /**
+         * Constructs a Builder for a new StateOfSalesProductInstance.
          *
-         * @param iri
+         * @param iri IRI of the StateOfSalesProductInstance.
          */
         public Builder(final IRI iri) {
             stateOfSalesProductInstanceImpl = new StateOfSalesProductInstanceImpl(iri);
         }
 
         /**
+         * A relationship type where a {@link SpatioTemporalExtent} may be aggregated into one or
+         * more others.
+         * <p>
+         * Note: This has the same meaning as, but different representation to, the
+         * {@link uk.gov.gchq.hqdm.model.Aggregation} entity type.
+         * </p>
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder aggregated_Into(final SpatioTemporalExtent spatioTemporalExtent) {
             stateOfSalesProductInstanceImpl.addValue(AGGREGATED_INTO,
@@ -77,9 +85,11 @@ public class StateOfSalesProductInstanceImpl extends HqdmObject
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} has exactly one {@link Event} that is its beginning.
          *
-         * @param event
-         * @return
+         * @param event The Event.
+         * @return This builder.
          */
         public final Builder beginning(final Event event) {
             stateOfSalesProductInstanceImpl.addValue(BEGINNING, event.getIri());
@@ -87,9 +97,15 @@ public class StateOfSalesProductInstanceImpl extends HqdmObject
         }
 
         /**
+         * A relationship type where a {@link SpatioTemporalExtent} may consist of one or more
+         * others.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * <p>
+         * Note: This is the inverse of {@link uk.gov.gchq.hqdm.iri.HQDM#PART__OF}.
+         * </p>
+         *
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder consists__Of(final SpatioTemporalExtent spatioTemporalExtent) {
             stateOfSalesProductInstanceImpl.addValue(CONSISTS__OF, spatioTemporalExtent.getIri());
@@ -97,9 +113,11 @@ public class StateOfSalesProductInstanceImpl extends HqdmObject
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} has exactly one {@link Event} that is its ending.
          *
-         * @param event
-         * @return
+         * @param event The Event.
+         * @return This builder.
          */
         public final Builder ending(final Event event) {
             stateOfSalesProductInstanceImpl.addValue(ENDING, event.getIri());
@@ -107,9 +125,11 @@ public class StateOfSalesProductInstanceImpl extends HqdmObject
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.model.Thing} may be a member of one
+         * or more {@link Class}.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder member__Of(final Class clazz) {
             stateOfSalesProductInstanceImpl.addValue(MEMBER__OF, clazz.getIri());
@@ -117,11 +137,12 @@ public class StateOfSalesProductInstanceImpl extends HqdmObject
         }
 
         /**
-         * A member_of relationship type where a state_of_sales_product_instance may be a member_of
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a
+         * {@link StateOfSalesProductInstance} may be a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF}
          * one or more {@link ClassOfStateOfSalesProductInstance}.
          *
-         * @param classOfStateOfSalesProductInstance
-         * @return
+         * @param classOfStateOfSalesProductInstance The ClassOfStateOfSalesProductInstance.
+         * @return This builder.
          */
         public final Builder member_Of(
                 final ClassOfStateOfSalesProductInstance classOfStateOfSalesProductInstance) {
@@ -131,9 +152,12 @@ public class StateOfSalesProductInstanceImpl extends HqdmObject
         }
 
         /**
+         * An {@link uk.gov.gchq.hqdm.iri.HQDM#AGGREGATED_INTO} relationship type where a
+         * {@link SpatioTemporalExtent} may be part of another and the whole has emergent properties
+         * and is more than just the sum of its parts.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder part__Of(final SpatioTemporalExtent spatioTemporalExtent) {
             stateOfSalesProductInstanceImpl.addValue(PART__OF, spatioTemporalExtent.getIri());
@@ -141,9 +165,17 @@ public class StateOfSalesProductInstanceImpl extends HqdmObject
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} may be {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} one or more
+         * {@link PossibleWorld}.
          *
-         * @param possibleWorld
-         * @return
+         * <p>
+         * Note: The relationship is optional because a {@link PossibleWorld} is not
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} any other {@link SpatioTemporalExtent}.
+         * </p>
+         *
+         * @param possibleWorld The PossibleWorld.
+         * @return This builder.
          */
         public final Builder part_Of_Possible_World_M(final PossibleWorld possibleWorld) {
             stateOfSalesProductInstanceImpl.addValue(PART_OF_POSSIBLE_WORLD,
@@ -152,9 +184,12 @@ public class StateOfSalesProductInstanceImpl extends HqdmObject
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} may be a temporal part of one or more other
+         * {@link SpatioTemporalExtent}.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder temporal__Part_Of(final SpatioTemporalExtent spatioTemporalExtent) {
             stateOfSalesProductInstanceImpl.addValue(TEMPORAL__PART_OF,
@@ -163,11 +198,13 @@ public class StateOfSalesProductInstanceImpl extends HqdmObject
         }
 
         /**
-         * A temporal_part_of relationship type where a state_of_sales_product_instance may be a
-         * temporal_part_of one or more {@link SalesProductInstance}.
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} relationship type where a
+         * {@link StateOfSalesProductInstance} may be a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} one or more
+         * {@link SalesProductInstance}.
          *
-         * @param salesProductInstance
-         * @return
+         * @param salesProductInstance The SalesProductInstance.
+         * @return This builder.
          */
         public final Builder temporal_Part_Of(final SalesProductInstance salesProductInstance) {
             stateOfSalesProductInstanceImpl.addValue(TEMPORAL_PART_OF,
@@ -176,9 +213,12 @@ public class StateOfSalesProductInstanceImpl extends HqdmObject
         }
 
         /**
+         * Returns an instance of StateOfSalesProductInstance created from the properties set on
+         * this builder.
          *
-         * @return
-         * @throws HqdmException
+         * @return The built StateOfSalesProductInstance.
+         * @throws HqdmException If the StateOfSalesProductInstance is missing any mandatory
+         *         properties.
          */
         public StateOfSalesProductInstance build() throws HqdmException {
             if (stateOfSalesProductInstanceImpl.hasValue(AGGREGATED_INTO)

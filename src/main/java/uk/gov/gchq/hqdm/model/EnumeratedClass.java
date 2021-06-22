@@ -15,7 +15,7 @@
 package uk.gov.gchq.hqdm.model;
 
 /**
- * A {@link Class} where each member__of the class is known.
+ * A {@link Class} where each {@code member__of} the {@link Class} is known.
  */
 public interface EnumeratedClass extends Class {
 }

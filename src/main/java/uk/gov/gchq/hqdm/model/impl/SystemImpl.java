@@ -43,32 +43,40 @@ import uk.gov.gchq.hqdm.pojo.HqdmObject;
  */
 public class SystemImpl extends HqdmObject implements System {
     /**
+     * Constructs a new System.
      *
-     * @param iri
+     * @param iri IRI of the System.
      */
     public SystemImpl(final IRI iri) {
         super(SystemImpl.class, iri, SYSTEM);
     }
 
     /**
-     * Builder for SystemImpl.
+     * Builder for constructing instances of System.
      */
     public static class Builder {
-        /** */
+
         private final SystemImpl systemImpl;
 
         /**
+         * Constructs a Builder for a new System.
          *
-         * @param iri
+         * @param iri IRI of the System.
          */
         public Builder(final IRI iri) {
             systemImpl = new SystemImpl(iri);
         }
 
         /**
+         * A relationship type where a {@link SpatioTemporalExtent} may be aggregated into one or
+         * more others.
+         * <p>
+         * Note: This has the same meaning as, but different representation to, the
+         * {@link uk.gov.gchq.hqdm.model.Aggregation} entity type.
+         * </p>
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder aggregated_Into(final SpatioTemporalExtent spatioTemporalExtent) {
             systemImpl.addValue(AGGREGATED_INTO, spatioTemporalExtent.getIri());
@@ -76,9 +84,11 @@ public class SystemImpl extends HqdmObject implements System {
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} has exactly one {@link Event} that is its beginning.
          *
-         * @param event
-         * @return
+         * @param event The Event.
+         * @return This builder.
          */
         public final Builder beginning(final Event event) {
             systemImpl.addValue(BEGINNING, event.getIri());
@@ -86,9 +96,15 @@ public class SystemImpl extends HqdmObject implements System {
         }
 
         /**
+         * A relationship type where a {@link SpatioTemporalExtent} may consist of one or more
+         * others.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * <p>
+         * Note: This is the inverse of {@link uk.gov.gchq.hqdm.iri.HQDM#PART__OF}.
+         * </p>
+         *
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder consists__Of(final SpatioTemporalExtent spatioTemporalExtent) {
             systemImpl.addValue(CONSISTS__OF, spatioTemporalExtent.getIri());
@@ -96,9 +112,11 @@ public class SystemImpl extends HqdmObject implements System {
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} has exactly one {@link Event} that is its ending.
          *
-         * @param event
-         * @return
+         * @param event The Event.
+         * @return This builder.
          */
         public final Builder ending(final Event event) {
             systemImpl.addValue(ENDING, event.getIri());
@@ -106,9 +124,11 @@ public class SystemImpl extends HqdmObject implements System {
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.model.Thing} may be a member of one
+         * or more {@link Class}.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder member__Of(final Class clazz) {
             systemImpl.addValue(MEMBER__OF, clazz.getIri());
@@ -116,11 +136,11 @@ public class SystemImpl extends HqdmObject implements System {
         }
 
         /**
-         * A member_of relationship type where a system may be a member_of one or more
-         * {@link ClassOfSystem}.
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a {@link System}
+         * may be a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one or more {@link ClassOfSystem}.
          *
-         * @param classOfSystem
-         * @return
+         * @param classOfSystem The ClassOfSystem.
+         * @return This builder.
          */
         public final Builder member_Of(final ClassOfSystem classOfSystem) {
             systemImpl.addValue(MEMBER_OF, classOfSystem.getIri());
@@ -128,11 +148,12 @@ public class SystemImpl extends HqdmObject implements System {
         }
 
         /**
-         * A member_of_kind relationship type where a system may be a member_of one or more
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF_KIND} relationship type where a
+         * {@link System} may be a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one or more
          * {@link KindOfSystem}.
          *
-         * @param kindOfSystem
-         * @return
+         * @param kindOfSystem The KindOfSystem.
+         * @return This builder.
          */
         public final Builder member_Of_Kind(final KindOfSystem kindOfSystem) {
             systemImpl.addValue(MEMBER_OF_KIND, kindOfSystem.getIri());
@@ -140,9 +161,12 @@ public class SystemImpl extends HqdmObject implements System {
         }
 
         /**
+         * An {@link uk.gov.gchq.hqdm.iri.HQDM#AGGREGATED_INTO} relationship type where a
+         * {@link SpatioTemporalExtent} may be part of another and the whole has emergent properties
+         * and is more than just the sum of its parts.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder part__Of(final SpatioTemporalExtent spatioTemporalExtent) {
             systemImpl.addValue(PART__OF, spatioTemporalExtent.getIri());
@@ -150,9 +174,17 @@ public class SystemImpl extends HqdmObject implements System {
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} may be {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} one or more
+         * {@link PossibleWorld}.
          *
-         * @param possibleWorld
-         * @return
+         * <p>
+         * Note: The relationship is optional because a {@link PossibleWorld} is not
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} any other {@link SpatioTemporalExtent}.
+         * </p>
+         *
+         * @param possibleWorld The PossibleWorld.
+         * @return This builder.
          */
         public final Builder part_Of_Possible_World_M(final PossibleWorld possibleWorld) {
             systemImpl.addValue(PART_OF_POSSIBLE_WORLD, possibleWorld.getIri());
@@ -160,9 +192,12 @@ public class SystemImpl extends HqdmObject implements System {
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} may be a temporal part of one or more other
+         * {@link SpatioTemporalExtent}.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder temporal__Part_Of(final SpatioTemporalExtent spatioTemporalExtent) {
             systemImpl.addValue(TEMPORAL__PART_OF, spatioTemporalExtent.getIri());
@@ -170,9 +205,12 @@ public class SystemImpl extends HqdmObject implements System {
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} relationship type where a
+         * {@link uk.gov.gchq.hqdm.model.StateOfSystem} may be a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} one or more {@link System}.
          *
-         * @param system
-         * @return
+         * @param system The System.
+         * @return This builder.
          */
         public final Builder temporal_Part_Of(final System system) {
             systemImpl.addValue(TEMPORAL_PART_OF, system.getIri());
@@ -180,9 +218,10 @@ public class SystemImpl extends HqdmObject implements System {
         }
 
         /**
+         * Returns an instance of System created from the properties set on this builder.
          *
-         * @return
-         * @throws HqdmException
+         * @return The built System.
+         * @throws HqdmException If the System is missing any mandatory properties.
          */
         public System build() throws HqdmException {
             if (systemImpl.hasValue(AGGREGATED_INTO)

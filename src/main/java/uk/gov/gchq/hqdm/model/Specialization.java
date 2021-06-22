@@ -15,7 +15,8 @@
 package uk.gov.gchq.hqdm.model;
 
 /**
- * A {@link Relationship} where each member__of the subclass is a member__of the superclass.
+ * A {@link Relationship} where each {@code member__of} the {@code subclass} is a {@code member__of}
+ * the {@code superclass}.
  */
 public interface Specialization extends Relationship {
 }

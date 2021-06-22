@@ -45,32 +45,40 @@ import uk.gov.gchq.hqdm.pojo.HqdmObject;
  */
 public class OrganizationComponentImpl extends HqdmObject implements OrganizationComponent {
     /**
+     * Constructs a new OrganizationComponent.
      *
-     * @param iri
+     * @param iri IRI of the OrganizationComponent.
      */
     public OrganizationComponentImpl(final IRI iri) {
         super(OrganizationComponentImpl.class, iri, ORGANIZATION_COMPONENT);
     }
 
     /**
-     * Builder for OrganizationComponentImpl.
+     * Builder for constructing instances of OrganizationComponent.
      */
     public static class Builder {
-        /** */
+
         private final OrganizationComponentImpl organizationComponentImpl;
 
         /**
+         * Constructs a Builder for a new OrganizationComponent.
          *
-         * @param iri
+         * @param iri IRI of the OrganizationComponent.
          */
         public Builder(final IRI iri) {
             organizationComponentImpl = new OrganizationComponentImpl(iri);
         }
 
         /**
+         * A relationship type where a {@link SpatioTemporalExtent} may be aggregated into one or
+         * more others.
+         * <p>
+         * Note: This has the same meaning as, but different representation to, the
+         * {@link uk.gov.gchq.hqdm.model.Aggregation} entity type.
+         * </p>
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder aggregated_Into(final SpatioTemporalExtent spatioTemporalExtent) {
             organizationComponentImpl.addValue(AGGREGATED_INTO, spatioTemporalExtent.getIri());
@@ -78,9 +86,11 @@ public class OrganizationComponentImpl extends HqdmObject implements Organizatio
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} has exactly one {@link Event} that is its beginning.
          *
-         * @param event
-         * @return
+         * @param event The Event.
+         * @return This builder.
          */
         public final Builder beginning(final Event event) {
             organizationComponentImpl.addValue(BEGINNING, event.getIri());
@@ -88,11 +98,12 @@ public class OrganizationComponentImpl extends HqdmObject implements Organizatio
         }
 
         /**
-         * A component_of relationship type where an organization_component is a replaceable
-         * component of exactly one {@link Organization}.
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#COMPONENT_OF} relationship type where an
+         * {@link OrganizationComponent} is a replaceable component of exactly one
+         * {@link Organization}.
          *
-         * @param organization
-         * @return
+         * @param organization The Organization.
+         * @return This builder.
          */
         public final Builder component_Of_M(final Organization organization) {
             organizationComponentImpl.addValue(COMPONENT_OF, organization.getIri());
@@ -100,9 +111,15 @@ public class OrganizationComponentImpl extends HqdmObject implements Organizatio
         }
 
         /**
+         * A relationship type where a {@link SpatioTemporalExtent} may consist of one or more
+         * others.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * <p>
+         * Note: This is the inverse of {@link uk.gov.gchq.hqdm.iri.HQDM#PART__OF}.
+         * </p>
+         *
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder consists__Of(final SpatioTemporalExtent spatioTemporalExtent) {
             organizationComponentImpl.addValue(CONSISTS__OF, spatioTemporalExtent.getIri());
@@ -110,9 +127,11 @@ public class OrganizationComponentImpl extends HqdmObject implements Organizatio
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} has exactly one {@link Event} that is its ending.
          *
-         * @param event
-         * @return
+         * @param event The Event.
+         * @return This builder.
          */
         public final Builder ending(final Event event) {
             organizationComponentImpl.addValue(ENDING, event.getIri());
@@ -120,9 +139,11 @@ public class OrganizationComponentImpl extends HqdmObject implements Organizatio
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.model.Thing} may be a member of one
+         * or more {@link Class}.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder member__Of(final Class clazz) {
             organizationComponentImpl.addValue(MEMBER__OF, clazz.getIri());
@@ -130,11 +151,12 @@ public class OrganizationComponentImpl extends HqdmObject implements Organizatio
         }
 
         /**
-         * A member_of_relationship type where an organization_component may be a member_of one or
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where an
+         * {@link OrganizationComponent} may be a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one or
          * more {@link ClassOfOrganizationComponent}.
          *
-         * @param classOfOrganizationComponent
-         * @return
+         * @param classOfOrganizationComponent The ClassOfOrganizationComponent.
+         * @return This builder.
          */
         public final Builder member_Of(
                 final ClassOfOrganizationComponent classOfOrganizationComponent) {
@@ -143,11 +165,12 @@ public class OrganizationComponentImpl extends HqdmObject implements Organizatio
         }
 
         /**
-         * A member_of_kind relationship type where an organization_component may be a member_of one
-         * or more {@link KindOfOrganizationComponent}.
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF_KIND} relationship type where an
+         * {@link OrganizationComponent} may be a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one or
+         * more {@link KindOfOrganizationComponent}.
          *
-         * @param kindOfOrganizationComponent
-         * @return
+         * @param kindOfOrganizationComponent The KindOfOrganizationComponent.
+         * @return This builder.
          */
         public final Builder member_Of_Kind(
                 final KindOfOrganizationComponent kindOfOrganizationComponent) {
@@ -157,9 +180,12 @@ public class OrganizationComponentImpl extends HqdmObject implements Organizatio
         }
 
         /**
+         * An {@link uk.gov.gchq.hqdm.iri.HQDM#AGGREGATED_INTO} relationship type where a
+         * {@link SpatioTemporalExtent} may be part of another and the whole has emergent properties
+         * and is more than just the sum of its parts.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder part__Of(final SpatioTemporalExtent spatioTemporalExtent) {
             organizationComponentImpl.addValue(PART__OF, spatioTemporalExtent.getIri());
@@ -167,9 +193,17 @@ public class OrganizationComponentImpl extends HqdmObject implements Organizatio
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} may be {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} one or more
+         * {@link PossibleWorld}.
          *
-         * @param possibleWorld
-         * @return
+         * <p>
+         * Note: The relationship is optional because a {@link PossibleWorld} is not
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} any other {@link SpatioTemporalExtent}.
+         * </p>
+         *
+         * @param possibleWorld The PossibleWorld.
+         * @return This builder.
          */
         public final Builder part_Of_Possible_World_M(final PossibleWorld possibleWorld) {
             organizationComponentImpl.addValue(PART_OF_POSSIBLE_WORLD, possibleWorld.getIri());
@@ -177,9 +211,12 @@ public class OrganizationComponentImpl extends HqdmObject implements Organizatio
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} may be a temporal part of one or more other
+         * {@link SpatioTemporalExtent}.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder temporal__Part_Of(final SpatioTemporalExtent spatioTemporalExtent) {
             organizationComponentImpl.addValue(TEMPORAL__PART_OF, spatioTemporalExtent.getIri());
@@ -187,9 +224,13 @@ public class OrganizationComponentImpl extends HqdmObject implements Organizatio
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} relationship type where a
+         * {@link uk.gov.gchq.hqdm.model.StateOfOrganizationComponent} may be a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} one or more
+         * {@link OrganizationComponent}.
          *
-         * @param organizationComponent
-         * @return
+         * @param organizationComponent The OrganizationComponent.
+         * @return This builder.
          */
         public final Builder temporal_Part_Of(final OrganizationComponent organizationComponent) {
             organizationComponentImpl.addValue(TEMPORAL_PART_OF, organizationComponent.getIri());
@@ -197,9 +238,11 @@ public class OrganizationComponentImpl extends HqdmObject implements Organizatio
         }
 
         /**
+         * Returns an instance of OrganizationComponent created from the properties set on this
+         * builder.
          *
-         * @return
-         * @throws HqdmException
+         * @return The built OrganizationComponent.
+         * @throws HqdmException If the OrganizationComponent is missing any mandatory properties.
          */
         public OrganizationComponent build() throws HqdmException {
             if (organizationComponentImpl.hasValue(AGGREGATED_INTO)

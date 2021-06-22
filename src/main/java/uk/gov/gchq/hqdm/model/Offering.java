@@ -15,8 +15,8 @@
 package uk.gov.gchq.hqdm.model;
 
 /**
- * A {@link ClassOfOffer} that is for a {@link ClassOfIndividual}, at a price, by a party, for a
- * {@link PeriodOfTime}.
+ * A {@link ClassOfOffer} that is for a {@link ClassOfIndividual}, at a {@link Price}, by a
+ * {@link Party}, for a {@link PeriodOfTime}.
  */
 public interface Offering extends ClassOfOffer {
 }

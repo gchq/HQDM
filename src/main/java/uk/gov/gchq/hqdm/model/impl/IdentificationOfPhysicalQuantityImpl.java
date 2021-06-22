@@ -34,34 +34,36 @@ import uk.gov.gchq.hqdm.pojo.HqdmObject;
 public class IdentificationOfPhysicalQuantityImpl extends HqdmObject
         implements IdentificationOfPhysicalQuantity {
     /**
+     * Constructs a new IdentificationOfPhysicalQuantity.
      *
-     * @param iri
+     * @param iri IRI of the IdentificationOfPhysicalQuantity.
      */
     public IdentificationOfPhysicalQuantityImpl(final IRI iri) {
         super(IdentificationOfPhysicalQuantityImpl.class, iri, IDENTIFICATION_OF_PHYSICAL_QUANTITY);
     }
 
     /**
-     * Builder for IdentificationOfPhysicalQuantityImpl.
+     * Builder for constructing instances of IdentificationOfPhysicalQuantity.
      */
     public static class Builder {
-        /** */
+
         private final IdentificationOfPhysicalQuantityImpl identificationOfPhysicalQuantityImpl;
 
         /**
+         * Constructs a Builder for a new IdentificationOfPhysicalQuantity.
          *
-         * @param iri
+         * @param iri IRI of the IdentificationOfPhysicalQuantity.
          */
         public Builder(final IRI iri) {
             identificationOfPhysicalQuantityImpl = new IdentificationOfPhysicalQuantityImpl(iri);
         }
 
         /**
-         * A relationship type where an identification_of_physical_quantity consists of exactly one
-         * REAL as its value.
+         * A relationship type where an {@link IdentificationOfPhysicalQuantity} consists of exactly
+         * one REAL as its value.
          *
-         * @param value
-         * @return
+         * @param value The Value.
+         * @return This builder.
          */
         public final Builder value__M(final double value) {
             identificationOfPhysicalQuantityImpl.addRealValue(VALUE_, value);
@@ -69,9 +71,13 @@ public class IdentificationOfPhysicalQuantityImpl extends HqdmObject
         }
 
         /**
+         * A relationship type where a {@link RecognizingLanguageCommunity} is a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#PARTICIPANT_IN} each
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one or more
+         * {@link uk.gov.gchq.hqdm.model.RepresentationByPattern}.
          *
-         * @param recognizingLanguageCommunity
-         * @return
+         * @param recognizingLanguageCommunity The RecognizingLanguageCommunity.
+         * @return This builder.
          */
         public final Builder consists_Of_In_Members_M(
                 final RecognizingLanguageCommunity recognizingLanguageCommunity) {
@@ -81,11 +87,11 @@ public class IdentificationOfPhysicalQuantityImpl extends HqdmObject
         }
 
         /**
-         * A relationship type where a member_of an identification_of_physical_quantity represents
-         * exactly one {@link PhysicalQuantity}.
+         * A relationship type where a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} an
+         * {@link IdentificationOfPhysicalQuantity} represents exactly one {@link PhysicalQuantity}.
          *
-         * @param physicalQuantity
-         * @return
+         * @param physicalQuantity The PhysicalQuantity.
+         * @return This builder.
          */
         public final Builder represented_M(final PhysicalQuantity physicalQuantity) {
             identificationOfPhysicalQuantityImpl.addValue(REPRESENTED, physicalQuantity.getIri());
@@ -93,11 +99,11 @@ public class IdentificationOfPhysicalQuantityImpl extends HqdmObject
         }
 
         /**
-         * A relationship type where an identification_of_physical_quantity uses exactly one
+         * A relationship type where an {@link IdentificationOfPhysicalQuantity} uses exactly one
          * {@link Scale}.
          *
-         * @param scale
-         * @return
+         * @param scale The Scale.
+         * @return This builder.
          */
         public final Builder uses_M(final Scale scale) {
             identificationOfPhysicalQuantityImpl.addValue(USES, scale.getIri());
@@ -105,9 +111,12 @@ public class IdentificationOfPhysicalQuantityImpl extends HqdmObject
         }
 
         /**
+         * Returns an instance of IdentificationOfPhysicalQuantity created from the properties set
+         * on this builder.
          *
-         * @return
-         * @throws HqdmException
+         * @return The built IdentificationOfPhysicalQuantity.
+         * @throws HqdmException If the IdentificationOfPhysicalQuantity is missing any mandatory
+         *         properties.
          */
         public IdentificationOfPhysicalQuantity build() throws HqdmException {
             if (!identificationOfPhysicalQuantityImpl.hasValue(VALUE_)) {

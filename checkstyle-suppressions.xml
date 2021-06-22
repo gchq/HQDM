@@ -7,7 +7,4 @@
   <suppress checks="ConstantName" files="HQDM.java" />
   <suppress checks="AbbreviationAsWordInName" files="IRI.java|HQDM.java|RDFS.java" />
   <suppress checks="TypeName" files="Function_.java" />
-
-  <!-- Javadoc Suppressions -->
-  <suppress checks="SummaryJavadoc|JavadocParagraph|SingleLineJavadoc|AtclauseOrder|NonEmptyAtclauseDescription" files=".java" />
 </suppressions>

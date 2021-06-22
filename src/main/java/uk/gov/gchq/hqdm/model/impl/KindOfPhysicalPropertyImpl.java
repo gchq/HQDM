@@ -31,32 +31,36 @@ import uk.gov.gchq.hqdm.pojo.HqdmObject;
  */
 public class KindOfPhysicalPropertyImpl extends HqdmObject implements KindOfPhysicalProperty {
     /**
+     * Constructs a new KindOfPhysicalProperty.
      *
-     * @param iri
+     * @param iri IRI of the KindOfPhysicalProperty.
      */
     public KindOfPhysicalPropertyImpl(final IRI iri) {
         super(KindOfPhysicalPropertyImpl.class, iri, KIND_OF_PHYSICAL_PROPERTY);
     }
 
     /**
-     * Builder for KindOfPhysicalPropertyImpl.
+     * Builder for constructing instances of KindOfPhysicalProperty.
      */
     public static class Builder {
-        /** */
+
         private final KindOfPhysicalPropertyImpl kindOfPhysicalPropertyImpl;
 
         /**
+         * Constructs a Builder for a new KindOfPhysicalProperty.
          *
-         * @param iri
+         * @param iri IRI of the KindOfPhysicalProperty.
          */
         public Builder(final IRI iri) {
             kindOfPhysicalPropertyImpl = new KindOfPhysicalPropertyImpl(iri);
         }
 
         /**
+         * A relationship type where each {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the
+         * {@link Class} is a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the superclass.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder has_Superclass(final Class clazz) {
             kindOfPhysicalPropertyImpl.addValue(HAS_SUPERCLASS, clazz.getIri());
@@ -64,9 +68,11 @@ public class KindOfPhysicalPropertyImpl extends HqdmObject implements KindOfPhys
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.model.Thing} may be a member of one
+         * or more {@link Class}.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder member__Of(final Class clazz) {
             kindOfPhysicalPropertyImpl.addValue(MEMBER__OF, clazz.getIri());
@@ -74,9 +80,11 @@ public class KindOfPhysicalPropertyImpl extends HqdmObject implements KindOfPhys
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a {@link Class} may
+         * be a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one or more {@link ClassOfClass}.
          *
-         * @param classOfClass
-         * @return
+         * @param classOfClass The ClassOfClass.
+         * @return This builder.
          */
         public final Builder member_Of(final ClassOfClass classOfClass) {
             kindOfPhysicalPropertyImpl.addValue(MEMBER_OF, classOfClass.getIri());
@@ -84,9 +92,11 @@ public class KindOfPhysicalPropertyImpl extends HqdmObject implements KindOfPhys
         }
 
         /**
+         * Returns an instance of KindOfPhysicalProperty created from the properties set on this
+         * builder.
          *
-         * @return
-         * @throws HqdmException
+         * @return The built KindOfPhysicalProperty.
+         * @throws HqdmException If the KindOfPhysicalProperty is missing any mandatory properties.
          */
         public KindOfPhysicalProperty build() throws HqdmException {
             if (kindOfPhysicalPropertyImpl.hasValue(HAS_SUPERCLASS)

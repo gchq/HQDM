@@ -16,7 +16,7 @@ package uk.gov.gchq.hqdm.model;
 
 /**
  * A {@link StateOfSystemComponent} that is also a {@link StateOfSociallyConstructedObject} that is
- * a temporal_part_of an {@link OrganizationComponent}.
+ * a {@code temporal_part_of} an {@link OrganizationComponent}.
  */
 public interface StateOfOrganizationComponent extends
         StateOfSystemComponent,

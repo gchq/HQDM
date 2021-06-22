@@ -15,8 +15,8 @@
 package uk.gov.gchq.hqdm.model;
 
 /**
- * An {@link Association} that consists_of an {@link Owner} and an {@link Asset} where the owner
- * owns the asset.
+ * An {@link Association} that {@code consists_of} an {@link Owner} and an {@link Asset} where the
+ * {@link Owner} owns the {@link Asset}.
  */
 public interface Ownership extends Association {
 }

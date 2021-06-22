@@ -15,8 +15,8 @@
 package uk.gov.gchq.hqdm.model;
 
 /**
- * A {@link SociallyConstructedActivity} that ends one ownership and begins another for assets that
- * are a temporal_part_of the same {@link PhysicalObject}.
+ * A {@link SociallyConstructedActivity} that ends one {@link Ownership} and begins another for
+ * {@link Asset}s that are a {@code temporal_part_of} the same {@link PhysicalObject}.
  */
 public interface TransferOfOwnership extends SociallyConstructedActivity {
 }

@@ -38,32 +38,38 @@ import uk.gov.gchq.hqdm.pojo.HqdmObject;
  */
 public class KindOfFunctionalObjectImpl extends HqdmObject implements KindOfFunctionalObject {
     /**
+     * Constructs a new KindOfFunctionalObject.
      *
-     * @param iri
+     * @param iri IRI of the KindOfFunctionalObject.
      */
     public KindOfFunctionalObjectImpl(final IRI iri) {
         super(KindOfFunctionalObjectImpl.class, iri, KIND_OF_FUNCTIONAL_OBJECT);
     }
 
     /**
-     * Builder for KindOfFunctionalObjectImpl.
+     * Builder for constructing instances of KindOfFunctionalObject.
      */
     public static class Builder {
-        /** */
+
         private final KindOfFunctionalObjectImpl kindOfFunctionalObjectImpl;
 
         /**
+         * Constructs a Builder for a new KindOfFunctionalObject.
          *
-         * @param iri
+         * @param iri IRI of the KindOfFunctionalObject.
          */
         public Builder(final IRI iri) {
             kindOfFunctionalObjectImpl = new KindOfFunctionalObjectImpl(iri);
         }
 
         /**
+         * An inverse {@link uk.gov.gchq.hqdm.iri.HQDM#PART__OF_BY_CLASS} relationship type where a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one {@link ClassOfSpatioTemporalExtent}
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#CONSISTS_OF} another
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} a {@link ClassOfSpatioTemporalExtent}.
          *
-         * @param classOfSpatioTemporalExtent
-         * @return
+         * @param classOfSpatioTemporalExtent The ClassOfSpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder consists__Of_By_Class(
                 final ClassOfSpatioTemporalExtent classOfSpatioTemporalExtent) {
@@ -73,9 +79,11 @@ public class KindOfFunctionalObjectImpl extends HqdmObject implements KindOfFunc
         }
 
         /**
+         * A relationship type where each {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the
+         * {@link Class} is a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the superclass.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder has_Superclass(final Class clazz) {
             kindOfFunctionalObjectImpl.addValue(HAS_SUPERCLASS, clazz.getIri());
@@ -83,11 +91,11 @@ public class KindOfFunctionalObjectImpl extends HqdmObject implements KindOfFunc
         }
 
         /**
-         * A relationship type where each member_of a kind_of_functional_object is intended to play
-         * one or more {@link Role}.
+         * A relationship type where each {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} a
+         * {@link KindOfFunctionalObject} is intended to play one or more {@link Role}.
          *
-         * @param role
-         * @return
+         * @param role The Role.
+         * @return This builder.
          */
         public final Builder intended_Role_By_Class_M(final Role role) {
             kindOfFunctionalObjectImpl.addValue(INTENDED_ROLE_BY_CLASS, role.getIri());
@@ -95,9 +103,11 @@ public class KindOfFunctionalObjectImpl extends HqdmObject implements KindOfFunc
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.model.Thing} may be a member of one
+         * or more {@link Class}.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder member__Of(final Class clazz) {
             kindOfFunctionalObjectImpl.addValue(MEMBER__OF, clazz.getIri());
@@ -105,9 +115,11 @@ public class KindOfFunctionalObjectImpl extends HqdmObject implements KindOfFunc
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a {@link Class} may
+         * be a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one or more {@link ClassOfClass}.
          *
-         * @param classOfClass
-         * @return
+         * @param classOfClass The ClassOfClass.
+         * @return This builder.
          */
         public final Builder member_Of(final ClassOfClass classOfClass) {
             kindOfFunctionalObjectImpl.addValue(MEMBER_OF, classOfClass.getIri());
@@ -115,9 +127,12 @@ public class KindOfFunctionalObjectImpl extends HqdmObject implements KindOfFunc
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a
+         * {@link ClassOfSpatioTemporalExtent} may be a member of one or more
+         * {@link ClassOfClassOfSpatioTemporalExtent}.
          *
-         * @param classOfClassOfSpatioTemporalExtent
-         * @return
+         * @param classOfClassOfSpatioTemporalExtent The ClassOfClassOfSpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder member_Of_(
                 final ClassOfClassOfSpatioTemporalExtent classOfClassOfSpatioTemporalExtent) {
@@ -127,9 +142,12 @@ public class KindOfFunctionalObjectImpl extends HqdmObject implements KindOfFunc
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} a
+         * {@link ClassOfSpatioTemporalExtent} is {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} some {@link ClassOfSpatioTemporalExtent}.
          *
-         * @param classOfSpatioTemporalExtent
-         * @return
+         * @param classOfSpatioTemporalExtent The ClassOfSpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder part__Of_By_Class(
                 final ClassOfSpatioTemporalExtent classOfSpatioTemporalExtent) {
@@ -139,9 +157,11 @@ public class KindOfFunctionalObjectImpl extends HqdmObject implements KindOfFunc
         }
 
         /**
+         * Returns an instance of KindOfFunctionalObject created from the properties set on this
+         * builder.
          *
-         * @return
-         * @throws HqdmException
+         * @return The built KindOfFunctionalObject.
+         * @throws HqdmException If the KindOfFunctionalObject is missing any mandatory properties.
          */
         public KindOfFunctionalObject build() throws HqdmException {
             if (kindOfFunctionalObjectImpl.hasValue(HAS_SUPERCLASS)

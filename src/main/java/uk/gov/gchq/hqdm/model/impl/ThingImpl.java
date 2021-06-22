@@ -27,36 +27,41 @@ import uk.gov.gchq.hqdm.pojo.HqdmObject;
  * An implementation of Thing.
  */
 public class ThingImpl extends HqdmObject implements Thing {
+    /**
+     * Constructs a new Thing with no IRI.
+     */
     public ThingImpl() {}
 
     /**
+     * Constructs a new Thing.
      *
-     * @param iri
+     * @param iri IRI of the Thing.
      */
     public ThingImpl(final IRI iri) {
         super(ThingImpl.class, iri, THING);
     }
 
     /**
-     * Builder for ThingImpl.
+     * Builder for constructing instances of Thing.
      */
     public static class Builder {
-        /** */
+
         private final ThingImpl thing;
 
         /**
+         * Constructs a Builder for a new Thing.
          *
-         * @param iri
+         * @param iri IRI of the Thing.
          */
         public Builder(final IRI iri) {
             thing = new ThingImpl(iri);
         }
 
         /**
-         * A relationship type where a thing may be a member of one or more {@link Class}.
+         * A relationship type where a {@link Thing} may be a member of one or more {@link Class}.
          *
-         * @param clazz
-         * @return
+         * @param clazz Class of the Thing.
+         * @return This builder.
          */
         public final Builder member__Of(final Class clazz) {
             thing.addValue(MEMBER__OF, clazz.getIri());
@@ -64,9 +69,10 @@ public class ThingImpl extends HqdmObject implements Thing {
         }
 
         /**
+         * Returns an instance of Thing created from the properties set on this builder.
          *
-         * @return
-         * @throws HqdmException
+         * @return The built Thing.
+         * @throws HqdmException If the Thing is missing any mandatory properties.
          */
         public Thing build() throws HqdmException {
             if (thing.hasValue(MEMBER__OF)

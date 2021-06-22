@@ -15,6 +15,20 @@ An introduction to [Magma Core](https://github.com/gchq/MagmaCore) and the HQDM 
 - [Java 15](https://openjdk.java.net/projects/jdk/15/) - Core language
 - [Maven](https://maven.apache.org/) - Dependency management
 
+### Inclusion in other projects
+
+The HQDM Java object library can be incorporated into other maven projects using the dependency:
+
+```xml
+<dependency>
+  <groupId>uk.gov.gchq.hqdm</groupId>
+  <artifactId>hqdm</artifactId>
+  <version>1.0</version>
+</dependency>
+```
+
+_HQDM is not currently hosted on Maven Central, so a local install of this repository will be required._
+
 ## Contributing
 
 We welcome contributions to the project. Detailed information on our ways of working can be found [here](CONTRIBUTING.md).

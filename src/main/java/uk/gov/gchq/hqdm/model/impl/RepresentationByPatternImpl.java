@@ -32,34 +32,38 @@ import uk.gov.gchq.hqdm.pojo.HqdmObject;
  */
 public class RepresentationByPatternImpl extends HqdmObject implements RepresentationByPattern {
     /**
+     * Constructs a new RepresentationByPattern.
      *
-     * @param iri
+     * @param iri IRI of the RepresentationByPattern.
      */
     public RepresentationByPatternImpl(final IRI iri) {
         super(RepresentationByPatternImpl.class, iri, REPRESENTATION_BY_PATTERN);
     }
 
     /**
-     * Builder for RepresentationByPatternImpl.
+     * Builder for constructing instances of RepresentationByPattern.
      */
     public static class Builder {
-        /** */
+
         private final RepresentationByPatternImpl representationByPatternImpl;
 
         /**
+         * Constructs a Builder for a new RepresentationByPattern.
          *
-         * @param iri
+         * @param iri IRI of the RepresentationByPattern.
          */
         public Builder(final IRI iri) {
             representationByPatternImpl = new RepresentationByPatternImpl(iri);
         }
 
         /**
-         * A consists_of_by_class relationship type where a member_of the representation_by_pattern
-         * has a sign that is a member_of the {@link Pattern}.
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#CONSISTS_OF_BY_CLASS} relationship type where a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the {@link RepresentationByPattern} has a
+         * {@link uk.gov.gchq.hqdm.model.Sign} that is a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF}
+         * the {@link Pattern}.
          *
-         * @param pattern
-         * @return
+         * @param pattern The Pattern.
+         * @return This builder.
          */
         public final Builder consists_Of_By_Class_M(final Pattern pattern) {
             representationByPatternImpl.addValue(CONSISTS_OF_BY_CLASS, pattern.getIri());
@@ -67,11 +71,12 @@ public class RepresentationByPatternImpl extends HqdmObject implements Represent
         }
 
         /**
-         * A relationship type where a {@link RecognizingLanguageCommunity} is a participant_in each
-         * member_of one or more representation_by_pattern.
+         * A relationship type where a {@link RecognizingLanguageCommunity} is a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#PARTICIPANT_IN} each
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one or more {@link RepresentationByPattern}.
          *
-         * @param recognizingLanguageCommunity
-         * @return
+         * @param recognizingLanguageCommunity The RecognizingLanguageCommunity.
+         * @return This builder.
          */
         public final Builder consists_Of_In_Members_M(
                 final RecognizingLanguageCommunity recognizingLanguageCommunity) {
@@ -81,11 +86,11 @@ public class RepresentationByPatternImpl extends HqdmObject implements Represent
         }
 
         /**
-         * A relationship type where the {@link Thing} is represented by each member_of the
-         * representation_by_pattern.
+         * A relationship type where the {@link Thing} is represented by each
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the {@link RepresentationByPattern}.
          *
-         * @param thing
-         * @return
+         * @param thing The Thing.
+         * @return This builder.
          */
         public final Builder represented_M(final Thing thing) {
             representationByPatternImpl.addValue(REPRESENTED, thing.getIri());
@@ -93,9 +98,11 @@ public class RepresentationByPatternImpl extends HqdmObject implements Represent
         }
 
         /**
+         * Returns an instance of RepresentationByPattern created from the properties set on this
+         * builder.
          *
-         * @return
-         * @throws HqdmException
+         * @return The built RepresentationByPattern.
+         * @throws HqdmException If the RepresentationByPattern is missing any mandatory properties.
          */
         public RepresentationByPattern build() throws HqdmException {
             if (!representationByPatternImpl.hasValue(CONSISTS_OF_BY_CLASS)) {

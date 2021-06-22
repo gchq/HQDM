@@ -32,32 +32,39 @@ import uk.gov.gchq.hqdm.pojo.HqdmObject;
  */
 public class IdentificationImpl extends HqdmObject implements Identification {
     /**
+     * Constructs a new Identification.
      *
-     * @param iri
+     * @param iri IRI of the Identification.
      */
     public IdentificationImpl(final IRI iri) {
         super(IdentificationImpl.class, iri, IDENTIFICATION);
     }
 
     /**
-     * Builder for IdentificationImpl.
+     * Builder for constructing instances of Identification.
      */
     public static class Builder {
-        /** */
+
         private final IdentificationImpl identificationImpl;
 
         /**
+         * Constructs a Builder for a new Identification.
          *
-         * @param iri
+         * @param iri IRI of the Identification.
          */
         public Builder(final IRI iri) {
             identificationImpl = new IdentificationImpl(iri);
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#CONSISTS_OF_BY_CLASS} relationship type where a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the
+         * {@link uk.gov.gchq.hqdm.model.RepresentationByPattern} has a
+         * {@link uk.gov.gchq.hqdm.model.Sign} that is a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF}
+         * the {@link Pattern}.
          *
-         * @param pattern
-         * @return
+         * @param pattern The Pattern.
+         * @return This builder.
          */
         public final Builder consists_Of_By_Class_M(final Pattern pattern) {
             identificationImpl.addValue(CONSISTS_OF_BY_CLASS, pattern.getIri());
@@ -65,9 +72,13 @@ public class IdentificationImpl extends HqdmObject implements Identification {
         }
 
         /**
+         * A relationship type where a {@link RecognizingLanguageCommunity} is a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#PARTICIPANT_IN} each
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one or more
+         * {@link uk.gov.gchq.hqdm.model.RepresentationByPattern}.
          *
-         * @param recognizingLanguageCommunity
-         * @return
+         * @param recognizingLanguageCommunity The RecognizingLanguageCommunity.
+         * @return This builder.
          */
         public final Builder consists_Of_In_Members_M(
                 final RecognizingLanguageCommunity recognizingLanguageCommunity) {
@@ -77,9 +88,12 @@ public class IdentificationImpl extends HqdmObject implements Identification {
         }
 
         /**
+         * A relationship type where the thing is represented by each
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the
+         * {@link uk.gov.gchq.hqdm.model.RepresentationByPattern}.
          *
-         * @param thing
-         * @return
+         * @param thing The Thing.
+         * @return This builder.
          */
         public final Builder represented_M(final Thing thing) {
             identificationImpl.addValue(REPRESENTED, thing.getIri());
@@ -87,9 +101,10 @@ public class IdentificationImpl extends HqdmObject implements Identification {
         }
 
         /**
+         * Returns an instance of Identification created from the properties set on this builder.
          *
-         * @return
-         * @throws HqdmException
+         * @return The built Identification.
+         * @throws HqdmException If the Identification is missing any mandatory properties.
          */
         public Identification build() throws HqdmException {
             if (!identificationImpl.hasValue(CONSISTS_OF_BY_CLASS)) {

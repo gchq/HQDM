@@ -15,7 +15,7 @@
 package uk.gov.gchq.hqdm.model;
 
 /**
- * A {@link ReachingAgreement} that consists_of exactly one offer of a
+ * A {@link ReachingAgreement} that {@code consists_of} exactly one {@link Offer} of a
  * {@link TransferOfOwnershipOfMoney} for exactly one {@link TransferOfOwnership} that is accepted.
  */
 public interface OfferAndAcceptanceForGoods extends AgreeContract {

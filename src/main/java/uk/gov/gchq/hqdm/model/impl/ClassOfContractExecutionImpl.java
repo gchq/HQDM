@@ -40,32 +40,38 @@ import uk.gov.gchq.hqdm.pojo.HqdmObject;
  */
 public class ClassOfContractExecutionImpl extends HqdmObject implements ClassOfContractExecution {
     /**
+     * Constructs a new ClassOfContractExecution.
      *
-     * @param iri
+     * @param iri IRI of the ClassOfContractExecution.
      */
     public ClassOfContractExecutionImpl(final IRI iri) {
         super(ClassOfContractExecutionImpl.class, iri, CLASS_OF_CONTRACT_EXECUTION);
     }
 
     /**
-     * Builder for ClassOfContractExecutionImpl.
+     * Builder for constructing instances of ClassOfContractExecution.
      */
     public static class Builder {
-        /** */
+
         private final ClassOfContractExecutionImpl classOfContractExecutionImpl;
 
         /**
+         * Constructs a Builder for a new ClassOfContractExecution.
          *
-         * @param iri
+         * @param iri IRI of the ClassOfContractExecution.
          */
         public Builder(final IRI iri) {
             classOfContractExecutionImpl = new ClassOfContractExecutionImpl(iri);
         }
 
         /**
+         * An inverse {@link uk.gov.gchq.hqdm.iri.HQDM#PART__OF_BY_CLASS} relationship type where a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one {@link ClassOfSpatioTemporalExtent}
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#CONSISTS_OF} another
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} a {@link ClassOfSpatioTemporalExtent}.
          *
-         * @param classOfSpatioTemporalExtent
-         * @return
+         * @param classOfSpatioTemporalExtent The ClassOfSpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder consists__Of_By_Class(
                 final ClassOfSpatioTemporalExtent classOfSpatioTemporalExtent) {
@@ -75,9 +81,11 @@ public class ClassOfContractExecutionImpl extends HqdmObject implements ClassOfC
         }
 
         /**
+         * A relationship type where each {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the
+         * {@link Class} is a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the superclass.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder has_Superclass(final Class clazz) {
             classOfContractExecutionImpl.addValue(HAS_SUPERCLASS, clazz.getIri());
@@ -85,9 +93,11 @@ public class ClassOfContractExecutionImpl extends HqdmObject implements ClassOfC
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.model.Thing} may be a member of one
+         * or more {@link Class}.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder member__Of(final Class clazz) {
             classOfContractExecutionImpl.addValue(MEMBER__OF, clazz.getIri());
@@ -95,9 +105,11 @@ public class ClassOfContractExecutionImpl extends HqdmObject implements ClassOfC
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a {@link Class} may
+         * be a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one or more {@link ClassOfClass}.
          *
-         * @param classOfClass
-         * @return
+         * @param classOfClass The ClassOfClass.
+         * @return This builder.
          */
         public final Builder member_Of(final ClassOfClass classOfClass) {
             classOfContractExecutionImpl.addValue(MEMBER_OF, classOfClass.getIri());
@@ -105,9 +117,12 @@ public class ClassOfContractExecutionImpl extends HqdmObject implements ClassOfC
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a
+         * {@link ClassOfSpatioTemporalExtent} may be a member of one or more
+         * {@link ClassOfClassOfSpatioTemporalExtent}.
          *
-         * @param classOfClassOfSpatioTemporalExtent
-         * @return
+         * @param classOfClassOfSpatioTemporalExtent The ClassOfClassOfSpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder member_Of_(
                 final ClassOfClassOfSpatioTemporalExtent classOfClassOfSpatioTemporalExtent) {
@@ -117,9 +132,12 @@ public class ClassOfContractExecutionImpl extends HqdmObject implements ClassOfC
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} a
+         * {@link ClassOfSpatioTemporalExtent} is {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} some {@link ClassOfSpatioTemporalExtent}.
          *
-         * @param classOfSpatioTemporalExtent
-         * @return
+         * @param classOfSpatioTemporalExtent The ClassOfSpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder part__Of_By_Class(
                 final ClassOfSpatioTemporalExtent classOfSpatioTemporalExtent) {
@@ -129,11 +147,13 @@ public class ClassOfContractExecutionImpl extends HqdmObject implements ClassOfC
         }
 
         /**
-         * A part_of_by_class relationship type where a member_of the class_of_contract_execution
-         * may be a part_of a member_of the {@link ClassOfContractProcess}.
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF_BY_CLASS} relationship type where a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the {@link ClassOfContractExecution} may be a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF}
+         * the {@link ClassOfContractProcess}.
          *
-         * @param classOfContractProcess
-         * @return
+         * @param classOfContractProcess The ClassOfContractProcess.
+         * @return This builder.
          */
         public final Builder part_Of_By_Class(
                 final ClassOfContractProcess classOfContractProcess) {
@@ -143,9 +163,14 @@ public class ClassOfContractExecutionImpl extends HqdmObject implements ClassOfC
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF_BY_CLASS} relationship type where a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} a
+         * {@link uk.gov.gchq.hqdm.model.ClassOfSociallyConstructedActivity} may be a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} a
+         * {@link ClassOfAgreementExecution}.
          *
-         * @param classOfAgreementExecution
-         * @return
+         * @param classOfAgreementExecution The ClassOfAgreementExecution.
+         * @return This builder.
          */
         public final Builder part_Of_By_Class_(
                 final ClassOfAgreementExecution classOfAgreementExecution) {
@@ -155,9 +180,12 @@ public class ClassOfContractExecutionImpl extends HqdmObject implements ClassOfC
         }
 
         /**
+         * Returns an instance of ClassOfContractExecution created from the properties set on this
+         * builder.
          *
-         * @return
-         * @throws HqdmException
+         * @return The built ClassOfContractExecution.
+         * @throws HqdmException If the ClassOfContractExecution is missing any mandatory
+         *         properties.
          */
         public ClassOfContractExecution build() throws HqdmException {
             if (classOfContractExecutionImpl.hasValue(HAS_SUPERCLASS)

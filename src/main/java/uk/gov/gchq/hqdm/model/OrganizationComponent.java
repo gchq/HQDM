@@ -16,8 +16,8 @@ package uk.gov.gchq.hqdm.model;
 
 /**
  * A {@link StateOfOrganizationComponent}, {@link SystemComponent}, and
- * {@link SociallyConstructedObject} that is a component_of an {@link Organization} that can be
- * completely replaced without losing its identity.
+ * {@link SociallyConstructedObject} that is a {@code component_of} an {@link Organization} that can
+ * be completely replaced without losing its identity.
  */
 public interface OrganizationComponent extends
         StateOfOrganizationComponent,

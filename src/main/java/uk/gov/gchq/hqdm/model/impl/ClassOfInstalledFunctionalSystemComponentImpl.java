@@ -37,8 +37,9 @@ import uk.gov.gchq.hqdm.pojo.HqdmObject;
 public class ClassOfInstalledFunctionalSystemComponentImpl extends HqdmObject
         implements ClassOfInstalledFunctionalSystemComponent {
     /**
+     * Constructs a new ClassOfInstalledFunctionalSystemComponent.
      *
-     * @param iri
+     * @param iri IRI of the ClassOfInstalledFunctionalSystemComponent.
      */
     public ClassOfInstalledFunctionalSystemComponentImpl(final IRI iri) {
         super(ClassOfInstalledFunctionalSystemComponentImpl.class, iri,
@@ -46,16 +47,17 @@ public class ClassOfInstalledFunctionalSystemComponentImpl extends HqdmObject
     }
 
     /**
-     * Builder for ClassOfInstalledFunctionalSystemComponentImpl.
+     * Builder for constructing instances of ClassOfInstalledFunctionalSystemComponent.
      */
     public static class Builder {
-        /** */
+
         @SuppressWarnings("LineLength")
         private final ClassOfInstalledFunctionalSystemComponentImpl classOfInstalledFunctionalSystemComponentImpl;
 
         /**
+         * Constructs a Builder for a new ClassOfInstalledFunctionalSystemComponent.
          *
-         * @param iri
+         * @param iri IRI of the ClassOfInstalledFunctionalSystemComponent.
          */
         public Builder(final IRI iri) {
             classOfInstalledFunctionalSystemComponentImpl =
@@ -63,9 +65,13 @@ public class ClassOfInstalledFunctionalSystemComponentImpl extends HqdmObject
         }
 
         /**
+         * An inverse {@link uk.gov.gchq.hqdm.iri.HQDM#PART__OF_BY_CLASS} relationship type where a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one {@link ClassOfSpatioTemporalExtent}
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#CONSISTS_OF} another
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} a {@link ClassOfSpatioTemporalExtent}.
          *
-         * @param classOfSpatioTemporalExtent
-         * @return
+         * @param classOfSpatioTemporalExtent The ClassOfSpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder consists__Of_By_Class(
                 final ClassOfSpatioTemporalExtent classOfSpatioTemporalExtent) {
@@ -75,9 +81,11 @@ public class ClassOfInstalledFunctionalSystemComponentImpl extends HqdmObject
         }
 
         /**
+         * A relationship type where each {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the
+         * {@link Class} is a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the superclass.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder has_Superclass(final Class clazz) {
             classOfInstalledFunctionalSystemComponentImpl.addValue(HAS_SUPERCLASS, clazz.getIri());
@@ -85,9 +93,11 @@ public class ClassOfInstalledFunctionalSystemComponentImpl extends HqdmObject
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.model.Thing} may be a member of one
+         * or more {@link Class}.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder member__Of(final Class clazz) {
             classOfInstalledFunctionalSystemComponentImpl.addValue(MEMBER__OF, clazz.getIri());
@@ -95,9 +105,11 @@ public class ClassOfInstalledFunctionalSystemComponentImpl extends HqdmObject
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a {@link Class} may
+         * be a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one or more {@link ClassOfClass}.
          *
-         * @param classOfClass
-         * @return
+         * @param classOfClass The ClassOfClass.
+         * @return This builder.
          */
         public final Builder member_Of(final ClassOfClass classOfClass) {
             classOfInstalledFunctionalSystemComponentImpl.addValue(MEMBER_OF,
@@ -106,9 +118,12 @@ public class ClassOfInstalledFunctionalSystemComponentImpl extends HqdmObject
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a
+         * {@link ClassOfSpatioTemporalExtent} may be a member of one or more
+         * {@link ClassOfClassOfSpatioTemporalExtent}.
          *
-         * @param classOfClassOfSpatioTemporalExtent
-         * @return
+         * @param classOfClassOfSpatioTemporalExtent The ClassOfClassOfSpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder member_Of_(
                 final ClassOfClassOfSpatioTemporalExtent classOfClassOfSpatioTemporalExtent) {
@@ -118,9 +133,12 @@ public class ClassOfInstalledFunctionalSystemComponentImpl extends HqdmObject
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} a
+         * {@link ClassOfSpatioTemporalExtent} is {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} some {@link ClassOfSpatioTemporalExtent}.
          *
-         * @param classOfSpatioTemporalExtent
-         * @return
+         * @param classOfSpatioTemporalExtent The ClassOfSpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder part__Of_By_Class(
                 final ClassOfSpatioTemporalExtent classOfSpatioTemporalExtent) {
@@ -130,9 +148,12 @@ public class ClassOfInstalledFunctionalSystemComponentImpl extends HqdmObject
         }
 
         /**
+         * Returns an instance of ClassOfInstalledFunctionalSystemComponent created from the
+         * properties set on this builder.
          *
-         * @return
-         * @throws HqdmException
+         * @return The built ClassOfInstalledFunctionalSystemComponent.
+         * @throws HqdmException If the ClassOfInstalledFunctionalSystemComponent is missing any
+         *         mandatory properties.
          */
         public ClassOfInstalledFunctionalSystemComponent build() throws HqdmException {
             if (classOfInstalledFunctionalSystemComponentImpl.hasValue(HAS_SUPERCLASS)

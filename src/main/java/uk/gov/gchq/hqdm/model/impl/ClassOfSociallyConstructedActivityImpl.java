@@ -41,8 +41,9 @@ import uk.gov.gchq.hqdm.pojo.HqdmObject;
 public class ClassOfSociallyConstructedActivityImpl extends HqdmObject
         implements ClassOfSociallyConstructedActivity {
     /**
+     * Constructs a new ClassOfSociallyConstructedActivity.
      *
-     * @param iri
+     * @param iri IRI of the ClassOfSociallyConstructedActivity.
      */
     public ClassOfSociallyConstructedActivityImpl(final IRI iri) {
         super(ClassOfSociallyConstructedActivityImpl.class, iri,
@@ -50,15 +51,16 @@ public class ClassOfSociallyConstructedActivityImpl extends HqdmObject
     }
 
     /**
-     * Builder for ClassOfSociallyConstructedActivityImpl.
+     * Builder for constructing instances of ClassOfSociallyConstructedActivity.
      */
     public static class Builder {
-        /** */
+
         private final ClassOfSociallyConstructedActivityImpl classOfSociallyConstructedActivityImpl;
 
         /**
+         * Constructs a Builder for a new ClassOfSociallyConstructedActivity.
          *
-         * @param iri
+         * @param iri IRI of the ClassOfSociallyConstructedActivity.
          */
         public Builder(final IRI iri) {
             classOfSociallyConstructedActivityImpl =
@@ -66,9 +68,13 @@ public class ClassOfSociallyConstructedActivityImpl extends HqdmObject
         }
 
         /**
+         * An inverse {@link uk.gov.gchq.hqdm.iri.HQDM#PART__OF_BY_CLASS} relationship type where a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one {@link ClassOfSpatioTemporalExtent}
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#CONSISTS_OF} another
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} a {@link ClassOfSpatioTemporalExtent}.
          *
-         * @param classOfSpatioTemporalExtent
-         * @return
+         * @param classOfSpatioTemporalExtent The ClassOfSpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder consists__Of_By_Class(
                 final ClassOfSpatioTemporalExtent classOfSpatioTemporalExtent) {
@@ -78,9 +84,11 @@ public class ClassOfSociallyConstructedActivityImpl extends HqdmObject
         }
 
         /**
+         * A relationship type where each {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the
+         * {@link Class} is a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the superclass.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder has_Superclass(final Class clazz) {
             classOfSociallyConstructedActivityImpl.addValue(HAS_SUPERCLASS, clazz.getIri());
@@ -88,9 +96,11 @@ public class ClassOfSociallyConstructedActivityImpl extends HqdmObject
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.model.Thing} may be a member of one
+         * or more {@link Class}.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder member__Of(final Class clazz) {
             classOfSociallyConstructedActivityImpl.addValue(MEMBER__OF, clazz.getIri());
@@ -98,9 +108,11 @@ public class ClassOfSociallyConstructedActivityImpl extends HqdmObject
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a {@link Class} may
+         * be a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one or more {@link ClassOfClass}.
          *
-         * @param classOfClass
-         * @return
+         * @param classOfClass The ClassOfClass.
+         * @return This builder.
          */
         public final Builder member_Of(final ClassOfClass classOfClass) {
             classOfSociallyConstructedActivityImpl.addValue(MEMBER_OF, classOfClass.getIri());
@@ -108,9 +120,12 @@ public class ClassOfSociallyConstructedActivityImpl extends HqdmObject
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a
+         * {@link ClassOfSpatioTemporalExtent} may be a member of one or more
+         * {@link ClassOfClassOfSpatioTemporalExtent}.
          *
-         * @param classOfClassOfSpatioTemporalExtent
-         * @return
+         * @param classOfClassOfSpatioTemporalExtent The ClassOfClassOfSpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder member_Of_(
                 final ClassOfClassOfSpatioTemporalExtent classOfClassOfSpatioTemporalExtent) {
@@ -120,9 +135,12 @@ public class ClassOfSociallyConstructedActivityImpl extends HqdmObject
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} a
+         * {@link ClassOfSpatioTemporalExtent} is {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} some {@link ClassOfSpatioTemporalExtent}.
          *
-         * @param classOfSpatioTemporalExtent
-         * @return
+         * @param classOfSpatioTemporalExtent The ClassOfSpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder part__Of_By_Class(
                 final ClassOfSpatioTemporalExtent classOfSpatioTemporalExtent) {
@@ -132,11 +150,13 @@ public class ClassOfSociallyConstructedActivityImpl extends HqdmObject
         }
 
         /**
-         * A part_of_by_class where a member_of a class_of_socially_constructed_activity may be a
-         * part_of a member_of a {@link ClassOfReachingAgreement}.
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF_BY_CLASS} relationship type where a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} a {@link ClassOfSociallyConstructedActivity}
+         * may be a {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} a {@link ClassOfReachingAgreement}.
          *
-         * @param classOfReachingAgreement
-         * @return
+         * @param classOfReachingAgreement The ClassOfReachingAgreement.
+         * @return This builder.
          */
         public final Builder part_Of_By_Class(
                 final ClassOfReachingAgreement classOfReachingAgreement) {
@@ -146,12 +166,13 @@ public class ClassOfSociallyConstructedActivityImpl extends HqdmObject
         }
 
         /**
-         * A part_of_by_class relationship type where a member_of a
-         * class_of_socially_constructed_activity may be a part_of a member_of a
-         * {@link ClassOfAgreementExecution}.
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF_BY_CLASS} relationship type where a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} a {@link ClassOfSociallyConstructedActivity}
+         * may be a {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} a {@link ClassOfAgreementExecution}.
          *
-         * @param classOfAgreementExecution
-         * @return
+         * @param classOfAgreementExecution The ClassOfAgreementExecution.
+         * @return This builder.
          */
         public final Builder part_Of_By_Class_(
                 final ClassOfAgreementExecution classOfAgreementExecution) {
@@ -161,9 +182,12 @@ public class ClassOfSociallyConstructedActivityImpl extends HqdmObject
         }
 
         /**
+         * Returns an instance of ClassOfSociallyConstructedActivity created from the properties set
+         * on this builder.
          *
-         * @return
-         * @throws HqdmException
+         * @return The built ClassOfSociallyConstructedActivity.
+         * @throws HqdmException If the ClassOfSociallyConstructedActivity is missing any mandatory
+         *         properties.
          */
         public ClassOfSociallyConstructedActivity build() throws HqdmException {
             if (classOfSociallyConstructedActivityImpl.hasValue(HAS_SUPERCLASS)

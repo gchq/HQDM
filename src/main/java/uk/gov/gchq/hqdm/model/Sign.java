@@ -16,8 +16,8 @@ package uk.gov.gchq.hqdm.model;
 
 /**
  * A {@link StateOfSign}, that is also a {@link SociallyConstructedObject}, and a
- * {@link Participant} that represents some thing for some community in one or more
- * representations_by_sign.
+ * {@link Participant} that represents some {@link Thing} for some community in one or more
+ * {@code representation_by_sign}.
  */
 public interface Sign extends
         SociallyConstructedObject,

@@ -40,32 +40,38 @@ import uk.gov.gchq.hqdm.pojo.HqdmObject;
  */
 public class SalesProductImpl extends HqdmObject implements SalesProduct {
     /**
+     * Constructs a new SalesProduct.
      *
-     * @param iri
+     * @param iri IRI of the SalesProduct.
      */
     public SalesProductImpl(final IRI iri) {
         super(SalesProductImpl.class, iri, SALES_PRODUCT);
     }
 
     /**
-     * Builder for SalesProductImpl.
+     * Builder for constructing instances of SalesProduct.
      */
     public static class Builder {
-        /** */
+
         private final SalesProductImpl salesProductImpl;
 
         /**
+         * Constructs a Builder for a new SalesProduct.
          *
-         * @param iri
+         * @param iri IRI of the SalesProduct.
          */
         public Builder(final IRI iri) {
             salesProductImpl = new SalesProductImpl(iri);
         }
 
         /**
+         * An inverse {@link uk.gov.gchq.hqdm.iri.HQDM#PART__OF_BY_CLASS} relationship type where a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one {@link ClassOfSpatioTemporalExtent}
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#CONSISTS_OF} another
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} a {@link ClassOfSpatioTemporalExtent}.
          *
-         * @param classOfSpatioTemporalExtent
-         * @return
+         * @param classOfSpatioTemporalExtent The ClassOfSpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder consists__Of_By_Class(
                 final ClassOfSpatioTemporalExtent classOfSpatioTemporalExtent) {
@@ -74,9 +80,11 @@ public class SalesProductImpl extends HqdmObject implements SalesProduct {
         }
 
         /**
+         * A relationship type where each {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the
+         * {@link Class} is a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the superclass.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder has_Superclass(final Class clazz) {
             salesProductImpl.addValue(HAS_SUPERCLASS, clazz.getIri());
@@ -84,12 +92,14 @@ public class SalesProductImpl extends HqdmObject implements SalesProduct {
         }
 
         /**
-         * A subclass_of relationship type where when a sales_product meets_specification of a
-         * {@link RequirementSpecification}, each member_of a sales_product is a member_of the
+         * A subclass_of relationship type where when a {@link SalesProduct}
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEETS_SPECIFICATION} of a
+         * {@link RequirementSpecification}, each {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} a
+         * {@link SalesProduct} is a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the
          * {@link RequirementSpecification}.
          *
-         * @param requirementSpecification
-         * @return
+         * @param requirementSpecification The RequirementSpecification.
+         * @return This builder.
          */
         public final Builder meets_Specification(
                 final RequirementSpecification requirementSpecification) {
@@ -98,9 +108,11 @@ public class SalesProductImpl extends HqdmObject implements SalesProduct {
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.model.Thing} may be a member of one
+         * or more {@link Class}.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder member__Of(final Class clazz) {
             salesProductImpl.addValue(MEMBER__OF, clazz.getIri());
@@ -108,9 +120,11 @@ public class SalesProductImpl extends HqdmObject implements SalesProduct {
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a {@link Class} may
+         * be a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one or more {@link ClassOfClass}.
          *
-         * @param classOfClass
-         * @return
+         * @param classOfClass The ClassOfClass.
+         * @return This builder.
          */
         public final Builder member_Of(final ClassOfClass classOfClass) {
             salesProductImpl.addValue(MEMBER_OF, classOfClass.getIri());
@@ -118,9 +132,12 @@ public class SalesProductImpl extends HqdmObject implements SalesProduct {
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a
+         * {@link ClassOfSpatioTemporalExtent} may be a member of one or more
+         * {@link ClassOfClassOfSpatioTemporalExtent}.
          *
-         * @param classOfClassOfSpatioTemporalExtent
-         * @return
+         * @param classOfClassOfSpatioTemporalExtent The ClassOfClassOfSpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder member_Of_(
                 final ClassOfClassOfSpatioTemporalExtent classOfClassOfSpatioTemporalExtent) {
@@ -129,9 +146,12 @@ public class SalesProductImpl extends HqdmObject implements SalesProduct {
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} a
+         * {@link ClassOfSpatioTemporalExtent} is {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} some {@link ClassOfSpatioTemporalExtent}.
          *
-         * @param classOfSpatioTemporalExtent
-         * @return
+         * @param classOfSpatioTemporalExtent The ClassOfSpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder part__Of_By_Class(
                 final ClassOfSpatioTemporalExtent classOfSpatioTemporalExtent) {
@@ -140,10 +160,11 @@ public class SalesProductImpl extends HqdmObject implements SalesProduct {
         }
 
         /**
-         * A specialization where the sales_product is sold under a {@link ProductBrand}.
+         * A {@link uk.gov.gchq.hqdm.model.Specialization} where the {@link SalesProduct} is sold
+         * under a {@link ProductBrand}.
          *
-         * @param productBrand
-         * @return
+         * @param productBrand The ProductBrand.
+         * @return This builder.
          */
         public final Builder sold_Under(final ProductBrand productBrand) {
             salesProductImpl.addValue(SOLD_UNDER, productBrand.getIri());
@@ -151,9 +172,10 @@ public class SalesProductImpl extends HqdmObject implements SalesProduct {
         }
 
         /**
+         * Returns an instance of SalesProduct created from the properties set on this builder.
          *
-         * @return
-         * @throws HqdmException
+         * @return The built SalesProduct.
+         * @throws HqdmException If the SalesProduct is missing any mandatory properties.
          */
         public SalesProduct build() throws HqdmException {
             if (salesProductImpl.hasValue(HAS_SUPERCLASS)

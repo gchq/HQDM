@@ -43,32 +43,40 @@ import uk.gov.gchq.hqdm.pojo.HqdmObject;
  */
 public class OrdinaryBiologicalObjectImpl extends HqdmObject implements OrdinaryBiologicalObject {
     /**
+     * Constructs a new OrdinaryBiologicalObject.
      *
-     * @param iri
+     * @param iri IRI of the OrdinaryBiologicalObject.
      */
     public OrdinaryBiologicalObjectImpl(final IRI iri) {
         super(OrdinaryBiologicalObjectImpl.class, iri, ORDINARY_BIOLOGICAL_OBJECT);
     }
 
     /**
-     * Builder for OrdinaryBiologicalObjectImpl.
+     * Builder for constructing instances of OrdinaryBiologicalObject.
      */
     public static class Builder {
-        /** */
+
         private final OrdinaryBiologicalObjectImpl ordinaryBiologicalObjectImpl;
 
         /**
+         * Constructs a Builder for a new OrdinaryBiologicalObject.
          *
-         * @param iri
+         * @param iri IRI of the OrdinaryBiologicalObject.
          */
         public Builder(final IRI iri) {
             ordinaryBiologicalObjectImpl = new OrdinaryBiologicalObjectImpl(iri);
         }
 
         /**
+         * A relationship type where a {@link SpatioTemporalExtent} may be aggregated into one or
+         * more others.
+         * <p>
+         * Note: This has the same meaning as, but different representation to, the
+         * {@link uk.gov.gchq.hqdm.model.Aggregation} entity type.
+         * </p>
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder aggregated_Into(final SpatioTemporalExtent spatioTemporalExtent) {
             ordinaryBiologicalObjectImpl.addValue(AGGREGATED_INTO, spatioTemporalExtent.getIri());
@@ -76,9 +84,11 @@ public class OrdinaryBiologicalObjectImpl extends HqdmObject implements Ordinary
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} has exactly one {@link Event} that is its beginning.
          *
-         * @param event
-         * @return
+         * @param event The Event.
+         * @return This builder.
          */
         public final Builder beginning(final Event event) {
             ordinaryBiologicalObjectImpl.addValue(BEGINNING, event.getIri());
@@ -86,9 +96,15 @@ public class OrdinaryBiologicalObjectImpl extends HqdmObject implements Ordinary
         }
 
         /**
+         * A relationship type where a {@link SpatioTemporalExtent} may consist of one or more
+         * others.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * <p>
+         * Note: This is the inverse of {@link uk.gov.gchq.hqdm.iri.HQDM#PART__OF}.
+         * </p>
+         *
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder consists__Of(final SpatioTemporalExtent spatioTemporalExtent) {
             ordinaryBiologicalObjectImpl.addValue(CONSISTS__OF, spatioTemporalExtent.getIri());
@@ -96,9 +112,11 @@ public class OrdinaryBiologicalObjectImpl extends HqdmObject implements Ordinary
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} has exactly one {@link Event} that is its ending.
          *
-         * @param event
-         * @return
+         * @param event The Event.
+         * @return This builder.
          */
         public final Builder ending(final Event event) {
             ordinaryBiologicalObjectImpl.addValue(ENDING, event.getIri());
@@ -106,9 +124,11 @@ public class OrdinaryBiologicalObjectImpl extends HqdmObject implements Ordinary
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.model.Thing} may be a member of one
+         * or more {@link Class}.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder member__Of(final Class clazz) {
             ordinaryBiologicalObjectImpl.addValue(MEMBER__OF, clazz.getIri());
@@ -116,11 +136,12 @@ public class OrdinaryBiologicalObjectImpl extends HqdmObject implements Ordinary
         }
 
         /**
-         * A member_of relationship type where an ordinary_biological_object may be a member_of one
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where an
+         * {@link OrdinaryBiologicalObject} may be a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one
          * or more {@link ClassOfOrdinaryBiologicalObject}.
          *
-         * @param classOfOrdinaryBiologicalObject
-         * @return
+         * @param classOfOrdinaryBiologicalObject The ClassOfOrdinaryBiologicalObject.
+         * @return This builder.
          */
         public final Builder member_Of(
                 final ClassOfOrdinaryBiologicalObject classOfOrdinaryBiologicalObject) {
@@ -130,11 +151,12 @@ public class OrdinaryBiologicalObjectImpl extends HqdmObject implements Ordinary
         }
 
         /**
-         * A member_of relationship type where an ordinary_biological_object may be a member_of one
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where an
+         * {@link OrdinaryBiologicalObject} may be a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one
          * or more {@link KindOfOrdinaryBiologicalObject}.
          *
-         * @param kindOfOrdinaryBiologicalObject
-         * @return
+         * @param kindOfOrdinaryBiologicalObject The KindOfOrdinaryBiologicalObject.
+         * @return This builder.
          */
         public final Builder member_Of_Kind(
                 final KindOfOrdinaryBiologicalObject kindOfOrdinaryBiologicalObject) {
@@ -144,9 +166,12 @@ public class OrdinaryBiologicalObjectImpl extends HqdmObject implements Ordinary
         }
 
         /**
+         * An {@link uk.gov.gchq.hqdm.iri.HQDM#AGGREGATED_INTO} relationship type where a
+         * {@link SpatioTemporalExtent} may be part of another and the whole has emergent properties
+         * and is more than just the sum of its parts.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder part__Of(final SpatioTemporalExtent spatioTemporalExtent) {
             ordinaryBiologicalObjectImpl.addValue(PART__OF, spatioTemporalExtent.getIri());
@@ -154,9 +179,17 @@ public class OrdinaryBiologicalObjectImpl extends HqdmObject implements Ordinary
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} may be {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} one or more
+         * {@link PossibleWorld}.
          *
-         * @param possibleWorld
-         * @return
+         * <p>
+         * Note: The relationship is optional because a {@link PossibleWorld} is not
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} any other {@link SpatioTemporalExtent}.
+         * </p>
+         *
+         * @param possibleWorld The PossibleWorld.
+         * @return This builder.
          */
         public final Builder part_Of_Possible_World_M(final PossibleWorld possibleWorld) {
             ordinaryBiologicalObjectImpl.addValue(PART_OF_POSSIBLE_WORLD, possibleWorld.getIri());
@@ -164,9 +197,12 @@ public class OrdinaryBiologicalObjectImpl extends HqdmObject implements Ordinary
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} may be a temporal part of one or more other
+         * {@link SpatioTemporalExtent}.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder temporal__Part_Of(final SpatioTemporalExtent spatioTemporalExtent) {
             ordinaryBiologicalObjectImpl.addValue(TEMPORAL__PART_OF, spatioTemporalExtent.getIri());
@@ -174,9 +210,13 @@ public class OrdinaryBiologicalObjectImpl extends HqdmObject implements Ordinary
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} relationship type where a
+         * {@link uk.gov.gchq.hqdm.model.StateOfOrdinaryBiologicalObject} may be a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} one or more
+         * {@link OrdinaryBiologicalObject}.
          *
-         * @param ordinaryBiologicalObject
-         * @return
+         * @param ordinaryBiologicalObject The OrdinaryBiologicalObject.
+         * @return This builder.
          */
         public final Builder temporal_Part_Of(
                 final OrdinaryBiologicalObject ordinaryBiologicalObject) {
@@ -186,9 +226,12 @@ public class OrdinaryBiologicalObjectImpl extends HqdmObject implements Ordinary
         }
 
         /**
+         * Returns an instance of OrdinaryBiologicalObject created from the properties set on this
+         * builder.
          *
-         * @return
-         * @throws HqdmException
+         * @return The built OrdinaryBiologicalObject.
+         * @throws HqdmException If the OrdinaryBiologicalObject is missing any mandatory
+         *         properties.
          */
         public OrdinaryBiologicalObject build() throws HqdmException {
             if (ordinaryBiologicalObjectImpl.hasValue(AGGREGATED_INTO)

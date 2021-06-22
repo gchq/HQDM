@@ -16,7 +16,7 @@ package uk.gov.gchq.hqdm.model;
 
 /**
  * A {@link StateOfOrdinaryFunctionalObject} that is a {@link SalesProductInstance} or a
- * temporal_part_of one.
+ * {@code temporal_part_of} one.
  */
 public interface StateOfSalesProductInstance extends StateOfOrdinaryFunctionalObject {
 }

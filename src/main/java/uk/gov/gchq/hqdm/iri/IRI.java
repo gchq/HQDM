@@ -19,91 +19,92 @@ import java.util.Objects;
 import uk.gov.gchq.hqdm.exception.IriException;
 
 /**
- *
+ * An implementation of Internationalized Resource Identifiers.
  */
 public class IRI {
-    /** */
+
     private IriBase base;
 
-    /** */
-    private String value;
+    private String resource;
 
-    /** */
     private String iri;
 
     /**
+     * Constructs a new IRI from a base namespace and resource name.
      *
-     * @param base
-     * @param value
+     * @param base IRI base namespace.
+     * @param resource Resource name.
      */
-    public IRI(final IriBase base, final String value) {
+    public IRI(final IriBase base, final String resource) {
         this.base = base;
-        this.value = value;
-        this.iri = base.getNamespace() + value;
+        this.resource = resource;
+        this.iri = base.getNamespace() + resource;
     }
 
     /**
+     * Constructs a new IRI from a string.
      *
-     * @param iri
-     * @throws IriException
+     * @param iri IRI string.
+     * @throws IriException If the IRI string is malformed.
      */
     public IRI(final String iri) throws IriException {
         fromString(iri);
     }
 
     /**
+     * The namespace of the IRI.
      *
-     * @return
+     * @return IRI namespace.
      */
     public IriBase getBase() {
         return base;
     }
 
     /**
+     * Set the IriBase namespace of the IRI.
      *
-     * @param base
+     * @param base IRI namespace.
      */
     public void setBase(final IriBase base) {
         this.base = base;
     }
 
     /**
+     * The name of the resource.
      *
-     * @return
+     * @return Resource name.
      */
-    public String getValue() {
-        return value;
+    public String getResource() {
+        return resource;
     }
 
     /**
+     * Set the resource name.
      *
-     * @param value
+     * @param resource Resource name.
      */
-    public void setValue(final String value) {
-        this.value = value;
+    public void setResource(final String resource) {
+        this.resource = resource;
     }
 
     /**
+     * The full IRI string of the resource.
      *
-     * @return
+     * @return IRI string.
      */
     public String getIri() {
         return iri;
     }
 
     /**
+     * Set the IRI string.
      *
-     * @param iri
-     * @throws IriException
+     * @param iri IRI string.
      */
     public void setIri(final String iri) {
         this.iri = iri;
     }
 
-    /**
-     *
-     * @param iri
-     */
     private void fromString(final String iri) throws IriException {
         int index = iri.lastIndexOf('#');
         if (index < 0) {
@@ -113,15 +114,16 @@ public class IRI {
             throw new IriException("Cannot parse IRI: " + iri);
         } else {
             final String baseString = iri.substring(0, index + 1);
-            base = new IriBase(baseString, baseString);
-            value = iri.substring(index + 1);
-            this.iri = base.getNamespace() + value;
+            this.base = new IriBase(baseString, baseString);
+            this.resource = iri.substring(index + 1);
+            this.iri = base.getNamespace() + resource;
         }
     }
 
     /**
+     * Returns the full IRI string value.
      *
-     * @return
+     * @return IRI string.
      */
     @Override
     public String toString() {
@@ -129,8 +131,10 @@ public class IRI {
     }
 
     /**
+     * Compare to another {@code Object}.
      *
-     * @param object
+     * @param object Object to compare.
+     * @return True if
      */
     @Override
     public boolean equals(final Object object) {
@@ -141,15 +145,11 @@ public class IRI {
             return false;
         }
         final IRI iri = (IRI) object;
-        return Objects.equals(base, iri.base) && Objects.equals(value, iri.value);
+        return Objects.equals(base, iri.base) && Objects.equals(resource, iri.resource);
     }
 
-    /**
-     *
-     * @return
-     */
     @Override
     public int hashCode() {
-        return Objects.hash(base, value);
+        return Objects.hash(base, resource);
     }
 }

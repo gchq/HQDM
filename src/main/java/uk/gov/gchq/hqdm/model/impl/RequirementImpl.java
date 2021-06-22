@@ -44,32 +44,40 @@ import uk.gov.gchq.hqdm.pojo.HqdmObject;
  */
 public class RequirementImpl extends HqdmObject implements Requirement {
     /**
+     * Constructs a new Requirement.
      *
-     * @param iri
+     * @param iri IRI of the Requirement.
      */
     public RequirementImpl(final IRI iri) {
         super(RequirementImpl.class, iri, REQUIREMENT);
     }
 
     /**
-     * Builder for RequirementImpl.
+     * Builder for constructing instances of Requirement.
      */
     public static class Builder {
-        /** */
+
         private final RequirementImpl requirementImpl;
 
         /**
+         * Constructs a Builder for a new Requirement.
          *
-         * @param iri
+         * @param iri IRI of the Requirement.
          */
         public Builder(final IRI iri) {
             requirementImpl = new RequirementImpl(iri);
         }
 
         /**
+         * A relationship type where a {@link SpatioTemporalExtent} may be aggregated into one or
+         * more others.
+         * <p>
+         * Note: This has the same meaning as, but different representation to, the
+         * {@link uk.gov.gchq.hqdm.model.Aggregation} entity type.
+         * </p>
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder aggregated_Into(final SpatioTemporalExtent spatioTemporalExtent) {
             requirementImpl.addValue(AGGREGATED_INTO, spatioTemporalExtent.getIri());
@@ -77,9 +85,11 @@ public class RequirementImpl extends HqdmObject implements Requirement {
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} has exactly one {@link Event} that is its beginning.
          *
-         * @param event
-         * @return
+         * @param event The Event.
+         * @return This builder.
          */
         public final Builder beginning(final Event event) {
             requirementImpl.addValue(BEGINNING, event.getIri());
@@ -87,9 +97,15 @@ public class RequirementImpl extends HqdmObject implements Requirement {
         }
 
         /**
+         * A relationship type where a {@link SpatioTemporalExtent} may consist of one or more
+         * others.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * <p>
+         * Note: This is the inverse of {@link uk.gov.gchq.hqdm.iri.HQDM#PART__OF}.
+         * </p>
+         *
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder consists__Of(final SpatioTemporalExtent spatioTemporalExtent) {
             requirementImpl.addValue(CONSISTS__OF, spatioTemporalExtent.getIri());
@@ -97,11 +113,12 @@ public class RequirementImpl extends HqdmObject implements Requirement {
         }
 
         /**
-         * A member_of relationship type where a requirement is defined_by exactly one
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a
+         * {@link Requirement} is {@link uk.gov.gchq.hqdm.iri.HQDM#DEFINED_BY} exactly one
          * {@link RequirementSpecification}.
          *
-         * @param requirementSpecification
-         * @return
+         * @param requirementSpecification The RequirementSpecification.
+         * @return This builder.
          */
         public final Builder defined_By_M(final RequirementSpecification requirementSpecification) {
             requirementImpl.addValue(DEFINED_BY, requirementSpecification.getIri());
@@ -109,9 +126,11 @@ public class RequirementImpl extends HqdmObject implements Requirement {
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} has exactly one {@link Event} that is its ending.
          *
-         * @param event
-         * @return
+         * @param event The Event.
+         * @return This builder.
          */
         public final Builder ending(final Event event) {
             requirementImpl.addValue(ENDING, event.getIri());
@@ -119,9 +138,11 @@ public class RequirementImpl extends HqdmObject implements Requirement {
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.model.Thing} may be a member of one
+         * or more {@link Class}.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder member__Of(final Class clazz) {
             requirementImpl.addValue(MEMBER__OF, clazz.getIri());
@@ -129,9 +150,12 @@ public class RequirementImpl extends HqdmObject implements Requirement {
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a
+         * {@link SpatioTemporalExtent} is a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} a
+         * {@link ClassOfSpatioTemporalExtent}.
          *
-         * @param classOfSpatioTemporalExtent
-         * @return
+         * @param classOfSpatioTemporalExtent The ClassOfSpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder member_Of(
                 final ClassOfSpatioTemporalExtent classOfSpatioTemporalExtent) {
@@ -140,9 +164,12 @@ public class RequirementImpl extends HqdmObject implements Requirement {
         }
 
         /**
+         * An {@link uk.gov.gchq.hqdm.iri.HQDM#AGGREGATED_INTO} relationship type where a
+         * {@link SpatioTemporalExtent} may be part of another and the whole has emergent properties
+         * and is more than just the sum of its parts.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder part__Of(final SpatioTemporalExtent spatioTemporalExtent) {
             requirementImpl.addValue(PART__OF, spatioTemporalExtent.getIri());
@@ -150,10 +177,11 @@ public class RequirementImpl extends HqdmObject implements Requirement {
         }
 
         /**
-         * A part_of relationship type where a requirement must be part_of one or more {@link Plan}.
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a {@link Requirement}
+         * must be {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} one or more {@link Plan}.
          *
-         * @param plan
-         * @return
+         * @param plan The Plan.
+         * @return This builder.
          */
         public final Builder part_Of_Plan_M(final Plan plan) {
             requirementImpl.addValue(PART_OF_PLAN, plan.getIri());
@@ -161,9 +189,17 @@ public class RequirementImpl extends HqdmObject implements Requirement {
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} may be {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} one or more
+         * {@link PossibleWorld}.
          *
-         * @param possibleWorld
-         * @return
+         * <p>
+         * Note: The relationship is optional because a {@link PossibleWorld} is not
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} any other {@link SpatioTemporalExtent}.
+         * </p>
+         *
+         * @param possibleWorld The PossibleWorld.
+         * @return This builder.
          */
         public final Builder part_Of_Possible_World_M(final PossibleWorld possibleWorld) {
             requirementImpl.addValue(PART_OF_POSSIBLE_WORLD, possibleWorld.getIri());
@@ -171,9 +207,12 @@ public class RequirementImpl extends HqdmObject implements Requirement {
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} may be a temporal part of one or more other
+         * {@link SpatioTemporalExtent}.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder temporal__Part_Of(final SpatioTemporalExtent spatioTemporalExtent) {
             requirementImpl.addValue(TEMPORAL__PART_OF, spatioTemporalExtent.getIri());
@@ -181,9 +220,10 @@ public class RequirementImpl extends HqdmObject implements Requirement {
         }
 
         /**
+         * Returns an instance of Requirement created from the properties set on this builder.
          *
-         * @return
-         * @throws HqdmException
+         * @return The built Requirement.
+         * @throws HqdmException If the Requirement is missing any mandatory properties.
          */
         public Requirement build() throws HqdmException {
             if (requirementImpl.hasValue(AGGREGATED_INTO)

@@ -16,7 +16,7 @@ package uk.gov.gchq.hqdm.model;
 
 /**
  * A {@link SociallyConstructedObject} that is also a {@link StateOfPhysicalObject} that is a
- * temporal_part_of an {@link AmountOfMoney}.
+ * {@code temporal_part_of} an {@link AmountOfMoney}.
  */
 public interface StateOfAmountOfMoney extends
         StateOfSociallyConstructedObject,

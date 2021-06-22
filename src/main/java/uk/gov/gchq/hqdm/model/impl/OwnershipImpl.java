@@ -49,32 +49,40 @@ import uk.gov.gchq.hqdm.pojo.HqdmObject;
  */
 public class OwnershipImpl extends HqdmObject implements Ownership {
     /**
+     * Constructs a new Ownership.
      *
-     * @param iri
+     * @param iri IRI of the Ownership.
      */
     public OwnershipImpl(final IRI iri) {
         super(OwnershipImpl.class, iri, OWNERSHIP);
     }
 
     /**
-     * Builder for OwnershipImpl.
+     * Builder for constructing instances of Ownership.
      */
     public static class Builder {
-        /** */
+
         private final OwnershipImpl ownershipImpl;
 
         /**
+         * Constructs a Builder for a new Ownership.
          *
-         * @param iri
+         * @param iri IRI of the Ownership.
          */
         public Builder(final IRI iri) {
             ownershipImpl = new OwnershipImpl(iri);
         }
 
         /**
+         * A relationship type where a {@link SpatioTemporalExtent} may be aggregated into one or
+         * more others.
+         * <p>
+         * Note: This has the same meaning as, but different representation to, the
+         * {@link uk.gov.gchq.hqdm.model.Aggregation} entity type.
+         * </p>
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder aggregated_Into(final SpatioTemporalExtent spatioTemporalExtent) {
             ownershipImpl.addValue(AGGREGATED_INTO, spatioTemporalExtent.getIri());
@@ -82,11 +90,12 @@ public class OwnershipImpl extends HqdmObject implements Ownership {
         }
 
         /**
-         * A beginning relationship type where an ownership has as beginning exactly one
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#BEGINNING} relationship type where an
+         * {@link Ownership} has as {@link uk.gov.gchq.hqdm.iri.HQDM#BEGINNING} exactly one
          * {@link BeginningOfOwnership}.
          *
-         * @param beginningOfOwnership
-         * @return
+         * @param beginningOfOwnership The BeginningOfOwnership.
+         * @return This builder.
          */
         public final Builder beginning_M(final BeginningOfOwnership beginningOfOwnership) {
             ownershipImpl.addValue(BEGINNING, beginningOfOwnership.getIri());
@@ -94,9 +103,15 @@ public class OwnershipImpl extends HqdmObject implements Ownership {
         }
 
         /**
+         * A relationship type where a {@link SpatioTemporalExtent} may consist of one or more
+         * others.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * <p>
+         * Note: This is the inverse of {@link uk.gov.gchq.hqdm.iri.HQDM#PART__OF}.
+         * </p>
+         *
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder consists__Of(final SpatioTemporalExtent spatioTemporalExtent) {
             ownershipImpl.addValue(CONSISTS__OF, spatioTemporalExtent.getIri());
@@ -104,11 +119,12 @@ public class OwnershipImpl extends HqdmObject implements Ownership {
         }
 
         /**
-         * A consists_of_participant relationship type where an ownership consists_of_participant
-         * exactly one {@link Owner}.
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#CONSISTS_OF_PARTICIPANT} relationship type where an
+         * {@link Ownership} {@link uk.gov.gchq.hqdm.iri.HQDM#CONSISTS_OF_PARTICIPANT} exactly one
+         * {@link Owner}.
          *
-         * @param owner
-         * @return
+         * @param owner The Owner.
+         * @return This builder.
          */
         public final Builder consists_Of_Participant(final Owner owner) {
             ownershipImpl.addValue(CONSISTS_OF_PARTICIPANT, owner.getIri());
@@ -116,11 +132,12 @@ public class OwnershipImpl extends HqdmObject implements Ownership {
         }
 
         /**
-         * A consists_of_participant relationship type where an ownership association
-         * consists_of_participant exactly one {@link Asset}.
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#CONSISTS_OF_PARTICIPANT} relationship type where an
+         * {@link Ownership} {@link uk.gov.gchq.hqdm.iri.HQDM#CONSISTS_OF_PARTICIPANT} exactly one
+         * {@link Asset}.
          *
-         * @param asset
-         * @return
+         * @param asset The Asset.
+         * @return This builder.
          */
         public final Builder consists_Of_Participant_(final Asset asset) {
             ownershipImpl.addValue(CONSISTS_OF_PARTICIPANT_, asset.getIri());
@@ -128,11 +145,12 @@ public class OwnershipImpl extends HqdmObject implements Ownership {
         }
 
         /**
-         * An ending relationship type where an ownership has as ending not more than one
+         * An {@link uk.gov.gchq.hqdm.iri.HQDM#ENDING} relationship type where an {@link Ownership}
+         * has as {@link uk.gov.gchq.hqdm.iri.HQDM#ENDING} not more than one
          * {@link EndingOfOwnership}.
          *
-         * @param endingOfOwnership
-         * @return
+         * @param endingOfOwnership The EndingOfOwnership.
+         * @return This builder.
          */
         public final Builder ending(final EndingOfOwnership endingOfOwnership) {
             ownershipImpl.addValue(ENDING, endingOfOwnership.getIri());
@@ -140,9 +158,11 @@ public class OwnershipImpl extends HqdmObject implements Ownership {
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.model.Thing} may be a member of one
+         * or more {@link Class}.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder member__Of(final Class clazz) {
             ownershipImpl.addValue(MEMBER__OF, clazz.getIri());
@@ -150,9 +170,12 @@ public class OwnershipImpl extends HqdmObject implements Ownership {
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where an
+         * {@link uk.gov.gchq.hqdm.model.Association} may be a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one or more {@link ClassOfAssociation}.
          *
-         * @param classOfAssociation
-         * @return
+         * @param classOfAssociation The ClassOfAssociation.
+         * @return This builder.
          */
         public final Builder member_Of(final ClassOfAssociation classOfAssociation) {
             ownershipImpl.addValue(MEMBER_OF, classOfAssociation.getIri());
@@ -160,9 +183,12 @@ public class OwnershipImpl extends HqdmObject implements Ownership {
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF_KIND} relationship type where each
+         * {@link uk.gov.gchq.hqdm.model.Association} is a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one or more {@link KindOfAssociation}.
          *
-         * @param kindOfAssociation
-         * @return
+         * @param kindOfAssociation The KindOfAssociation.
+         * @return This builder.
          */
         public final Builder member_Of_Kind_M(final KindOfAssociation kindOfAssociation) {
             ownershipImpl.addValue(MEMBER_OF_KIND, kindOfAssociation.getIri());
@@ -170,9 +196,12 @@ public class OwnershipImpl extends HqdmObject implements Ownership {
         }
 
         /**
+         * An {@link uk.gov.gchq.hqdm.iri.HQDM#AGGREGATED_INTO} relationship type where a
+         * {@link SpatioTemporalExtent} may be part of another and the whole has emergent properties
+         * and is more than just the sum of its parts.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder part__Of(final SpatioTemporalExtent spatioTemporalExtent) {
             ownershipImpl.addValue(PART__OF, spatioTemporalExtent.getIri());
@@ -180,9 +209,17 @@ public class OwnershipImpl extends HqdmObject implements Ownership {
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} may be {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} one or more
+         * {@link PossibleWorld}.
          *
-         * @param possibleWorld
-         * @return
+         * <p>
+         * Note: The relationship is optional because a {@link PossibleWorld} is not
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} any other {@link SpatioTemporalExtent}.
+         * </p>
+         *
+         * @param possibleWorld The PossibleWorld.
+         * @return This builder.
          */
         public final Builder part_Of_Possible_World_M(final PossibleWorld possibleWorld) {
             ownershipImpl.addValue(PART_OF_POSSIBLE_WORLD, possibleWorld.getIri());
@@ -190,9 +227,12 @@ public class OwnershipImpl extends HqdmObject implements Ownership {
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} may be a temporal part of one or more other
+         * {@link SpatioTemporalExtent}.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder temporal__Part_Of(final SpatioTemporalExtent spatioTemporalExtent) {
             ownershipImpl.addValue(TEMPORAL__PART_OF, spatioTemporalExtent.getIri());
@@ -200,9 +240,21 @@ public class OwnershipImpl extends HqdmObject implements Ownership {
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} relationship type where a
+         * {@link uk.gov.gchq.hqdm.model.State} may be a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} one or more {@link Individual}.
          *
-         * @param individual
-         * @return
+         * <p>
+         * Note: The relationship is optional because an {@link Individual} is not necessarily a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} another {@link Individual}, yet is a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} {@link uk.gov.gchq.hqdm.model.State} as well
+         * as {@link Individual}. This applies to all subtypes of
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} that are between a {@code state_of_X}
+         * and {@code X}.
+         * </p>
+         *
+         * @param individual The Individual.
+         * @return This builder.
          */
         public final Builder temporal_Part_Of(final Individual individual) {
             ownershipImpl.addValue(TEMPORAL_PART_OF, individual.getIri());
@@ -210,9 +262,10 @@ public class OwnershipImpl extends HqdmObject implements Ownership {
         }
 
         /**
+         * Returns an instance of Ownership created from the properties set on this builder.
          *
-         * @return
-         * @throws HqdmException
+         * @return The built Ownership.
+         * @throws HqdmException If the Ownership is missing any mandatory properties.
          */
         public Ownership build() throws HqdmException {
             if (ownershipImpl.hasValue(AGGREGATED_INTO)

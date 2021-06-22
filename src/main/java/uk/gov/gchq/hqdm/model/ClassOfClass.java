@@ -15,8 +15,12 @@
 package uk.gov.gchq.hqdm.model;
 
 /**
- * A {@link Class} that is {@link Class} or any of its subsets. Note: More formally this means that
- * any member_of the powerset of class is a valid member_of class_of_class.
+ * A {@link Class} that is {@link Class} or any of its subsets.
+ *
+ * <p>
+ * Note: More formally this means that any {@code member_of} the powerset of class is a valid
+ * {@code member_of} {@link ClassOfClass}.
+ * </p>
  */
 public interface ClassOfClass extends ClassOfAbstractObject {
 }

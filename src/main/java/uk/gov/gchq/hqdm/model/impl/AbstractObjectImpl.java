@@ -28,32 +28,36 @@ import uk.gov.gchq.hqdm.pojo.HqdmObject;
  */
 public class AbstractObjectImpl extends HqdmObject implements AbstractObject {
     /**
+     * Constructs a new AbstractObject.
      *
-     * @param iri
+     * @param iri IRI of the AbstractObject.
      */
     public AbstractObjectImpl(final IRI iri) {
         super(AbstractObjectImpl.class, iri, ABSTRACT_OBJECT);
     }
 
     /**
-     * Builder for AbstractObjectImpl.
+     * Builder for constructing instances of AbstractObject.
      */
     public static class Builder {
-        /** */
+
         private final AbstractObjectImpl abstractObjectImpl;
 
         /**
+         * Constructs a Builder for a new AbstractObject.
          *
-         * @param iri
+         * @param iri IRI of the AbstractObject.
          */
         public Builder(final IRI iri) {
             abstractObjectImpl = new AbstractObjectImpl(iri);
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.model.Thing} may be a member of one
+         * or more {@link Class}.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder member__Of(final Class clazz) {
             abstractObjectImpl.addValue(MEMBER__OF, clazz.getIri());
@@ -61,9 +65,10 @@ public class AbstractObjectImpl extends HqdmObject implements AbstractObject {
         }
 
         /**
+         * Returns an instance of AbstractObject created from the properties set on this builder.
          *
-         * @return
-         * @throws HqdmException
+         * @return The built AbstractObject.
+         * @throws HqdmException If the AbstractObject is missing any mandatory properties.
          */
         public AbstractObject build() throws HqdmException {
             if (abstractObjectImpl.hasValue(MEMBER__OF)

@@ -56,32 +56,41 @@ import uk.gov.gchq.hqdm.pojo.HqdmObject;
  */
 public class AgreementProcessImpl extends HqdmObject implements AgreementProcess {
     /**
+     * Constructs a new AgreementProcess.
      *
-     * @param iri
+     * @param iri IRI of the AgreementProcess.
      */
     public AgreementProcessImpl(final IRI iri) {
         super(AgreementProcessImpl.class, iri, AGREEMENT_PROCESS);
     }
 
     /**
-     * Builder for AgreementProcessImpl.
+     * Builder for constructing instances of AgreementProcess.
      */
     public static class Builder {
-        /** */
+
         private final AgreementProcessImpl agreementProcessImpl;
 
         /**
+         * Constructs a Builder for a new AgreementProcess.
          *
-         * @param iri
+         * @param iri IRI of the AgreementProcess.
          */
         public Builder(final IRI iri) {
             agreementProcessImpl = new AgreementProcessImpl(iri);
         }
 
         /**
+         * A relationship type where a {@link SpatioTemporalExtent} may be aggregated into one or
+         * more others.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * <p>
+         * Note: This has the same meaning as, but different representation to, the
+         * {@link uk.gov.gchq.hqdm.model.Aggregation} entity type.
+         * </p>
+         *
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder aggregated_Into(final SpatioTemporalExtent spatioTemporalExtent) {
             agreementProcessImpl.addValue(AGGREGATED_INTO, spatioTemporalExtent.getIri());
@@ -89,9 +98,11 @@ public class AgreementProcessImpl extends HqdmObject implements AgreementProcess
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} has exactly one {@link Event} that is its beginning.
          *
-         * @param event
-         * @return
+         * @param event The Event.
+         * @return This builder.
          */
         public final Builder beginning(final Event event) {
             agreementProcessImpl.addValue(BEGINNING, event.getIri());
@@ -99,9 +110,11 @@ public class AgreementProcessImpl extends HqdmObject implements AgreementProcess
         }
 
         /**
+         * A relationship type where each {@link uk.gov.gchq.hqdm.model.Activity} is the cause of
+         * one or more {@link Event}.
          *
-         * @param event
-         * @return
+         * @param event The Event.
+         * @return This builder.
          */
         public final Builder causes_M(final Event event) {
             agreementProcessImpl.addValue(CAUSES, event.getIri());
@@ -109,9 +122,15 @@ public class AgreementProcessImpl extends HqdmObject implements AgreementProcess
         }
 
         /**
+         * A relationship type where a {@link SpatioTemporalExtent} may consist of one or more
+         * others.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * <p>
+         * Note: This is the inverse of {@link uk.gov.gchq.hqdm.iri.HQDM#PART__OF}.
+         * </p>
+         *
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder consists__Of(final SpatioTemporalExtent spatioTemporalExtent) {
             agreementProcessImpl.addValue(CONSISTS__OF, spatioTemporalExtent.getIri());
@@ -119,11 +138,11 @@ public class AgreementProcessImpl extends HqdmObject implements AgreementProcess
         }
 
         /**
-         * A consists_of relationship type where an agreement_process consists of exactly one
-         * {@link ReachingAgreement}.
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#CONSISTS_OF} relationship type where an
+         * {@link AgreementProcess} consists of exactly one {@link ReachingAgreement}.
          *
-         * @param reachingAgreement
-         * @return
+         * @param reachingAgreement The ReachingAgreement.
+         * @return Builder
          */
         public final Builder consists_Of(final ReachingAgreement reachingAgreement) {
             agreementProcessImpl.addValue(CONSISTS_OF, reachingAgreement.getIri());
@@ -131,11 +150,11 @@ public class AgreementProcessImpl extends HqdmObject implements AgreementProcess
         }
 
         /**
-         * A consists_of relationship type where an agreement_process consists of at least one
-         * {@link AgreementExecution}.
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#CONSISTS_OF} relationship type where an
+         * {@link AgreementProcess} consists of at least one {@link AgreementExecution}.
          *
-         * @param agreementExecution
-         * @return
+         * @param agreementExecution The AgreementExecution.
+         * @return Builder
          */
         public final Builder consists_Of_(final AgreementExecution agreementExecution) {
             agreementProcessImpl.addValue(CONSISTS_OF_, agreementExecution.getIri());
@@ -143,9 +162,12 @@ public class AgreementProcessImpl extends HqdmObject implements AgreementProcess
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#CONSISTS_OF} relationship type where an
+         * {@link uk.gov.gchq.hqdm.model.Activity} {@link uk.gov.gchq.hqdm.iri.HQDM#CONSISTS_OF} one
+         * or more {@link Participant}s.
          *
-         * @param participant
-         * @return
+         * @param participant The Participant.
+         * @return This builder.
          */
         public final Builder consists_Of_Participant(final Participant participant) {
             agreementProcessImpl.addValue(CONSISTS_OF_PARTICIPANT, participant.getIri());
@@ -153,9 +175,11 @@ public class AgreementProcessImpl extends HqdmObject implements AgreementProcess
         }
 
         /**
+         * A relationship type where an {@link uk.gov.gchq.hqdm.model.Activity} may determine one or
+         * more {@link Thing} to be the case.
          *
-         * @param thing
-         * @return
+         * @param thing The Thing.
+         * @return This builder.
          */
         public final Builder determines(final Thing thing) {
             agreementProcessImpl.addValue(DETERMINES, thing.getIri());
@@ -163,9 +187,11 @@ public class AgreementProcessImpl extends HqdmObject implements AgreementProcess
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} has exactly one {@link Event} that is its ending.
          *
-         * @param event
-         * @return
+         * @param event The Event.
+         * @return This builder.
          */
         public final Builder ending(final Event event) {
             agreementProcessImpl.addValue(ENDING, event.getIri());
@@ -173,9 +199,10 @@ public class AgreementProcessImpl extends HqdmObject implements AgreementProcess
         }
 
         /**
+         * A relationship type where a {@link Thing} may be a member of one or more {@link Class}.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder member__Of(final Class clazz) {
             agreementProcessImpl.addValue(MEMBER__OF, clazz.getIri());
@@ -183,11 +210,12 @@ public class AgreementProcessImpl extends HqdmObject implements AgreementProcess
         }
 
         /**
-         * A member_of relationship type where an agreement_process may be a member_of one or more
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where an
+         * {@link AgreementProcess} may be a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one or more
          * {@link ClassOfAgreementProcess}.
          *
-         * @param classOfAgreementProcess
-         * @return
+         * @param classOfAgreementProcess The ClassOfAgreementProcess.
+         * @return Builder
          */
         public final Builder member_Of(final ClassOfAgreementProcess classOfAgreementProcess) {
             agreementProcessImpl.addValue(MEMBER_OF, classOfAgreementProcess.getIri());
@@ -195,9 +223,12 @@ public class AgreementProcessImpl extends HqdmObject implements AgreementProcess
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF_KIND} relationship type where each
+         * {@link uk.gov.gchq.hqdm.model.Activity} is a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF}
+         * one or more {@link KindOfActivity}.
          *
-         * @param kindOfActivity
-         * @return
+         * @param kindOfActivity The KindOfActivity.
+         * @return This builder.
          */
         public final Builder member_Of_Kind_M(final KindOfActivity kindOfActivity) {
             agreementProcessImpl.addValue(MEMBER_OF_KIND, kindOfActivity.getIri());
@@ -205,9 +236,12 @@ public class AgreementProcessImpl extends HqdmObject implements AgreementProcess
         }
 
         /**
+         * An {@link uk.gov.gchq.hqdm.iri.HQDM#AGGREGATED_INTO} relationship type where a
+         * {@link SpatioTemporalExtent} may be part of another and the whole has emergent properties
+         * and is more than just the sum of its parts.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder part__Of(final SpatioTemporalExtent spatioTemporalExtent) {
             agreementProcessImpl.addValue(PART__OF, spatioTemporalExtent.getIri());
@@ -215,9 +249,12 @@ public class AgreementProcessImpl extends HqdmObject implements AgreementProcess
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link uk.gov.gchq.hqdm.model.SociallyConstructedActivity} may be a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} one or more {@link ReachingAgreement}.
          *
-         * @param reachingAgreement
-         * @return
+         * @param reachingAgreement The ReachingAgreement.
+         * @return This builder.
          */
         public final Builder part_Of(final ReachingAgreement reachingAgreement) {
             agreementProcessImpl.addValue(PART_OF, reachingAgreement.getIri());
@@ -225,9 +262,12 @@ public class AgreementProcessImpl extends HqdmObject implements AgreementProcess
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link uk.gov.gchq.hqdm.model.SociallyConstructedObject} may be a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} one or more {@link AgreementExecution}.
          *
-         * @param agreementExecution
-         * @return
+         * @param agreementExecution The AgreementExecution.
+         * @return This builder.
          */
         public final Builder part_Of_(final AgreementExecution agreementExecution) {
             agreementProcessImpl.addValue(PART_OF_, agreementExecution.getIri());
@@ -235,9 +275,17 @@ public class AgreementProcessImpl extends HqdmObject implements AgreementProcess
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} may be {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} one or more
+         * {@link PossibleWorld}.
          *
-         * @param possibleWorld
-         * @return
+         * <p>
+         * Note: The relationship is optional because a {@link PossibleWorld} is not
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} any other {@link SpatioTemporalExtent}.
+         * </p>
+         *
+         * @param possibleWorld The PossibleWorld.
+         * @return This builder.
          */
         public final Builder part_Of_Possible_World_M(final PossibleWorld possibleWorld) {
             agreementProcessImpl.addValue(PART_OF_POSSIBLE_WORLD, possibleWorld.getIri());
@@ -245,9 +293,11 @@ public class AgreementProcessImpl extends HqdmObject implements AgreementProcess
         }
 
         /**
+         * A relationship type where an {@link uk.gov.gchq.hqdm.model.Activity} may reference one or
+         * more {@link Thing}.
          *
-         * @param thing
-         * @return
+         * @param thing The Thing.
+         * @return This builder.
          */
         public final Builder references(final Thing thing) {
             agreementProcessImpl.addValue(REFERENCES, thing.getIri());
@@ -255,9 +305,12 @@ public class AgreementProcessImpl extends HqdmObject implements AgreementProcess
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} may be a temporal part of one or more other
+         * {@link SpatioTemporalExtent}.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder temporal__Part_Of(final SpatioTemporalExtent spatioTemporalExtent) {
             agreementProcessImpl.addValue(TEMPORAL__PART_OF, spatioTemporalExtent.getIri());
@@ -265,9 +318,21 @@ public class AgreementProcessImpl extends HqdmObject implements AgreementProcess
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} relationship type where a
+         * {@link uk.gov.gchq.hqdm.model.State} may be a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} one or more {@link Individual}.
          *
-         * @param individual
-         * @return
+         * <p>
+         * Note: The relationship is optional because an {@link Individual} is not necessarily a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} another {@link Individual}, yet is a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} {@link uk.gov.gchq.hqdm.model.State} as well
+         * as {@link Individual}. This applies to all subtypes of
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} that are between a {@code state_of_X}
+         * and {@code X}.
+         * </p>
+         *
+         * @param individual The Individual.
+         * @return This builder.
          */
         public final Builder temporal_Part_Of(final Individual individual) {
             agreementProcessImpl.addValue(TEMPORAL_PART_OF, individual.getIri());
@@ -275,9 +340,10 @@ public class AgreementProcessImpl extends HqdmObject implements AgreementProcess
         }
 
         /**
+         * Returns an instance of AgreementProcess created from the properties set on this builder.
          *
-         * @return
-         * @throws HqdmException
+         * @return The built AgreementProcess.
+         * @throws HqdmException If the AgreementProcess is missing any mandatory properties.
          */
         public AgreementProcess build() throws HqdmException {
             if (agreementProcessImpl.hasValue(AGGREGATED_INTO)

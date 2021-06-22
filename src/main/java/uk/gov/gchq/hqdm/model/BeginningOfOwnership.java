@@ -15,7 +15,7 @@
 package uk.gov.gchq.hqdm.model;
 
 /**
- * An {@link Event} that is the beginning of an ownership association.
+ * An {@link Event} that is the {@code beginning} of an {@link Ownership}.
  */
 public interface BeginningOfOwnership extends Event {
 }

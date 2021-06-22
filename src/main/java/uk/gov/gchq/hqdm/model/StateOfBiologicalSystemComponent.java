@@ -16,7 +16,8 @@ package uk.gov.gchq.hqdm.model;
 
 /**
  * A {@link StateOfBiologicalSystemComponent} and {@link StateOfSystemComponent} that is a
- * {@link BiologicalSystemComponent} or a temporal_part_of a {@link BiologicalSystemComponent}.
+ * {@link BiologicalSystemComponent} or a {@code temporal_part_of} a
+ * {@link BiologicalSystemComponent}.
  */
 public interface StateOfBiologicalSystemComponent extends
         StateOfBiologicalObject,

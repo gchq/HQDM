@@ -15,7 +15,7 @@
 package uk.gov.gchq.hqdm.model;
 
 /**
- * An {@link Event} that is the whole of space at an instant from some viewpoint.
+ * An {@link Event} that is all of space at an instant from some viewpoint.
  */
 public interface PointInTime extends Event {
 }

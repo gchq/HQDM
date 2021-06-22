@@ -39,32 +39,38 @@ import uk.gov.gchq.hqdm.pojo.HqdmObject;
  */
 public class SalesProductVersionImpl extends HqdmObject implements SalesProductVersion {
     /**
+     * Constructs a new SalesProductVersion.
      *
-     * @param iri
+     * @param iri IRI of the SalesProductVersion.
      */
     public SalesProductVersionImpl(final IRI iri) {
         super(SalesProductVersionImpl.class, iri, SALES_PRODUCT_VERSION);
     }
 
     /**
-     * Builder for SalesProductVersionImpl.
+     * Builder for constructing instances of SalesProductVersion.
      */
     public static class Builder {
-        /** */
+
         private final SalesProductVersionImpl salesProductVersionImpl;
 
         /**
+         * Constructs a Builder for a new SalesProductVersion.
          *
-         * @param iri
+         * @param iri IRI of the SalesProductVersion.
          */
         public Builder(final IRI iri) {
             salesProductVersionImpl = new SalesProductVersionImpl(iri);
         }
 
         /**
+         * An inverse {@link uk.gov.gchq.hqdm.iri.HQDM#PART__OF_BY_CLASS} relationship type where a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one {@link ClassOfSpatioTemporalExtent}
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#CONSISTS_OF} another
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} a {@link ClassOfSpatioTemporalExtent}.
          *
-         * @param classOfSpatioTemporalExtent
-         * @return
+         * @param classOfSpatioTemporalExtent The ClassOfSpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder consists__Of_By_Class(
                 final ClassOfSpatioTemporalExtent classOfSpatioTemporalExtent) {
@@ -74,9 +80,11 @@ public class SalesProductVersionImpl extends HqdmObject implements SalesProductV
         }
 
         /**
+         * A relationship type where each {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the
+         * {@link Class} is a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the superclass.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder has_Superclass(final Class clazz) {
             salesProductVersionImpl.addValue(HAS_SUPERCLASS, clazz.getIri());
@@ -84,9 +92,11 @@ public class SalesProductVersionImpl extends HqdmObject implements SalesProductV
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.model.Thing} may be a member of one
+         * or more {@link Class}.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder member__Of(final Class clazz) {
             salesProductVersionImpl.addValue(MEMBER__OF, clazz.getIri());
@@ -94,9 +104,11 @@ public class SalesProductVersionImpl extends HqdmObject implements SalesProductV
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a {@link Class} may
+         * be a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one or more {@link ClassOfClass}.
          *
-         * @param classOfClass
-         * @return
+         * @param classOfClass The ClassOfClass.
+         * @return This builder.
          */
         public final Builder member_Of(final ClassOfClass classOfClass) {
             salesProductVersionImpl.addValue(MEMBER_OF, classOfClass.getIri());
@@ -104,9 +116,12 @@ public class SalesProductVersionImpl extends HqdmObject implements SalesProductV
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a
+         * {@link ClassOfSpatioTemporalExtent} may be a member of one or more
+         * {@link ClassOfClassOfSpatioTemporalExtent}.
          *
-         * @param classOfClassOfSpatioTemporalExtent
-         * @return
+         * @param classOfClassOfSpatioTemporalExtent The ClassOfClassOfSpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder member_Of_(
                 final ClassOfClassOfSpatioTemporalExtent classOfClassOfSpatioTemporalExtent) {
@@ -116,9 +131,12 @@ public class SalesProductVersionImpl extends HqdmObject implements SalesProductV
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} a
+         * {@link ClassOfSpatioTemporalExtent} is {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} some {@link ClassOfSpatioTemporalExtent}.
          *
-         * @param classOfSpatioTemporalExtent
-         * @return
+         * @param classOfSpatioTemporalExtent The ClassOfSpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder part__Of_By_Class(
                 final ClassOfSpatioTemporalExtent classOfSpatioTemporalExtent) {
@@ -128,10 +146,11 @@ public class SalesProductVersionImpl extends HqdmObject implements SalesProductV
         }
 
         /**
-         * A specialization where the sales_product_version may be sold as a {@link SalesProduct}.
+         * A {@link uk.gov.gchq.hqdm.model.Specialization} where the {@link SalesProductVersion} may
+         * be sold as a {@link SalesProduct}.
          *
-         * @param salesProduct
-         * @return
+         * @param salesProduct The SalesProduct.
+         * @return This builder.
          */
         public final Builder sold_As(final SalesProduct salesProduct) {
             salesProductVersionImpl.addValue(SOLD_AS, salesProduct.getIri());
@@ -139,10 +158,10 @@ public class SalesProductVersionImpl extends HqdmObject implements SalesProductV
         }
 
         /**
-         * A relationship type where a sales_product_version may have exactly one successor.
+         * A relationship type where a {@link SalesProductVersion} may have exactly one successor.
          *
-         * @param salesProductVersion
-         * @return
+         * @param salesProductVersion The SalesProductVersion.
+         * @return This builder.
          */
         public final Builder successor(final SalesProductVersion salesProductVersion) {
             salesProductVersionImpl.addValue(SUCCESSOR, salesProductVersion.getIri());
@@ -150,9 +169,11 @@ public class SalesProductVersionImpl extends HqdmObject implements SalesProductV
         }
 
         /**
+         * Returns an instance of SalesProductVersion created from the properties set on this
+         * builder.
          *
-         * @return
-         * @throws HqdmException
+         * @return The built SalesProductVersion.
+         * @throws HqdmException If the SalesProductVersion is missing any mandatory properties.
          */
         public SalesProductVersion build() throws HqdmException {
             if (salesProductVersionImpl.hasValue(HAS_SUPERCLASS)

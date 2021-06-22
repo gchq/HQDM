@@ -36,35 +36,38 @@ import uk.gov.gchq.hqdm.pojo.HqdmObject;
 public class ClassOfSpatioTemporalExtentImpl extends HqdmObject
         implements ClassOfSpatioTemporalExtent {
     /**
+     * Constructs a new ClassOfSpatioTemporalExtent.
      *
-     * @param iri
+     * @param iri IRI of the ClassOfSpatioTemporalExtent.
      */
     public ClassOfSpatioTemporalExtentImpl(final IRI iri) {
         super(ClassOfSpatioTemporalExtentImpl.class, iri, CLASS_OF_SPATIO_TEMPORAL_EXTENT);
     }
 
     /**
-     * Builder for ClassOfSpatioTemporalExtentImpl.
+     * Builder for constructing instances of ClassOfSpatioTemporalExtent.
      */
     public static class Builder {
-        /** */
+
         private final ClassOfSpatioTemporalExtentImpl classOfSpatioTemporalExtentImpl;
 
         /**
+         * Constructs a Builder for a new ClassOfSpatioTemporalExtent.
          *
-         * @param iri
+         * @param iri IRI of the ClassOfSpatioTemporalExtent.
          */
         public Builder(final IRI iri) {
             classOfSpatioTemporalExtentImpl = new ClassOfSpatioTemporalExtentImpl(iri);
         }
 
         /**
-         * An inverse part__of_by_class relationship type where a member_of one
-         * class_of_spatio_temporal_extent consists_of another member_of a
-         * class_of_spatio_temporal_extent.
+         * An inverse {@link uk.gov.gchq.hqdm.iri.HQDM#PART__OF_BY_CLASS} relationship type where a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one {@link ClassOfSpatioTemporalExtent}
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#CONSISTS_OF} another
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} a {@link ClassOfSpatioTemporalExtent}.
          *
-         * @param classOfSpatioTemporalExtent
-         * @return
+         * @param classOfSpatioTemporalExtent The ClassOfSpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder consists__Of_By_Class(
                 final ClassOfSpatioTemporalExtent classOfSpatioTemporalExtent) {
@@ -74,9 +77,11 @@ public class ClassOfSpatioTemporalExtentImpl extends HqdmObject
         }
 
         /**
+         * A relationship type where each {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the
+         * {@link Class} is a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the superclass.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder has_Superclass(final Class clazz) {
             classOfSpatioTemporalExtentImpl.addValue(HAS_SUPERCLASS, clazz.getIri());
@@ -84,9 +89,11 @@ public class ClassOfSpatioTemporalExtentImpl extends HqdmObject
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.model.Thing} may be a member of one
+         * or more {@link Class}.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder member__Of(final Class clazz) {
             classOfSpatioTemporalExtentImpl.addValue(MEMBER__OF, clazz.getIri());
@@ -94,9 +101,11 @@ public class ClassOfSpatioTemporalExtentImpl extends HqdmObject
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a {@link Class} may
+         * be a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one or more {@link ClassOfClass}.
          *
-         * @param classOfClass
-         * @return
+         * @param classOfClass The ClassOfClass.
+         * @return This builder.
          */
         public final Builder member_Of(final ClassOfClass classOfClass) {
             classOfSpatioTemporalExtentImpl.addValue(MEMBER_OF, classOfClass.getIri());
@@ -104,11 +113,12 @@ public class ClassOfSpatioTemporalExtentImpl extends HqdmObject
         }
 
         /**
-         * A member_of relationship type where a class_of_spatio_temporal_extent may be a member of
-         * one or more {@link ClassOfClassOfSpatioTemporalExtent}.
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a
+         * {@link ClassOfSpatioTemporalExtent} may be a member of one or more
+         * {@link ClassOfClassOfSpatioTemporalExtent}.
          *
-         * @param classOfClassOfSpatioTemporalExtent
-         * @return
+         * @param classOfClassOfSpatioTemporalExtent The ClassOfClassOfSpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder member_Of_(
                 final ClassOfClassOfSpatioTemporalExtent classOfClassOfSpatioTemporalExtent) {
@@ -118,11 +128,12 @@ public class ClassOfSpatioTemporalExtentImpl extends HqdmObject
         }
 
         /**
-         * A relationship type where a member_of a class_of_spatio_temporal_extent is part_of a
-         * member_of some class_of_spatio_temporal_extent.
+         * A relationship type where a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} a
+         * {@link ClassOfSpatioTemporalExtent} is {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} some {@link ClassOfSpatioTemporalExtent}.
          *
-         * @param classOfSpatioTemporalExtent
-         * @return
+         * @param classOfSpatioTemporalExtent The ClassOfSpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder part__Of_By_Class(
                 final ClassOfSpatioTemporalExtent classOfSpatioTemporalExtent) {
@@ -132,9 +143,12 @@ public class ClassOfSpatioTemporalExtentImpl extends HqdmObject
         }
 
         /**
+         * Returns an instance of ClassOfSpatioTemporalExtent created from the properties set on
+         * this builder.
          *
-         * @return
-         * @throws HqdmException
+         * @return The built ClassOfSpatioTemporalExtent.
+         * @throws HqdmException If the ClassOfSpatioTemporalExtent is missing any mandatory
+         *         properties.
          */
         public ClassOfSpatioTemporalExtent build() throws HqdmException {
             if (classOfSpatioTemporalExtentImpl.hasValue(HAS_SUPERCLASS)

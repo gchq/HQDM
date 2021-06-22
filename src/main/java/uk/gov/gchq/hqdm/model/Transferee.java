@@ -15,7 +15,7 @@
 package uk.gov.gchq.hqdm.model;
 
 /**
- * A {@link StateOfParty} and {@link Participant} receiving ownership in a
+ * A {@link StateOfParty} and {@link Participant} receiving {@link Ownership} in a
  * {@link TransferOfOwnership}.
  */
 public interface Transferee extends

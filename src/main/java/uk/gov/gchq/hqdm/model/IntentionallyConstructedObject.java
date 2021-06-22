@@ -16,8 +16,12 @@ package uk.gov.gchq.hqdm.model;
 
 /**
  * An {@link Individual} and {@link StateOfIntentionallyConstructedObject} that is intentionally
- * constructed. Note: being intentionally constructed means that it is an act of will or agreement
- * that makes it what it is.
+ * constructed.
+ *
+ * <p>
+ * Note: being intentionally constructed means that it is an act of will or agreement that makes it
+ * what it is.
+ * </p>
  */
 public interface IntentionallyConstructedObject extends
         Individual,

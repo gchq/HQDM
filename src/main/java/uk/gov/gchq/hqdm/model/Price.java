@@ -15,7 +15,7 @@
 package uk.gov.gchq.hqdm.model;
 
 /**
- * A {@link ClassOfAmountOfMoney} that is the consideration_by_class in an offering.
+ * A {@link ClassOfAmountOfMoney} that is the {@code consideration_by_class} in an {@link Offering}.
  */
 public interface Price extends ClassOfAmountOfMoney {
 }

@@ -15,7 +15,7 @@
 package uk.gov.gchq.hqdm.model;
 
 /**
- * A {@link StateOfSociallyConstructedObject} that is a {@link Sign} or a temporal_part_of a
+ * A {@link StateOfSociallyConstructedObject} that is a {@link Sign} or a {@code temporal_part_of} a
  * {@link Sign}.
  */
 public interface StateOfSign extends StateOfSociallyConstructedObject {

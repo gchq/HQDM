@@ -33,27 +33,29 @@ import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.Thing;
 
 /**
- *
+ * Object factory for building HQDM Java objects from RDF triples.
  */
 public final class HqdmObjectFactory {
-    /** */
+
     private static final Map<String, Constructor> CONSTRUCTOR_MAP = new HashMap<>();
 
     private HqdmObjectFactory() {}
 
     /**
+     * Create a new HQDM object from a HQDM entity type and IRI.
      *
-     * @param <T>
-     * @param hqdmType
-     * @param iri
-     * @return
-     * @throws HqdmException
+     * @param <T> {@link Thing} or any of its subclasses.
+     * @param hqdmType IRI definition of HQDM object type defined in
+     *        {@link uk.gov.gchq.hqdm.iri.HQDM}.
+     * @param iri IRI of the object.
+     * @return The constructed HQDM Object.
+     * @throws HqdmException If the HqdmObject could not be built.
      */
     public static <T extends Thing> T create(final HqdmIri hqdmType, final IRI iri)
             throws HqdmException {
         try {
             final String className = "uk.gov.gchq.hqdm.impl."
-                    + toCamelCase(hqdmType.getValue()) + "Impl";
+                    + toCamelCase(hqdmType.getResource()) + "Impl";
             final Class clazz = Class.forName(className);
             final Constructor<T> constructor = getIriConstructor(clazz);
             return constructor.newInstance(iri);
@@ -63,12 +65,14 @@ public final class HqdmObjectFactory {
     }
 
     /**
+     * Create a HqdmObject from an IRI and list of predicates.
      *
-     * @param key
-     * @param pairs
-     * @return
+     * @param iri IRI of the object.
+     * @param pairs Object attributes.
+     * @return The constructed HQDM Object.
+     * @throws HqdmException If the HqdmObject could not be built.
      */
-    public static HqdmObject create(final String key, final List<Pair<String, String>> pairs)
+    public static HqdmObject create(final String iri, final List<Pair<String, String>> pairs)
             throws HqdmException {
         try {
             final List<IRI> iris = new ArrayList<>();
@@ -90,7 +94,7 @@ public final class HqdmObjectFactory {
                     className = classNames.get(0);
                 } else {
                     if (!iris.isEmpty()) {
-                        className = iris.get(0).getValue();
+                        className = iris.get(0).getResource();
                         className = "uk.gov.gchq.hqdm.impl." + toCamelCase(className) + "Impl";
                     } else {
                         className = "NOT FOUND";
@@ -99,7 +103,7 @@ public final class HqdmObjectFactory {
                 final Class clazz = Class.forName(className);
 
                 final Constructor constructor = getIriConstructor(clazz);
-                final HqdmObject result = (HqdmObject) constructor.newInstance(new IRI(key));
+                final HqdmObject result = (HqdmObject) constructor.newInstance(new IRI(iri));
 
                 for (final Pair<String, String> pair : pairs) {
                     if (pair.getRight().startsWith("http")) {
@@ -110,18 +114,13 @@ public final class HqdmObjectFactory {
                 }
                 return result;
             } else {
-                throw new HqdmException("No type information for: " + key);
+                throw new HqdmException("No type information for: " + iri);
             }
         } catch (final Exception ex) {
             throw new HqdmException(ex);
         }
     }
 
-    /**
-     *
-     * @param name
-     * @return
-     */
     private static String toCamelCase(final String name) {
         final char[] result = name.toCharArray();
         boolean toggle = true;

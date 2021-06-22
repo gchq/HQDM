@@ -15,8 +15,8 @@
 package uk.gov.gchq.hqdm.model;
 
 /**
- * A {@link Composition} where the part is the entire whole spatially, but part of the whole
- * temporally.
+ * A {@link Composition} where the part is the entire {@code whole} spatially, but part of the
+ * {@code whole} temporally.
  */
 public interface TemporalComposition extends Composition {
 }

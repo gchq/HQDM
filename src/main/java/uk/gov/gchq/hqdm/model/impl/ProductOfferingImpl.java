@@ -48,33 +48,36 @@ import uk.gov.gchq.hqdm.pojo.HqdmObject;
  */
 public class ProductOfferingImpl extends HqdmObject implements ProductOffering {
     /**
+     * Constructs a new ProductOffering.
      *
-     * @param iri
+     * @param iri IRI of the ProductOffering.
      */
     public ProductOfferingImpl(final IRI iri) {
         super(ProductOfferingImpl.class, iri, PRODUCT_OFFERING);
     }
 
     /**
-     * Builder for ProductOfferingImpl.
+     * Builder for constructing instances of ProductOffering.
      */
     public static class Builder {
-        /** */
+
         private final ProductOfferingImpl productOfferingImpl;
 
         /**
+         * Constructs a Builder for a new ProductOffering.
          *
-         * @param iri
+         * @param iri IRI of the ProductOffering.
          */
         public Builder(final IRI iri) {
             productOfferingImpl = new ProductOfferingImpl(iri);
         }
 
         /**
-         * A class_of_offered relationship type where a member_of a {@link SalesProduct} is offered.
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#CLASS_OF_OFFERED} relationship type where a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} a {@link SalesProduct} is offered.
          *
-         * @param salesProduct
-         * @return
+         * @param salesProduct The SalesProduct.
+         * @return This builder.
          */
         public final Builder class_Of_Offered_M(final SalesProduct salesProduct) {
             productOfferingImpl.addValue(CLASS_OF_OFFERED, salesProduct.getIri());
@@ -82,9 +85,11 @@ public class ProductOfferingImpl extends HqdmObject implements ProductOffering {
         }
 
         /**
+         * A relationship type where an {@link uk.gov.gchq.hqdm.model.Offering} has exactly one
+         * price at which the {@link uk.gov.gchq.hqdm.model.Offering} is made.
          *
-         * @param price
-         * @return
+         * @param price The Price.
+         * @return This builder.
          */
         public final Builder consideration_By_Class_M(final Price price) {
             productOfferingImpl.addValue(CONSIDERATION_BY_CLASS, price.getIri());
@@ -92,9 +97,13 @@ public class ProductOfferingImpl extends HqdmObject implements ProductOffering {
         }
 
         /**
+         * An inverse {@link uk.gov.gchq.hqdm.iri.HQDM#PART__OF_BY_CLASS} relationship type where a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one {@link ClassOfSpatioTemporalExtent}
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#CONSISTS_OF} another
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} a {@link ClassOfSpatioTemporalExtent}.
          *
-         * @param classOfSpatioTemporalExtent
-         * @return
+         * @param classOfSpatioTemporalExtent The ClassOfSpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder consists__Of_By_Class(
                 final ClassOfSpatioTemporalExtent classOfSpatioTemporalExtent) {
@@ -104,9 +113,11 @@ public class ProductOfferingImpl extends HqdmObject implements ProductOffering {
         }
 
         /**
+         * A relationship type where each {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the
+         * {@link Class} is a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the superclass.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder has_Superclass(final Class clazz) {
             productOfferingImpl.addValue(HAS_SUPERCLASS, clazz.getIri());
@@ -114,9 +125,11 @@ public class ProductOfferingImpl extends HqdmObject implements ProductOffering {
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.model.Thing} may be a member of one
+         * or more {@link Class}.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder member__Of(final Class clazz) {
             productOfferingImpl.addValue(MEMBER__OF, clazz.getIri());
@@ -124,9 +137,11 @@ public class ProductOfferingImpl extends HqdmObject implements ProductOffering {
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a {@link Class} may
+         * be a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one or more {@link ClassOfClass}.
          *
-         * @param classOfClass
-         * @return
+         * @param classOfClass The ClassOfClass.
+         * @return This builder.
          */
         public final Builder member_Of(final ClassOfClass classOfClass) {
             productOfferingImpl.addValue(MEMBER_OF, classOfClass.getIri());
@@ -134,9 +149,12 @@ public class ProductOfferingImpl extends HqdmObject implements ProductOffering {
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a
+         * {@link ClassOfSpatioTemporalExtent} may be a member of one or more
+         * {@link ClassOfClassOfSpatioTemporalExtent}.
          *
-         * @param classOfClassOfSpatioTemporalExtent
-         * @return
+         * @param classOfClassOfSpatioTemporalExtent The ClassOfClassOfSpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder member_Of_(
                 final ClassOfClassOfSpatioTemporalExtent classOfClassOfSpatioTemporalExtent) {
@@ -145,9 +163,11 @@ public class ProductOfferingImpl extends HqdmObject implements ProductOffering {
         }
 
         /**
+         * A relationship type where an {@link uk.gov.gchq.hqdm.model.Offering} has exactly one
+         * {@link Party} who makes the {@link uk.gov.gchq.hqdm.model.Offering}.
          *
-         * @param party
-         * @return
+         * @param party The Party.
+         * @return This builder.
          */
         public final Builder offeror_M(final Party party) {
             productOfferingImpl.addValue(OFFEROR, party.getIri());
@@ -155,9 +175,12 @@ public class ProductOfferingImpl extends HqdmObject implements ProductOffering {
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} a
+         * {@link ClassOfSpatioTemporalExtent} is {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} some {@link ClassOfSpatioTemporalExtent}.
          *
-         * @param classOfSpatioTemporalExtent
-         * @return
+         * @param classOfSpatioTemporalExtent The ClassOfSpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder part__Of_By_Class(
                 final ClassOfSpatioTemporalExtent classOfSpatioTemporalExtent) {
@@ -166,9 +189,14 @@ public class ProductOfferingImpl extends HqdmObject implements ProductOffering {
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF_BY_CLASS} relationship type where a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} a
+         * {@link uk.gov.gchq.hqdm.model.ClassOfSociallyConstructedActivity} may be a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} a
+         * {@link ClassOfReachingAgreement}.
          *
-         * @param classOfReachingAgreement
-         * @return
+         * @param classOfReachingAgreement The ClassOfReachingAgreement.
+         * @return This builder.
          */
         public final Builder part_Of_By_Class(
                 final ClassOfReachingAgreement classOfReachingAgreement) {
@@ -177,9 +205,14 @@ public class ProductOfferingImpl extends HqdmObject implements ProductOffering {
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF_BY_CLASS} relationship type where a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} a
+         * {@link uk.gov.gchq.hqdm.model.ClassOfSociallyConstructedActivity} may be a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} a
+         * {@link ClassOfAgreementExecution}.
          *
-         * @param classOfAgreementExecution
-         * @return
+         * @param classOfAgreementExecution The ClassOfAgreementExecution.
+         * @return This builder.
          */
         public final Builder part_Of_By_Class_(
                 final ClassOfAgreementExecution classOfAgreementExecution) {
@@ -188,9 +221,11 @@ public class ProductOfferingImpl extends HqdmObject implements ProductOffering {
         }
 
         /**
+         * A relationship that is exactly one {@link PeriodOfTime} for which the
+         * {@link uk.gov.gchq.hqdm.model.Offering} is valid.
          *
-         * @param periodOfTime
-         * @return
+         * @param periodOfTime The PeriodOfTime.
+         * @return This builder.
          */
         public final Builder period_Offered_M(final PeriodOfTime periodOfTime) {
             productOfferingImpl.addValue(PERIOD_OFFERED, periodOfTime.getIri());
@@ -198,9 +233,10 @@ public class ProductOfferingImpl extends HqdmObject implements ProductOffering {
         }
 
         /**
+         * Returns an instance of ProductOffering created from the properties set on this builder.
          *
-         * @return
-         * @throws HqdmException
+         * @return The built ProductOffering.
+         * @throws HqdmException If the ProductOffering is missing any mandatory properties.
          */
         public ProductOffering build() throws HqdmException {
             if (!productOfferingImpl.hasValue(CLASS_OF_OFFERED)) {

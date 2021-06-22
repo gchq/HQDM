@@ -33,32 +33,36 @@ import uk.gov.gchq.hqdm.pojo.HqdmObject;
  */
 public class AggregationImpl extends HqdmObject implements Aggregation {
     /**
+     * Constructs a new Aggregation.
      *
-     * @param iri
+     * @param iri IRI of the Aggregation.
      */
     public AggregationImpl(final IRI iri) {
         super(AggregationImpl.class, iri, AGGREGATION);
     }
 
     /**
-     * Builder for AggregationImpl.
+     * Builder for constructing instances of Aggregation.
      */
     public static class Builder {
-        /** */
+
         private final AggregationImpl aggregationImpl;
 
         /**
+         * Constructs a Builder for a new Aggregation.
          *
-         * @param iri
+         * @param iri IRI of the Aggregation.
          */
         public Builder(final IRI iri) {
             aggregationImpl = new AggregationImpl(iri);
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.model.Thing} may be a member of one
+         * or more {@link Class}.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder member__Of(final Class clazz) {
             aggregationImpl.addValue(MEMBER__OF, clazz.getIri());
@@ -66,9 +70,11 @@ public class AggregationImpl extends HqdmObject implements Aggregation {
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a relationship is a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} a {@link ClassOfRelationship}.
          *
-         * @param classOfRelationship
-         * @return
+         * @param classOfRelationship The ClassOfRelationship.
+         * @return This builder.
          */
         public final Builder member_Of(final ClassOfRelationship classOfRelationship) {
             aggregationImpl.addValue(MEMBER_OF, classOfRelationship.getIri());
@@ -76,11 +82,11 @@ public class AggregationImpl extends HqdmObject implements Aggregation {
         }
 
         /**
-         * A relationship type where an aggregation has exactly one {@link SpatioTemporalExtent} as
-         * the part.
+         * A relationship type where an {@link Aggregation} has exactly one
+         * {@link SpatioTemporalExtent} as the part.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder part_M(final SpatioTemporalExtent spatioTemporalExtent) {
             aggregationImpl.addValue(PART, spatioTemporalExtent.getIri());
@@ -88,11 +94,11 @@ public class AggregationImpl extends HqdmObject implements Aggregation {
         }
 
         /**
-         * A relationship type where an aggregation has exactly one {@link SpatioTemporalExtent} as
-         * the whole.
+         * A relationship type where an {@link Aggregation} has exactly one
+         * {@link SpatioTemporalExtent} as the whole.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder whole_M(final SpatioTemporalExtent spatioTemporalExtent) {
             aggregationImpl.addValue(WHOLE, spatioTemporalExtent.getIri());
@@ -100,9 +106,10 @@ public class AggregationImpl extends HqdmObject implements Aggregation {
         }
 
         /**
+         * Returns an instance of Aggregation created from the properties set on this builder.
          *
-         * @return
-         * @throws HqdmException
+         * @return The built Aggregation.
+         * @throws HqdmException If the Aggregation is missing any mandatory properties.
          */
         public Aggregation build() throws HqdmException {
             if (aggregationImpl.hasValue(MEMBER__OF)

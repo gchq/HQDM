@@ -15,7 +15,7 @@
 package uk.gov.gchq.hqdm.model;
 
 /**
- * A {@link StateOfSystem} that is a {@link Party} or a temporal_part_of a {@link Party}.
+ * A {@link StateOfSystem} that is a {@link Party} or a {@code temporal_part_of} a {@link Party}.
  */
 public interface StateOfParty extends StateOfSystem {
 }

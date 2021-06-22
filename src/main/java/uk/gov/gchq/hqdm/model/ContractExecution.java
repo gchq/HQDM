@@ -15,7 +15,7 @@
 package uk.gov.gchq.hqdm.model;
 
 /**
- * An {@link AgreementExecution} that is the provision of some thing in exchange for some
+ * An {@link AgreementExecution} that is the provision of some {@link Thing} in exchange for some
  * consideration.
  */
 public interface ContractExecution extends AgreementExecution {

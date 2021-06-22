@@ -38,32 +38,38 @@ import uk.gov.gchq.hqdm.pojo.HqdmObject;
  */
 public class KindOfOrganizationImpl extends HqdmObject implements KindOfOrganization {
     /**
+     * Constructs a new KindOfOrganization.
      *
-     * @param iri
+     * @param iri IRI of the KindOfOrganization.
      */
     public KindOfOrganizationImpl(final IRI iri) {
         super(KindOfOrganizationImpl.class, iri, KIND_OF_ORGANIZATION);
     }
 
     /**
-     * Builder for KindOfOrganizationImpl.
+     * Builder for constructing instances of KindOfOrganization.
      */
     public static class Builder {
-        /** */
+
         private final KindOfOrganizationImpl kindOfOrganizationImpl;
 
         /**
+         * Constructs a Builder for a new KindOfOrganization.
          *
-         * @param iri
+         * @param iri IRI of the KindOfOrganization.
          */
         public Builder(final IRI iri) {
             kindOfOrganizationImpl = new KindOfOrganizationImpl(iri);
         }
 
         /**
+         * An inverse {@link uk.gov.gchq.hqdm.iri.HQDM#PART__OF_BY_CLASS} relationship type where a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one {@link ClassOfSpatioTemporalExtent}
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#CONSISTS_OF} another
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} a {@link ClassOfSpatioTemporalExtent}.
          *
-         * @param classOfSpatioTemporalExtent
-         * @return
+         * @param classOfSpatioTemporalExtent The ClassOfSpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder consists__Of_By_Class(
                 final ClassOfSpatioTemporalExtent classOfSpatioTemporalExtent) {
@@ -73,9 +79,13 @@ public class KindOfOrganizationImpl extends HqdmObject implements KindOfOrganiza
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#CONSISTS_OF_BY_CLASS} relationship type where each
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} a {@link uk.gov.gchq.hqdm.model.KindOfSystem}
+         * has a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one or more
+         * {@link uk.gov.gchq.hqdm.model.KindOfSystemComponent} as a component.
          *
-         * @param kindOfOrganizationComponent
-         * @return
+         * @param kindOfOrganizationComponent The KindOfOrganizationComponent.
+         * @return This builder.
          */
         public final Builder has_Component_By_Class_M(
                 final KindOfOrganizationComponent kindOfOrganizationComponent) {
@@ -85,9 +95,11 @@ public class KindOfOrganizationImpl extends HqdmObject implements KindOfOrganiza
         }
 
         /**
+         * A relationship type where each {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the
+         * {@link Class} is a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the superclass.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder has_Superclass(final Class clazz) {
             kindOfOrganizationImpl.addValue(HAS_SUPERCLASS, clazz.getIri());
@@ -95,9 +107,11 @@ public class KindOfOrganizationImpl extends HqdmObject implements KindOfOrganiza
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.model.Thing} may be a member of one
+         * or more {@link Class}.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder member__Of(final Class clazz) {
             kindOfOrganizationImpl.addValue(MEMBER__OF, clazz.getIri());
@@ -105,9 +119,11 @@ public class KindOfOrganizationImpl extends HqdmObject implements KindOfOrganiza
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a {@link Class} may
+         * be a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one or more {@link ClassOfClass}.
          *
-         * @param classOfClass
-         * @return
+         * @param classOfClass The ClassOfClass.
+         * @return This builder.
          */
         public final Builder member_Of(final ClassOfClass classOfClass) {
             kindOfOrganizationImpl.addValue(MEMBER_OF, classOfClass.getIri());
@@ -115,9 +131,12 @@ public class KindOfOrganizationImpl extends HqdmObject implements KindOfOrganiza
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a
+         * {@link ClassOfSpatioTemporalExtent} may be a member of one or more
+         * {@link ClassOfClassOfSpatioTemporalExtent}.
          *
-         * @param classOfClassOfSpatioTemporalExtent
-         * @return
+         * @param classOfClassOfSpatioTemporalExtent The ClassOfClassOfSpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder member_Of_(
                 final ClassOfClassOfSpatioTemporalExtent classOfClassOfSpatioTemporalExtent) {
@@ -127,9 +146,12 @@ public class KindOfOrganizationImpl extends HqdmObject implements KindOfOrganiza
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} a
+         * {@link ClassOfSpatioTemporalExtent} is {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} some {@link ClassOfSpatioTemporalExtent}.
          *
-         * @param classOfSpatioTemporalExtent
-         * @return
+         * @param classOfSpatioTemporalExtent The ClassOfSpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder part__Of_By_Class(
                 final ClassOfSpatioTemporalExtent classOfSpatioTemporalExtent) {
@@ -139,9 +161,11 @@ public class KindOfOrganizationImpl extends HqdmObject implements KindOfOrganiza
         }
 
         /**
+         * Returns an instance of KindOfOrganization created from the properties set on this
+         * builder.
          *
-         * @return
-         * @throws HqdmException
+         * @return The built KindOfOrganization.
+         * @throws HqdmException If the KindOfOrganization is missing any mandatory properties.
          */
         public KindOfOrganization build() throws HqdmException {
             if (!kindOfOrganizationImpl.hasValue(HAS_COMPONENT_BY_CLASS)) {

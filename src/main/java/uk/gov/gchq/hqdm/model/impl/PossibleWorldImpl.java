@@ -44,32 +44,40 @@ import uk.gov.gchq.hqdm.pojo.HqdmObject;
  */
 public class PossibleWorldImpl extends HqdmObject implements PossibleWorld {
     /**
+     * Constructs a new PossibleWorld.
      *
-     * @param iri
+     * @param iri IRI of the PossibleWorld.
      */
     public PossibleWorldImpl(final IRI iri) {
         super(PossibleWorldImpl.class, iri, POSSIBLE_WORLD);
     }
 
     /**
-     * Builder for PossibleWorldImpl.
+     * Builder for constructing instances of PossibleWorld.
      */
     public static class Builder {
-        /** */
+
         private final PossibleWorldImpl possibleWorldImpl;
 
         /**
+         * Constructs a Builder for a new PossibleWorld.
          *
-         * @param iri
+         * @param iri IRI of the PossibleWorld.
          */
         public Builder(final IRI iri) {
             possibleWorldImpl = new PossibleWorldImpl(iri);
         }
 
         /**
+         * A relationship type where a {@link SpatioTemporalExtent} may be aggregated into one or
+         * more others.
+         * <p>
+         * Note: This has the same meaning as, but different representation to, the
+         * {@link uk.gov.gchq.hqdm.model.Aggregation} entity type.
+         * </p>
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder aggregated_Into(final SpatioTemporalExtent spatioTemporalExtent) {
             possibleWorldImpl.addValue(AGGREGATED_INTO, spatioTemporalExtent.getIri());
@@ -77,9 +85,11 @@ public class PossibleWorldImpl extends HqdmObject implements PossibleWorld {
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} has exactly one {@link Event} that is its beginning.
          *
-         * @param event
-         * @return
+         * @param event The Event.
+         * @return This builder.
          */
         public final Builder beginning(final Event event) {
             possibleWorldImpl.addValue(BEGINNING, event.getIri());
@@ -87,9 +97,15 @@ public class PossibleWorldImpl extends HqdmObject implements PossibleWorld {
         }
 
         /**
+         * A relationship type where a {@link SpatioTemporalExtent} may consist of one or more
+         * others.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * <p>
+         * Note: This is the inverse of {@link uk.gov.gchq.hqdm.iri.HQDM#PART__OF}.
+         * </p>
+         *
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder consists__Of(final SpatioTemporalExtent spatioTemporalExtent) {
             possibleWorldImpl.addValue(CONSISTS__OF, spatioTemporalExtent.getIri());
@@ -97,9 +113,11 @@ public class PossibleWorldImpl extends HqdmObject implements PossibleWorld {
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} has exactly one {@link Event} that is its ending.
          *
-         * @param event
-         * @return
+         * @param event The Event.
+         * @return This builder.
          */
         public final Builder ending(final Event event) {
             possibleWorldImpl.addValue(ENDING, event.getIri());
@@ -107,9 +125,11 @@ public class PossibleWorldImpl extends HqdmObject implements PossibleWorld {
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.model.Thing} may be a member of one
+         * or more {@link Class}.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder member__Of(final Class clazz) {
             possibleWorldImpl.addValue(MEMBER__OF, clazz.getIri());
@@ -117,11 +137,12 @@ public class PossibleWorldImpl extends HqdmObject implements PossibleWorld {
         }
 
         /**
-         * A member_of relationship type where a possible_world may be a member_of one or more
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a
+         * {@link PossibleWorld} may be a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one or more
          * {@link ClassOfPossibleWorld}.
          *
-         * @param classOfPossibleWorld
-         * @return
+         * @param classOfPossibleWorld The ClassOfPossibleWorld.
+         * @return This builder.
          */
         public final Builder member_Of(final ClassOfPossibleWorld classOfPossibleWorld) {
             possibleWorldImpl.addValue(MEMBER_OF, classOfPossibleWorld.getIri());
@@ -129,9 +150,12 @@ public class PossibleWorldImpl extends HqdmObject implements PossibleWorld {
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where an
+         * {@link Individual} may be a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one or more
+         * {@link KindOfIndividual}.
          *
-         * @param kindOfIndividual
-         * @return
+         * @param kindOfIndividual The KindOfIndividual.
+         * @return This builder.
          */
         public final Builder member_Of_Kind(final KindOfIndividual kindOfIndividual) {
             possibleWorldImpl.addValue(MEMBER_OF_KIND, kindOfIndividual.getIri());
@@ -139,9 +163,12 @@ public class PossibleWorldImpl extends HqdmObject implements PossibleWorld {
         }
 
         /**
+         * An {@link uk.gov.gchq.hqdm.iri.HQDM#AGGREGATED_INTO} relationship type where a
+         * {@link SpatioTemporalExtent} may be part of another and the whole has emergent properties
+         * and is more than just the sum of its parts.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder part__Of(final SpatioTemporalExtent spatioTemporalExtent) {
             possibleWorldImpl.addValue(PART__OF, spatioTemporalExtent.getIri());
@@ -149,9 +176,17 @@ public class PossibleWorldImpl extends HqdmObject implements PossibleWorld {
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} may be {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} one or more
+         * {@link PossibleWorld}.
          *
-         * @param possibleWorld
-         * @return
+         * <p>
+         * Note: The relationship is optional because a {@link PossibleWorld} is not
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} any other {@link SpatioTemporalExtent}.
+         * </p>
+         *
+         * @param possibleWorld The PossibleWorld.
+         * @return This builder.
          */
         public final Builder part_Of_Possible_World_M(final PossibleWorld possibleWorld) {
             possibleWorldImpl.addValue(PART_OF_POSSIBLE_WORLD, possibleWorld.getIri());
@@ -159,9 +194,12 @@ public class PossibleWorldImpl extends HqdmObject implements PossibleWorld {
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} may be a temporal part of one or more other
+         * {@link SpatioTemporalExtent}.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder temporal__Part_Of(final SpatioTemporalExtent spatioTemporalExtent) {
             possibleWorldImpl.addValue(TEMPORAL__PART_OF, spatioTemporalExtent.getIri());
@@ -169,9 +207,21 @@ public class PossibleWorldImpl extends HqdmObject implements PossibleWorld {
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} relationship type where a
+         * {@link uk.gov.gchq.hqdm.model.State} may be a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} one or more {@link Individual}.
          *
-         * @param individual
-         * @return
+         * <p>
+         * Note: The relationship is optional because an {@link Individual} is not necessarily a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} another {@link Individual}, yet is a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} {@link uk.gov.gchq.hqdm.model.State} as well
+         * as {@link Individual}. This applies to all subtypes of
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} that are between a {@code state_of_X}
+         * and {@code X}.
+         * </p>
+         *
+         * @param individual The Individual.
+         * @return This builder.
          */
         public final Builder temporal_Part_Of(final Individual individual) {
             possibleWorldImpl.addValue(TEMPORAL_PART_OF, individual.getIri());
@@ -179,9 +229,12 @@ public class PossibleWorldImpl extends HqdmObject implements PossibleWorld {
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} relationship type where a
+         * {@link uk.gov.gchq.hqdm.model.PeriodOfTime} may be a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} one or more {@link PossibleWorld}.
          *
-         * @param possibleWorld
-         * @return
+         * @param possibleWorld The PossibleWorld.
+         * @return This builder.
          */
         public final Builder temporal_Part_Of_(final PossibleWorld possibleWorld) {
             possibleWorldImpl.addValue(TEMPORAL_PART_OF_, possibleWorld.getIri());
@@ -189,9 +242,10 @@ public class PossibleWorldImpl extends HqdmObject implements PossibleWorld {
         }
 
         /**
+         * Returns an instance of PossibleWorld created from the properties set on this builder.
          *
-         * @return
-         * @throws HqdmException
+         * @return The built PossibleWorld.
+         * @throws HqdmException If the PossibleWorld is missing any mandatory properties.
          */
         public PossibleWorld build() throws HqdmException {
             if (possibleWorldImpl.hasValue(AGGREGATED_INTO)

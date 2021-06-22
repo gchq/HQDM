@@ -35,8 +35,9 @@ import uk.gov.gchq.hqdm.pojo.HqdmObject;
 public class KindOfRelationshipWithRestrictionImpl extends HqdmObject
         implements KindOfRelationshipWithRestriction {
     /**
+     * Constructs a new KindOfRelationshipWithRestriction.
      *
-     * @param iri
+     * @param iri IRI of the KindOfRelationshipWithRestriction.
      */
     public KindOfRelationshipWithRestrictionImpl(final IRI iri) {
         super(KindOfRelationshipWithRestrictionImpl.class, iri,
@@ -44,24 +45,27 @@ public class KindOfRelationshipWithRestrictionImpl extends HqdmObject
     }
 
     /**
-     * Builder for KindOfRelationshipWithRestrictionImpl.
+     * Builder for constructing instances of KindOfRelationshipWithRestriction.
      */
     public static class Builder {
-        /** */
+
         private final KindOfRelationshipWithRestrictionImpl kindOfRelationshipWithRestrictionImpl;
 
         /**
+         * Constructs a Builder for a new KindOfRelationshipWithRestriction.
          *
-         * @param iri
+         * @param iri IRI of the KindOfRelationshipWithRestriction.
          */
         public Builder(final IRI iri) {
             kindOfRelationshipWithRestrictionImpl = new KindOfRelationshipWithRestrictionImpl(iri);
         }
 
         /**
+         * A relationship type where each {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the
+         * {@link Class} is a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the superclass.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder has_Superclass(final Class clazz) {
             kindOfRelationshipWithRestrictionImpl.addValue(HAS_SUPERCLASS, clazz.getIri());
@@ -69,9 +73,11 @@ public class KindOfRelationshipWithRestrictionImpl extends HqdmObject
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.model.Thing} may be a member of one
+         * or more {@link Class}.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder member__Of(final Class clazz) {
             kindOfRelationshipWithRestrictionImpl.addValue(MEMBER__OF, clazz.getIri());
@@ -79,9 +85,11 @@ public class KindOfRelationshipWithRestrictionImpl extends HqdmObject
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a {@link Class} may
+         * be a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one or more {@link ClassOfClass}.
          *
-         * @param classOfClass
-         * @return
+         * @param classOfClass The ClassOfClass.
+         * @return This builder.
          */
         public final Builder member_Of(final ClassOfClass classOfClass) {
             kindOfRelationshipWithRestrictionImpl.addValue(MEMBER_OF, classOfClass.getIri());
@@ -90,10 +98,10 @@ public class KindOfRelationshipWithRestrictionImpl extends HqdmObject
 
         /**
          * A relationship type where the {@link Classification} is of a required role player for the
-         * members of a kind_of_relationship_with_restriction.
+         * members of a {@link KindOfRelationshipWithRestriction}.
          *
-         * @param classification
-         * @return
+         * @param classification The Classification.
+         * @return This builder.
          */
         public final Builder required_Role_Player_M(final Classification classification) {
             kindOfRelationshipWithRestrictionImpl.addValue(REQUIRED_ROLE_PLAYER,
@@ -102,9 +110,11 @@ public class KindOfRelationshipWithRestrictionImpl extends HqdmObject
         }
 
         /**
+         * The roles that must be filled by members of a
+         * {@link uk.gov.gchq.hqdm.model.KindOfRelationshipWithSignature}.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder roles_M(final Class clazz) {
             kindOfRelationshipWithRestrictionImpl.addValue(ROLES, clazz.getIri());
@@ -112,9 +122,12 @@ public class KindOfRelationshipWithRestrictionImpl extends HqdmObject
         }
 
         /**
+         * Returns an instance of KindOfRelationshipWithRestriction created from the properties set
+         * on this builder.
          *
-         * @return
-         * @throws HqdmException
+         * @return The built KindOfRelationshipWithRestriction.
+         * @throws HqdmException If the KindOfRelationshipWithRestriction is missing any mandatory
+         *         properties.
          */
         public KindOfRelationshipWithRestriction build() throws HqdmException {
             if (kindOfRelationshipWithRestrictionImpl.hasValue(HAS_SUPERCLASS)

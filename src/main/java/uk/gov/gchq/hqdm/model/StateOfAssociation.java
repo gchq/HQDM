@@ -15,7 +15,8 @@
 package uk.gov.gchq.hqdm.model;
 
 /**
- * A {@link State} that is an {@link Association} or a temporal_part_of an {@link Association}.
+ * A {@link State} that is an {@link Association} or a {@code temporal_part_of} an
+ * {@link Association}.
  */
 public interface StateOfAssociation extends State {
 }

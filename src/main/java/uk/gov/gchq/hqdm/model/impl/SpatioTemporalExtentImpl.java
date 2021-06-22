@@ -39,34 +39,36 @@ import uk.gov.gchq.hqdm.pojo.HqdmObject;
  */
 public class SpatioTemporalExtentImpl extends HqdmObject implements SpatioTemporalExtent {
     /**
+     * Constructs a new SpatioTemporalExtent.
      *
-     * @param iri
+     * @param iri IRI of the SpatioTemporalExtent.
      */
     public SpatioTemporalExtentImpl(final IRI iri) {
         super(SpatioTemporalExtentImpl.class, iri, SPATIO_TEMPORAL_EXTENT);
     }
 
     /**
-     * Builder for SpatioTemporalExtentImpl.
+     * Builder for constructing instances of SpatioTemporalExtent.
      */
     public static class Builder {
-        /** */
+
         private final SpatioTemporalExtentImpl spatioTemporalExtentImpl;
 
         /**
+         * Constructs a Builder for a new SpatioTemporalExtent.
          *
-         * @param iri
+         * @param iri IRI of the SpatioTemporalExtent.
          */
         public Builder(final IRI iri) {
             spatioTemporalExtentImpl = new SpatioTemporalExtentImpl(iri);
         }
 
         /**
-         * A relationship type where a spatio_temporal_extent may be aggregated into one or more
-         * others.
+         * A relationship type where a {@link SpatioTemporalExtent} may be aggregated into one or
+         * more others.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder aggregated_Into(final SpatioTemporalExtent spatioTemporalExtent) {
             spatioTemporalExtentImpl.addValue(AGGREGATED_INTO, spatioTemporalExtent.getIri());
@@ -74,11 +76,11 @@ public class SpatioTemporalExtentImpl extends HqdmObject implements SpatioTempor
         }
 
         /**
-         * A part_of relationship type where a spatio_temporal_extent has exactly one {@link Event}
-         * that is its beginning.
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} has exactly one {@link Event} that is its beginning.
          *
-         * @param event
-         * @return
+         * @param event The Event.
+         * @return This builder.
          */
         public final Builder beginning(final Event event) {
             spatioTemporalExtentImpl.addValue(BEGINNING, event.getIri());
@@ -86,10 +88,11 @@ public class SpatioTemporalExtentImpl extends HqdmObject implements SpatioTempor
         }
 
         /**
-         * A relationship type where a spatio_temporal_extent may consist of one or more others.
+         * A relationship type where a {@link SpatioTemporalExtent} may consist of one or more
+         * others.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder consists__Of(final SpatioTemporalExtent spatioTemporalExtent) {
             spatioTemporalExtentImpl.addValue(CONSISTS__OF, spatioTemporalExtent.getIri());
@@ -97,11 +100,11 @@ public class SpatioTemporalExtentImpl extends HqdmObject implements SpatioTempor
         }
 
         /**
-         * A part_of relationship type where a spatio_temporal_extent has exactly one {@link Event}
-         * that is its ending.
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} has exactly one {@link Event} that is its ending.
          *
-         * @param event
-         * @return
+         * @param event The Event.
+         * @return This builder.
          */
         public final Builder ending(final Event event) {
             spatioTemporalExtentImpl.addValue(ENDING, event.getIri());
@@ -109,9 +112,11 @@ public class SpatioTemporalExtentImpl extends HqdmObject implements SpatioTempor
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.model.Thing} may be a member of one
+         * or more {@link Class}.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder member__Of(final Class clazz) {
             spatioTemporalExtentImpl.addValue(MEMBER__OF, clazz.getIri());
@@ -119,11 +124,12 @@ public class SpatioTemporalExtentImpl extends HqdmObject implements SpatioTempor
         }
 
         /**
-         * A member_of relationship type where a spatio_temporal_extent is a member_of a
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a
+         * {@link SpatioTemporalExtent} is a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} a
          * {@link ClassOfSpatioTemporalExtent}.
          *
-         * @param classOfSpatioTemporalExtent
-         * @return
+         * @param classOfSpatioTemporalExtent The ClassOfSpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder member_Of(
                 final ClassOfSpatioTemporalExtent classOfSpatioTemporalExtent) {
@@ -132,11 +138,12 @@ public class SpatioTemporalExtentImpl extends HqdmObject implements SpatioTempor
         }
 
         /**
-         * An aggregated_into relationship type where a spatio_temporal_extent may be part of
-         * another and the whole has emergent properties and is more than just the sum of its parts.
+         * An {@link uk.gov.gchq.hqdm.iri.HQDM#AGGREGATED_INTO}relationship type where a
+         * {@link SpatioTemporalExtent} may be part of another and the whole has emergent properties
+         * and is more than just the sum of its parts.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder part__Of(final SpatioTemporalExtent spatioTemporalExtent) {
             spatioTemporalExtentImpl.addValue(PART__OF, spatioTemporalExtent.getIri());
@@ -144,11 +151,12 @@ public class SpatioTemporalExtentImpl extends HqdmObject implements SpatioTempor
         }
 
         /**
-         * A part_of relationship type where a spatio_temporal_extent may be part_of one or more
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} may be {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} one or more
          * {@link PossibleWorld}.
          *
-         * @param possibleWorld
-         * @return
+         * @param possibleWorld The PossibleWorld.
+         * @return This builder.
          */
         public final Builder part_Of_Possible_World_M(final PossibleWorld possibleWorld) {
             spatioTemporalExtentImpl.addValue(PART_OF_POSSIBLE_WORLD, possibleWorld.getIri());
@@ -156,11 +164,12 @@ public class SpatioTemporalExtentImpl extends HqdmObject implements SpatioTempor
         }
 
         /**
-         * A part_of relationship type where a spatio_temporal_extent may be a temporal part of one
-         * or more other spatio_temporal_extent.
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} may be a temporal part of one or more other
+         * {@link SpatioTemporalExtent}.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder temporal__Part_Of(final SpatioTemporalExtent spatioTemporalExtent) {
             spatioTemporalExtentImpl.addValue(TEMPORAL__PART_OF, spatioTemporalExtent.getIri());
@@ -168,9 +177,11 @@ public class SpatioTemporalExtentImpl extends HqdmObject implements SpatioTempor
         }
 
         /**
+         * Returns an instance of SpatioTemporalExtent created from the properties set on this
+         * builder.
          *
-         * @return
-         * @throws HqdmException
+         * @return The built SpatioTemporalExtent.
+         * @throws HqdmException If the SpatioTemporalExtent is missing any mandatory properties.
          */
         public SpatioTemporalExtent build() throws HqdmException {
             if (spatioTemporalExtentImpl.hasValue(AGGREGATED_INTO)

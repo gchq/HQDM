@@ -17,7 +17,7 @@ package uk.gov.gchq.hqdm.model;
 import uk.gov.gchq.hqdm.pojo.Top;
 
 /**
- * A SELECT where a {@link Participant} may be a participant_in an {@link Activity} or an
+ * A SELECT where a {@link Participant} may be a {@code participant_in} an {@link Activity} or an
  * {@link Association}.
  */
 public interface ParticipantInActivityOrAssociation extends Top {

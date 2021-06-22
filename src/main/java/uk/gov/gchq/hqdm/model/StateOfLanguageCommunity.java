@@ -15,7 +15,7 @@
 package uk.gov.gchq.hqdm.model;
 
 /**
- * A {@link StateOfOrganization} that is a temporal_part_of a {@link LanguageCommunity}.
+ * A {@link StateOfOrganization} that is a {@code temporal_part_of} a {@link LanguageCommunity}.
  */
 public interface StateOfLanguageCommunity extends StateOfOrganization {
 }

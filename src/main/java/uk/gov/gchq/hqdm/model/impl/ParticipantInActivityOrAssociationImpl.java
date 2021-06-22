@@ -27,8 +27,9 @@ import uk.gov.gchq.hqdm.pojo.HqdmObject;
 public class ParticipantInActivityOrAssociationImpl extends HqdmObject
         implements ParticipantInActivityOrAssociation {
     /**
+     * Constructs a new ParticipantInActivityOrAssociation.
      *
-     * @param iri
+     * @param iri IRI of the ParticipantInActivityOrAssociation.
      */
     public ParticipantInActivityOrAssociationImpl(final IRI iri) {
         super(ParticipantInActivityOrAssociationImpl.class, iri,
@@ -36,15 +37,16 @@ public class ParticipantInActivityOrAssociationImpl extends HqdmObject
     }
 
     /**
-     * Builder for ParticipantInActivityOrAssociationImpl.
+     * Builder for constructing instances of ParticipantInActivityOrAssociation.
      */
     public static class Builder {
-        /** */
+
         private final ParticipantInActivityOrAssociationImpl participantInActivityOrAssociationImpl;
 
         /**
+         * Constructs a Builder for a new ParticipantInActivityOrAssociation.
          *
-         * @param iri
+         * @param iri IRI of the ParticipantInActivityOrAssociation.
          */
         public Builder(final IRI iri) {
             participantInActivityOrAssociationImpl =
@@ -52,9 +54,12 @@ public class ParticipantInActivityOrAssociationImpl extends HqdmObject
         }
 
         /**
+         * Returns an instance of ParticipantInActivityOrAssociation created from the properties set
+         * on this builder.
          *
-         * @return
-         * @throws HqdmException
+         * @return The built ParticipantInActivityOrAssociation.
+         * @throws HqdmException If the ParticipantInActivityOrAssociation is missing any mandatory
+         *         properties.
          */
         public ParticipantInActivityOrAssociation build() throws HqdmException {
             return participantInActivityOrAssociationImpl;

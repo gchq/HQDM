@@ -15,8 +15,8 @@
 package uk.gov.gchq.hqdm.model;
 
 /**
- * A {@link StateOfParty} that is also a {@link Participant} that is a temporal_part_of an
- * {@link Owner} that is a participant_in one or more {@link TransferOfOwnership}.
+ * A {@link StateOfParty} that is also a {@link Participant} that is a {@code temporal_part_of} an
+ * {@link Owner} that is a {@code participant_in} one or more {@link TransferOfOwnership}.
  */
 public interface Transferor extends
         StateOfParty,
