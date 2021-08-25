@@ -1786,22 +1786,6 @@ public final class HQDM {
     /**
      * A {@link #CONSISTS_OF} relationship subtype where an entity has another {@link CONSISTS_OF}
      * relationship.
-     *
-     * AgreeContract: A {@link #CONSISTS_OF} relationship type where an
-     * {@link uk.gov.gchq.hqdm.model.AgreeContract} {@link #CONSISTS_OF} exactly one
-     * {@link uk.gov.gchq.hqdm.model.Offer}.
-     *
-     * AgreementProcess: A {@link #CONSISTS_OF} relationship type where an
-     * {@link uk.gov.gchq.hqdm.model.AgreementProcess} consists of at least one
-     * {@link uk.gov.gchq.hqdm.model.AgreementExecution}.
-     *
-     * ExchangeOfGoodsAndMoney: A {@link #CONSISTS_OF} relationship type where an
-     * {@link uk.gov.gchq.hqdm.model.ExchangeOfGoodsAndMoney} consists of exactly one
-     * {@link uk.gov.gchq.hqdm.model.TransferOfOwnershipOfMoney}.
-     *
-     * RepresentationBySign: A {@link #CONSISTS_OF} relationship type where a
-     * {@link uk.gov.gchq.hqdm.model.RepresentationBySign} consists of one or more
-     * {@link uk.gov.gchq.hqdm.model.RecognizingLanguageCommunity}.
      */
     public static final HqdmIri CONSISTS_OF_ = new HqdmIri(HQDM, "consists_of_");
 
@@ -1820,19 +1804,6 @@ public final class HQDM {
      * {@link uk.gov.gchq.hqdm.model.KindOfActivity} or
      * {@link uk.gov.gchq.hqdm.model.KindOfAssociation} has a {@link #MEMBER_OF} a
      * {@link uk.gov.gchq.hqdm.model.Role} as a {@link uk.gov.gchq.hqdm.model.Participant} or part.
-     *
-     * KindOfActivity: A {@link #CONSISTS_OF_BY_CLASS} relationship type where a {@link #MEMBER_OF}
-     * a {@link uk.gov.gchq.hqdm.model.KindOfActivity} has a {@link #MEMBER_OF} a
-     * {@link uk.gov.gchq.hqdm.model.Role} as a {@link uk.gov.gchq.hqdm.model.Participant}.
-     *
-     * KindOfAssociation: A {@link #CONSISTS_OF_BY_CLASS} relationship type where a
-     * {@link #MEMBER_OF} the {@link uk.gov.gchq.hqdm.model.KindOfAssociation} has a
-     * {@link #MEMBER_OF} the {@link uk.gov.gchq.hqdm.model.Role} as a part.
-     *
-     * RepresentationByPattern: A {@link #CONSISTS_OF_BY_CLASS} relationship type where a
-     * {@link #MEMBER_OF} the {@link uk.gov.gchq.hqdm.model.RepresentationByPattern} has a
-     * {@link uk.gov.gchq.hqdm.model.Sign} that is a {@link #MEMBER_OF} the
-     * {@link uk.gov.gchq.hqdm.model.Pattern}.
      */
     public static final HqdmIri CONSISTS_OF_BY_CLASS = new HqdmIri(HQDM, "consists_of_by_class");
 
@@ -1853,19 +1824,8 @@ public final class HQDM {
 
     /**
      * A {@link #CONSISTS_OF} relationship type where an {@link uk.gov.gchq.hqdm.model.Activity} or
-     * {@link uk.gov.gchq.hqdm.model.Association} {@link #CONSISTS_OF} a
-     * {@link uk.gov.gchq.hqdm.model.Participant}.
-     *
-     * Activity: A {@link #CONSISTS_OF} relationship type where an
-     * {@link uk.gov.gchq.hqdm.model.Activity} {@link #CONSISTS_OF} one or more
-     * {@link uk.gov.gchq.hqdm.model.Participant}s.
-     *
-     * Association: A {@link #CONSISTS_OF} relationship type where each
-     * {@link uk.gov.gchq.hqdm.model.Association} consists of two or more
-     * {@link uk.gov.gchq.hqdm.model.Participant}s.
-     *
-     * Note: The cardinality constraint shows a minimum cardinality of one because this relationship
-     * will be retyped for particular participants in an {@link uk.gov.gchq.hqdm.model.Association}.
+     * {@link uk.gov.gchq.hqdm.model.Association} {@link #CONSISTS_OF} at least one (for Activity)
+     * or two (for Association) of {@link uk.gov.gchq.hqdm.model.Participant}.
      */
     public static final HqdmIri CONSISTS_OF_PARTICIPANT =
             new HqdmIri(HQDM, "consists_of_participant");
@@ -1873,18 +1833,6 @@ public final class HQDM {
     /**
      * A {@link #CONSISTS_OF_PARTICIPANT} relationship subtype where an entity has another
      * {@link #CONSISTS_OF_PARTICIPANT} relationship.
-     *
-     * Employment: A {@link #CONSISTS_OF_PARTICIPANT} relationship type where an
-     * {@link uk.gov.gchq.hqdm.model.Employment} consists of exactly one
-     * {@link uk.gov.gchq.hqdm.model.Employee}.
-     *
-     * Ownership: A {@link #CONSISTS_OF_PARTICIPANT} relationship type where an
-     * {@link uk.gov.gchq.hqdm.model.Ownership} {@link #CONSISTS_OF_PARTICIPANT} exactly one
-     * {@link uk.gov.gchq.hqdm.model.Asset}.
-     *
-     * TransferOfOwnership: A {@link #CONSISTS_OF_PARTICIPANT} relationship type where a
-     * {@link uk.gov.gchq.hqdm.model.TransferOfOwnership} {@link #CONSISTS_OF_PARTICIPANT} exactly
-     * one {@link uk.gov.gchq.hqdm.model.Transferee}.
      */
     public static final HqdmIri CONSISTS_OF_PARTICIPANT_ =
             new HqdmIri(HQDM, "consists_of_participant_");
@@ -1998,18 +1946,7 @@ public final class HQDM {
 
     /**
      * A {@link #MEMBER_OF} relationship subtype where an entity has another {@link MEMBER_OF}
-     * relationship.
-     *
-     * ClassOfSpatioTemporalExtent: A {@link #MEMBER_OF} relationship type where a
-     * {@link uk.gov.gchq.hqdm.model.ClassOfSpatioTemporalExtent} may be a member of one or more
-     * {@link uk.gov.gchq.hqdm.model.ClassOfClassOfSpatioTemporalExtent}.
-     *
-     * Sign: A {@link #MEMBER_OF} relationship type where a {@link uk.gov.gchq.hqdm.model.Sign} is a
-     * {@link #MEMBER_OF} one or more {@link uk.gov.gchq.hqdm.model.Pattern}.
-     *
-     * RepresentationBySign: A {@link #MEMBER_OF} relationship type where the
-     * {@link uk.gov.gchq.hqdm.model.RepresentationBySign} must be a {@link #MEMBER_OF} exactly one
-     * {@link uk.gov.gchq.hqdm.model.RepresentationByPattern}.
+     * relationship that is less constrained in its scope.
      */
     public static final HqdmIri MEMBER_OF_ = new HqdmIri(HQDM, "member_of_");
 
@@ -2031,17 +1968,8 @@ public final class HQDM {
     public static final HqdmIri MEMBER_OF_CURRENCY = new HqdmIri(HQDM, "member_of_currency");
 
     /**
-     * Participant: A {@link #MEMBER_OF_KIND} relationship type where each
-     * {@link uk.gov.gchq.hqdm.model.Participant} is a {@link #MEMBER_OF} one or more
-     * {@link uk.gov.gchq.hqdm.model.Role}.
-     *
-     * Individual: A {@link #MEMBER_OF} relationship type where an
-     * {@link uk.gov.gchq.hqdm.model.Individual} may be a {@link #MEMBER_OF} one or more
-     * {@link uk.gov.gchq.hqdm.model.KindOfIndividual}.
-     *
-     * DefinedRelationship: A {@link #MEMBER_OF} relationship type where each
-     * {@link uk.gov.gchq.hqdm.model.DefinedRelationship} is a {@link #MEMBER_OF} exactly one
-     * {@link uk.gov.gchq.hqdm.model.KindOfRelationshipWithSignature}.
+     * A {@link #MEMBER_OF} relationship type where an {@link uk.gov.gchq.hqdm.model.Individual} may
+     * be a {@link #MEMBER_OF} one or more {@link uk.gov.gchq.hqdm.model.KindOfIndividual}.
      */
     public static final HqdmIri MEMBER_OF_KIND = new HqdmIri(HQDM, "member_of_kind");
 
@@ -2088,28 +2016,16 @@ public final class HQDM {
     public static final HqdmIri PART_OF_ = new HqdmIri(HQDM, "part_of_");
 
     /**
-     * Role: A {@link #PART_OF_BY_CLASS} where a {@link #MEMBER_OF} a
-     * {@link uk.gov.gchq.hqdm.model.Role} is a {@link uk.gov.gchq.hqdm.model.Participant} in a
-     * {@link #MEMBER_OF} a {@link uk.gov.gchq.hqdm.model.ClassOfActivity}.
-     *
-     * ClassOfSociallyConstructedActivity: A {@link #PART_OF_BY_CLASS} where a {@link #MEMBER_OF} a
-     * {@link uk.gov.gchq.hqdm.model.ClassOfSociallyConstructedActivity} may be a {@link #PART_OF} a
-     * {@link #MEMBER_OF} a {@link uk.gov.gchq.hqdm.model.ClassOfReachingAgreement}.
+     * A {@link #PART_OF_BY_CLASS} where a {@link #MEMBER_OF} a {@link uk.gov.gchq.hqdm.model.Role}
+     * is a {@link uk.gov.gchq.hqdm.model.Participant} in a {@link #MEMBER_OF} a
+     * {@link uk.gov.gchq.hqdm.model.ClassOfActivity}.
      */
     public static final HqdmIri PART_OF_BY_CLASS = new HqdmIri(HQDM, "part_of_by_class");
 
     /**
-     * A {@link #CONSISTS_OF} relationship subtype where an entity has another {@link CONSISTS_OF}
-     * relationship.
-     *
-     * Role: A {@link #PART_OF_BY_CLASS} relationship type where a {@link #MEMBER_OF} a
+     * A {@link #PART_OF_BY_CLASS} relationship type where a {@link #MEMBER_OF} a
      * {@link uk.gov.gchq.hqdm.model.Role} is a {@link #PART_OF} a {@link #MEMBER_OF} the
      * {@link uk.gov.gchq.hqdm.model.Class}.
-     *
-     * ClassOfSociallyConstructedActivity: A {@link #PART_OF_BY_CLASS} relationship type where a
-     * {@link #MEMBER_OF} a {@link uk.gov.gchq.hqdm.model.ClassOfSociallyConstructedActivity} may be
-     * a {@link #PART_OF} a {@link #MEMBER_OF} a
-     * {@link uk.gov.gchq.hqdm.model.ClassOfAgreementExecution}.
      */
     public static final HqdmIri PART_OF_BY_CLASS_ = new HqdmIri(HQDM, "part_of_by_class_");
 
