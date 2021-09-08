@@ -16,7 +16,7 @@ package uk.gov.gchq.hqdm.model;
 
 /**
  * A {@link ClassOfFunctionalSystemComponent} that is also a {@link KindOfSystemComponent} where
- * each member_of a {@link KindOfFunctionalSystemComponent} is of the same kind.
+ * each {@code member_of} a {@link KindOfFunctionalSystemComponent} is of the same kind.
  */
 public interface KindOfFunctionalSystemComponent extends
         ClassOfFunctionalSystemComponent,

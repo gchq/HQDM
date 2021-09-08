@@ -30,32 +30,36 @@ import uk.gov.gchq.hqdm.pojo.HqdmObject;
  */
 public class UnitOfMeasureImpl extends HqdmObject implements UnitOfMeasure {
     /**
+     * Constructs a new UnitOfMeasure.
      *
-     * @param iri
+     * @param iri IRI of the UnitOfMeasure.
      */
     public UnitOfMeasureImpl(final IRI iri) {
         super(UnitOfMeasureImpl.class, iri, UNIT_OF_MEASURE);
     }
 
     /**
-     * Builder for UnitOfMeasureImpl.
+     * Builder for constructing instances of UnitOfMeasure.
      */
     public static class Builder {
-        /** */
+
         private final UnitOfMeasureImpl unitOfMeasureImpl;
 
         /**
+         * Constructs a Builder for a new UnitOfMeasure.
          *
-         * @param iri
+         * @param iri IRI of the UnitOfMeasure.
          */
         public Builder(final IRI iri) {
             unitOfMeasureImpl = new UnitOfMeasureImpl(iri);
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.model.Thing} may be a member of one
+         * or more {@link Class}.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder member__Of(final Class clazz) {
             unitOfMeasureImpl.addValue(MEMBER__OF, clazz.getIri());
@@ -63,9 +67,11 @@ public class UnitOfMeasureImpl extends HqdmObject implements UnitOfMeasure {
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a relationship is a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} a {@link ClassOfRelationship}.
          *
-         * @param classOfRelationship
-         * @return
+         * @param classOfRelationship The ClassOfRelationship.
+         * @return This builder.
          */
         public final Builder member_Of(final ClassOfRelationship classOfRelationship) {
             unitOfMeasureImpl.addValue(MEMBER_OF, classOfRelationship.getIri());
@@ -73,9 +79,10 @@ public class UnitOfMeasureImpl extends HqdmObject implements UnitOfMeasure {
         }
 
         /**
+         * Returns an instance of UnitOfMeasure created from the properties set on this builder.
          *
-         * @return
-         * @throws HqdmException
+         * @return The built UnitOfMeasure.
+         * @throws HqdmException If the UnitOfMeasure is missing any mandatory properties.
          */
         public UnitOfMeasure build() throws HqdmException {
             if (unitOfMeasureImpl.hasValue(MEMBER__OF)

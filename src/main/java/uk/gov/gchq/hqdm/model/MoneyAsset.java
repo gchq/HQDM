@@ -15,7 +15,7 @@
 package uk.gov.gchq.hqdm.model;
 
 /**
- * An asset that is a {@link StateOfAmountOfMoney}.
+ * An {@link Asset} that is a {@link StateOfAmountOfMoney}.
  */
 public interface MoneyAsset extends
         Asset,

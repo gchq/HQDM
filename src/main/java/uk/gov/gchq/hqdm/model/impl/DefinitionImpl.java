@@ -32,32 +32,39 @@ import uk.gov.gchq.hqdm.pojo.HqdmObject;
  */
 public class DefinitionImpl extends HqdmObject implements Definition {
     /**
+     * Constructs a new Definition.
      *
-     * @param iri
+     * @param iri IRI of the Definition.
      */
     public DefinitionImpl(final IRI iri) {
         super(DefinitionImpl.class, iri, DEFINITION);
     }
 
     /**
-     * Builder for DefinitionImpl.
+     * Builder for constructing instances of Definition.
      */
     public static class Builder {
-        /** */
+
         private final DefinitionImpl definitionImpl;
 
         /**
+         * Constructs a Builder for a new Definition.
          *
-         * @param iri
+         * @param iri IRI of the Definition.
          */
         public Builder(final IRI iri) {
             definitionImpl = new DefinitionImpl(iri);
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#CONSISTS_OF_BY_CLASS} relationship type where a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the
+         * {@link uk.gov.gchq.hqdm.model.RepresentationByPattern} has a
+         * {@link uk.gov.gchq.hqdm.model.Sign} that is a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF}
+         * the {@link Pattern}.
          *
-         * @param pattern
-         * @return
+         * @param pattern The Pattern.
+         * @return This builder.
          */
         public final Builder consists_Of_By_Class_M(final Pattern pattern) {
             definitionImpl.addValue(CONSISTS_OF_BY_CLASS, pattern.getIri());
@@ -65,9 +72,13 @@ public class DefinitionImpl extends HqdmObject implements Definition {
         }
 
         /**
+         * A relationship type where a {@link RecognizingLanguageCommunity} is a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#PARTICIPANT_IN} each
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one or more
+         * {@link uk.gov.gchq.hqdm.model.RepresentationByPattern}.
          *
-         * @param recognizingLanguageCommunity
-         * @return
+         * @param recognizingLanguageCommunity The RecognizingLanguageCommunity.
+         * @return This builder.
          */
         public final Builder consists_Of_In_Members_M(
                 final RecognizingLanguageCommunity recognizingLanguageCommunity) {
@@ -76,10 +87,10 @@ public class DefinitionImpl extends HqdmObject implements Definition {
         }
 
         /**
-         * A relationship type where exactly one {@link Class} is defined by the definition.
+         * A relationship type where exactly one {@link Class} is defined by the {@link Definition}.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder represented_M(final Class clazz) {
             definitionImpl.addValue(REPRESENTED, clazz.getIri());
@@ -87,9 +98,10 @@ public class DefinitionImpl extends HqdmObject implements Definition {
         }
 
         /**
+         * Returns an instance of Definition created from the properties set on this builder.
          *
-         * @return
-         * @throws HqdmException
+         * @return The built Definition.
+         * @throws HqdmException If the Definition is missing any mandatory properties.
          */
         public Definition build() throws HqdmException {
             if (!definitionImpl.hasValue(CONSISTS_OF_BY_CLASS)) {

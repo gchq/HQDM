@@ -37,8 +37,9 @@ import uk.gov.gchq.hqdm.pojo.HqdmObject;
 public class ClassOfStateOfOrdinaryBiologicalObjectImpl extends HqdmObject
         implements ClassOfStateOfOrdinaryBiologicalObject {
     /**
+     * Constructs a new ClassOfStateOfOrdinaryBiologicalObject.
      *
-     * @param iri
+     * @param iri IRI of the ClassOfStateOfOrdinaryBiologicalObject.
      */
     public ClassOfStateOfOrdinaryBiologicalObjectImpl(final IRI iri) {
         super(ClassOfStateOfOrdinaryBiologicalObjectImpl.class, iri,
@@ -46,16 +47,17 @@ public class ClassOfStateOfOrdinaryBiologicalObjectImpl extends HqdmObject
     }
 
     /**
-     * Builder for ClassOfStateOfOrdinaryBiologicalObjectImpl.
+     * Builder for constructing instances of ClassOfStateOfOrdinaryBiologicalObject.
      */
     public static class Builder {
-        /** */
+
         @SuppressWarnings("LineLength")
         private final ClassOfStateOfOrdinaryBiologicalObjectImpl classOfStateOfOrdinaryBiologicalObjectImpl;
 
         /**
+         * Constructs a Builder for a new ClassOfStateOfOrdinaryBiologicalObject.
          *
-         * @param iri
+         * @param iri IRI of the ClassOfStateOfOrdinaryBiologicalObject.
          */
         public Builder(final IRI iri) {
             classOfStateOfOrdinaryBiologicalObjectImpl =
@@ -63,9 +65,13 @@ public class ClassOfStateOfOrdinaryBiologicalObjectImpl extends HqdmObject
         }
 
         /**
+         * An inverse {@link uk.gov.gchq.hqdm.iri.HQDM#PART__OF_BY_CLASS} relationship type where a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one {@link ClassOfSpatioTemporalExtent}
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#CONSISTS_OF} another
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} a {@link ClassOfSpatioTemporalExtent}.
          *
-         * @param classOfSpatioTemporalExtent
-         * @return
+         * @param classOfSpatioTemporalExtent The ClassOfSpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder consists__Of_By_Class(
                 final ClassOfSpatioTemporalExtent classOfSpatioTemporalExtent) {
@@ -75,9 +81,11 @@ public class ClassOfStateOfOrdinaryBiologicalObjectImpl extends HqdmObject
         }
 
         /**
+         * A relationship type where each {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the
+         * {@link Class} is a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the superclass.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder has_Superclass(final Class clazz) {
             classOfStateOfOrdinaryBiologicalObjectImpl.addValue(HAS_SUPERCLASS, clazz.getIri());
@@ -85,9 +93,11 @@ public class ClassOfStateOfOrdinaryBiologicalObjectImpl extends HqdmObject
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.model.Thing} may be a member of one
+         * or more {@link Class}.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder member__Of(final Class clazz) {
             classOfStateOfOrdinaryBiologicalObjectImpl.addValue(MEMBER__OF, clazz.getIri());
@@ -95,9 +105,11 @@ public class ClassOfStateOfOrdinaryBiologicalObjectImpl extends HqdmObject
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a {@link Class} may
+         * be a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one or more {@link ClassOfClass}.
          *
-         * @param classOfClass
-         * @return
+         * @param classOfClass The ClassOfClass.
+         * @return This builder.
          */
         public final Builder member_Of(final ClassOfClass classOfClass) {
             classOfStateOfOrdinaryBiologicalObjectImpl.addValue(MEMBER_OF, classOfClass.getIri());
@@ -105,9 +117,12 @@ public class ClassOfStateOfOrdinaryBiologicalObjectImpl extends HqdmObject
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a
+         * {@link ClassOfSpatioTemporalExtent} may be a member of one or more
+         * {@link ClassOfClassOfSpatioTemporalExtent}.
          *
-         * @param classOfClassOfSpatioTemporalExtent
-         * @return
+         * @param classOfClassOfSpatioTemporalExtent The ClassOfClassOfSpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder member_Of_(
                 final ClassOfClassOfSpatioTemporalExtent classOfClassOfSpatioTemporalExtent) {
@@ -117,9 +132,12 @@ public class ClassOfStateOfOrdinaryBiologicalObjectImpl extends HqdmObject
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} a
+         * {@link ClassOfSpatioTemporalExtent} is {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} some {@link ClassOfSpatioTemporalExtent}.
          *
-         * @param classOfSpatioTemporalExtent
-         * @return
+         * @param classOfSpatioTemporalExtent The ClassOfSpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder part__Of_By_Class(
                 final ClassOfSpatioTemporalExtent classOfSpatioTemporalExtent) {
@@ -129,9 +147,12 @@ public class ClassOfStateOfOrdinaryBiologicalObjectImpl extends HqdmObject
         }
 
         /**
+         * Returns an instance of ClassOfStateOfOrdinaryBiologicalObject created from the properties
+         * set on this builder.
          *
-         * @return
-         * @throws HqdmException
+         * @return The built ClassOfStateOfOrdinaryBiologicalObject.
+         * @throws HqdmException If the ClassOfStateOfOrdinaryBiologicalObject is missing any
+         *         mandatory properties.
          */
         public ClassOfStateOfOrdinaryBiologicalObject build() throws HqdmException {
             if (classOfStateOfOrdinaryBiologicalObjectImpl.hasValue(HAS_SUPERCLASS)

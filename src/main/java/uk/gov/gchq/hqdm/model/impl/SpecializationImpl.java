@@ -32,32 +32,36 @@ import uk.gov.gchq.hqdm.pojo.HqdmObject;
  */
 public class SpecializationImpl extends HqdmObject implements Specialization {
     /**
+     * Constructs a new Specialization.
      *
-     * @param iri
+     * @param iri IRI of the Specialization.
      */
     public SpecializationImpl(final IRI iri) {
         super(SpecializationImpl.class, iri, SPECIALIZATION);
     }
 
     /**
-     * Builder for SpecializationImpl.
+     * Builder for constructing instances of Specialization.
      */
     public static class Builder {
-        /** */
+
         private final SpecializationImpl specializationImpl;
 
         /**
+         * Constructs a Builder for a new Specialization.
          *
-         * @param iri
+         * @param iri IRI of the Specialization.
          */
         public Builder(final IRI iri) {
             specializationImpl = new SpecializationImpl(iri);
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.model.Thing} may be a member of one
+         * or more {@link Class}.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder member__Of(final Class clazz) {
             specializationImpl.addValue(MEMBER__OF, clazz.getIri());
@@ -65,9 +69,11 @@ public class SpecializationImpl extends HqdmObject implements Specialization {
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a relationship is a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} a {@link ClassOfRelationship}.
          *
-         * @param classOfRelationship
-         * @return
+         * @param classOfRelationship The ClassOfRelationship.
+         * @return This builder.
          */
         public final Builder member_Of(final ClassOfRelationship classOfRelationship) {
             specializationImpl.addValue(MEMBER_OF, classOfRelationship.getIri());
@@ -75,10 +81,11 @@ public class SpecializationImpl extends HqdmObject implements Specialization {
         }
 
         /**
-         * A relationship type where each specialization has exactly one {@link Class} as subclass.
+         * A relationship type where each {@link Specialization} has exactly one {@link Class} as
+         * subclass.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder subclass_M(final Class clazz) {
             specializationImpl.addValue(SUBCLASS, clazz.getIri());
@@ -86,11 +93,11 @@ public class SpecializationImpl extends HqdmObject implements Specialization {
         }
 
         /**
-         * A relationship type where each specialization has exactly one {@link Class} as
+         * A relationship type where each {@link Specialization} has exactly one {@link Class} as
          * superclass.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder superclass_M(final Class clazz) {
             specializationImpl.addValue(SUPERCLASS, clazz.getIri());
@@ -98,9 +105,10 @@ public class SpecializationImpl extends HqdmObject implements Specialization {
         }
 
         /**
+         * Returns an instance of Specialization created from the properties set on this builder.
          *
-         * @return
-         * @throws HqdmException
+         * @return The built Specialization.
+         * @throws HqdmException If the Specialization is missing any mandatory properties.
          */
         public Specialization build() throws HqdmException {
             if (specializationImpl.hasValue(MEMBER__OF)

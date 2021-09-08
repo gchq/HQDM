@@ -46,32 +46,40 @@ import uk.gov.gchq.hqdm.pojo.HqdmObject;
  */
 public class BiologicalSystemImpl extends HqdmObject implements BiologicalSystem {
     /**
+     * Constructs a new BiologicalSystem.
      *
-     * @param iri
+     * @param iri IRI of the BiologicalSystem.
      */
     public BiologicalSystemImpl(final IRI iri) {
         super(BiologicalSystemImpl.class, iri, BIOLOGICAL_SYSTEM);
     }
 
     /**
-     * Builder for BiologicalSystemImpl.
+     * Builder for constructing instances of BiologicalSystem.
      */
     public static class Builder {
-        /** */
+
         private final BiologicalSystemImpl biologicalSystemImpl;
 
         /**
+         * Constructs a Builder for a new BiologicalSystem.
          *
-         * @param iri
+         * @param iri IRI of the BiologicalSystem.
          */
         public Builder(final IRI iri) {
             biologicalSystemImpl = new BiologicalSystemImpl(iri);
         }
 
         /**
+         * A relationship type where a {@link SpatioTemporalExtent} may be aggregated into one or
+         * more others.
+         * <p>
+         * Note: This has the same meaning as, but different representation to, the
+         * {@link uk.gov.gchq.hqdm.model.Aggregation} entity type.
+         * </p>
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder aggregated_Into(final SpatioTemporalExtent spatioTemporalExtent) {
             biologicalSystemImpl.addValue(AGGREGATED_INTO, spatioTemporalExtent.getIri());
@@ -79,9 +87,11 @@ public class BiologicalSystemImpl extends HqdmObject implements BiologicalSystem
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} has exactly one {@link Event} that is its beginning.
          *
-         * @param event
-         * @return
+         * @param event The Event.
+         * @return This builder.
          */
         public final Builder beginning(final Event event) {
             biologicalSystemImpl.addValue(BEGINNING, event.getIri());
@@ -89,9 +99,15 @@ public class BiologicalSystemImpl extends HqdmObject implements BiologicalSystem
         }
 
         /**
+         * A relationship type where a {@link SpatioTemporalExtent} may consist of one or more
+         * others.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * <p>
+         * Note: This is the inverse of {@link uk.gov.gchq.hqdm.iri.HQDM#PART__OF}.
+         * </p>
+         *
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder consists__Of(final SpatioTemporalExtent spatioTemporalExtent) {
             biologicalSystemImpl.addValue(CONSISTS__OF, spatioTemporalExtent.getIri());
@@ -99,9 +115,11 @@ public class BiologicalSystemImpl extends HqdmObject implements BiologicalSystem
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} has exactly one {@link Event} that is its ending.
          *
-         * @param event
-         * @return
+         * @param event The Event.
+         * @return This builder.
          */
         public final Builder ending(final Event event) {
             biologicalSystemImpl.addValue(ENDING, event.getIri());
@@ -109,9 +127,11 @@ public class BiologicalSystemImpl extends HqdmObject implements BiologicalSystem
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.model.Thing} may be a member of one
+         * or more {@link Class}.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder member__Of(final Class clazz) {
             biologicalSystemImpl.addValue(MEMBER__OF, clazz.getIri());
@@ -119,11 +139,12 @@ public class BiologicalSystemImpl extends HqdmObject implements BiologicalSystem
         }
 
         /**
-         * A member_of relationship type where a biological_system may be a member_of one or more
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a
+         * {@link BiologicalSystem} may be a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one or more
          * {@link ClassOfBiologicalSystem}.
          *
-         * @param classOfBiologicalSystem
-         * @return
+         * @param classOfBiologicalSystem The ClassOfBiologicalSystem.
+         * @return Builder
          */
         public final Builder member_Of(final ClassOfBiologicalSystem classOfBiologicalSystem) {
             biologicalSystemImpl.addValue(MEMBER_OF, classOfBiologicalSystem.getIri());
@@ -131,11 +152,12 @@ public class BiologicalSystemImpl extends HqdmObject implements BiologicalSystem
         }
 
         /**
-         * A member_of_kind relationship type where a biological_system may be a member_of one or
-         * more {@link KindOfBiologicalSystem}.
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF_KIND} relationship type where a
+         * {@link BiologicalSystem} may be a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one or more
+         * {@link KindOfBiologicalSystem}.
          *
-         * @param kindOfBiologicalSystem
-         * @return
+         * @param kindOfBiologicalSystem The KindOfBiologicalSystem.
+         * @return Builder
          */
         public final Builder member_Of_Kind(final KindOfBiologicalSystem kindOfBiologicalSystem) {
             biologicalSystemImpl.addValue(MEMBER_OF_KIND, kindOfBiologicalSystem.getIri());
@@ -143,11 +165,11 @@ public class BiologicalSystemImpl extends HqdmObject implements BiologicalSystem
         }
 
         /**
-         * A member_of relationship type where a biological_system has a natural {@link Role} that
-         * it plays.
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a
+         * {@link BiologicalSystem} has a natural {@link Role} that it plays.
          *
-         * @param role
-         * @return
+         * @param role The Role.
+         * @return Builder
          */
         public final Builder natural_Role_M(final Role role) {
             biologicalSystemImpl.addValue(NATURAL_ROLE, role.getIri());
@@ -155,9 +177,12 @@ public class BiologicalSystemImpl extends HqdmObject implements BiologicalSystem
         }
 
         /**
+         * An {@link uk.gov.gchq.hqdm.iri.HQDM#AGGREGATED_INTO} relationship type where a
+         * {@link SpatioTemporalExtent} may be part of another and the whole has emergent properties
+         * and is more than just the sum of its parts.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder part__Of(final SpatioTemporalExtent spatioTemporalExtent) {
             biologicalSystemImpl.addValue(PART__OF, spatioTemporalExtent.getIri());
@@ -165,9 +190,17 @@ public class BiologicalSystemImpl extends HqdmObject implements BiologicalSystem
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} may be {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} one or more
+         * {@link PossibleWorld}.
          *
-         * @param possibleWorld
-         * @return
+         * <p>
+         * Note: The relationship is optional because a {@link PossibleWorld} is not
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} any other {@link SpatioTemporalExtent}.
+         * </p>
+         *
+         * @param possibleWorld The PossibleWorld.
+         * @return This builder.
          */
         public final Builder part_Of_Possible_World_M(final PossibleWorld possibleWorld) {
             biologicalSystemImpl.addValue(PART_OF_POSSIBLE_WORLD, possibleWorld.getIri());
@@ -175,9 +208,12 @@ public class BiologicalSystemImpl extends HqdmObject implements BiologicalSystem
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} may be a temporal part of one or more other
+         * {@link SpatioTemporalExtent}.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder temporal__Part_Of(final SpatioTemporalExtent spatioTemporalExtent) {
             biologicalSystemImpl.addValue(TEMPORAL__PART_OF, spatioTemporalExtent.getIri());
@@ -185,9 +221,13 @@ public class BiologicalSystemImpl extends HqdmObject implements BiologicalSystem
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} relationship type where a
+         * {@link uk.gov.gchq.hqdm.model.StateOfOrdinaryBiologicalObject} may be a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} one or more
+         * {@link OrdinaryBiologicalObject}.
          *
-         * @param ordinaryBiologicalObject
-         * @return
+         * @param ordinaryBiologicalObject The OrdinaryBiologicalObject.
+         * @return This builder.
          */
         public final Builder temporal_Part_Of(
                 final OrdinaryBiologicalObject ordinaryBiologicalObject) {
@@ -196,9 +236,10 @@ public class BiologicalSystemImpl extends HqdmObject implements BiologicalSystem
         }
 
         /**
+         * Returns an instance of BiologicalSystem created from the properties set on this builder.
          *
-         * @return
-         * @throws HqdmException
+         * @return The built BiologicalSystem.
+         * @throws HqdmException If the BiologicalSystem is missing any mandatory properties.
          */
         public BiologicalSystem build() throws HqdmException {
             if (biologicalSystemImpl.hasValue(AGGREGATED_INTO)

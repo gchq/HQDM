@@ -31,32 +31,36 @@ import uk.gov.gchq.hqdm.pojo.HqdmObject;
  */
 public class EnumeratedClassImpl extends HqdmObject implements EnumeratedClass {
     /**
+     * Constructs a new EnumeratedClass.
      *
-     * @param iri
+     * @param iri IRI of the EnumeratedClass.
      */
     public EnumeratedClassImpl(final IRI iri) {
         super(EnumeratedClassImpl.class, iri, ENUMERATED_CLASS);
     }
 
     /**
-     * Builder for EnumeratedClassImpl.
+     * Builder for constructing instances of EnumeratedClass.
      */
     public static class Builder {
-        /** */
+
         private final EnumeratedClassImpl enumeratedClassImpl;
 
         /**
+         * Constructs a Builder for a new EnumeratedClass.
          *
-         * @param iri
+         * @param iri IRI of the EnumeratedClass.
          */
         public Builder(final IRI iri) {
             enumeratedClassImpl = new EnumeratedClassImpl(iri);
         }
 
         /**
+         * A relationship type where each {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the
+         * {@link Class} is a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the superclass.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder has_Superclass(final Class clazz) {
             enumeratedClassImpl.addValue(HAS_SUPERCLASS, clazz.getIri());
@@ -64,9 +68,11 @@ public class EnumeratedClassImpl extends HqdmObject implements EnumeratedClass {
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.model.Thing} may be a member of one
+         * or more {@link Class}.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder member__Of(final Class clazz) {
             enumeratedClassImpl.addValue(MEMBER__OF, clazz.getIri());
@@ -74,9 +80,11 @@ public class EnumeratedClassImpl extends HqdmObject implements EnumeratedClass {
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a {@link Class} may
+         * be a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one or more {@link ClassOfClass}.
          *
-         * @param classOfClass
-         * @return
+         * @param classOfClass The ClassOfClass.
+         * @return This builder.
          */
         public final Builder member_Of(final ClassOfClass classOfClass) {
             enumeratedClassImpl.addValue(MEMBER_OF, classOfClass.getIri());
@@ -84,9 +92,10 @@ public class EnumeratedClassImpl extends HqdmObject implements EnumeratedClass {
         }
 
         /**
+         * Returns an instance of EnumeratedClass created from the properties set on this builder.
          *
-         * @return
-         * @throws HqdmException
+         * @return The built EnumeratedClass.
+         * @throws HqdmException If the EnumeratedClass is missing any mandatory properties.
          */
         public EnumeratedClass build() throws HqdmException {
             if (enumeratedClassImpl.hasValue(HAS_SUPERCLASS)

@@ -16,7 +16,7 @@ package uk.gov.gchq.hqdm.model;
 
 /**
  * A {@link ClassOfFunctionalObject}, that is also a {@link KindOfPhysicalObject}, and a
- * {@link KindOfIntentionallyConstructedObject} where each member_of a
+ * {@link KindOfIntentionallyConstructedObject} where each {@code member_of} a
  * {@link KindOfFunctionalObject} is of the same kind.
  */
 public interface KindOfFunctionalObject extends

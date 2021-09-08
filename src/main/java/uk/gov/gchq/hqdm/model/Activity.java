@@ -15,8 +15,8 @@
 package uk.gov.gchq.hqdm.model;
 
 /**
- * An {@link Individual} that consists of its participants and causes some event.
- **/
+ * An {@link Individual} that consists of its {@link Participant}s and causes some {@link Event}.
+ */
 public interface Activity extends
         Individual,
         StateOfActivity,

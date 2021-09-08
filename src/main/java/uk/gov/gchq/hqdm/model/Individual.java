@@ -15,9 +15,13 @@
 package uk.gov.gchq.hqdm.model;
 
 /**
- * A {@link SpatioTemporalExtent} that is not a proper temporal_part_of any other {@link Individual}
- * of the same kind. Note: In standard mereology a spatio_temporal_extent is a part of itself. Parts
- * of an individual excluding itself are called proper parts.
+ * A {@link SpatioTemporalExtent} that is not a proper {@code temporal_part_of} any other
+ * {@link Individual} of the same kind.
+ *
+ * <p>
+ * Note: In standard mereology a {@link SpatioTemporalExtent} is a part of itself. Parts of an
+ * {@link Individual} excluding itself are called proper parts.
+ * </p>
  */
 public interface Individual extends State {
 }

@@ -15,7 +15,7 @@
 package uk.gov.gchq.hqdm.model;
 
 /**
- * A {@link StateOfPerson} that is a participant_in an {@link Employment}.
+ * A {@link StateOfPerson} that is a {@code participant_in} an {@link Employment}.
  */
 public interface Employee extends
         StateOfPerson,

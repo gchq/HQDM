@@ -33,32 +33,36 @@ import uk.gov.gchq.hqdm.pojo.HqdmObject;
  */
 public class TemporalCompositionImpl extends HqdmObject implements TemporalComposition {
     /**
+     * Constructs a new TemporalComposition.
      *
-     * @param iri
+     * @param iri IRI of the TemporalComposition.
      */
     public TemporalCompositionImpl(final IRI iri) {
         super(TemporalCompositionImpl.class, iri, TEMPORAL_COMPOSITION);
     }
 
     /**
-     * Builder for TemporalCompositionImpl.
+     * Builder for constructing instances of TemporalComposition.
      */
     public static class Builder {
-        /** */
+
         private final TemporalCompositionImpl temporalCompositionImpl;
 
         /**
+         * Constructs a Builder for a new TemporalComposition.
          *
-         * @param iri
+         * @param iri IRI of the TemporalComposition.
          */
         public Builder(final IRI iri) {
             temporalCompositionImpl = new TemporalCompositionImpl(iri);
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.model.Thing} may be a member of one
+         * or more {@link Class}.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder member__Of(final Class clazz) {
             temporalCompositionImpl.addValue(MEMBER__OF, clazz.getIri());
@@ -66,9 +70,11 @@ public class TemporalCompositionImpl extends HqdmObject implements TemporalCompo
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a relationship is a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} a {@link ClassOfRelationship}.
          *
-         * @param classOfRelationship
-         * @return
+         * @param classOfRelationship The ClassOfRelationship.
+         * @return This builder.
          */
         public final Builder member_Of(final ClassOfRelationship classOfRelationship) {
             temporalCompositionImpl.addValue(MEMBER_OF, classOfRelationship.getIri());
@@ -76,9 +82,11 @@ public class TemporalCompositionImpl extends HqdmObject implements TemporalCompo
         }
 
         /**
+         * A relationship type where an {@link uk.gov.gchq.hqdm.model.Aggregation} has exactly one
+         * {@link SpatioTemporalExtent} as the part.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder part_M(final SpatioTemporalExtent spatioTemporalExtent) {
             temporalCompositionImpl.addValue(PART, spatioTemporalExtent.getIri());
@@ -86,9 +94,11 @@ public class TemporalCompositionImpl extends HqdmObject implements TemporalCompo
         }
 
         /**
+         * A relationship type where an {@link uk.gov.gchq.hqdm.model.Aggregation} has exactly one
+         * {@link SpatioTemporalExtent} as the whole.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder whole_M(final SpatioTemporalExtent spatioTemporalExtent) {
             temporalCompositionImpl.addValue(WHOLE, spatioTemporalExtent.getIri());
@@ -96,9 +106,11 @@ public class TemporalCompositionImpl extends HqdmObject implements TemporalCompo
         }
 
         /**
+         * Returns an instance of TemporalComposition created from the properties set on this
+         * builder.
          *
-         * @return
-         * @throws HqdmException
+         * @return The built TemporalComposition.
+         * @throws HqdmException If the TemporalComposition is missing any mandatory properties.
          */
         public TemporalComposition build() throws HqdmException {
             if (temporalCompositionImpl.hasValue(MEMBER__OF)

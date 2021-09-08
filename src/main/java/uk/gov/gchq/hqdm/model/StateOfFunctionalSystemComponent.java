@@ -16,7 +16,7 @@ package uk.gov.gchq.hqdm.model;
 
 /**
  * A {@link StateOfIntentionallyConstructedObject} that is a {@link SystemComponent} or a
- * temporal_part_of a {@link SystemComponent}.
+ * {@code temporal_part_of} a {@link SystemComponent}.
  */
 public interface StateOfFunctionalSystemComponent extends
         StateOfFunctionalObject,

@@ -48,32 +48,40 @@ import uk.gov.gchq.hqdm.pojo.HqdmObject;
  */
 public class FunctionalSystemComponentImpl extends HqdmObject implements FunctionalSystemComponent {
     /**
+     * Constructs a new FunctionalSystemComponent.
      *
-     * @param iri
+     * @param iri IRI of the FunctionalSystemComponent.
      */
     public FunctionalSystemComponentImpl(final IRI iri) {
         super(FunctionalSystemComponentImpl.class, iri, FUNCTIONAL_SYSTEM_COMPONENT);
     }
 
     /**
-     * Builder for FunctionalSystemComponentImpl.
+     * Builder for constructing instances of FunctionalSystemComponent.
      */
     public static class Builder {
-        /** */
+
         private final FunctionalSystemComponentImpl functionalSystemComponentImpl;
 
         /**
+         * Constructs a Builder for a new FunctionalSystemComponent.
          *
-         * @param iri
+         * @param iri IRI of the FunctionalSystemComponent.
          */
         public Builder(final IRI iri) {
             functionalSystemComponentImpl = new FunctionalSystemComponentImpl(iri);
         }
 
         /**
+         * A relationship type where a {@link SpatioTemporalExtent} may be aggregated into one or
+         * more others.
+         * <p>
+         * Note: This has the same meaning as, but different representation to, the
+         * {@link uk.gov.gchq.hqdm.model.Aggregation} entity type.
+         * </p>
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder aggregated_Into(final SpatioTemporalExtent spatioTemporalExtent) {
             functionalSystemComponentImpl.addValue(AGGREGATED_INTO, spatioTemporalExtent.getIri());
@@ -81,9 +89,11 @@ public class FunctionalSystemComponentImpl extends HqdmObject implements Functio
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} has exactly one {@link Event} that is its beginning.
          *
-         * @param event
-         * @return
+         * @param event The Event.
+         * @return This builder.
          */
         public final Builder beginning(final Event event) {
             functionalSystemComponentImpl.addValue(BEGINNING, event.getIri());
@@ -91,11 +101,11 @@ public class FunctionalSystemComponentImpl extends HqdmObject implements Functio
         }
 
         /**
-         * A component_of relationship type where each functional_system_component is a component of
-         * exactly one {@link FunctionalSystem}.
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#COMPONENT_OF} relationship type where each
+         * {@link FunctionalSystemComponent} is a component of exactly one {@link FunctionalSystem}.
          *
-         * @param functionalSystem
-         * @return
+         * @param functionalSystem The FunctionalSystem.
+         * @return This builder.
          */
         public final Builder component_Of_M(final FunctionalSystem functionalSystem) {
             functionalSystemComponentImpl.addValue(COMPONENT_OF, functionalSystem.getIri());
@@ -103,9 +113,15 @@ public class FunctionalSystemComponentImpl extends HqdmObject implements Functio
         }
 
         /**
+         * A relationship type where a {@link SpatioTemporalExtent} may consist of one or more
+         * others.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * <p>
+         * Note: This is the inverse of {@link uk.gov.gchq.hqdm.iri.HQDM#PART__OF}.
+         * </p>
+         *
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder consists__Of(final SpatioTemporalExtent spatioTemporalExtent) {
             functionalSystemComponentImpl.addValue(CONSISTS__OF, spatioTemporalExtent.getIri());
@@ -113,9 +129,11 @@ public class FunctionalSystemComponentImpl extends HqdmObject implements Functio
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} has exactly one {@link Event} that is its ending.
          *
-         * @param event
-         * @return
+         * @param event The Event.
+         * @return This builder.
          */
         public final Builder ending(final Event event) {
             functionalSystemComponentImpl.addValue(ENDING, event.getIri());
@@ -123,9 +141,11 @@ public class FunctionalSystemComponentImpl extends HqdmObject implements Functio
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.model.FunctionalObject} has one or
+         * more intended {@link Role}(s).
          *
-         * @param role
-         * @return
+         * @param role The Role.
+         * @return This builder.
          */
         public final Builder intended_Role_M(final Role role) {
             functionalSystemComponentImpl.addValue(INTENDED_ROLE, role.getIri());
@@ -133,9 +153,11 @@ public class FunctionalSystemComponentImpl extends HqdmObject implements Functio
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.model.Thing} may be a member of one
+         * or more {@link Class}.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder member__Of(final Class clazz) {
             functionalSystemComponentImpl.addValue(MEMBER__OF, clazz.getIri());
@@ -143,11 +165,12 @@ public class FunctionalSystemComponentImpl extends HqdmObject implements Functio
         }
 
         /**
-         * A member_of relationship type where a functional_system_component may be a member_of one
-         * or more {@link ClassOfFunctionalSystemComponent}.
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a
+         * {@link FunctionalSystemComponent} may be a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF}
+         * one or more {@link ClassOfFunctionalSystemComponent}.
          *
-         * @param classOfFunctionalSystemComponent
-         * @return
+         * @param classOfFunctionalSystemComponent The ClassOfFunctionalSystemComponent.
+         * @return This builder.
          */
         public final Builder member_Of(
                 final ClassOfFunctionalSystemComponent classOfFunctionalSystemComponent) {
@@ -157,11 +180,12 @@ public class FunctionalSystemComponentImpl extends HqdmObject implements Functio
         }
 
         /**
-         * A member_of_kind relationship type where a functional_system_component is a member_of at
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF_KIND} relationship type where a
+         * {@link FunctionalSystemComponent} is a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} at
          * least one {@link KindOfFunctionalSystemComponent}.
          *
-         * @param kindOfFunctionalSystemComponent
-         * @return
+         * @param kindOfFunctionalSystemComponent The KindOfFunctionalSystemComponent.
+         * @return This builder.
          */
         public final Builder member_Of_Kind_M(
                 final KindOfFunctionalSystemComponent kindOfFunctionalSystemComponent) {
@@ -171,9 +195,12 @@ public class FunctionalSystemComponentImpl extends HqdmObject implements Functio
         }
 
         /**
+         * An {@link uk.gov.gchq.hqdm.iri.HQDM#AGGREGATED_INTO} relationship type where a
+         * {@link SpatioTemporalExtent} may be part of another and the whole has emergent properties
+         * and is more than just the sum of its parts.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder part__Of(final SpatioTemporalExtent spatioTemporalExtent) {
             functionalSystemComponentImpl.addValue(PART__OF, spatioTemporalExtent.getIri());
@@ -181,9 +208,17 @@ public class FunctionalSystemComponentImpl extends HqdmObject implements Functio
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} may be {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} one or more
+         * {@link PossibleWorld}.
          *
-         * @param possibleWorld
-         * @return
+         * <p>
+         * Note: The relationship is optional because a {@link PossibleWorld} is not
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} any other {@link SpatioTemporalExtent}.
+         * </p>
+         *
+         * @param possibleWorld The PossibleWorld.
+         * @return This builder.
          */
         public final Builder part_Of_Possible_World_M(final PossibleWorld possibleWorld) {
             functionalSystemComponentImpl.addValue(PART_OF_POSSIBLE_WORLD, possibleWorld.getIri());
@@ -191,9 +226,12 @@ public class FunctionalSystemComponentImpl extends HqdmObject implements Functio
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} may be a temporal part of one or more other
+         * {@link SpatioTemporalExtent}.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder temporal__Part_Of(final SpatioTemporalExtent spatioTemporalExtent) {
             functionalSystemComponentImpl.addValue(TEMPORAL__PART_OF,
@@ -202,9 +240,21 @@ public class FunctionalSystemComponentImpl extends HqdmObject implements Functio
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} relationship type where a
+         * {@link uk.gov.gchq.hqdm.model.State} may be a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} one or more {@link Individual}.
          *
-         * @param individual
-         * @return
+         * <p>
+         * Note: The relationship is optional because an {@link Individual} is not necessarily a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} another {@link Individual}, yet is a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} {@link uk.gov.gchq.hqdm.model.State} as well
+         * as {@link Individual}. This applies to all subtypes of
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} that are between a {@code state_of_X}
+         * and {@code X}.
+         * </p>
+         *
+         * @param individual The Individual.
+         * @return This builder.
          */
         public final Builder temporal_Part_Of(final Individual individual) {
             functionalSystemComponentImpl.addValue(TEMPORAL_PART_OF, individual.getIri());
@@ -212,9 +262,12 @@ public class FunctionalSystemComponentImpl extends HqdmObject implements Functio
         }
 
         /**
+         * Returns an instance of FunctionalSystemComponent created from the properties set on this
+         * builder.
          *
-         * @return
-         * @throws HqdmException
+         * @return The built FunctionalSystemComponent.
+         * @throws HqdmException If the FunctionalSystemComponent is missing any mandatory
+         *         properties.
          */
         public FunctionalSystemComponent build() throws HqdmException {
             if (functionalSystemComponentImpl.hasValue(AGGREGATED_INTO)

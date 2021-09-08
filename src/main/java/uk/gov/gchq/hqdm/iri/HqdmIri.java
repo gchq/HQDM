@@ -17,22 +17,26 @@ package uk.gov.gchq.hqdm.iri;
 import uk.gov.gchq.hqdm.exception.IriException;
 
 /**
- *
+ * An implementation of Internationalized Resource Identifiers for defining HQDM entities and
+ * relationship types.
  */
 public class HqdmIri extends IRI {
+
     /**
+     * Constructs a new IRI to define a HQDM resource.
      *
-     * @param base
-     * @param value
+     * @param base IRI base namespace.
+     * @param resource HQDM resource name.
      */
-    public HqdmIri(final IriBase base, final String value) {
-        super(base, value);
+    public HqdmIri(final IriBase base, final String resource) {
+        super(base, resource);
     }
 
     /**
+     * Constructs a new IRI from a string to define a HQDM resource.
      *
-     * @param iri
-     * @throws IriException
+     * @param iri IRI string.
+     * @throws IriException If the IRI string is malformed.
      */
     public HqdmIri(final String iri) throws IriException {
         super(iri);

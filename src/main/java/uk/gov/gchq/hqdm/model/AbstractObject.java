@@ -15,7 +15,7 @@
 package uk.gov.gchq.hqdm.model;
 
 /**
- * A thing that does not exist in space or time.
+ * A {@link Thing} that does not exist in space or time.
  */
 public interface AbstractObject extends Thing {
 }

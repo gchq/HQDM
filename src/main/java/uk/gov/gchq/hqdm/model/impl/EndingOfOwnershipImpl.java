@@ -40,32 +40,40 @@ import uk.gov.gchq.hqdm.pojo.HqdmObject;
  */
 public class EndingOfOwnershipImpl extends HqdmObject implements EndingOfOwnership {
     /**
+     * Constructs a new EndingOfOwnership.
      *
-     * @param iri
+     * @param iri IRI of the EndingOfOwnership.
      */
     public EndingOfOwnershipImpl(final IRI iri) {
         super(EndingOfOwnershipImpl.class, iri, ENDING_OF_OWNERSHIP);
     }
 
     /**
-     * Builder for EndingOfOwnershipImpl.
+     * Builder for constructing instances of EndingOfOwnership.
      */
     public static class Builder {
-        /** */
+
         private final EndingOfOwnershipImpl endingOfOwnershipImpl;
 
         /**
+         * Constructs a Builder for a new EndingOfOwnership.
          *
-         * @param iri
+         * @param iri IRI of the EndingOfOwnership.
          */
         public Builder(final IRI iri) {
             endingOfOwnershipImpl = new EndingOfOwnershipImpl(iri);
         }
 
         /**
+         * A relationship type where a {@link SpatioTemporalExtent} may be aggregated into one or
+         * more others.
+         * <p>
+         * Note: This has the same meaning as, but different representation to, the
+         * {@link uk.gov.gchq.hqdm.model.Aggregation} entity type.
+         * </p>
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder aggregated_Into(final SpatioTemporalExtent spatioTemporalExtent) {
             endingOfOwnershipImpl.addValue(AGGREGATED_INTO, spatioTemporalExtent.getIri());
@@ -73,9 +81,11 @@ public class EndingOfOwnershipImpl extends HqdmObject implements EndingOfOwnersh
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} has exactly one {@link Event} that is its beginning.
          *
-         * @param event
-         * @return
+         * @param event The Event.
+         * @return This builder.
          */
         public final Builder beginning(final Event event) {
             endingOfOwnershipImpl.addValue(BEGINNING, event.getIri());
@@ -83,9 +93,15 @@ public class EndingOfOwnershipImpl extends HqdmObject implements EndingOfOwnersh
         }
 
         /**
+         * A relationship type where a {@link SpatioTemporalExtent} may consist of one or more
+         * others.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * <p>
+         * Note: This is the inverse of {@link uk.gov.gchq.hqdm.iri.HQDM#PART__OF}.
+         * </p>
+         *
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder consists__Of(final SpatioTemporalExtent spatioTemporalExtent) {
             endingOfOwnershipImpl.addValue(CONSISTS__OF, spatioTemporalExtent.getIri());
@@ -93,9 +109,11 @@ public class EndingOfOwnershipImpl extends HqdmObject implements EndingOfOwnersh
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} has exactly one {@link Event} that is its ending.
          *
-         * @param event
-         * @return
+         * @param event The Event.
+         * @return This builder.
          */
         public final Builder ending(final Event event) {
             endingOfOwnershipImpl.addValue(ENDING, event.getIri());
@@ -103,9 +121,11 @@ public class EndingOfOwnershipImpl extends HqdmObject implements EndingOfOwnersh
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.model.Thing} may be a member of one
+         * or more {@link Class}.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder member__Of(final Class clazz) {
             endingOfOwnershipImpl.addValue(MEMBER__OF, clazz.getIri());
@@ -113,9 +133,11 @@ public class EndingOfOwnershipImpl extends HqdmObject implements EndingOfOwnersh
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where an {@link Event}
+         * may be a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one or more {@link ClassOfEvent}.
          *
-         * @param classOfEvent
-         * @return
+         * @param classOfEvent The ClassOfEvent.
+         * @return This builder.
          */
         public final Builder member_Of(final ClassOfEvent classOfEvent) {
             endingOfOwnershipImpl.addValue(MEMBER_OF, classOfEvent.getIri());
@@ -123,9 +145,12 @@ public class EndingOfOwnershipImpl extends HqdmObject implements EndingOfOwnersh
         }
 
         /**
+         * An {@link uk.gov.gchq.hqdm.iri.HQDM#AGGREGATED_INTO} relationship type where a
+         * {@link SpatioTemporalExtent} may be part of another and the whole has emergent properties
+         * and is more than just the sum of its parts.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder part__Of(final SpatioTemporalExtent spatioTemporalExtent) {
             endingOfOwnershipImpl.addValue(PART__OF, spatioTemporalExtent.getIri());
@@ -133,9 +158,17 @@ public class EndingOfOwnershipImpl extends HqdmObject implements EndingOfOwnersh
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} may be {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} one or more
+         * {@link PossibleWorld}.
          *
-         * @param possibleWorld
-         * @return
+         * <p>
+         * Note: The relationship is optional because a {@link PossibleWorld} is not
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} any other {@link SpatioTemporalExtent}.
+         * </p>
+         *
+         * @param possibleWorld The PossibleWorld.
+         * @return This builder.
          */
         public final Builder part_Of_Possible_World_M(final PossibleWorld possibleWorld) {
             endingOfOwnershipImpl.addValue(PART_OF_POSSIBLE_WORLD, possibleWorld.getIri());
@@ -143,9 +176,12 @@ public class EndingOfOwnershipImpl extends HqdmObject implements EndingOfOwnersh
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} may be a temporal part of one or more other
+         * {@link SpatioTemporalExtent}.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder temporal__Part_Of(final SpatioTemporalExtent spatioTemporalExtent) {
             endingOfOwnershipImpl.addValue(TEMPORAL__PART_OF, spatioTemporalExtent.getIri());
@@ -153,9 +189,10 @@ public class EndingOfOwnershipImpl extends HqdmObject implements EndingOfOwnersh
         }
 
         /**
+         * Returns an instance of EndingOfOwnership created from the properties set on this builder.
          *
-         * @return
-         * @throws HqdmException
+         * @return The built EndingOfOwnership.
+         * @throws HqdmException If the EndingOfOwnership is missing any mandatory properties.
          */
         public EndingOfOwnership build() throws HqdmException {
             if (endingOfOwnershipImpl.hasValue(AGGREGATED_INTO)

@@ -41,32 +41,38 @@ import uk.gov.gchq.hqdm.pojo.HqdmObject;
  */
 public class PhysicalQuantityRangeImpl extends HqdmObject implements PhysicalQuantityRange {
     /**
+     * Constructs a new PhysicalQuantityRange.
      *
-     * @param iri
+     * @param iri IRI of the PhysicalQuantityRange.
      */
     public PhysicalQuantityRangeImpl(final IRI iri) {
         super(PhysicalQuantityRangeImpl.class, iri, PHYSICAL_QUANTITY_RANGE);
     }
 
     /**
-     * Builder for PhysicalQuantityRangeImpl.
+     * Builder for constructing instances of PhysicalQuantityRange.
      */
     public static class Builder {
-        /** */
+
         private final PhysicalQuantityRangeImpl physicalQuantityRangeImpl;
 
         /**
+         * Constructs a Builder for a new PhysicalQuantityRange.
          *
-         * @param iri
+         * @param iri IRI of the PhysicalQuantityRange.
          */
         public Builder(final IRI iri) {
             physicalQuantityRangeImpl = new PhysicalQuantityRangeImpl(iri);
         }
 
         /**
+         * An inverse {@link uk.gov.gchq.hqdm.iri.HQDM#PART__OF_BY_CLASS} relationship type where a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one {@link ClassOfSpatioTemporalExtent}
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#CONSISTS_OF} another
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} a {@link ClassOfSpatioTemporalExtent}.
          *
-         * @param classOfSpatioTemporalExtent
-         * @return
+         * @param classOfSpatioTemporalExtent The ClassOfSpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder consists__Of_By_Class(
                 final ClassOfSpatioTemporalExtent classOfSpatioTemporalExtent) {
@@ -76,9 +82,11 @@ public class PhysicalQuantityRangeImpl extends HqdmObject implements PhysicalQua
         }
 
         /**
+         * A relationship type where each {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the
+         * {@link Class} is a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the superclass.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder has_Superclass(final Class clazz) {
             physicalQuantityRangeImpl.addValue(HAS_SUPERCLASS, clazz.getIri());
@@ -86,11 +94,11 @@ public class PhysicalQuantityRangeImpl extends HqdmObject implements PhysicalQua
         }
 
         /**
-         * A supertype_of relationship type where each physical_quantity_range must have as
-         * lower_bound exactly one {@link PhysicalQuantity}.
+         * A supertype_of relationship type where each {@link PhysicalQuantityRange} must have as
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#LOWER_BOUND} exactly one {@link PhysicalQuantity}.
          *
-         * @param physicalQuantity
-         * @return
+         * @param physicalQuantity The PhysicalQuantity.
+         * @return This builder.
          */
         public final Builder lower_Bound_M(final PhysicalQuantity physicalQuantity) {
             physicalQuantityRangeImpl.addValue(LOWER_BOUND, physicalQuantity.getIri());
@@ -98,9 +106,11 @@ public class PhysicalQuantityRangeImpl extends HqdmObject implements PhysicalQua
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.model.Thing} may be a member of one
+         * or more {@link Class}.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder member__Of(final Class clazz) {
             physicalQuantityRangeImpl.addValue(MEMBER__OF, clazz.getIri());
@@ -108,9 +118,11 @@ public class PhysicalQuantityRangeImpl extends HqdmObject implements PhysicalQua
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a {@link Class} may
+         * be a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one or more {@link ClassOfClass}.
          *
-         * @param classOfClass
-         * @return
+         * @param classOfClass The ClassOfClass.
+         * @return This builder.
          */
         public final Builder member_Of(final ClassOfClass classOfClass) {
             physicalQuantityRangeImpl.addValue(MEMBER_OF, classOfClass.getIri());
@@ -118,9 +130,12 @@ public class PhysicalQuantityRangeImpl extends HqdmObject implements PhysicalQua
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a
+         * {@link ClassOfSpatioTemporalExtent} may be a member of one or more
+         * {@link ClassOfClassOfSpatioTemporalExtent}.
          *
-         * @param classOfClassOfSpatioTemporalExtent
-         * @return
+         * @param classOfClassOfSpatioTemporalExtent The ClassOfClassOfSpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder member_Of_(
                 final ClassOfClassOfSpatioTemporalExtent classOfClassOfSpatioTemporalExtent) {
@@ -130,9 +145,12 @@ public class PhysicalQuantityRangeImpl extends HqdmObject implements PhysicalQua
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} a
+         * {@link ClassOfSpatioTemporalExtent} is {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} some {@link ClassOfSpatioTemporalExtent}.
          *
-         * @param classOfSpatioTemporalExtent
-         * @return
+         * @param classOfSpatioTemporalExtent The ClassOfSpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder part__Of_By_Class(
                 final ClassOfSpatioTemporalExtent classOfSpatioTemporalExtent) {
@@ -142,9 +160,12 @@ public class PhysicalQuantityRangeImpl extends HqdmObject implements PhysicalQua
         }
 
         /**
+         * A supertype_of relationship type where the members of each {@link PhysicalProperty} in
+         * the {@link uk.gov.gchq.hqdm.model.PhysicalPropertyRange} are members of the
+         * {@link uk.gov.gchq.hqdm.model.PhysicalPropertyRange}.
          *
-         * @param physicalProperty
-         * @return
+         * @param physicalProperty The PhysicalProperty.
+         * @return This builder.
          */
         public final Builder ranges_Over_M(final PhysicalProperty physicalProperty) {
             physicalQuantityRangeImpl.addValue(RANGES_OVER, physicalProperty.getIri());
@@ -152,11 +173,11 @@ public class PhysicalQuantityRangeImpl extends HqdmObject implements PhysicalQua
         }
 
         /**
-         * A supertype_of relationship type where each physical_quantity_range must have as
-         * upper_bound exactly one {@link PhysicalQuantity}.
+         * A supertype_of relationship type where each {@link PhysicalQuantityRange} must have as
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#UPPER_BOUND} exactly one {@link PhysicalQuantity}.
          *
-         * @param physicalQuantity
-         * @return
+         * @param physicalQuantity The PhysicalQuantity.
+         * @return This builder.
          */
         public final Builder upper_Bound_M(final PhysicalQuantity physicalQuantity) {
             physicalQuantityRangeImpl.addValue(UPPER_BOUND, physicalQuantity.getIri());
@@ -164,9 +185,11 @@ public class PhysicalQuantityRangeImpl extends HqdmObject implements PhysicalQua
         }
 
         /**
+         * Returns an instance of PhysicalQuantityRange created from the properties set on this
+         * builder.
          *
-         * @return
-         * @throws HqdmException
+         * @return The built PhysicalQuantityRange.
+         * @throws HqdmException If the PhysicalQuantityRange is missing any mandatory properties.
          */
         public PhysicalQuantityRange build() throws HqdmException {
             if (physicalQuantityRangeImpl.hasValue(HAS_SUPERCLASS)

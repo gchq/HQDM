@@ -15,10 +15,13 @@
 package uk.gov.gchq.hqdm.model;
 
 /**
- * A {@link ClassOfState} that is {@link Individual} or any of its subsets. Note: Only classes that
- * necessarily apply to an individual for the whole of its life are valid members. Others are
- * members of class_of_state and apply to the state that is the individual for the period of time
- * that the class applies for.
+ * A {@link ClassOfState} that is {@link Individual} or any of its subsets.
+ *
+ * <p>
+ * Note: Only a class that necessarily applies to an {@link Individual} for the whole of its life
+ * are valid members. Others are members of {@link ClassOfState} and apply to the {@link State} that
+ * is the {@link Individual} for the period of time that the {@link Class} applies for.
+ * </p>
  */
 public interface ClassOfIndividual extends ClassOfState {
 }

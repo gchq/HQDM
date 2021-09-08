@@ -16,7 +16,7 @@ package uk.gov.gchq.hqdm.model;
 
 /**
  * A {@link ClassOfOrdinaryBiologicalObject}, that is also a {@link KindOfOrdinaryPhysicalObject},
- * and a {@link KindOfBiologicalObject} where each member_of a
+ * and a {@link KindOfBiologicalObject} where each {@code member_of} a
  * {@link KindOfOrdinaryBiologicalObject} is of the same kind.
  */
 public interface KindOfOrdinaryFunctionalObject extends

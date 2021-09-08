@@ -36,32 +36,38 @@ import uk.gov.gchq.hqdm.pojo.HqdmObject;
  */
 public class ClassOfPersonImpl extends HqdmObject implements ClassOfPerson {
     /**
+     * Constructs a new ClassOfPerson.
      *
-     * @param iri
+     * @param iri IRI of the ClassOfPerson.
      */
     public ClassOfPersonImpl(final IRI iri) {
         super(ClassOfPersonImpl.class, iri, CLASS_OF_PERSON);
     }
 
     /**
-     * Builder for ClassOfPersonImpl.
+     * Builder for constructing instances of ClassOfPerson.
      */
     public static class Builder {
-        /** */
+
         private final ClassOfPersonImpl classOfPersonImpl;
 
         /**
+         * Constructs a Builder for a new ClassOfPerson.
          *
-         * @param iri
+         * @param iri IRI of the ClassOfPerson.
          */
         public Builder(final IRI iri) {
             classOfPersonImpl = new ClassOfPersonImpl(iri);
         }
 
         /**
+         * An inverse {@link uk.gov.gchq.hqdm.iri.HQDM#PART__OF_BY_CLASS} relationship type where a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one {@link ClassOfSpatioTemporalExtent}
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#CONSISTS_OF} another
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} a {@link ClassOfSpatioTemporalExtent}.
          *
-         * @param classOfSpatioTemporalExtent
-         * @return
+         * @param classOfSpatioTemporalExtent The ClassOfSpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder consists__Of_By_Class(
                 final ClassOfSpatioTemporalExtent classOfSpatioTemporalExtent) {
@@ -70,9 +76,11 @@ public class ClassOfPersonImpl extends HqdmObject implements ClassOfPerson {
         }
 
         /**
+         * A relationship type where each {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the
+         * {@link Class} is a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the superclass.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder has_Superclass(final Class clazz) {
             classOfPersonImpl.addValue(HAS_SUPERCLASS, clazz.getIri());
@@ -80,9 +88,11 @@ public class ClassOfPersonImpl extends HqdmObject implements ClassOfPerson {
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.model.Thing} may be a member of one
+         * or more {@link Class}.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder member__Of(final Class clazz) {
             classOfPersonImpl.addValue(MEMBER__OF, clazz.getIri());
@@ -90,9 +100,11 @@ public class ClassOfPersonImpl extends HqdmObject implements ClassOfPerson {
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a {@link Class} may
+         * be a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one or more {@link ClassOfClass}.
          *
-         * @param classOfClass
-         * @return
+         * @param classOfClass The ClassOfClass.
+         * @return This builder.
          */
         public final Builder member_Of(final ClassOfClass classOfClass) {
             classOfPersonImpl.addValue(MEMBER_OF, classOfClass.getIri());
@@ -100,9 +112,12 @@ public class ClassOfPersonImpl extends HqdmObject implements ClassOfPerson {
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a
+         * {@link ClassOfSpatioTemporalExtent} may be a member of one or more
+         * {@link ClassOfClassOfSpatioTemporalExtent}.
          *
-         * @param classOfClassOfSpatioTemporalExtent
-         * @return
+         * @param classOfClassOfSpatioTemporalExtent The ClassOfClassOfSpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder member_Of_(
                 final ClassOfClassOfSpatioTemporalExtent classOfClassOfSpatioTemporalExtent) {
@@ -111,9 +126,12 @@ public class ClassOfPersonImpl extends HqdmObject implements ClassOfPerson {
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} a
+         * {@link ClassOfSpatioTemporalExtent} is {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} some {@link ClassOfSpatioTemporalExtent}.
          *
-         * @param classOfSpatioTemporalExtent
-         * @return
+         * @param classOfSpatioTemporalExtent The ClassOfSpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder part__Of_By_Class(
                 final ClassOfSpatioTemporalExtent classOfSpatioTemporalExtent) {
@@ -122,9 +140,10 @@ public class ClassOfPersonImpl extends HqdmObject implements ClassOfPerson {
         }
 
         /**
+         * Returns an instance of ClassOfPerson created from the properties set on this builder.
          *
-         * @return
-         * @throws HqdmException
+         * @return The built ClassOfPerson.
+         * @throws HqdmException If the ClassOfPerson is missing any mandatory properties.
          */
         public ClassOfPerson build() throws HqdmException {
             if (classOfPersonImpl.hasValue(HAS_SUPERCLASS)

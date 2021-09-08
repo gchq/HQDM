@@ -15,7 +15,7 @@
 package uk.gov.gchq.hqdm.model;
 
 /**
- * A {@link State} that is a temporal_part_of some {@link PossibleWorld}.
+ * A {@link State} that is a {@code temporal_part_of} some {@link PossibleWorld}.
  */
 public interface PeriodOfTime extends State {
 }

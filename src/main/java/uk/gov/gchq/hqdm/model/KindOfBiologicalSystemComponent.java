@@ -16,7 +16,7 @@ package uk.gov.gchq.hqdm.model;
 
 /**
  * A {@link ClassOfBiologicalSystemComponent} that is also a {@link KindOfSystemComponent} where all
- * the member components play the same role in some {@link BiologicalSystem}.
+ * the member components play the same {@link Role} in some {@link BiologicalSystem}.
  */
 public interface KindOfBiologicalSystemComponent extends
         ClassOfBiologicalSystemComponent,

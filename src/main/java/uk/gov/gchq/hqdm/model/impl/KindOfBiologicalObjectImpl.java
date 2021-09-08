@@ -36,32 +36,38 @@ import uk.gov.gchq.hqdm.pojo.HqdmObject;
  */
 public class KindOfBiologicalObjectImpl extends HqdmObject implements KindOfBiologicalObject {
     /**
+     * Constructs a new KindOfBiologicalObject.
      *
-     * @param iri
+     * @param iri IRI of the KindOfBiologicalObject.
      */
     public KindOfBiologicalObjectImpl(final IRI iri) {
         super(KindOfBiologicalObjectImpl.class, iri, KIND_OF_BIOLOGICAL_OBJECT);
     }
 
     /**
-     * Builder for KindOfBiologicalObjectImpl.
+     * Builder for constructing instances of KindOfBiologicalObject.
      */
     public static class Builder {
-        /** */
+
         private final KindOfBiologicalObjectImpl kindOfBiologicalObjectImpl;
 
         /**
+         * Constructs a Builder for a new KindOfBiologicalObject.
          *
-         * @param iri
+         * @param iri IRI of the KindOfBiologicalObject.
          */
         public Builder(final IRI iri) {
             kindOfBiologicalObjectImpl = new KindOfBiologicalObjectImpl(iri);
         }
 
         /**
+         * An inverse {@link uk.gov.gchq.hqdm.iri.HQDM#PART__OF_BY_CLASS} relationship type where a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one {@link ClassOfSpatioTemporalExtent}
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#CONSISTS_OF} another
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} a {@link ClassOfSpatioTemporalExtent}.
          *
-         * @param classOfSpatioTemporalExtent
-         * @return
+         * @param classOfSpatioTemporalExtent The ClassOfSpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder consists__Of_By_Class(
                 final ClassOfSpatioTemporalExtent classOfSpatioTemporalExtent) {
@@ -71,9 +77,11 @@ public class KindOfBiologicalObjectImpl extends HqdmObject implements KindOfBiol
         }
 
         /**
+         * A relationship type where each {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the
+         * {@link Class} is a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the superclass.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder has_Superclass(final Class clazz) {
             kindOfBiologicalObjectImpl.addValue(HAS_SUPERCLASS, clazz.getIri());
@@ -81,9 +89,11 @@ public class KindOfBiologicalObjectImpl extends HqdmObject implements KindOfBiol
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.model.Thing} may be a member of one
+         * or more {@link Class}.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder member__Of(final Class clazz) {
             kindOfBiologicalObjectImpl.addValue(MEMBER__OF, clazz.getIri());
@@ -91,9 +101,11 @@ public class KindOfBiologicalObjectImpl extends HqdmObject implements KindOfBiol
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a {@link Class} may
+         * be a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one or more {@link ClassOfClass}.
          *
-         * @param classOfClass
-         * @return
+         * @param classOfClass The ClassOfClass.
+         * @return This builder.
          */
         public final Builder member_Of(final ClassOfClass classOfClass) {
             kindOfBiologicalObjectImpl.addValue(MEMBER_OF, classOfClass.getIri());
@@ -101,9 +113,12 @@ public class KindOfBiologicalObjectImpl extends HqdmObject implements KindOfBiol
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a
+         * {@link ClassOfSpatioTemporalExtent} may be a member of one or more
+         * {@link ClassOfClassOfSpatioTemporalExtent}.
          *
-         * @param classOfClassOfSpatioTemporalExtent
-         * @return
+         * @param classOfClassOfSpatioTemporalExtent The ClassOfClassOfSpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder member_Of_(
                 final ClassOfClassOfSpatioTemporalExtent classOfClassOfSpatioTemporalExtent) {
@@ -113,9 +128,12 @@ public class KindOfBiologicalObjectImpl extends HqdmObject implements KindOfBiol
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} a
+         * {@link ClassOfSpatioTemporalExtent} is {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} some {@link ClassOfSpatioTemporalExtent}.
          *
-         * @param classOfSpatioTemporalExtent
-         * @return
+         * @param classOfSpatioTemporalExtent The ClassOfSpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder part__Of_By_Class(
                 final ClassOfSpatioTemporalExtent classOfSpatioTemporalExtent) {
@@ -125,9 +143,11 @@ public class KindOfBiologicalObjectImpl extends HqdmObject implements KindOfBiol
         }
 
         /**
+         * Returns an instance of KindOfBiologicalObject created from the properties set on this
+         * builder.
          *
-         * @return
-         * @throws HqdmException
+         * @return The built KindOfBiologicalObject.
+         * @throws HqdmException If the KindOfBiologicalObject is missing any mandatory properties.
          */
         public KindOfBiologicalObject build() throws HqdmException {
             if (kindOfBiologicalObjectImpl.hasValue(HAS_SUPERCLASS)

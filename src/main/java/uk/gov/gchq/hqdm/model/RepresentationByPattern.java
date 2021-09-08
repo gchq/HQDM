@@ -15,8 +15,8 @@
 package uk.gov.gchq.hqdm.model;
 
 /**
- * A {@link ClassOfRepresentation} where the sign in all the members are members of the pattern
- * specified.
+ * A {@link ClassOfRepresentation} where the {@link Sign} in all the members are members of the
+ * {@link Pattern} specified.
  */
 public interface RepresentationByPattern extends ClassOfRepresentation {
 }

@@ -15,8 +15,8 @@
 package uk.gov.gchq.hqdm.model;
 
 /**
- * An {@link Association} that consists of an employer and an employee where the employer pays the
- * employee to work for them.
+ * An {@link Association} that consists of an {@link Employer} and an {@link Employee} where the
+ * {@link Employer} pays the {@link Employee} to work for them.
  */
 public interface Employment extends Association {
 }

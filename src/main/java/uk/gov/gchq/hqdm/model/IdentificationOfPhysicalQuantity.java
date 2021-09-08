@@ -17,7 +17,7 @@ package uk.gov.gchq.hqdm.model;
 /**
  * An {@link Identification} that identifies a {@link PhysicalQuantity}. An
  * {@link IdentificationOfPhysicalQuantity} consists of a REAL that is a representation of the
- * value_ the physical quantity maps to on the scale.
+ * {@code value_} the physical quantity maps to on the {@link Scale}.
  */
 public interface IdentificationOfPhysicalQuantity extends Identification {
 }

@@ -16,8 +16,11 @@ package uk.gov.gchq.hqdm.model;
 
 /**
  * An {@link Organization} that is a group of people who share a common understanding of a set of
- * signs. Note: This is not restricted to natural languages, but also controlled languages,
- * taxonomies etc.
+ * {@link Sign}s.
+ *
+ * <p>
+ * Note: This is not restricted to natural languages, but also controlled languages, taxonomies etc.
+ * </p>
  */
 public interface LanguageCommunity extends
         StateOfLanguageCommunity,

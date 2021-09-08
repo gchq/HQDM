@@ -16,7 +16,7 @@ package uk.gov.gchq.hqdm.model;
 
 /**
  * A {@link ClassOfPhysicalQuantity} that is also a {@link KindOfPhysicalProperty} such that each
- * member_of the same {@link KindOfPhysicalQuantity} is comparable to the others.
+ * {@code member_of} the same {@link KindOfPhysicalQuantity} is comparable to the others.
  */
 public interface KindOfPhysicalQuantity extends
         ClassOfPhysicalQuantity,

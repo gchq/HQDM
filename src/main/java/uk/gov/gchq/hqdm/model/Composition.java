@@ -15,8 +15,8 @@
 package uk.gov.gchq.hqdm.model;
 
 /**
- * An {@link Aggregation} where the whole is an arrangement of the parts that results in emergent
- * properties.
+ * An {@link Aggregation} where the {@code whole} is an arrangement of the parts that results in
+ * emergent properties.
  */
 public interface Composition extends Aggregation {
 }

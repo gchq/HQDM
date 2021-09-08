@@ -46,32 +46,40 @@ import uk.gov.gchq.hqdm.pojo.HqdmObject;
  */
 public class OrdinaryFunctionalObjectImpl extends HqdmObject implements OrdinaryFunctionalObject {
     /**
+     * Constructs a new OrdinaryFunctionalObject.
      *
-     * @param iri
+     * @param iri IRI of the OrdinaryFunctionalObject.
      */
     public OrdinaryFunctionalObjectImpl(final IRI iri) {
         super(OrdinaryFunctionalObjectImpl.class, iri, ORDINARY_FUNCTIONAL_OBJECT);
     }
 
     /**
-     * Builder for OrdinaryFunctionalObjectImpl.
+     * Builder for constructing instances of OrdinaryFunctionalObject.
      */
     public static class Builder {
-        /** */
+
         private final OrdinaryFunctionalObjectImpl ordinaryFunctionalObjectImpl;
 
         /**
+         * Constructs a Builder for a new OrdinaryFunctionalObject.
          *
-         * @param iri
+         * @param iri IRI of the OrdinaryFunctionalObject.
          */
         public Builder(final IRI iri) {
             ordinaryFunctionalObjectImpl = new OrdinaryFunctionalObjectImpl(iri);
         }
 
         /**
+         * A relationship type where a {@link SpatioTemporalExtent} may be aggregated into one or
+         * more others.
+         * <p>
+         * Note: This has the same meaning as, but different representation to, the
+         * {@link uk.gov.gchq.hqdm.model.Aggregation} entity type.
+         * </p>
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder aggregated_Into(final SpatioTemporalExtent spatioTemporalExtent) {
             ordinaryFunctionalObjectImpl.addValue(AGGREGATED_INTO, spatioTemporalExtent.getIri());
@@ -79,9 +87,11 @@ public class OrdinaryFunctionalObjectImpl extends HqdmObject implements Ordinary
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} has exactly one {@link Event} that is its beginning.
          *
-         * @param event
-         * @return
+         * @param event The Event.
+         * @return This builder.
          */
         public final Builder beginning(final Event event) {
             ordinaryFunctionalObjectImpl.addValue(BEGINNING, event.getIri());
@@ -89,9 +99,15 @@ public class OrdinaryFunctionalObjectImpl extends HqdmObject implements Ordinary
         }
 
         /**
+         * A relationship type where a {@link SpatioTemporalExtent} may consist of one or more
+         * others.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * <p>
+         * Note: This is the inverse of {@link uk.gov.gchq.hqdm.iri.HQDM#PART__OF}.
+         * </p>
+         *
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder consists__Of(final SpatioTemporalExtent spatioTemporalExtent) {
             ordinaryFunctionalObjectImpl.addValue(CONSISTS__OF, spatioTemporalExtent.getIri());
@@ -99,9 +115,11 @@ public class OrdinaryFunctionalObjectImpl extends HqdmObject implements Ordinary
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} has exactly one {@link Event} that is its ending.
          *
-         * @param event
-         * @return
+         * @param event The Event.
+         * @return This builder.
          */
         public final Builder ending(final Event event) {
             ordinaryFunctionalObjectImpl.addValue(ENDING, event.getIri());
@@ -109,9 +127,11 @@ public class OrdinaryFunctionalObjectImpl extends HqdmObject implements Ordinary
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.model.FunctionalObject} has one or
+         * more intended {@link Role}(s).
          *
-         * @param role
-         * @return
+         * @param role The Role.
+         * @return This builder.
          */
         public final Builder intended_Role_M(final Role role) {
             ordinaryFunctionalObjectImpl.addValue(INTENDED_ROLE, role.getIri());
@@ -119,9 +139,11 @@ public class OrdinaryFunctionalObjectImpl extends HqdmObject implements Ordinary
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.model.Thing} may be a member of one
+         * or more {@link Class}.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder member__Of(final Class clazz) {
             ordinaryFunctionalObjectImpl.addValue(MEMBER__OF, clazz.getIri());
@@ -129,11 +151,12 @@ public class OrdinaryFunctionalObjectImpl extends HqdmObject implements Ordinary
         }
 
         /**
-         * A member_of relationship type where an ordinary_functional_object may be a member_of one
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where an
+         * {@link OrdinaryFunctionalObject} may be a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one
          * or more {@link ClassOfOrdinaryFunctionalObject}.
          *
-         * @param classOfOrdinaryFunctionalObject
-         * @return
+         * @param classOfOrdinaryFunctionalObject The ClassOfOrdinaryFunctionalObject.
+         * @return This builder.
          */
         public final Builder member_Of(
                 final ClassOfOrdinaryFunctionalObject classOfOrdinaryFunctionalObject) {
@@ -143,11 +166,12 @@ public class OrdinaryFunctionalObjectImpl extends HqdmObject implements Ordinary
         }
 
         /**
-         * A member_of relationship type where an ordinary_functional_object may be a member_of one
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where an
+         * {@link OrdinaryFunctionalObject} may be a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one
          * or more {@link KindOfOrdinaryFunctionalObject}.
          *
-         * @param kindOfOrdinaryFunctionalObject
-         * @return
+         * @param kindOfOrdinaryFunctionalObject The KindOfOrdinaryFunctionalObject.
+         * @return This builder.
          */
         public final Builder member_Of_Kind(
                 final KindOfOrdinaryFunctionalObject kindOfOrdinaryFunctionalObject) {
@@ -157,9 +181,12 @@ public class OrdinaryFunctionalObjectImpl extends HqdmObject implements Ordinary
         }
 
         /**
+         * An {@link uk.gov.gchq.hqdm.iri.HQDM#AGGREGATED_INTO} relationship type where a
+         * {@link SpatioTemporalExtent} may be part of another and the whole has emergent properties
+         * and is more than just the sum of its parts.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder part__Of(final SpatioTemporalExtent spatioTemporalExtent) {
             ordinaryFunctionalObjectImpl.addValue(PART__OF, spatioTemporalExtent.getIri());
@@ -167,9 +194,17 @@ public class OrdinaryFunctionalObjectImpl extends HqdmObject implements Ordinary
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} may be {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} one or more
+         * {@link PossibleWorld}.
          *
-         * @param possibleWorld
-         * @return
+         * <p>
+         * Note: The relationship is optional because a {@link PossibleWorld} is not
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} any other {@link SpatioTemporalExtent}.
+         * </p>
+         *
+         * @param possibleWorld The PossibleWorld.
+         * @return This builder.
          */
         public final Builder part_Of_Possible_World_M(final PossibleWorld possibleWorld) {
             ordinaryFunctionalObjectImpl.addValue(PART_OF_POSSIBLE_WORLD, possibleWorld.getIri());
@@ -177,9 +212,12 @@ public class OrdinaryFunctionalObjectImpl extends HqdmObject implements Ordinary
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} may be a temporal part of one or more other
+         * {@link SpatioTemporalExtent}.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder temporal__Part_Of(final SpatioTemporalExtent spatioTemporalExtent) {
             ordinaryFunctionalObjectImpl.addValue(TEMPORAL__PART_OF, spatioTemporalExtent.getIri());
@@ -187,9 +225,21 @@ public class OrdinaryFunctionalObjectImpl extends HqdmObject implements Ordinary
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} relationship type where a
+         * {@link uk.gov.gchq.hqdm.model.State} may be a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} one or more {@link Individual}.
          *
-         * @param individual
-         * @return
+         * <p>
+         * Note: The relationship is optional because an {@link Individual} is not necessarily a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} another {@link Individual}, yet is a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} {@link uk.gov.gchq.hqdm.model.State} as well
+         * as {@link Individual}. This applies to all subtypes of
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} that are between a {@code state_of_X}
+         * and {@code X}.
+         * </p>
+         *
+         * @param individual The Individual.
+         * @return This builder.
          */
         public final Builder temporal_Part_Of(final Individual individual) {
             ordinaryFunctionalObjectImpl.addValue(TEMPORAL_PART_OF, individual.getIri());
@@ -197,9 +247,12 @@ public class OrdinaryFunctionalObjectImpl extends HqdmObject implements Ordinary
         }
 
         /**
+         * Returns an instance of OrdinaryFunctionalObject created from the properties set on this
+         * builder.
          *
-         * @return
-         * @throws HqdmException
+         * @return The built OrdinaryFunctionalObject.
+         * @throws HqdmException If the OrdinaryFunctionalObject is missing any mandatory
+         *         properties.
          */
         public OrdinaryFunctionalObject build() throws HqdmException {
             if (ordinaryFunctionalObjectImpl.hasValue(AGGREGATED_INTO)

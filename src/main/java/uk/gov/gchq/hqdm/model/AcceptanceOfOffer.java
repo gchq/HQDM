@@ -15,8 +15,8 @@
 package uk.gov.gchq.hqdm.model;
 
 /**
- * A {@link SociallyConstructedActivity} that is the acceptance of an offer as part_of an
- * {@link AgreeContract}.
+ * A {@link SociallyConstructedActivity} that is the acceptance of an {@link Offer} as
+ * {@code part_of} an {@link AgreeContract}.
  */
 public interface AcceptanceOfOffer extends SociallyConstructedActivity {
 }

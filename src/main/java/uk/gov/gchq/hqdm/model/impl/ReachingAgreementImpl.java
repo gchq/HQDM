@@ -56,32 +56,40 @@ import uk.gov.gchq.hqdm.pojo.HqdmObject;
  */
 public class ReachingAgreementImpl extends HqdmObject implements ReachingAgreement {
     /**
+     * Constructs a new ReachingAgreement.
      *
-     * @param iri
+     * @param iri IRI of the ReachingAgreement.
      */
     public ReachingAgreementImpl(final IRI iri) {
         super(ReachingAgreementImpl.class, iri, REACHING_AGREEMENT);
     }
 
     /**
-     * Builder for ReachingAgreementImpl.
+     * Builder for constructing instances of ReachingAgreement.
      */
     public static class Builder {
-        /** */
+
         private final ReachingAgreementImpl reachingAgreementImpl;
 
         /**
+         * Constructs a Builder for a new ReachingAgreement.
          *
-         * @param iri
+         * @param iri IRI of the ReachingAgreement.
          */
         public Builder(final IRI iri) {
             reachingAgreementImpl = new ReachingAgreementImpl(iri);
         }
 
         /**
+         * A relationship type where a {@link SpatioTemporalExtent} may be aggregated into one or
+         * more others.
+         * <p>
+         * Note: This has the same meaning as, but different representation to, the
+         * {@link uk.gov.gchq.hqdm.model.Aggregation} entity type.
+         * </p>
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder aggregated_Into(final SpatioTemporalExtent spatioTemporalExtent) {
             reachingAgreementImpl.addValue(AGGREGATED_INTO, spatioTemporalExtent.getIri());
@@ -89,9 +97,11 @@ public class ReachingAgreementImpl extends HqdmObject implements ReachingAgreeme
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} has exactly one {@link Event} that is its beginning.
          *
-         * @param event
-         * @return
+         * @param event The Event.
+         * @return This builder.
          */
         public final Builder beginning(final Event event) {
             reachingAgreementImpl.addValue(BEGINNING, event.getIri());
@@ -99,9 +109,11 @@ public class ReachingAgreementImpl extends HqdmObject implements ReachingAgreeme
         }
 
         /**
+         * A relationship type where each {@link Activity} is the cause of one or more
+         * {@link Event}.
          *
-         * @param event
-         * @return
+         * @param event The Event.
+         * @return This builder.
          */
         public final Builder causes_M(final Event event) {
             reachingAgreementImpl.addValue(CAUSES, event.getIri());
@@ -109,9 +121,15 @@ public class ReachingAgreementImpl extends HqdmObject implements ReachingAgreeme
         }
 
         /**
+         * A relationship type where a {@link SpatioTemporalExtent} may consist of one or more
+         * others.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * <p>
+         * Note: This is the inverse of {@link uk.gov.gchq.hqdm.iri.HQDM#PART__OF}.
+         * </p>
+         *
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder consists__Of(final SpatioTemporalExtent spatioTemporalExtent) {
             reachingAgreementImpl.addValue(CONSISTS__OF, spatioTemporalExtent.getIri());
@@ -119,9 +137,12 @@ public class ReachingAgreementImpl extends HqdmObject implements ReachingAgreeme
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#CONSISTS_OF} relationship type where an
+         * {@link Activity} may {@link uk.gov.gchq.hqdm.iri.HQDM#CONSISTS_OF} one or more other
+         * {@link Activity}.
          *
-         * @param activity
-         * @return
+         * @param activity The Activity.
+         * @return This builder.
          */
         public final Builder consists_Of(final Activity activity) {
             reachingAgreementImpl.addValue(CONSISTS_OF, activity.getIri());
@@ -129,9 +150,12 @@ public class ReachingAgreementImpl extends HqdmObject implements ReachingAgreeme
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#CONSISTS_OF} relationship type where an
+         * {@link Activity} {@link uk.gov.gchq.hqdm.iri.HQDM#CONSISTS_OF} one or more
+         * {@link Participant}s.
          *
-         * @param participant
-         * @return
+         * @param participant The Participant.
+         * @return This builder.
          */
         public final Builder consists_Of_Participant(final Participant participant) {
             reachingAgreementImpl.addValue(CONSISTS_OF_PARTICIPANT, participant.getIri());
@@ -139,9 +163,11 @@ public class ReachingAgreementImpl extends HqdmObject implements ReachingAgreeme
         }
 
         /**
+         * A relationship type where an {@link Activity} may determine one or more {@link Thing} to
+         * be the case.
          *
-         * @param thing
-         * @return
+         * @param thing The Thing.
+         * @return This builder.
          */
         public final Builder determines(final Thing thing) {
             reachingAgreementImpl.addValue(DETERMINES, thing.getIri());
@@ -149,9 +175,11 @@ public class ReachingAgreementImpl extends HqdmObject implements ReachingAgreeme
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} has exactly one {@link Event} that is its ending.
          *
-         * @param event
-         * @return
+         * @param event The Event.
+         * @return This builder.
          */
         public final Builder ending(final Event event) {
             reachingAgreementImpl.addValue(ENDING, event.getIri());
@@ -159,9 +187,10 @@ public class ReachingAgreementImpl extends HqdmObject implements ReachingAgreeme
         }
 
         /**
+         * A relationship type where a {@link Thing} may be a member of one or more {@link Class}.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder member__Of(final Class clazz) {
             reachingAgreementImpl.addValue(MEMBER__OF, clazz.getIri());
@@ -169,11 +198,12 @@ public class ReachingAgreementImpl extends HqdmObject implements ReachingAgreeme
         }
 
         /**
-         * A member_of relationship type where a reaching_agreement may be a member_of one or more
-         * {@link ClassOfReachingAgreement}.
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a
+         * {@link ReachingAgreement} may be a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one or
+         * more {@link ClassOfReachingAgreement}.
          *
-         * @param classOfReachingAgreement
-         * @return
+         * @param classOfReachingAgreement The ClassOfReachingAgreement.
+         * @return This builder.
          */
         public final Builder member_Of(final ClassOfReachingAgreement classOfReachingAgreement) {
             reachingAgreementImpl.addValue(MEMBER_OF, classOfReachingAgreement.getIri());
@@ -181,9 +211,12 @@ public class ReachingAgreementImpl extends HqdmObject implements ReachingAgreeme
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF_KIND} relationship type where each
+         * {@link Activity} is a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one or more
+         * {@link KindOfActivity}.
          *
-         * @param kindOfActivity
-         * @return
+         * @param kindOfActivity The KindOfActivity.
+         * @return This builder.
          */
         public final Builder member_Of_Kind_M(final KindOfActivity kindOfActivity) {
             reachingAgreementImpl.addValue(MEMBER_OF_KIND, kindOfActivity.getIri());
@@ -191,9 +224,12 @@ public class ReachingAgreementImpl extends HqdmObject implements ReachingAgreeme
         }
 
         /**
+         * An {@link uk.gov.gchq.hqdm.iri.HQDM#AGGREGATED_INTO} relationship type where a
+         * {@link SpatioTemporalExtent} may be part of another and the whole has emergent properties
+         * and is more than just the sum of its parts.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder part__Of(final SpatioTemporalExtent spatioTemporalExtent) {
             reachingAgreementImpl.addValue(PART__OF, spatioTemporalExtent.getIri());
@@ -201,11 +237,12 @@ public class ReachingAgreementImpl extends HqdmObject implements ReachingAgreeme
         }
 
         /**
-         * A part_of relationship type where a reaching_agreement is a part_of exactly one
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link ReachingAgreement} is a {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} exactly one
          * {@link AgreementProcess}.
          *
-         * @param agreementProcess
-         * @return
+         * @param agreementProcess The AgreementProcess.
+         * @return This builder.
          */
         public final Builder part_Of_M(final AgreementProcess agreementProcess) {
             reachingAgreementImpl.addValue(PART_OF, agreementProcess.getIri());
@@ -213,9 +250,12 @@ public class ReachingAgreementImpl extends HqdmObject implements ReachingAgreeme
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link uk.gov.gchq.hqdm.model.SociallyConstructedObject} may be a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} one or more {@link AgreementExecution}.
          *
-         * @param agreementExecution
-         * @return
+         * @param agreementExecution The AgreementExecution.
+         * @return This builder.
          */
         public final Builder part_Of_(final AgreementExecution agreementExecution) {
             reachingAgreementImpl.addValue(PART_OF_, agreementExecution.getIri());
@@ -223,9 +263,17 @@ public class ReachingAgreementImpl extends HqdmObject implements ReachingAgreeme
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} may be {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} one or more
+         * {@link PossibleWorld}.
          *
-         * @param possibleWorld
-         * @return
+         * <p>
+         * Note: The relationship is optional because a {@link PossibleWorld} is not
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} any other {@link SpatioTemporalExtent}.
+         * </p>
+         *
+         * @param possibleWorld The PossibleWorld.
+         * @return This builder.
          */
         public final Builder part_Of_Possible_World_M(final PossibleWorld possibleWorld) {
             reachingAgreementImpl.addValue(PART_OF_POSSIBLE_WORLD, possibleWorld.getIri());
@@ -233,9 +281,10 @@ public class ReachingAgreementImpl extends HqdmObject implements ReachingAgreeme
         }
 
         /**
+         * A relationship type where an {@link Activity} may reference one or more {@link Thing}.
          *
-         * @param thing
-         * @return
+         * @param thing The Thing.
+         * @return This builder.
          */
         public final Builder references(final Thing thing) {
             reachingAgreementImpl.addValue(REFERENCES, thing.getIri());
@@ -243,9 +292,12 @@ public class ReachingAgreementImpl extends HqdmObject implements ReachingAgreeme
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} may be a temporal part of one or more other
+         * {@link SpatioTemporalExtent}.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder temporal__Part_Of(final SpatioTemporalExtent spatioTemporalExtent) {
             reachingAgreementImpl.addValue(TEMPORAL__PART_OF, spatioTemporalExtent.getIri());
@@ -253,9 +305,21 @@ public class ReachingAgreementImpl extends HqdmObject implements ReachingAgreeme
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} relationship type where a
+         * {@link uk.gov.gchq.hqdm.model.State} may be a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} one or more {@link Individual}.
          *
-         * @param individual
-         * @return
+         * <p>
+         * Note: The relationship is optional because an {@link Individual} is not necessarily a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} another {@link Individual}, yet is a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} {@link uk.gov.gchq.hqdm.model.State} as well
+         * as {@link Individual}. This applies to all subtypes of
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} that are between a {@code state_of_X}
+         * and {@code X}.
+         * </p>
+         *
+         * @param individual The Individual.
+         * @return This builder.
          */
         public final Builder temporal_Part_Of(final Individual individual) {
             reachingAgreementImpl.addValue(TEMPORAL_PART_OF, individual.getIri());
@@ -263,9 +327,10 @@ public class ReachingAgreementImpl extends HqdmObject implements ReachingAgreeme
         }
 
         /**
+         * Returns an instance of ReachingAgreement created from the properties set on this builder.
          *
-         * @return
-         * @throws HqdmException
+         * @return The built ReachingAgreement.
+         * @throws HqdmException If the ReachingAgreement is missing any mandatory properties.
          */
         public ReachingAgreement build() throws HqdmException {
             if (reachingAgreementImpl.hasValue(AGGREGATED_INTO)

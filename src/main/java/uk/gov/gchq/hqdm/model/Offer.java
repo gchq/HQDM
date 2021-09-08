@@ -15,7 +15,7 @@
 package uk.gov.gchq.hqdm.model;
 
 /**
- * A {@link SociallyConstructedActivity} that proposes an exchange of some thing for some
+ * A {@link SociallyConstructedActivity} that proposes an exchange of some {@link Thing} for some
  * consideration.
  */
 public interface Offer extends SociallyConstructedActivity {

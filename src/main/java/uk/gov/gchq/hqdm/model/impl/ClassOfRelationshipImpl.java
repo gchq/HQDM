@@ -31,32 +31,36 @@ import uk.gov.gchq.hqdm.pojo.HqdmObject;
  */
 public class ClassOfRelationshipImpl extends HqdmObject implements ClassOfRelationship {
     /**
+     * Constructs a new ClassOfRelationship.
      *
-     * @param iri
+     * @param iri IRI of the ClassOfRelationship.
      */
     public ClassOfRelationshipImpl(final IRI iri) {
         super(ClassOfRelationshipImpl.class, iri, CLASS_OF_RELATIONSHIP);
     }
 
     /**
-     * Builder for ClassOfRelationshipImpl.
+     * Builder for constructing instances of ClassOfRelationship.
      */
     public static class Builder {
-        /** */
+
         private final ClassOfRelationshipImpl classOfRelationshipImpl;
 
         /**
+         * Constructs a Builder for a new ClassOfRelationship.
          *
-         * @param iri
+         * @param iri IRI of the ClassOfRelationship.
          */
         public Builder(final IRI iri) {
             classOfRelationshipImpl = new ClassOfRelationshipImpl(iri);
         }
 
         /**
+         * A relationship type where each {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the
+         * {@link Class} is a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the superclass.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder has_Superclass(final Class clazz) {
             classOfRelationshipImpl.addValue(HAS_SUPERCLASS, clazz.getIri());
@@ -64,9 +68,11 @@ public class ClassOfRelationshipImpl extends HqdmObject implements ClassOfRelati
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.model.Thing} may be a member of one
+         * or more {@link Class}.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder member__Of(final Class clazz) {
             classOfRelationshipImpl.addValue(MEMBER__OF, clazz.getIri());
@@ -74,9 +80,11 @@ public class ClassOfRelationshipImpl extends HqdmObject implements ClassOfRelati
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a {@link Class} may
+         * be a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one or more {@link ClassOfClass}.
          *
-         * @param classOfClass
-         * @return
+         * @param classOfClass The ClassOfClass.
+         * @return This builder.
          */
         public final Builder member_Of(final ClassOfClass classOfClass) {
             classOfRelationshipImpl.addValue(MEMBER_OF, classOfClass.getIri());
@@ -84,9 +92,11 @@ public class ClassOfRelationshipImpl extends HqdmObject implements ClassOfRelati
         }
 
         /**
+         * Returns an instance of ClassOfRelationship created from the properties set on this
+         * builder.
          *
-         * @return
-         * @throws HqdmException
+         * @return The built ClassOfRelationship.
+         * @throws HqdmException If the ClassOfRelationship is missing any mandatory properties.
          */
         public ClassOfRelationship build() throws HqdmException {
             if (classOfRelationshipImpl.hasValue(HAS_SUPERCLASS)

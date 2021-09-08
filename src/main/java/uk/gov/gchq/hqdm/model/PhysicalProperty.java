@@ -15,8 +15,8 @@
 package uk.gov.gchq.hqdm.model;
 
 /**
- * A {@link ClassOfState} that is some characteristic that is the same for each state that possesses
- * it (is a member_of it).
+ * A {@link ClassOfState} that is some characteristic that is the same for each {@link State} that
+ * possesses it (is a {@code member_of} it).
  */
 public interface PhysicalProperty extends ClassOfState {
 }

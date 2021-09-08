@@ -16,8 +16,8 @@ package uk.gov.gchq.hqdm.model;
 
 /**
  * A {@link StateOfPosition}, that is also a {@link StateOfPerson}, and an {@link InstalledObject}
- * that is a {@link Person} while they are in a {@link Position} and also the position while it is
- * filled by the person.
+ * that is a {@link Person} while they are in a {@link Position} and also the {@link Position} while
+ * it is filled by the {@link Person}.
  */
 public interface PersonInPosition extends
         StateOfPosition,

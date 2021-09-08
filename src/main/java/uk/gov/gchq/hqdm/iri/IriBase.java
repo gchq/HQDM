@@ -17,67 +17,66 @@ package uk.gov.gchq.hqdm.iri;
 import java.util.Objects;
 
 /**
- *
+ * The base namespace of an {@link IRI}.
  */
 public class IriBase {
-    /** */
+
     private String prefix;
 
-    /** */
     private String namespace;
 
     /**
-     *
-     * @param prefix
-     * @param value
-     */
-    public IriBase(final String prefix, final String value) {
-        this.prefix = prefix;
-        this.namespace = value;
-    }
-
-    /**
-     *
+     * Constructs a new blank IriBase.
      */
     public IriBase() {}
 
     /**
+     * Constructs a new IriBase with a prefix and namespace.
      *
-     * @return
+     * @param prefix Prefix label for the vocabulary.
+     * @param namespace URL of the namespace.
+     */
+    public IriBase(final String prefix, final String namespace) {
+        this.prefix = prefix;
+        this.namespace = namespace;
+    }
+
+    /**
+     * Return the prefix label of the namespace.
+     *
+     * @return Namespace prefix.
      */
     public String getPrefix() {
         return prefix;
     }
 
     /**
+     * Set the prefix label for the namespace.
      *
-     * @param prefix
+     * @param prefix Namespace prefix.
      */
     public void setPrefix(final String prefix) {
         this.prefix = prefix;
     }
 
     /**
+     * Return the URL of the namespace.
      *
-     * @return
+     * @return Namespace URL.
      */
     public String getNamespace() {
         return namespace;
     }
 
     /**
+     * Set the URL of the namespace.
      *
-     * @param namespace
+     * @param namespace Namespace URL.
      */
     public void setNamespace(final String namespace) {
         this.namespace = namespace;
     }
 
-    /**
-     *
-     * @param object
-     * @return
-     */
     @Override
     public boolean equals(final Object object) {
         if (this == object) {
@@ -90,10 +89,6 @@ public class IriBase {
         return Objects.equals(namespace, iri.namespace);
     }
 
-    /**
-     *
-     * @return
-     */
     @Override
     public int hashCode() {
         return Objects.hash(namespace);

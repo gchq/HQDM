@@ -42,32 +42,40 @@ import uk.gov.gchq.hqdm.pojo.HqdmObject;
  */
 public class StateImpl extends HqdmObject implements State {
     /**
+     * Constructs a new State.
      *
-     * @param iri
+     * @param iri IRI of the State.
      */
     public StateImpl(final IRI iri) {
         super(StateImpl.class, iri, STATE);
     }
 
     /**
-     * Builder for StateImpl.
+     * Builder for constructing instances of State.
      */
     public static class Builder {
-        /** */
+
         private final StateImpl stateImpl;
 
         /**
+         * Constructs a Builder for a new State.
          *
-         * @param iri
+         * @param iri IRI of the State.
          */
         public Builder(final IRI iri) {
             stateImpl = new StateImpl(iri);
         }
 
         /**
+         * A relationship type where a {@link SpatioTemporalExtent} may be aggregated into one or
+         * more others.
+         * <p>
+         * Note: This has the same meaning as, but different representation to, the
+         * {@link uk.gov.gchq.hqdm.model.Aggregation} entity type.
+         * </p>
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder aggregated_Into(final SpatioTemporalExtent spatioTemporalExtent) {
             stateImpl.addValue(AGGREGATED_INTO, spatioTemporalExtent.getIri());
@@ -75,9 +83,11 @@ public class StateImpl extends HqdmObject implements State {
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} has exactly one {@link Event} that is its beginning.
          *
-         * @param event
-         * @return
+         * @param event The Event.
+         * @return This builder.
          */
         public final Builder beginning(final Event event) {
             stateImpl.addValue(BEGINNING, event.getIri());
@@ -85,9 +95,15 @@ public class StateImpl extends HqdmObject implements State {
         }
 
         /**
+         * A relationship type where a {@link SpatioTemporalExtent} may consist of one or more
+         * others.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * <p>
+         * Note: This is the inverse of {@link uk.gov.gchq.hqdm.iri.HQDM#PART__OF}.
+         * </p>
+         *
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder consists__Of(final SpatioTemporalExtent spatioTemporalExtent) {
             stateImpl.addValue(CONSISTS__OF, spatioTemporalExtent.getIri());
@@ -95,9 +111,11 @@ public class StateImpl extends HqdmObject implements State {
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} has exactly one {@link Event} that is its ending.
          *
-         * @param event
-         * @return
+         * @param event The Event.
+         * @return This builder.
          */
         public final Builder ending(final Event event) {
             stateImpl.addValue(ENDING, event.getIri());
@@ -105,9 +123,11 @@ public class StateImpl extends HqdmObject implements State {
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.model.Thing} may be a member of one
+         * or more {@link Class}.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder member__Of(final Class clazz) {
             stateImpl.addValue(MEMBER__OF, clazz.getIri());
@@ -115,11 +135,11 @@ public class StateImpl extends HqdmObject implements State {
         }
 
         /**
-         * A member_of relationship type where a state may be a member_of one or more
-         * {@link ClassOfState}.
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a {@link State} may
+         * be a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one or more {@link ClassOfState}.
          *
-         * @param classOfState
-         * @return
+         * @param classOfState The ClassOfState.
+         * @return This builder.
          */
         public final Builder member_Of(final ClassOfState classOfState) {
             stateImpl.addValue(MEMBER_OF, classOfState.getIri());
@@ -127,9 +147,12 @@ public class StateImpl extends HqdmObject implements State {
         }
 
         /**
+         * An {@link uk.gov.gchq.hqdm.iri.HQDM#AGGREGATED_INTO} relationship type where a
+         * {@link SpatioTemporalExtent} may be part of another and the whole has emergent properties
+         * and is more than just the sum of its parts.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder part__Of(final SpatioTemporalExtent spatioTemporalExtent) {
             stateImpl.addValue(PART__OF, spatioTemporalExtent.getIri());
@@ -137,9 +160,17 @@ public class StateImpl extends HqdmObject implements State {
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} may be {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} one or more
+         * {@link PossibleWorld}.
          *
-         * @param possibleWorld
-         * @return
+         * <p>
+         * Note: The relationship is optional because a {@link PossibleWorld} is not
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} any other {@link SpatioTemporalExtent}.
+         * </p>
+         *
+         * @param possibleWorld The PossibleWorld.
+         * @return This builder.
          */
         public final Builder part_Of_Possible_World_M(final PossibleWorld possibleWorld) {
             stateImpl.addValue(PART_OF_POSSIBLE_WORLD, possibleWorld.getIri());
@@ -147,9 +178,12 @@ public class StateImpl extends HqdmObject implements State {
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} may be a temporal part of one or more other
+         * {@link SpatioTemporalExtent}.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder temporal__Part_Of(final SpatioTemporalExtent spatioTemporalExtent) {
             stateImpl.addValue(TEMPORAL__PART_OF, spatioTemporalExtent.getIri());
@@ -157,11 +191,20 @@ public class StateImpl extends HqdmObject implements State {
         }
 
         /**
-         * A temporal_part_of relationship type where a state may be a temporal_part_of one or more
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} relationship type where a
+         * {@link State} may be a {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} one or more
          * {@link Individual}.
          *
-         * @param individual
-         * @return
+         * <p>
+         * Note: The relationship is optional because an {@link Individual} is not necessarily a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} another {@link Individual}, yet is a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} {@link State} as well as {@link Individual}.
+         * This applies to all subtypes of {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} that
+         * are between a {@code state_of_X} and {@code X}.
+         * </p>
+         *
+         * @param individual The Individual.
+         * @return This builder.
          */
         public final Builder temporal_Part_Of(final Individual individual) {
             stateImpl.addValue(TEMPORAL_PART_OF, individual.getIri());
@@ -169,9 +212,10 @@ public class StateImpl extends HqdmObject implements State {
         }
 
         /**
+         * Returns an instance of State created from the properties set on this builder.
          *
-         * @return
-         * @throws HqdmException
+         * @return The built State.
+         * @throws HqdmException If the State is missing any mandatory properties.
          */
         public State build() throws HqdmException {
             if (stateImpl.hasValue(AGGREGATED_INTO)

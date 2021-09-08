@@ -15,7 +15,7 @@
 package uk.gov.gchq.hqdm.model;
 
 /**
- * A {@link KindOfRelationshipWithSignature} where one or more roles have fixed players.
+ * A {@link KindOfRelationshipWithSignature} where one or more {@code roles} have fixed players.
  */
 public interface KindOfRelationshipWithRestriction extends KindOfRelationshipWithSignature {
 }

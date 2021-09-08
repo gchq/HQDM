@@ -15,8 +15,8 @@
 package uk.gov.gchq.hqdm.model;
 
 /**
- * A {@link SpatioTemporalExtent} that is part_of_plan at least one {@link Plan} and is defined_by
- * exactly one {@link RequirementSpecification}.
+ * A {@link SpatioTemporalExtent} that is {@code part_of_plan} at least one {@link Plan} and is
+ * {@code defined_by} exactly one {@link RequirementSpecification}.
  */
 public interface Requirement extends SpatioTemporalExtent {
 }

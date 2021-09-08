@@ -15,9 +15,13 @@
 package uk.gov.gchq.hqdm.model;
 
 /**
- * A {@link PhysicalObject} that is a component_of a {@link System} and that can be completely
- * replaced without losing identity. Note: A system_component is existence dependent on the system
- * it is a component of, unlike any ordinary_physical_object that may be installed as the component.
+ * A {@link PhysicalObject} that is a {@code component_of} a {@link System} and that can be
+ * completely replaced without losing identity.
+ *
+ * <p>
+ * Note: A {@link SystemComponent} is existence dependent on the {@link System} it is a component
+ * of, unlike any {@link OrdinaryPhysicalObject} that may be installed as the component.
+ * </p>
  */
 public interface SystemComponent extends
         PhysicalObject,

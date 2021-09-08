@@ -33,32 +33,36 @@ import uk.gov.gchq.hqdm.pojo.HqdmObject;
  */
 public class CompositionImpl extends HqdmObject implements Composition {
     /**
+     * Constructs a new Composition.
      *
-     * @param iri
+     * @param iri IRI of the Composition.
      */
     public CompositionImpl(final IRI iri) {
         super(CompositionImpl.class, iri, COMPOSITION);
     }
 
     /**
-     * Builder for CompositionImpl.
+     * Builder for constructing instances of Composition.
      */
     public static class Builder {
-        /** */
+
         private final CompositionImpl compositionImpl;
 
         /**
+         * Constructs a Builder for a new Composition.
          *
-         * @param iri
+         * @param iri IRI of the Composition.
          */
         public Builder(final IRI iri) {
             compositionImpl = new CompositionImpl(iri);
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.model.Thing} may be a member of one
+         * or more {@link Class}.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder member__Of(final Class clazz) {
             compositionImpl.addValue(MEMBER__OF, clazz.getIri());
@@ -66,9 +70,11 @@ public class CompositionImpl extends HqdmObject implements Composition {
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a relationship is a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} a {@link ClassOfRelationship}.
          *
-         * @param classOfRelationship
-         * @return
+         * @param classOfRelationship The ClassOfRelationship.
+         * @return This builder.
          */
         public final Builder member_Of(final ClassOfRelationship classOfRelationship) {
             compositionImpl.addValue(MEMBER_OF, classOfRelationship.getIri());
@@ -76,9 +82,11 @@ public class CompositionImpl extends HqdmObject implements Composition {
         }
 
         /**
+         * A relationship type where an {@link uk.gov.gchq.hqdm.model.Aggregation} has exactly one
+         * {@link SpatioTemporalExtent} as the part.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder part_M(final SpatioTemporalExtent spatioTemporalExtent) {
             compositionImpl.addValue(PART, spatioTemporalExtent.getIri());
@@ -86,9 +94,11 @@ public class CompositionImpl extends HqdmObject implements Composition {
         }
 
         /**
+         * A relationship type where an {@link uk.gov.gchq.hqdm.model.Aggregation} has exactly one
+         * {@link SpatioTemporalExtent} as the whole.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder whole_M(final SpatioTemporalExtent spatioTemporalExtent) {
             compositionImpl.addValue(WHOLE, spatioTemporalExtent.getIri());
@@ -96,9 +106,10 @@ public class CompositionImpl extends HqdmObject implements Composition {
         }
 
         /**
+         * Returns an instance of Composition created from the properties set on this builder.
          *
-         * @return
-         * @throws HqdmException
+         * @return The built Composition.
+         * @throws HqdmException If the Composition is missing any mandatory properties.
          */
         public Composition build() throws HqdmException {
             if (compositionImpl.hasValue(MEMBER__OF)

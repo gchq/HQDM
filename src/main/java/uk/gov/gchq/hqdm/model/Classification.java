@@ -15,8 +15,11 @@
 package uk.gov.gchq.hqdm.model;
 
 /**
- * A {@link Relationship} where a thing is a member of a class. Note: This entity type is replicated
- * as the member__of relationship.
+ * A {@link Relationship} where a {@link Thing} is a member of a class{@link Class}.
+ *
+ * <p>
+ * Note: This entity type is replicated as the {@code member__of} relationship.
+ * </p>
  */
 public interface Classification extends Relationship {
 }

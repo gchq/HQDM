@@ -30,33 +30,36 @@ import uk.gov.gchq.hqdm.pojo.HqdmObject;
  */
 public class ClassImpl extends HqdmObject implements Class {
     /**
+     * Constructs a new Class.
      *
-     * @param iri
+     * @param iri IRI of the Class.
      */
     public ClassImpl(final IRI iri) {
         super(ClassImpl.class, iri, CLASS);
     }
 
     /**
-     * Builder for ClassImpl.
+     * Builder for constructing instances of Class.
      */
     public static class Builder {
-        /** */
+
         private final ClassImpl classImpl;
 
         /**
+         * Constructs a Builder for a new Class.
          *
-         * @param iri
+         * @param iri IRI of the Class.
          */
         public Builder(final IRI iri) {
             classImpl = new ClassImpl(iri);
         }
 
         /**
-         * A relationship type where each member_of the {@link Class} is a member_of the superclass.
+         * A relationship type where each {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the
+         * {@link Class} is a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the superclass.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder has_Superclass(final Class clazz) {
             classImpl.addValue(HAS_SUPERCLASS, clazz.getIri());
@@ -64,9 +67,11 @@ public class ClassImpl extends HqdmObject implements Class {
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.model.Thing} may be a member of one
+         * or more {@link Class}.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder member__Of(final Class clazz) {
             classImpl.addValue(MEMBER__OF, clazz.getIri());
@@ -74,11 +79,11 @@ public class ClassImpl extends HqdmObject implements Class {
         }
 
         /**
-         * A member_of relationship type where a class may be a member_of one or more
-         * {@link ClassOfClass}.
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a {@link Class} may
+         * be a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one or more {@link ClassOfClass}.
          *
-         * @param classOfClass
-         * @return
+         * @param classOfClass The ClassOfClass.
+         * @return This builder.
          */
         public final Builder member_Of(final ClassOfClass classOfClass) {
             classImpl.addValue(MEMBER_OF, classOfClass.getIri());
@@ -86,9 +91,10 @@ public class ClassImpl extends HqdmObject implements Class {
         }
 
         /**
+         * Returns an instance of Class created from the properties set on this builder.
          *
-         * @return
-         * @throws HqdmException
+         * @return The built Class.
+         * @throws HqdmException If the Class is missing any mandatory properties.
          */
         public Class build() throws HqdmException {
             if (classImpl.hasValue(HAS_SUPERCLASS)

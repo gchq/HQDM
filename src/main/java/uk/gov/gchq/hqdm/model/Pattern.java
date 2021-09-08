@@ -15,7 +15,7 @@
 package uk.gov.gchq.hqdm.model;
 
 /**
- * A {@link ClassOfSign} where all the signs are of the same pattern.
+ * A {@link ClassOfSign} where all the {@link Sign}s are of the same {@link Pattern}.
  */
 public interface Pattern extends ClassOfSign {
 }

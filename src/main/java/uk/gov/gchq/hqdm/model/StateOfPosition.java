@@ -15,7 +15,7 @@
 package uk.gov.gchq.hqdm.model;
 
 /**
- * A {@link StateOfOrganizationComponent} that is a {@link Position} or a temporal_part_of a
+ * A {@link StateOfOrganizationComponent} that is a {@link Position} or a {@code temporal_part_of} a
  * {@link Position}.
  */
 public interface StateOfPosition extends StateOfOrganizationComponent {

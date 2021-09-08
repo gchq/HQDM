@@ -46,32 +46,40 @@ import uk.gov.gchq.hqdm.pojo.HqdmObject;
  */
 public class SystemComponentImpl extends HqdmObject implements SystemComponent {
     /**
+     * Constructs a new SystemComponent.
      *
-     * @param iri
+     * @param iri IRI of the SystemComponent.
      */
     public SystemComponentImpl(final IRI iri) {
         super(SystemComponentImpl.class, iri, SYSTEM_COMPONENT);
     }
 
     /**
-     * Builder for SystemComponentImpl.
+     * Builder for constructing instances of SystemComponent.
      */
     public static class Builder {
-        /** */
+
         private final SystemComponentImpl systemComponentImpl;
 
         /**
+         * Constructs a Builder for a new SystemComponent.
          *
-         * @param iri
+         * @param iri IRI of the SystemComponent.
          */
         public Builder(final IRI iri) {
             systemComponentImpl = new SystemComponentImpl(iri);
         }
 
         /**
+         * A relationship type where a {@link SpatioTemporalExtent} may be aggregated into one or
+         * more others.
+         * <p>
+         * Note: This has the same meaning as, but different representation to, the
+         * {@link uk.gov.gchq.hqdm.model.Aggregation} entity type.
+         * </p>
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder aggregated_Into(final SpatioTemporalExtent spatioTemporalExtent) {
             systemComponentImpl.addValue(AGGREGATED_INTO, spatioTemporalExtent.getIri());
@@ -79,9 +87,11 @@ public class SystemComponentImpl extends HqdmObject implements SystemComponent {
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} has exactly one {@link Event} that is its beginning.
          *
-         * @param event
-         * @return
+         * @param event The Event.
+         * @return This builder.
          */
         public final Builder beginning(final Event event) {
             systemComponentImpl.addValue(BEGINNING, event.getIri());
@@ -89,11 +99,12 @@ public class SystemComponentImpl extends HqdmObject implements SystemComponent {
         }
 
         /**
-         * A part_of relationship type where each system_component is part_of exactly one
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where each
+         * {@link SystemComponent} is {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} exactly one
          * {@link System}.
          *
-         * @param system
-         * @return
+         * @param system The System.
+         * @return This builder.
          */
         public final Builder component_Of_M(final System system) {
             systemComponentImpl.addValue(COMPONENT_OF, system.getIri());
@@ -101,9 +112,15 @@ public class SystemComponentImpl extends HqdmObject implements SystemComponent {
         }
 
         /**
+         * A relationship type where a {@link SpatioTemporalExtent} may consist of one or more
+         * others.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * <p>
+         * Note: This is the inverse of {@link uk.gov.gchq.hqdm.iri.HQDM#PART__OF}.
+         * </p>
+         *
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder consists__Of(final SpatioTemporalExtent spatioTemporalExtent) {
             systemComponentImpl.addValue(CONSISTS__OF, spatioTemporalExtent.getIri());
@@ -111,9 +128,11 @@ public class SystemComponentImpl extends HqdmObject implements SystemComponent {
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} has exactly one {@link Event} that is its ending.
          *
-         * @param event
-         * @return
+         * @param event The Event.
+         * @return This builder.
          */
         public final Builder ending(final Event event) {
             systemComponentImpl.addValue(ENDING, event.getIri());
@@ -121,9 +140,11 @@ public class SystemComponentImpl extends HqdmObject implements SystemComponent {
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.model.Thing} may be a member of one
+         * or more {@link Class}.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder member__Of(final Class clazz) {
             systemComponentImpl.addValue(MEMBER__OF, clazz.getIri());
@@ -131,11 +152,12 @@ public class SystemComponentImpl extends HqdmObject implements SystemComponent {
         }
 
         /**
-         * A member_of relationship type where a system_component may be a member_of one or more
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a
+         * {@link SystemComponent} may be a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one or more
          * {@link ClassOfSystemComponent}.
          *
-         * @param classOfSystemComponent
-         * @return
+         * @param classOfSystemComponent The ClassOfSystemComponent.
+         * @return This builder.
          */
         public final Builder member_Of(final ClassOfSystemComponent classOfSystemComponent) {
             systemComponentImpl.addValue(MEMBER_OF, classOfSystemComponent.getIri());
@@ -143,9 +165,12 @@ public class SystemComponentImpl extends HqdmObject implements SystemComponent {
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a
+         * {@link uk.gov.gchq.hqdm.model.PhysicalObject} may be a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one or more {@link KindOfPhysicalObject}.
          *
-         * @param kindOfPhysicalObject
-         * @return
+         * @param kindOfPhysicalObject The KindOfPhysicalObject.
+         * @return This builder.
          */
         public final Builder member_Of_Kind(final KindOfPhysicalObject kindOfPhysicalObject) {
             systemComponentImpl.addValue(MEMBER_OF_KIND, kindOfPhysicalObject.getIri());
@@ -153,9 +178,12 @@ public class SystemComponentImpl extends HqdmObject implements SystemComponent {
         }
 
         /**
+         * An {@link uk.gov.gchq.hqdm.iri.HQDM#AGGREGATED_INTO} relationship type where a
+         * {@link SpatioTemporalExtent} may be part of another and the whole has emergent properties
+         * and is more than just the sum of its parts.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder part__Of(final SpatioTemporalExtent spatioTemporalExtent) {
             systemComponentImpl.addValue(PART__OF, spatioTemporalExtent.getIri());
@@ -163,9 +191,17 @@ public class SystemComponentImpl extends HqdmObject implements SystemComponent {
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} may be {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} one or more
+         * {@link PossibleWorld}.
          *
-         * @param possibleWorld
-         * @return
+         * <p>
+         * Note: The relationship is optional because a {@link PossibleWorld} is not
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} any other {@link SpatioTemporalExtent}.
+         * </p>
+         *
+         * @param possibleWorld The PossibleWorld.
+         * @return This builder.
          */
         public final Builder part_Of_Possible_World_M(final PossibleWorld possibleWorld) {
             systemComponentImpl.addValue(PART_OF_POSSIBLE_WORLD, possibleWorld.getIri());
@@ -173,9 +209,12 @@ public class SystemComponentImpl extends HqdmObject implements SystemComponent {
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} may be a temporal part of one or more other
+         * {@link SpatioTemporalExtent}.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder temporal__Part_Of(final SpatioTemporalExtent spatioTemporalExtent) {
             systemComponentImpl.addValue(TEMPORAL__PART_OF, spatioTemporalExtent.getIri());
@@ -183,9 +222,21 @@ public class SystemComponentImpl extends HqdmObject implements SystemComponent {
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} relationship type where a
+         * {@link uk.gov.gchq.hqdm.model.State} may be a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} one or more {@link Individual}.
          *
-         * @param individual
-         * @return
+         * <p>
+         * Note: The relationship is optional because an {@link Individual} is not necessarily a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} another {@link Individual}, yet is a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} {@link uk.gov.gchq.hqdm.model.State} as well
+         * as {@link Individual}. This applies to all subtypes of
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} that are between a {@code state_of_X}
+         * and {@code X}.
+         * </p>
+         *
+         * @param individual The Individual.
+         * @return This builder.
          */
         public final Builder temporal_Part_Of(final Individual individual) {
             systemComponentImpl.addValue(TEMPORAL_PART_OF, individual.getIri());
@@ -193,9 +244,10 @@ public class SystemComponentImpl extends HqdmObject implements SystemComponent {
         }
 
         /**
+         * Returns an instance of SystemComponent created from the properties set on this builder.
          *
-         * @return
-         * @throws HqdmException
+         * @return The built SystemComponent.
+         * @throws HqdmException If the SystemComponent is missing any mandatory properties.
          */
         public SystemComponent build() throws HqdmException {
             if (systemComponentImpl.hasValue(AGGREGATED_INTO)

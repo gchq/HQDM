@@ -40,32 +40,38 @@ import uk.gov.gchq.hqdm.pojo.HqdmObject;
  */
 public class RoleImpl extends HqdmObject implements Role {
     /**
+     * Constructs a new Role.
      *
-     * @param iri
+     * @param iri IRI of the Role.
      */
     public RoleImpl(final IRI iri) {
         super(RoleImpl.class, iri, ROLE);
     }
 
     /**
-     * Builder for RoleImpl.
+     * Builder for constructing instances of Role.
      */
     public static class Builder {
-        /** */
+
         private final RoleImpl roleImpl;
 
         /**
+         * Constructs a Builder for a new Role.
          *
-         * @param iri
+         * @param iri IRI of the Role.
          */
         public Builder(final IRI iri) {
             roleImpl = new RoleImpl(iri);
         }
 
         /**
+         * An inverse {@link uk.gov.gchq.hqdm.iri.HQDM#PART__OF_BY_CLASS} relationship type where a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one {@link ClassOfSpatioTemporalExtent}
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#CONSISTS_OF} another
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} a {@link ClassOfSpatioTemporalExtent}.
          *
-         * @param classOfSpatioTemporalExtent
-         * @return
+         * @param classOfSpatioTemporalExtent The ClassOfSpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder consists__Of_By_Class(
                 final ClassOfSpatioTemporalExtent classOfSpatioTemporalExtent) {
@@ -74,9 +80,11 @@ public class RoleImpl extends HqdmObject implements Role {
         }
 
         /**
+         * A relationship type where each {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the
+         * {@link Class} is a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the superclass.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder has_Superclass(final Class clazz) {
             roleImpl.addValue(HAS_SUPERCLASS, clazz.getIri());
@@ -84,9 +92,11 @@ public class RoleImpl extends HqdmObject implements Role {
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.model.Thing} may be a member of one
+         * or more {@link Class}.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder member__Of(final Class clazz) {
             roleImpl.addValue(MEMBER__OF, clazz.getIri());
@@ -94,9 +104,11 @@ public class RoleImpl extends HqdmObject implements Role {
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a {@link Class} may
+         * be a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one or more {@link ClassOfClass}.
          *
-         * @param classOfClass
-         * @return
+         * @param classOfClass The ClassOfClass.
+         * @return This builder.
          */
         public final Builder member_Of(final ClassOfClass classOfClass) {
             roleImpl.addValue(MEMBER_OF, classOfClass.getIri());
@@ -104,9 +116,12 @@ public class RoleImpl extends HqdmObject implements Role {
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a
+         * {@link ClassOfSpatioTemporalExtent} may be a member of one or more
+         * {@link ClassOfClassOfSpatioTemporalExtent}.
          *
-         * @param classOfClassOfSpatioTemporalExtent
-         * @return
+         * @param classOfClassOfSpatioTemporalExtent The ClassOfClassOfSpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder member_Of_(
                 final ClassOfClassOfSpatioTemporalExtent classOfClassOfSpatioTemporalExtent) {
@@ -115,9 +130,12 @@ public class RoleImpl extends HqdmObject implements Role {
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} a
+         * {@link ClassOfSpatioTemporalExtent} is {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} some {@link ClassOfSpatioTemporalExtent}.
          *
-         * @param classOfSpatioTemporalExtent
-         * @return
+         * @param classOfSpatioTemporalExtent The ClassOfSpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder part__Of_By_Class(
                 final ClassOfSpatioTemporalExtent classOfSpatioTemporalExtent) {
@@ -126,11 +144,13 @@ public class RoleImpl extends HqdmObject implements Role {
         }
 
         /**
-         * A part_of_by_class where a member_of a role is a participant in a member_of a
-         * {@link KindOfActivity}.
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF_BY_CLASS} relationship type where a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} a {@link Role} is a
+         * {@link uk.gov.gchq.hqdm.model.Participant} in a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} a {@link KindOfActivity}.
          *
-         * @param kindOfActivity
-         * @return
+         * @param kindOfActivity The KindOfActivity.
+         * @return This builder.
          */
         public final Builder part_Of_By_Class(final KindOfActivity kindOfActivity) {
             roleImpl.addValue(PART_OF_BY_CLASS, kindOfActivity.getIri());
@@ -138,10 +158,13 @@ public class RoleImpl extends HqdmObject implements Role {
         }
 
         /**
-         * A part_of_by_class where a member_of a role is a part_of a member_of the class.
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF_BY_CLASS} relationship type where a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} a {@link Role} is a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF}
+         * the class.
          *
-         * @param kindOfAssociation
-         * @return
+         * @param kindOfAssociation The KindOfAssociation.
+         * @return This builder.
          */
         public final Builder part_Of_By_Class_(final KindOfAssociation kindOfAssociation) {
             roleImpl.addValue(PART_OF_BY_CLASS_, kindOfAssociation.getIri());
@@ -149,9 +172,10 @@ public class RoleImpl extends HqdmObject implements Role {
         }
 
         /**
+         * Returns an instance of Role created from the properties set on this builder.
          *
-         * @return
-         * @throws HqdmException
+         * @return The built Role.
+         * @throws HqdmException If the Role is missing any mandatory properties.
          */
         public Role build() throws HqdmException {
             if (roleImpl.hasValue(HAS_SUPERCLASS)

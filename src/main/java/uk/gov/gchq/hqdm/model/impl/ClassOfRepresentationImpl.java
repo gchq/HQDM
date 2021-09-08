@@ -28,32 +28,36 @@ import uk.gov.gchq.hqdm.pojo.HqdmObject;
  */
 public class ClassOfRepresentationImpl extends HqdmObject implements ClassOfRepresentation {
     /**
+     * Constructs a new ClassOfRepresentation.
      *
-     * @param iri
+     * @param iri IRI of the ClassOfRepresentation.
      */
     public ClassOfRepresentationImpl(final IRI iri) {
         super(ClassOfRepresentationImpl.class, iri, CLASS_OF_REPRESENTATION);
     }
 
     /**
-     * Builder for ClassOfRepresentationImpl.
+     * Builder for constructing instances of ClassOfRepresentation.
      */
     public static class Builder {
-        /** */
+
         private final ClassOfRepresentationImpl classOfRepresentationImpl;
 
         /**
+         * Constructs a Builder for a new ClassOfRepresentation.
          *
-         * @param iri
+         * @param iri IRI of the ClassOfRepresentation.
          */
         public Builder(final IRI iri) {
             classOfRepresentationImpl = new ClassOfRepresentationImpl(iri);
         }
 
         /**
+         * A relationship type where each {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the
+         * {@link Class} is a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the superclass.
          *
-         * @param clazz
-         * @return
+         * @param clazz the Class.
+         * @return This builder.
          */
         public final Builder has_Superclass(final Class clazz) {
             classOfRepresentationImpl.addValue(HAS_SUPERCLASS, clazz.getIri());
@@ -61,9 +65,11 @@ public class ClassOfRepresentationImpl extends HqdmObject implements ClassOfRepr
         }
 
         /**
+         * Returns an instance of ClassOfRepresentation created from the properties set on this
+         * builder.
          *
-         * @return
-         * @throws HqdmException
+         * @return The built ClassOfRepresentation.
+         * @throws HqdmException If the ClassOfRepresentation is missing any mandatory properties.
          */
         public ClassOfRepresentation build() throws HqdmException {
             if (classOfRepresentationImpl.hasValue(HAS_SUPERCLASS)

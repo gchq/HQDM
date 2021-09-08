@@ -15,7 +15,7 @@
 package uk.gov.gchq.hqdm.model;
 
 /**
- * An {@link AbstractObject} that is what one thing has to do with one or more others.
+ * An {@link AbstractObject} that is what one {@link Thing} has to do with one or more others.
  */
 public interface Relationship extends AbstractObject {
 }

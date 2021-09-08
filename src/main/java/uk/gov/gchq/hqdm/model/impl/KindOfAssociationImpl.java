@@ -38,32 +38,38 @@ import uk.gov.gchq.hqdm.pojo.HqdmObject;
  */
 public class KindOfAssociationImpl extends HqdmObject implements KindOfAssociation {
     /**
+     * Constructs a new KindOfAssociation.
      *
-     * @param iri
+     * @param iri IRI of the KindOfAssociation.
      */
     public KindOfAssociationImpl(final IRI iri) {
         super(KindOfAssociationImpl.class, iri, KIND_OF_ASSOCIATION);
     }
 
     /**
-     * Builder for KindOfAssociationImpl.
+     * Builder for constructing instances of KindOfAssociation.
      */
     public static class Builder {
-        /** */
+
         private final KindOfAssociationImpl kindOfAssociationImpl;
 
         /**
+         * Constructs a Builder for a new KindOfAssociation.
          *
-         * @param iri
+         * @param iri IRI of the KindOfAssociation.
          */
         public Builder(final IRI iri) {
             kindOfAssociationImpl = new KindOfAssociationImpl(iri);
         }
 
         /**
+         * An inverse {@link uk.gov.gchq.hqdm.iri.HQDM#PART__OF_BY_CLASS} relationship type where a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one {@link ClassOfSpatioTemporalExtent}
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#CONSISTS_OF} another
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} a {@link ClassOfSpatioTemporalExtent}.
          *
-         * @param classOfSpatioTemporalExtent
-         * @return
+         * @param classOfSpatioTemporalExtent The ClassOfSpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder consists__Of_By_Class(
                 final ClassOfSpatioTemporalExtent classOfSpatioTemporalExtent) {
@@ -73,11 +79,12 @@ public class KindOfAssociationImpl extends HqdmObject implements KindOfAssociati
         }
 
         /**
-         * A consists_of_by_class relationship type where a member_of the kind_of_association has a
-         * member_of the {@link Role} as a part.
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#CONSISTS_OF_BY_CLASS} relationship type where a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the {@link KindOfAssociation} has a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the {@link Role} as a part.
          *
-         * @param role
-         * @return
+         * @param role The Role.
+         * @return This builder.
          */
         public final Builder consists_Of_By_Class(final Role role) {
             kindOfAssociationImpl.addValue(CONSISTS_OF_BY_CLASS, role.getIri());
@@ -85,9 +92,11 @@ public class KindOfAssociationImpl extends HqdmObject implements KindOfAssociati
         }
 
         /**
+         * A relationship type where each {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the
+         * {@link Class} is a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the superclass.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder has_Superclass(final Class clazz) {
             kindOfAssociationImpl.addValue(HAS_SUPERCLASS, clazz.getIri());
@@ -95,9 +104,11 @@ public class KindOfAssociationImpl extends HqdmObject implements KindOfAssociati
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.model.Thing} may be a member of one
+         * or more {@link Class}.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder member__Of(final Class clazz) {
             kindOfAssociationImpl.addValue(MEMBER__OF, clazz.getIri());
@@ -105,9 +116,11 @@ public class KindOfAssociationImpl extends HqdmObject implements KindOfAssociati
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a {@link Class} may
+         * be a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one or more {@link ClassOfClass}.
          *
-         * @param classOfClass
-         * @return
+         * @param classOfClass The ClassOfClass.
+         * @return This builder.
          */
         public final Builder member_Of(final ClassOfClass classOfClass) {
             kindOfAssociationImpl.addValue(MEMBER_OF, classOfClass.getIri());
@@ -115,9 +128,12 @@ public class KindOfAssociationImpl extends HqdmObject implements KindOfAssociati
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a
+         * {@link ClassOfSpatioTemporalExtent} may be a member of one or more
+         * {@link ClassOfClassOfSpatioTemporalExtent}.
          *
-         * @param classOfClassOfSpatioTemporalExtent
-         * @return
+         * @param classOfClassOfSpatioTemporalExtent The ClassOfClassOfSpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder member_Of_(
                 final ClassOfClassOfSpatioTemporalExtent classOfClassOfSpatioTemporalExtent) {
@@ -126,9 +142,12 @@ public class KindOfAssociationImpl extends HqdmObject implements KindOfAssociati
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} a
+         * {@link ClassOfSpatioTemporalExtent} is {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} some {@link ClassOfSpatioTemporalExtent}.
          *
-         * @param classOfSpatioTemporalExtent
-         * @return
+         * @param classOfSpatioTemporalExtent The ClassOfSpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder part__Of_By_Class(
                 final ClassOfSpatioTemporalExtent classOfSpatioTemporalExtent) {
@@ -137,9 +156,10 @@ public class KindOfAssociationImpl extends HqdmObject implements KindOfAssociati
         }
 
         /**
+         * Returns an instance of KindOfAssociation created from the properties set on this builder.
          *
-         * @return
-         * @throws HqdmException
+         * @return The built KindOfAssociation.
+         * @throws HqdmException If the KindOfAssociation is missing any mandatory properties.
          */
         public KindOfAssociation build() throws HqdmException {
             if (kindOfAssociationImpl.hasValue(HAS_SUPERCLASS)

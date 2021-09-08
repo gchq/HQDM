@@ -15,7 +15,8 @@
 package uk.gov.gchq.hqdm.model;
 
 /**
- * A {@link StateOfLanguageCommunity} that recognizes what a pattern is intended to represent.
+ * A {@link StateOfLanguageCommunity} that recognizes what a {@link Pattern} is intended to
+ * represent.
  */
 public interface RecognizingLanguageCommunity extends
         StateOfLanguageCommunity,

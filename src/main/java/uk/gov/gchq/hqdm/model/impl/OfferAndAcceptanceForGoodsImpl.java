@@ -59,32 +59,40 @@ import uk.gov.gchq.hqdm.pojo.HqdmObject;
 public class OfferAndAcceptanceForGoodsImpl extends HqdmObject
         implements OfferAndAcceptanceForGoods {
     /**
+     * Constructs a new OfferAndAcceptanceForGoods.
      *
-     * @param iri
+     * @param iri IRI of the OfferAndAcceptanceForGoods.
      */
     public OfferAndAcceptanceForGoodsImpl(final IRI iri) {
         super(OfferAndAcceptanceForGoodsImpl.class, iri, OFFER_AND_ACCEPTANCE_FOR_GOODS);
     }
 
     /**
-     * Builder for OfferAndAcceptanceForGoodsImpl.
+     * Builder for constructing instances of OfferAndAcceptanceForGoods.
      */
     public static class Builder {
-        /** */
+
         private final OfferAndAcceptanceForGoodsImpl offerAndAcceptanceForGoodsImpl;
 
         /**
+         * Constructs a Builder for a new OfferAndAcceptanceForGoods.
          *
-         * @param iri
+         * @param iri IRI of the OfferAndAcceptanceForGoods.
          */
         public Builder(final IRI iri) {
             offerAndAcceptanceForGoodsImpl = new OfferAndAcceptanceForGoodsImpl(iri);
         }
 
         /**
+         * A relationship type where a {@link SpatioTemporalExtent} may be aggregated into one or
+         * more others.
+         * <p>
+         * Note: This has the same meaning as, but different representation to, the
+         * {@link uk.gov.gchq.hqdm.model.Aggregation} entity type.
+         * </p>
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder aggregated_Into(final SpatioTemporalExtent spatioTemporalExtent) {
             offerAndAcceptanceForGoodsImpl.addValue(AGGREGATED_INTO, spatioTemporalExtent.getIri());
@@ -92,9 +100,11 @@ public class OfferAndAcceptanceForGoodsImpl extends HqdmObject
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} has exactly one {@link Event} that is its beginning.
          *
-         * @param event
-         * @return
+         * @param event The Event.
+         * @return This builder.
          */
         public final Builder beginning(final Event event) {
             offerAndAcceptanceForGoodsImpl.addValue(BEGINNING, event.getIri());
@@ -102,9 +112,11 @@ public class OfferAndAcceptanceForGoodsImpl extends HqdmObject
         }
 
         /**
+         * A relationship type where each {@link uk.gov.gchq.hqdm.model.Activity} is the cause of
+         * one or more {@link Event}.
          *
-         * @param event
-         * @return
+         * @param event The Event.
+         * @return This builder.
          */
         public final Builder causes_M(final Event event) {
             offerAndAcceptanceForGoodsImpl.addValue(CAUSES, event.getIri());
@@ -112,9 +124,15 @@ public class OfferAndAcceptanceForGoodsImpl extends HqdmObject
         }
 
         /**
+         * A relationship type where a {@link SpatioTemporalExtent} may consist of one or more
+         * others.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * <p>
+         * Note: This is the inverse of {@link uk.gov.gchq.hqdm.iri.HQDM#PART__OF}.
+         * </p>
+         *
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder consists__Of(final SpatioTemporalExtent spatioTemporalExtent) {
             offerAndAcceptanceForGoodsImpl.addValue(CONSISTS__OF, spatioTemporalExtent.getIri());
@@ -122,11 +140,12 @@ public class OfferAndAcceptanceForGoodsImpl extends HqdmObject
         }
 
         /**
-         * A consists_of relationship type where an offer_and_acceptance_for_goods consists of
-         * exactly one {@link AcceptanceOfOfferForGoods}.
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#CONSISTS_OF} relationship type where an
+         * {@link OfferAndAcceptanceForGoods} consists of exactly one
+         * {@link AcceptanceOfOfferForGoods}.
          *
-         * @param acceptanceOfOfferForGoods
-         * @return
+         * @param acceptanceOfOfferForGoods The AcceptanceOfOfferForGoods.
+         * @return Builder
          */
         public final Builder consists_Of(
                 final AcceptanceOfOfferForGoods acceptanceOfOfferForGoods) {
@@ -136,11 +155,11 @@ public class OfferAndAcceptanceForGoodsImpl extends HqdmObject
         }
 
         /**
-         * A consists_of_ relationship type where an offer_and_acceptance_for_goods consists_of
-         * exactly one {@link OfferForGoods}.
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#CONSISTS_OF_} relationship type where an
+         * {@link OfferAndAcceptanceForGoods} consists_of exactly one {@link OfferForGoods}.
          *
-         * @param offerForGoods
-         * @return
+         * @param offerForGoods The OfferForGoods.
+         * @return Builder
          */
         public final Builder consists_Of_(final OfferForGoods offerForGoods) {
             offerAndAcceptanceForGoodsImpl.addValue(CONSISTS_OF_, offerForGoods.getIri());
@@ -148,9 +167,12 @@ public class OfferAndAcceptanceForGoodsImpl extends HqdmObject
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#CONSISTS_OF} relationship type where an
+         * {@link uk.gov.gchq.hqdm.model.Activity} {@link uk.gov.gchq.hqdm.iri.HQDM#CONSISTS_OF} one
+         * or more {@link Participant}s.
          *
-         * @param participant
-         * @return
+         * @param participant The Participant.
+         * @return This builder.
          */
         public final Builder consists_Of_Participant(final Participant participant) {
             offerAndAcceptanceForGoodsImpl.addValue(CONSISTS_OF_PARTICIPANT, participant.getIri());
@@ -158,9 +180,11 @@ public class OfferAndAcceptanceForGoodsImpl extends HqdmObject
         }
 
         /**
+         * A relationship type where an {@link uk.gov.gchq.hqdm.model.Activity} may determine one or
+         * more {@link Thing} to be the case.
          *
-         * @param thing
-         * @return
+         * @param thing The Thing.
+         * @return This builder.
          */
         public final Builder determines(final Thing thing) {
             offerAndAcceptanceForGoodsImpl.addValue(DETERMINES, thing.getIri());
@@ -168,9 +192,11 @@ public class OfferAndAcceptanceForGoodsImpl extends HqdmObject
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} has exactly one {@link Event} that is its ending.
          *
-         * @param event
-         * @return
+         * @param event The Event.
+         * @return This builder.
          */
         public final Builder ending(final Event event) {
             offerAndAcceptanceForGoodsImpl.addValue(ENDING, event.getIri());
@@ -178,9 +204,10 @@ public class OfferAndAcceptanceForGoodsImpl extends HqdmObject
         }
 
         /**
+         * A relationship type where a {@link Thing} may be a member of one or more {@link Class}.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder member__Of(final Class clazz) {
             offerAndAcceptanceForGoodsImpl.addValue(MEMBER__OF, clazz.getIri());
@@ -188,9 +215,12 @@ public class OfferAndAcceptanceForGoodsImpl extends HqdmObject
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where an
+         * {@link uk.gov.gchq.hqdm.model.AgreeContract} may be a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one or more {@link ClassOfAgreeContract}.
          *
-         * @param classOfAgreeContract
-         * @return
+         * @param classOfAgreeContract The ClassOfAgreeContract.
+         * @return This builder.
          */
         public final Builder member_Of(final ClassOfAgreeContract classOfAgreeContract) {
             offerAndAcceptanceForGoodsImpl.addValue(MEMBER_OF, classOfAgreeContract.getIri());
@@ -198,9 +228,12 @@ public class OfferAndAcceptanceForGoodsImpl extends HqdmObject
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF_KIND} relationship type where each
+         * {@link uk.gov.gchq.hqdm.model.Activity} is a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF}
+         * one or more {@link KindOfActivity}.
          *
-         * @param kindOfActivity
-         * @return
+         * @param kindOfActivity The KindOfActivity.
+         * @return This builder.
          */
         public final Builder member_Of_Kind_M(final KindOfActivity kindOfActivity) {
             offerAndAcceptanceForGoodsImpl.addValue(MEMBER_OF_KIND, kindOfActivity.getIri());
@@ -208,9 +241,12 @@ public class OfferAndAcceptanceForGoodsImpl extends HqdmObject
         }
 
         /**
+         * An {@link uk.gov.gchq.hqdm.iri.HQDM#AGGREGATED_INTO} relationship type where a
+         * {@link SpatioTemporalExtent} may be part of another and the whole has emergent properties
+         * and is more than just the sum of its parts.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder part__Of(final SpatioTemporalExtent spatioTemporalExtent) {
             offerAndAcceptanceForGoodsImpl.addValue(PART__OF, spatioTemporalExtent.getIri());
@@ -218,11 +254,12 @@ public class OfferAndAcceptanceForGoodsImpl extends HqdmObject
         }
 
         /**
-         * A part_of relationship type where an offer_and_acceptance_for_goods is a part_of exactly
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where an
+         * {@link OfferAndAcceptanceForGoods} is a {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} exactly
          * one {@link SaleOfGoods}.
          *
-         * @param saleOfGoods
-         * @return
+         * @param saleOfGoods The SaleOfGoods.
+         * @return Builder
          */
         public final Builder part_Of_M(final SaleOfGoods saleOfGoods) {
             offerAndAcceptanceForGoodsImpl.addValue(PART_OF, saleOfGoods.getIri());
@@ -230,9 +267,12 @@ public class OfferAndAcceptanceForGoodsImpl extends HqdmObject
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link uk.gov.gchq.hqdm.model.SociallyConstructedObject} may be a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} one or more {@link AgreementExecution}.
          *
-         * @param agreementExecution
-         * @return
+         * @param agreementExecution The AgreementExecution.
+         * @return This builder.
          */
         public final Builder part_Of_(final AgreementExecution agreementExecution) {
             offerAndAcceptanceForGoodsImpl.addValue(PART_OF_, agreementExecution.getIri());
@@ -240,9 +280,17 @@ public class OfferAndAcceptanceForGoodsImpl extends HqdmObject
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} may be {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} one or more
+         * {@link PossibleWorld}.
          *
-         * @param possibleWorld
-         * @return
+         * <p>
+         * Note: The relationship is optional because a {@link PossibleWorld} is not
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} any other {@link SpatioTemporalExtent}.
+         * </p>
+         *
+         * @param possibleWorld The PossibleWorld.
+         * @return This builder.
          */
         public final Builder part_Of_Possible_World_M(final PossibleWorld possibleWorld) {
             offerAndAcceptanceForGoodsImpl.addValue(PART_OF_POSSIBLE_WORLD, possibleWorld.getIri());
@@ -250,9 +298,11 @@ public class OfferAndAcceptanceForGoodsImpl extends HqdmObject
         }
 
         /**
+         * A relationship type where an {@link uk.gov.gchq.hqdm.model.Activity} may reference one or
+         * more {@link Thing}.
          *
-         * @param thing
-         * @return
+         * @param thing The Thing.
+         * @return This builder.
          */
         public final Builder references(final Thing thing) {
             offerAndAcceptanceForGoodsImpl.addValue(REFERENCES, thing.getIri());
@@ -260,9 +310,12 @@ public class OfferAndAcceptanceForGoodsImpl extends HqdmObject
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} may be a temporal part of one or more other
+         * {@link SpatioTemporalExtent}.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder temporal__Part_Of(final SpatioTemporalExtent spatioTemporalExtent) {
             offerAndAcceptanceForGoodsImpl.addValue(TEMPORAL__PART_OF,
@@ -271,9 +324,21 @@ public class OfferAndAcceptanceForGoodsImpl extends HqdmObject
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} relationship type where a
+         * {@link uk.gov.gchq.hqdm.model.State} may be a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} one or more {@link Individual}.
          *
-         * @param individual
-         * @return
+         * <p>
+         * Note: The relationship is optional because an {@link Individual} is not necessarily a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} another {@link Individual}, yet is a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} {@link uk.gov.gchq.hqdm.model.State} as well
+         * as {@link Individual}. This applies to all subtypes of
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} that are between a {@code state_of_X}
+         * and {@code X}.
+         * </p>
+         *
+         * @param individual The Individual.
+         * @return This builder.
          */
         public final Builder temporal_Part_Of(final Individual individual) {
             offerAndAcceptanceForGoodsImpl.addValue(TEMPORAL_PART_OF, individual.getIri());
@@ -281,9 +346,12 @@ public class OfferAndAcceptanceForGoodsImpl extends HqdmObject
         }
 
         /**
+         * Returns an instance of OfferAndAcceptanceForGoods created from the properties set on this
+         * builder.
          *
-         * @return
-         * @throws HqdmException
+         * @return The built OfferAndAcceptanceForGoods.
+         * @throws HqdmException If the OfferAndAcceptanceForGoods is missing any mandatory
+         *         properties.
          */
         public OfferAndAcceptanceForGoods build() throws HqdmException {
             if (offerAndAcceptanceForGoodsImpl.hasValue(AGGREGATED_INTO)

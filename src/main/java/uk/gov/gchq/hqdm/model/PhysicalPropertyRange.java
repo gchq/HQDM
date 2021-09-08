@@ -16,8 +16,12 @@ package uk.gov.gchq.hqdm.model;
 
 /**
  * A {@link ClassOfState} where each member of the set is a member of a {@link PhysicalProperty}
- * within the range. Note: The physical_property_range is a supertype of each physical_property in
- * the range.
+ * within the range.
+ *
+ * <p>
+ * Note: The {@link PhysicalPropertyRange} is a supertype of each {@link PhysicalProperty} in the
+ * range.
+ * </p>
  */
 public interface PhysicalPropertyRange extends ClassOfState {
 }

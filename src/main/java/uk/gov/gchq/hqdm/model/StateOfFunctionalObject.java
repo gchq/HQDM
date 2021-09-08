@@ -16,7 +16,7 @@ package uk.gov.gchq.hqdm.model;
 
 /**
  * A {@link StateOfIntentionallyConstructedObject} and {@link StateOfPhysicalObject} that is a
- * {@link FunctionalObject} or a temporal_part_of a {@link FunctionalObject}.
+ * {@link FunctionalObject} or a {@code temporal_part_of} a {@link FunctionalObject}.
  */
 public interface StateOfFunctionalObject extends
         StateOfIntentionallyConstructedObject,

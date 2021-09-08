@@ -43,32 +43,40 @@ import uk.gov.gchq.hqdm.pojo.HqdmObject;
 public class StateOfOrdinaryPhysicalObjectImpl extends HqdmObject
         implements StateOfOrdinaryPhysicalObject {
     /**
+     * Constructs a new StateOfOrdinaryPhysicalObject.
      *
-     * @param iri
+     * @param iri IRI of the StateOfOrdinaryPhysicalObject.
      */
     public StateOfOrdinaryPhysicalObjectImpl(final IRI iri) {
         super(StateOfOrdinaryPhysicalObjectImpl.class, iri, STATE_OF_ORDINARY_PHYSICAL_OBJECT);
     }
 
     /**
-     * Builder for StateOfOrdinaryPhysicalObjectImpl.
+     * Builder for constructing instances of StateOfOrdinaryPhysicalObject.
      */
     public static class Builder {
-        /** */
+
         private final StateOfOrdinaryPhysicalObjectImpl stateOfOrdinaryPhysicalObjectImpl;
 
         /**
+         * Constructs a Builder for a new StateOfOrdinaryPhysicalObject.
          *
-         * @param iri
+         * @param iri IRI of the StateOfOrdinaryPhysicalObject.
          */
         public Builder(final IRI iri) {
             stateOfOrdinaryPhysicalObjectImpl = new StateOfOrdinaryPhysicalObjectImpl(iri);
         }
 
         /**
+         * A relationship type where a {@link SpatioTemporalExtent} may be aggregated into one or
+         * more others.
+         * <p>
+         * Note: This has the same meaning as, but different representation to, the
+         * {@link uk.gov.gchq.hqdm.model.Aggregation} entity type.
+         * </p>
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder aggregated_Into(final SpatioTemporalExtent spatioTemporalExtent) {
             stateOfOrdinaryPhysicalObjectImpl.addValue(AGGREGATED_INTO,
@@ -77,9 +85,11 @@ public class StateOfOrdinaryPhysicalObjectImpl extends HqdmObject
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} has exactly one {@link Event} that is its beginning.
          *
-         * @param event
-         * @return
+         * @param event The Event.
+         * @return This builder.
          */
         public final Builder beginning(final Event event) {
             stateOfOrdinaryPhysicalObjectImpl.addValue(BEGINNING, event.getIri());
@@ -87,9 +97,15 @@ public class StateOfOrdinaryPhysicalObjectImpl extends HqdmObject
         }
 
         /**
+         * A relationship type where a {@link SpatioTemporalExtent} may consist of one or more
+         * others.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * <p>
+         * Note: This is the inverse of {@link uk.gov.gchq.hqdm.iri.HQDM#PART__OF}.
+         * </p>
+         *
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder consists__Of(final SpatioTemporalExtent spatioTemporalExtent) {
             stateOfOrdinaryPhysicalObjectImpl.addValue(CONSISTS__OF, spatioTemporalExtent.getIri());
@@ -97,9 +113,11 @@ public class StateOfOrdinaryPhysicalObjectImpl extends HqdmObject
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} has exactly one {@link Event} that is its ending.
          *
-         * @param event
-         * @return
+         * @param event The Event.
+         * @return This builder.
          */
         public final Builder ending(final Event event) {
             stateOfOrdinaryPhysicalObjectImpl.addValue(ENDING, event.getIri());
@@ -107,9 +125,11 @@ public class StateOfOrdinaryPhysicalObjectImpl extends HqdmObject
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.model.Thing} may be a member of one
+         * or more {@link Class}.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder member__Of(final Class clazz) {
             stateOfOrdinaryPhysicalObjectImpl.addValue(MEMBER__OF, clazz.getIri());
@@ -117,11 +137,13 @@ public class StateOfOrdinaryPhysicalObjectImpl extends HqdmObject
         }
 
         /**
-         * A member_of relationship type where a state_of_ordinary_physical_object may be a
-         * member_of one or more {@link ClassOfStateOfOrdinaryPhysicalObject}.
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a
+         * {@link StateOfOrdinaryPhysicalObject} may be a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one or more
+         * {@link ClassOfStateOfOrdinaryPhysicalObject}.
          *
-         * @param classOfStateOfOrdinaryPhysicalObject
-         * @return
+         * @param classOfStateOfOrdinaryPhysicalObject The ClassOfStateOfOrdinaryPhysicalObject.
+         * @return This builder.
          */
         public final Builder member_Of(
                 final ClassOfStateOfOrdinaryPhysicalObject classOfStateOfOrdinaryPhysicalObject) {
@@ -131,9 +153,12 @@ public class StateOfOrdinaryPhysicalObjectImpl extends HqdmObject
         }
 
         /**
+         * An {@link uk.gov.gchq.hqdm.iri.HQDM#AGGREGATED_INTO} relationship type where a
+         * {@link SpatioTemporalExtent} may be part of another and the whole has emergent properties
+         * and is more than just the sum of its parts.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder part__Of(final SpatioTemporalExtent spatioTemporalExtent) {
             stateOfOrdinaryPhysicalObjectImpl.addValue(PART__OF, spatioTemporalExtent.getIri());
@@ -141,9 +166,17 @@ public class StateOfOrdinaryPhysicalObjectImpl extends HqdmObject
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} may be {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} one or more
+         * {@link PossibleWorld}.
          *
-         * @param possibleWorld
-         * @return
+         * <p>
+         * Note: The relationship is optional because a {@link PossibleWorld} is not
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} any other {@link SpatioTemporalExtent}.
+         * </p>
+         *
+         * @param possibleWorld The PossibleWorld.
+         * @return This builder.
          */
         public final Builder part_Of_Possible_World_M(final PossibleWorld possibleWorld) {
             stateOfOrdinaryPhysicalObjectImpl.addValue(PART_OF_POSSIBLE_WORLD,
@@ -152,9 +185,12 @@ public class StateOfOrdinaryPhysicalObjectImpl extends HqdmObject
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} may be a temporal part of one or more other
+         * {@link SpatioTemporalExtent}.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder temporal__Part_Of(final SpatioTemporalExtent spatioTemporalExtent) {
             stateOfOrdinaryPhysicalObjectImpl.addValue(TEMPORAL__PART_OF,
@@ -163,11 +199,13 @@ public class StateOfOrdinaryPhysicalObjectImpl extends HqdmObject
         }
 
         /**
-         * A temporal_part_of relationship type where a state_of_ordinary_physical_object may be a
-         * temporal_part_of one or more {@link OrdinaryPhysicalObject}.
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} relationship type where a
+         * {@link StateOfOrdinaryPhysicalObject} may be a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} one or more
+         * {@link OrdinaryPhysicalObject}.
          *
-         * @param ordinaryPhysicalObject
-         * @return
+         * @param ordinaryPhysicalObject The OrdinaryPhysicalObject.
+         * @return This builder.
          */
         public final Builder temporal_Part_Of(final OrdinaryPhysicalObject ordinaryPhysicalObject) {
             stateOfOrdinaryPhysicalObjectImpl.addValue(TEMPORAL_PART_OF,
@@ -176,9 +214,12 @@ public class StateOfOrdinaryPhysicalObjectImpl extends HqdmObject
         }
 
         /**
+         * Returns an instance of StateOfOrdinaryPhysicalObject created from the properties set on
+         * this builder.
          *
-         * @return
-         * @throws HqdmException
+         * @return The built StateOfOrdinaryPhysicalObject.
+         * @throws HqdmException If the StateOfOrdinaryPhysicalObject is missing any mandatory
+         *         properties.
          */
         public StateOfOrdinaryPhysicalObject build() throws HqdmException {
             if (stateOfOrdinaryPhysicalObjectImpl.hasValue(AGGREGATED_INTO)

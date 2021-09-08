@@ -31,32 +31,36 @@ import uk.gov.gchq.hqdm.pojo.HqdmObject;
  */
 public class ClassOfAbstractObjectImpl extends HqdmObject implements ClassOfAbstractObject {
     /**
+     * Constructs a new ClassOfAbstractObject.
      *
-     * @param iri
+     * @param iri IRI of the ClassOfAbstractObject.
      */
     public ClassOfAbstractObjectImpl(final IRI iri) {
         super(ClassOfAbstractObjectImpl.class, iri, CLASS_OF_ABSTRACT_OBJECT);
     }
 
     /**
-     * Builder for ClassOfAbstractObjectImpl.
+     * Builder for constructing instances of ClassOfAbstractObject.
      */
     public static class Builder {
-        /** */
+
         private final ClassOfAbstractObjectImpl classOfAbstractObjectImpl;
 
         /**
+         * Constructs a Builder for a new ClassOfAbstractObject.
          *
-         * @param iri
+         * @param iri IRI of the ClassOfAbstractObject.
          */
         public Builder(final IRI iri) {
             classOfAbstractObjectImpl = new ClassOfAbstractObjectImpl(iri);
         }
 
         /**
+         * A relationship type where each {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the
+         * {@link Class} is a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the superclass.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder has_Superclass(final Class clazz) {
             classOfAbstractObjectImpl.addValue(HAS_SUPERCLASS, clazz.getIri());
@@ -64,9 +68,11 @@ public class ClassOfAbstractObjectImpl extends HqdmObject implements ClassOfAbst
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.model.Thing} may be a member of one
+         * or more {@link Class}.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder member__Of(final Class clazz) {
             classOfAbstractObjectImpl.addValue(MEMBER__OF, clazz.getIri());
@@ -74,9 +80,11 @@ public class ClassOfAbstractObjectImpl extends HqdmObject implements ClassOfAbst
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a {@link Class} may
+         * be a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one or more {@link ClassOfClass}.
          *
-         * @param classOfClass
-         * @return
+         * @param classOfClass The ClassOfClass.
+         * @return This builder.
          */
         public final Builder member_Of(final ClassOfClass classOfClass) {
             classOfAbstractObjectImpl.addValue(MEMBER_OF, classOfClass.getIri());
@@ -84,9 +92,11 @@ public class ClassOfAbstractObjectImpl extends HqdmObject implements ClassOfAbst
         }
 
         /**
+         * Returns an instance of ClassOfAbstractObject created from the properties set on this
+         * builder.
          *
-         * @return
-         * @throws HqdmException
+         * @return The built ClassOfAbstractObject.
+         * @throws HqdmException If the ClassOfAbstractObject is missing any mandatory properties.
          */
         public ClassOfAbstractObject build() throws HqdmException {
             if (classOfAbstractObjectImpl.hasValue(HAS_SUPERCLASS)

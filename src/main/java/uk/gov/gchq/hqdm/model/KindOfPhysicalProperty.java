@@ -15,8 +15,8 @@
 package uk.gov.gchq.hqdm.model;
 
 /**
- * A {@link ClassOfPhysicalProperty} where each member_of a {@link KindOfPhysicalProperty} is of the
- * same kind.
+ * A {@link ClassOfPhysicalProperty} where each {@code member_of} a {@link KindOfPhysicalProperty}
+ * is of the same kind.
  */
 public interface KindOfPhysicalProperty extends ClassOfPhysicalProperty {
 }

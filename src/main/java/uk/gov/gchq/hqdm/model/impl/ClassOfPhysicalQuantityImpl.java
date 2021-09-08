@@ -31,32 +31,36 @@ import uk.gov.gchq.hqdm.pojo.HqdmObject;
  */
 public class ClassOfPhysicalQuantityImpl extends HqdmObject implements ClassOfPhysicalQuantity {
     /**
+     * Constructs a new ClassOfPhysicalQuantity.
      *
-     * @param iri
+     * @param iri IRI of the ClassOfPhysicalQuantity.
      */
     public ClassOfPhysicalQuantityImpl(final IRI iri) {
         super(ClassOfPhysicalQuantityImpl.class, iri, CLASS_OF_PHYSICAL_QUANTITY);
     }
 
     /**
-     * Builder for ClassOfPhysicalQuantityImpl.
+     * Builder for constructing instances of ClassOfPhysicalQuantity.
      */
     public static class Builder {
-        /** */
+
         private final ClassOfPhysicalQuantityImpl classOfPhysicalQuantityImpl;
 
         /**
+         * Constructs a Builder for a new ClassOfPhysicalQuantity.
          *
-         * @param iri
+         * @param iri IRI of the ClassOfPhysicalQuantity.
          */
         public Builder(final IRI iri) {
             classOfPhysicalQuantityImpl = new ClassOfPhysicalQuantityImpl(iri);
         }
 
         /**
+         * A relationship type where each {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the
+         * {@link Class} is a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the superclass.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder has_Superclass(final Class clazz) {
             classOfPhysicalQuantityImpl.addValue(HAS_SUPERCLASS, clazz.getIri());
@@ -64,9 +68,11 @@ public class ClassOfPhysicalQuantityImpl extends HqdmObject implements ClassOfPh
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.model.Thing} may be a member of one
+         * or more {@link Class}.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder member__Of(final Class clazz) {
             classOfPhysicalQuantityImpl.addValue(MEMBER__OF, clazz.getIri());
@@ -74,9 +80,11 @@ public class ClassOfPhysicalQuantityImpl extends HqdmObject implements ClassOfPh
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a {@link Class} may
+         * be a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one or more {@link ClassOfClass}.
          *
-         * @param classOfClass
-         * @return
+         * @param classOfClass The ClassOfClass.
+         * @return This builder.
          */
         public final Builder member_Of(final ClassOfClass classOfClass) {
             classOfPhysicalQuantityImpl.addValue(MEMBER_OF, classOfClass.getIri());
@@ -84,9 +92,11 @@ public class ClassOfPhysicalQuantityImpl extends HqdmObject implements ClassOfPh
         }
 
         /**
+         * Returns an instance of ClassOfPhysicalQuantity created from the properties set on this
+         * builder.
          *
-         * @return
-         * @throws HqdmException
+         * @return The built ClassOfPhysicalQuantity.
+         * @throws HqdmException If the ClassOfPhysicalQuantity is missing any mandatory properties.
          */
         public ClassOfPhysicalQuantity build() throws HqdmException {
             if (classOfPhysicalQuantityImpl.hasValue(HAS_SUPERCLASS)

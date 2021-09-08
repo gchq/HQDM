@@ -15,7 +15,7 @@
 package uk.gov.gchq.hqdm.model;
 
 /**
- * An offer of an {@link ExchangeOfGoodsAndMoney}.
+ * An {@link Offer} of an {@link ExchangeOfGoodsAndMoney}.
  */
 public interface OfferForGoods extends Offer {
 }

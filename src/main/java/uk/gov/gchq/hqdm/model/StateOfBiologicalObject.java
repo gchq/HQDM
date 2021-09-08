@@ -15,8 +15,8 @@
 package uk.gov.gchq.hqdm.model;
 
 /**
- * A {@link StateOfPhysicalObject} that is a {@link BiologicalObject} or a temporal_part_of a
- * {@link BiologicalObject}.
+ * A {@link StateOfPhysicalObject} that is a {@link BiologicalObject} or a {@code temporal_part_of}
+ * a {@link BiologicalObject}.
  */
 public interface StateOfBiologicalObject extends StateOfPhysicalObject {
 }

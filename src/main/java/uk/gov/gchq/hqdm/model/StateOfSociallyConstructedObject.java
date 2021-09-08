@@ -16,7 +16,7 @@ package uk.gov.gchq.hqdm.model;
 
 /**
  * A {@link StateOfIntentionallyConstructedObject} that is a {@link SociallyConstructedObject} or a
- * temporal_part_of a {@link SociallyConstructedObject}.
+ * {@code temporal_part_of} a {@link SociallyConstructedObject}.
  */
 public interface StateOfSociallyConstructedObject extends StateOfIntentionallyConstructedObject {
 }

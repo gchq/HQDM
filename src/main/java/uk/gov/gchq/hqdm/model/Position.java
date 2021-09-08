@@ -16,8 +16,12 @@ package uk.gov.gchq.hqdm.model;
 
 /**
  * An {@link OrganizationComponent} that is also a {@link StateOfPosition} that may be held by a
- * {@link Person}. Note: Normally a position is held by one person at a time, but this does not have
+ * {@link Person}.
+ *
+ * <p>
+ * Note: Normally a {@link Position} is held by one {@link Person} at a time, but this does not have
  * to be the case.
+ * </P>
  */
 public interface Position extends
         OrganizationComponent,

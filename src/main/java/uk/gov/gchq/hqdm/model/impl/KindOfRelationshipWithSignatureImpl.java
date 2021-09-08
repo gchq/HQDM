@@ -33,32 +33,36 @@ import uk.gov.gchq.hqdm.pojo.HqdmObject;
 public class KindOfRelationshipWithSignatureImpl extends HqdmObject
         implements KindOfRelationshipWithSignature {
     /**
+     * Constructs a new KindOfRelationshipWithSignature.
      *
-     * @param iri
+     * @param iri IRI of the KindOfRelationshipWithSignature.
      */
     public KindOfRelationshipWithSignatureImpl(final IRI iri) {
         super(KindOfRelationshipWithSignatureImpl.class, iri, KIND_OF_RELATIONSHIP_WITH_SIGNATURE);
     }
 
     /**
-     * Builder for KindOfRelationshipWithSignatureImpl.
+     * Builder for constructing instances of KindOfRelationshipWithSignature.
      */
     public static class Builder {
-        /** */
+
         private final KindOfRelationshipWithSignatureImpl kindOfRelationshipWithSignatureImpl;
 
         /**
+         * Constructs a Builder for a new KindOfRelationshipWithSignature.
          *
-         * @param iri
+         * @param iri IRI of the KindOfRelationshipWithSignature.
          */
         public Builder(final IRI iri) {
             kindOfRelationshipWithSignatureImpl = new KindOfRelationshipWithSignatureImpl(iri);
         }
 
         /**
+         * A relationship type where each {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the
+         * {@link Class} is a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the superclass.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder has_Superclass(final Class clazz) {
             kindOfRelationshipWithSignatureImpl.addValue(HAS_SUPERCLASS, clazz.getIri());
@@ -66,9 +70,11 @@ public class KindOfRelationshipWithSignatureImpl extends HqdmObject
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.model.Thing} may be a member of one
+         * or more {@link Class}.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder member__Of(final Class clazz) {
             kindOfRelationshipWithSignatureImpl.addValue(MEMBER__OF, clazz.getIri());
@@ -76,9 +82,11 @@ public class KindOfRelationshipWithSignatureImpl extends HqdmObject
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a {@link Class} may
+         * be a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one or more {@link ClassOfClass}.
          *
-         * @param classOfClass
-         * @return
+         * @param classOfClass The ClassOfClass.
+         * @return This builder.
          */
         public final Builder member_Of(final ClassOfClass classOfClass) {
             kindOfRelationshipWithSignatureImpl.addValue(MEMBER_OF, classOfClass.getIri());
@@ -86,10 +94,10 @@ public class KindOfRelationshipWithSignatureImpl extends HqdmObject
         }
 
         /**
-         * The roles that must be filled by members of a kind_of_relationship_with_signature.
+         * The roles that must be filled by members of a {@link KindOfRelationshipWithSignature}.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder roles_M(final Class clazz) {
             kindOfRelationshipWithSignatureImpl.addValue(ROLES, clazz.getIri());
@@ -97,9 +105,12 @@ public class KindOfRelationshipWithSignatureImpl extends HqdmObject
         }
 
         /**
+         * Returns an instance of KindOfRelationshipWithSignature created from the properties set on
+         * this builder.
          *
-         * @return
-         * @throws HqdmException
+         * @return The built KindOfRelationshipWithSignature.
+         * @throws HqdmException If the KindOfRelationshipWithSignature is missing any mandatory
+         *         properties.
          */
         public KindOfRelationshipWithSignature build() throws HqdmException {
             if (kindOfRelationshipWithSignatureImpl.hasValue(HAS_SUPERCLASS)

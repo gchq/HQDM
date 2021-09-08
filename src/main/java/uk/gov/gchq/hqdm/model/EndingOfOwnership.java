@@ -15,7 +15,7 @@
 package uk.gov.gchq.hqdm.model;
 
 /**
- * An {@link Event} that is the ending of an {@link Ownership}.
+ * An {@link Event} that is the {@code ending} of an {@link Ownership}.
  */
 public interface EndingOfOwnership extends Event {
 }

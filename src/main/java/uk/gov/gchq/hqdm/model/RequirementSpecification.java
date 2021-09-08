@@ -15,7 +15,7 @@
 package uk.gov.gchq.hqdm.model;
 
 /**
- * A {@link ClassOfSpatioTemporalExtent} that is the intersection_of one or more
+ * A {@link ClassOfSpatioTemporalExtent} that is the {@code intersection_of} one or more
  * {@link ClassOfState}.
  */
 public interface RequirementSpecification extends ClassOfSpatioTemporalExtent {

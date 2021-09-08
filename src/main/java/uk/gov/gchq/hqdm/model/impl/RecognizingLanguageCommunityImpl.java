@@ -47,32 +47,40 @@ import uk.gov.gchq.hqdm.pojo.HqdmObject;
 public class RecognizingLanguageCommunityImpl extends HqdmObject
         implements RecognizingLanguageCommunity {
     /**
+     * Constructs a new RecognizingLanguageCommunity.
      *
-     * @param iri
+     * @param iri IRI of the RecognizingLanguageCommunity.
      */
     public RecognizingLanguageCommunityImpl(final IRI iri) {
         super(RecognizingLanguageCommunityImpl.class, iri, RECOGNIZING_LANGUAGE_COMMUNITY);
     }
 
     /**
-     * Builder for RecognizingLanguageCommunityImpl.
+     * Builder for constructing instances of RecognizingLanguageCommunity.
      */
     public static class Builder {
-        /** */
+
         private final RecognizingLanguageCommunityImpl recognizingLanguageCommunityImpl;
 
         /**
+         * Constructs a Builder for a new RecognizingLanguageCommunity.
          *
-         * @param iri
+         * @param iri IRI of the RecognizingLanguageCommunity.
          */
         public Builder(final IRI iri) {
             recognizingLanguageCommunityImpl = new RecognizingLanguageCommunityImpl(iri);
         }
 
         /**
+         * A relationship type where a {@link SpatioTemporalExtent} may be aggregated into one or
+         * more others.
+         * <p>
+         * Note: This has the same meaning as, but different representation to, the
+         * {@link uk.gov.gchq.hqdm.model.Aggregation} entity type.
+         * </p>
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder aggregated_Into(final SpatioTemporalExtent spatioTemporalExtent) {
             recognizingLanguageCommunityImpl.addValue(AGGREGATED_INTO,
@@ -81,9 +89,11 @@ public class RecognizingLanguageCommunityImpl extends HqdmObject
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} has exactly one {@link Event} that is its beginning.
          *
-         * @param event
-         * @return
+         * @param event The Event.
+         * @return This builder.
          */
         public final Builder beginning(final Event event) {
             recognizingLanguageCommunityImpl.addValue(BEGINNING, event.getIri());
@@ -91,9 +101,15 @@ public class RecognizingLanguageCommunityImpl extends HqdmObject
         }
 
         /**
+         * A relationship type where a {@link SpatioTemporalExtent} may consist of one or more
+         * others.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * <p>
+         * Note: This is the inverse of {@link uk.gov.gchq.hqdm.iri.HQDM#PART__OF}.
+         * </p>
+         *
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder consists__Of(final SpatioTemporalExtent spatioTemporalExtent) {
             recognizingLanguageCommunityImpl.addValue(CONSISTS__OF, spatioTemporalExtent.getIri());
@@ -101,9 +117,11 @@ public class RecognizingLanguageCommunityImpl extends HqdmObject
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} has exactly one {@link Event} that is its ending.
          *
-         * @param event
-         * @return
+         * @param event The Event.
+         * @return This builder.
          */
         public final Builder ending(final Event event) {
             recognizingLanguageCommunityImpl.addValue(ENDING, event.getIri());
@@ -111,9 +129,11 @@ public class RecognizingLanguageCommunityImpl extends HqdmObject
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.model.Thing} may be a member of one
+         * or more {@link Class}.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder member__Of(final Class clazz) {
             recognizingLanguageCommunityImpl.addValue(MEMBER__OF, clazz.getIri());
@@ -121,9 +141,13 @@ public class RecognizingLanguageCommunityImpl extends HqdmObject
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a
+         * {@link uk.gov.gchq.hqdm.model.StateOfOrganization} may be a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one or more
+         * {@link ClassOfStateOfOrganization}.
          *
-         * @param classOfStateOfOrganization
-         * @return
+         * @param classOfStateOfOrganization The ClassOfStateOfOrganization.
+         * @return This builder.
          */
         public final Builder member_Of(
                 final ClassOfStateOfOrganization classOfStateOfOrganization) {
@@ -133,9 +157,12 @@ public class RecognizingLanguageCommunityImpl extends HqdmObject
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF_KIND} relationship type where each
+         * {@link uk.gov.gchq.hqdm.model.Participant} is a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one or more {@link Role}.
          *
-         * @param role
-         * @return
+         * @param role The Role.
+         * @return This builder.
          */
         public final Builder member_Of_Kind_M(final Role role) {
             recognizingLanguageCommunityImpl.addValue(MEMBER_OF_KIND, role.getIri());
@@ -143,9 +170,12 @@ public class RecognizingLanguageCommunityImpl extends HqdmObject
         }
 
         /**
+         * An {@link uk.gov.gchq.hqdm.iri.HQDM#AGGREGATED_INTO} relationship type where a
+         * {@link SpatioTemporalExtent} may be part of another and the whole has emergent properties
+         * and is more than just the sum of its parts.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder part__Of(final SpatioTemporalExtent spatioTemporalExtent) {
             recognizingLanguageCommunityImpl.addValue(PART__OF, spatioTemporalExtent.getIri());
@@ -153,9 +183,17 @@ public class RecognizingLanguageCommunityImpl extends HqdmObject
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} may be {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} one or more
+         * {@link PossibleWorld}.
          *
-         * @param possibleWorld
-         * @return
+         * <p>
+         * Note: The relationship is optional because a {@link PossibleWorld} is not
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} any other {@link SpatioTemporalExtent}.
+         * </p>
+         *
+         * @param possibleWorld The PossibleWorld.
+         * @return This builder.
          */
         public final Builder part_Of_Possible_World_M(final PossibleWorld possibleWorld) {
             recognizingLanguageCommunityImpl.addValue(PART_OF_POSSIBLE_WORLD,
@@ -164,11 +202,13 @@ public class RecognizingLanguageCommunityImpl extends HqdmObject
         }
 
         /**
-         * A participant_in relationship type where a recognizing_language_community is a
-         * participant_in one or more {@link RepresentationBySign}.
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PARTICIPANT_IN} relationship type where a
+         * {@link RecognizingLanguageCommunity} is a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#PARTICIPANT_IN} one or more
+         * {@link RepresentationBySign}.
          *
-         * @param representationBySign
-         * @return
+         * @param representationBySign The RepresentationBySign.
+         * @return This builder.
          */
         public final Builder participant_In(final RepresentationBySign representationBySign) {
             recognizingLanguageCommunityImpl.addValue(PARTICIPANT_IN,
@@ -177,9 +217,12 @@ public class RecognizingLanguageCommunityImpl extends HqdmObject
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} may be a temporal part of one or more other
+         * {@link SpatioTemporalExtent}.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder temporal__Part_Of(final SpatioTemporalExtent spatioTemporalExtent) {
             recognizingLanguageCommunityImpl.addValue(TEMPORAL__PART_OF,
@@ -188,9 +231,12 @@ public class RecognizingLanguageCommunityImpl extends HqdmObject
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} relationship type where a
+         * {@link uk.gov.gchq.hqdm.model.StateOfLanguageCommunity} may be a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} one or more {@link LanguageCommunity}.
          *
-         * @param languageCommunity
-         * @return
+         * @param languageCommunity The LanguageCommunity.
+         * @return This builder.
          */
         public final Builder temporal_Part_Of(final LanguageCommunity languageCommunity) {
             recognizingLanguageCommunityImpl.addValue(TEMPORAL_PART_OF, languageCommunity.getIri());
@@ -198,9 +244,12 @@ public class RecognizingLanguageCommunityImpl extends HqdmObject
         }
 
         /**
+         * Returns an instance of RecognizingLanguageCommunity created from the properties set on
+         * this builder.
          *
-         * @return
-         * @throws HqdmException
+         * @return The built RecognizingLanguageCommunity.
+         * @throws HqdmException If the RecognizingLanguageCommunity is missing any mandatory
+         *         properties.
          */
         public RecognizingLanguageCommunity build() throws HqdmException {
             if (recognizingLanguageCommunityImpl.hasValue(AGGREGATED_INTO)

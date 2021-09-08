@@ -16,7 +16,7 @@ package uk.gov.gchq.hqdm.model;
 
 /**
  * An {@link IntentionallyConstructedObject} that is also a {@link PhysicalObject} that has an
- * intended_role.
+ * {@code intended_role}.
  */
 public interface FunctionalObject extends
         IntentionallyConstructedObject,

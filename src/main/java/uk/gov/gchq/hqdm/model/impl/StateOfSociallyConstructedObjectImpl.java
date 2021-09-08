@@ -43,8 +43,9 @@ import uk.gov.gchq.hqdm.pojo.HqdmObject;
 public class StateOfSociallyConstructedObjectImpl extends HqdmObject
         implements StateOfSociallyConstructedObject {
     /**
+     * Constructs a new StateOfSociallyConstructedObject.
      *
-     * @param iri
+     * @param iri IRI of the StateOfSociallyConstructedObject.
      */
     public StateOfSociallyConstructedObjectImpl(final IRI iri) {
         super(StateOfSociallyConstructedObjectImpl.class, iri,
@@ -52,24 +53,31 @@ public class StateOfSociallyConstructedObjectImpl extends HqdmObject
     }
 
     /**
-     * Builder for StateOfSociallyConstructedObjectImpl.
+     * Builder for constructing instances of StateOfSociallyConstructedObject.
      */
     public static class Builder {
-        /** */
+
         private final StateOfSociallyConstructedObjectImpl stateOfSociallyConstructedObjectImpl;
 
         /**
+         * Constructs a Builder for a new StateOfSociallyConstructedObject.
          *
-         * @param iri
+         * @param iri IRI of the StateOfSociallyConstructedObject.
          */
         public Builder(final IRI iri) {
             stateOfSociallyConstructedObjectImpl = new StateOfSociallyConstructedObjectImpl(iri);
         }
 
         /**
+         * A relationship type where a {@link SpatioTemporalExtent} may be aggregated into one or
+         * more others.
+         * <p>
+         * Note: This has the same meaning as, but different representation to, the
+         * {@link uk.gov.gchq.hqdm.model.Aggregation} entity type.
+         * </p>
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder aggregated_Into(final SpatioTemporalExtent spatioTemporalExtent) {
             stateOfSociallyConstructedObjectImpl.addValue(AGGREGATED_INTO,
@@ -78,9 +86,11 @@ public class StateOfSociallyConstructedObjectImpl extends HqdmObject
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} has exactly one {@link Event} that is its beginning.
          *
-         * @param event
-         * @return
+         * @param event The Event.
+         * @return This builder.
          */
         public final Builder beginning(final Event event) {
             stateOfSociallyConstructedObjectImpl.addValue(BEGINNING, event.getIri());
@@ -88,9 +98,15 @@ public class StateOfSociallyConstructedObjectImpl extends HqdmObject
         }
 
         /**
+         * A relationship type where a {@link SpatioTemporalExtent} may consist of one or more
+         * others.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * <p>
+         * Note: This is the inverse of {@link uk.gov.gchq.hqdm.iri.HQDM#PART__OF}.
+         * </p>
+         *
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder consists__Of(final SpatioTemporalExtent spatioTemporalExtent) {
             stateOfSociallyConstructedObjectImpl.addValue(CONSISTS__OF,
@@ -99,9 +115,11 @@ public class StateOfSociallyConstructedObjectImpl extends HqdmObject
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} has exactly one {@link Event} that is its ending.
          *
-         * @param event
-         * @return
+         * @param event The Event.
+         * @return This builder.
          */
         public final Builder ending(final Event event) {
             stateOfSociallyConstructedObjectImpl.addValue(ENDING, event.getIri());
@@ -109,9 +127,11 @@ public class StateOfSociallyConstructedObjectImpl extends HqdmObject
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.model.Thing} may be a member of one
+         * or more {@link Class}.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder member__Of(final Class clazz) {
             stateOfSociallyConstructedObjectImpl.addValue(MEMBER__OF, clazz.getIri());
@@ -119,11 +139,14 @@ public class StateOfSociallyConstructedObjectImpl extends HqdmObject
         }
 
         /**
-         * A member_of relationship type where a state_of_socially_constructed_object may be a
-         * member_of one or more {@link ClassOfStateOfSociallyConstructedObject}.
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a
+         * {@link StateOfSociallyConstructedObject} may be a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one or more
+         * {@link ClassOfStateOfSociallyConstructedObject}.
          *
-         * @param classOfStateOfSociallyConstructedObject
-         * @return
+         * @param classOfStateOfSociallyConstructedObject The
+         *        classOfStateOfSociallyConstructedObject.
+         * @return This builder.
          */
         @SuppressWarnings("LineLength")
         public final Builder member_Of(
@@ -134,9 +157,12 @@ public class StateOfSociallyConstructedObjectImpl extends HqdmObject
         }
 
         /**
+         * An {@link uk.gov.gchq.hqdm.iri.HQDM#AGGREGATED_INTO} relationship type where a
+         * {@link SpatioTemporalExtent} may be part of another and the whole has emergent properties
+         * and is more than just the sum of its parts.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder part__Of(final SpatioTemporalExtent spatioTemporalExtent) {
             stateOfSociallyConstructedObjectImpl.addValue(PART__OF, spatioTemporalExtent.getIri());
@@ -144,9 +170,17 @@ public class StateOfSociallyConstructedObjectImpl extends HqdmObject
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} may be {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} one or more
+         * {@link PossibleWorld}.
          *
-         * @param possibleWorld
-         * @return
+         * <p>
+         * Note: The relationship is optional because a {@link PossibleWorld} is not
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} any other {@link SpatioTemporalExtent}.
+         * </p>
+         *
+         * @param possibleWorld The PossibleWorld.
+         * @return This builder.
          */
         public final Builder part_Of_Possible_World_M(final PossibleWorld possibleWorld) {
             stateOfSociallyConstructedObjectImpl.addValue(PART_OF_POSSIBLE_WORLD,
@@ -155,9 +189,12 @@ public class StateOfSociallyConstructedObjectImpl extends HqdmObject
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} may be a temporal part of one or more other
+         * {@link SpatioTemporalExtent}.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder temporal__Part_Of(final SpatioTemporalExtent spatioTemporalExtent) {
             stateOfSociallyConstructedObjectImpl.addValue(TEMPORAL__PART_OF,
@@ -166,11 +203,13 @@ public class StateOfSociallyConstructedObjectImpl extends HqdmObject
         }
 
         /**
-         * A temporal_part_of relationship type where a state_of_socially_constructed_object may be
-         * a temporal_part_of one or more {@link SociallyConstructedObject}.
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} relationship type where a
+         * {@link StateOfSociallyConstructedObject} may be a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} one or more
+         * {@link SociallyConstructedObject}.
          *
-         * @param sociallyConstructedObject
-         * @return
+         * @param sociallyConstructedObject The SociallyConstructedObject.
+         * @return This builder.
          */
         public final Builder temporal_Part_Of(
                 final SociallyConstructedObject sociallyConstructedObject) {
@@ -180,9 +219,12 @@ public class StateOfSociallyConstructedObjectImpl extends HqdmObject
         }
 
         /**
+         * Returns an instance of StateOfSociallyConstructedObject created from the properties set
+         * on this builder.
          *
-         * @return
-         * @throws HqdmException
+         * @return The built StateOfSociallyConstructedObject.
+         * @throws HqdmException If the StateOfSociallyConstructedObject is missing any mandatory
+         *         properties.
          */
         public StateOfSociallyConstructedObject build() throws HqdmException {
             if (stateOfSociallyConstructedObjectImpl.hasValue(AGGREGATED_INTO)

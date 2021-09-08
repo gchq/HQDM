@@ -16,8 +16,8 @@ package uk.gov.gchq.hqdm.model;
 
 /**
  * A {@link ClassOfRelationship} that is a subset of {@link DefinedRelationship} type where the
- * classifications involved in each {@link DefinedRelationship} have as classifiers the roles
- * specified by the {@link KindOfRelationshipWithSignature}.
+ * {@link Classification}s involved in each {@link DefinedRelationship} have as {@code classifier}s
+ * the {@code roles} specified by the {@link KindOfRelationshipWithSignature}.
  */
 public interface KindOfRelationshipWithSignature extends ClassOfRelationship {
 }

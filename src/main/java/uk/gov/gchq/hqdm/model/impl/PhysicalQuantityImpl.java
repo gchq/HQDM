@@ -38,32 +38,38 @@ import uk.gov.gchq.hqdm.pojo.HqdmObject;
  */
 public class PhysicalQuantityImpl extends HqdmObject implements PhysicalQuantity {
     /**
+     * Constructs a new PhysicalQuantity.
      *
-     * @param iri
+     * @param iri IRI of the PhysicalQuantity.
      */
     public PhysicalQuantityImpl(final IRI iri) {
         super(PhysicalQuantityImpl.class, iri, PHYSICAL_QUANTITY);
     }
 
     /**
-     * Builder for PhysicalQuantityImpl.
+     * Builder for constructing instances of PhysicalQuantity.
      */
     public static class Builder {
-        /** */
+
         private final PhysicalQuantityImpl physicalQuantityImpl;
 
         /**
+         * Constructs a Builder for a new PhysicalQuantity.
          *
-         * @param iri
+         * @param iri IRI of the PhysicalQuantity.
          */
         public Builder(final IRI iri) {
             physicalQuantityImpl = new PhysicalQuantityImpl(iri);
         }
 
         /**
+         * An inverse {@link uk.gov.gchq.hqdm.iri.HQDM#PART__OF_BY_CLASS} relationship type where a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one {@link ClassOfSpatioTemporalExtent}
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#CONSISTS_OF} another
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} a {@link ClassOfSpatioTemporalExtent}.
          *
-         * @param classOfSpatioTemporalExtent
-         * @return
+         * @param classOfSpatioTemporalExtent The ClassOfSpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder consists__Of_By_Class(
                 final ClassOfSpatioTemporalExtent classOfSpatioTemporalExtent) {
@@ -73,9 +79,11 @@ public class PhysicalQuantityImpl extends HqdmObject implements PhysicalQuantity
         }
 
         /**
+         * A relationship type where each {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the
+         * {@link Class} is a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the superclass.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder has_Superclass(final Class clazz) {
             physicalQuantityImpl.addValue(HAS_SUPERCLASS, clazz.getIri());
@@ -83,9 +91,11 @@ public class PhysicalQuantityImpl extends HqdmObject implements PhysicalQuantity
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.model.Thing} may be a member of one
+         * or more {@link Class}.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder member__Of(final Class clazz) {
             physicalQuantityImpl.addValue(MEMBER__OF, clazz.getIri());
@@ -93,11 +103,12 @@ public class PhysicalQuantityImpl extends HqdmObject implements PhysicalQuantity
         }
 
         /**
-         * A member_of relationship type where a physical_quantity may be a member_of one or more
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a
+         * {@link PhysicalQuantity} may be a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one or more
          * {@link ClassOfPhysicalQuantity}.
          *
-         * @param classOfPhysicalQuantity
-         * @return
+         * @param classOfPhysicalQuantity The ClassOfPhysicalQuantity.
+         * @return This builder.
          */
         public final Builder member_Of(final ClassOfPhysicalQuantity classOfPhysicalQuantity) {
             physicalQuantityImpl.addValue(MEMBER_OF, classOfPhysicalQuantity.getIri());
@@ -105,9 +116,12 @@ public class PhysicalQuantityImpl extends HqdmObject implements PhysicalQuantity
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a
+         * {@link ClassOfSpatioTemporalExtent} may be a member of one or more
+         * {@link ClassOfClassOfSpatioTemporalExtent}.
          *
-         * @param classOfClassOfSpatioTemporalExtent
-         * @return
+         * @param classOfClassOfSpatioTemporalExtent The ClassOfClassOfSpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder member_Of_(
                 final ClassOfClassOfSpatioTemporalExtent classOfClassOfSpatioTemporalExtent) {
@@ -116,11 +130,12 @@ public class PhysicalQuantityImpl extends HqdmObject implements PhysicalQuantity
         }
 
         /**
-         * A member_of relationship type where a physical_quantity is a member_of exactly one
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a
+         * {@link PhysicalQuantity} is a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} exactly one
          * {@link KindOfPhysicalQuantity}.
          *
-         * @param kindOfPhysicalQuantity
-         * @return
+         * @param kindOfPhysicalQuantity The KindOfPhysicalQuantity.
+         * @return This builder.
          */
         public final Builder member_Of_Kind_M(final KindOfPhysicalQuantity kindOfPhysicalQuantity) {
             physicalQuantityImpl.addValue(MEMBER_OF_KIND, kindOfPhysicalQuantity.getIri());
@@ -128,9 +143,12 @@ public class PhysicalQuantityImpl extends HqdmObject implements PhysicalQuantity
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} a
+         * {@link ClassOfSpatioTemporalExtent} is {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} some {@link ClassOfSpatioTemporalExtent}.
          *
-         * @param classOfSpatioTemporalExtent
-         * @return
+         * @param classOfSpatioTemporalExtent The ClassOfSpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder part__Of_By_Class(
                 final ClassOfSpatioTemporalExtent classOfSpatioTemporalExtent) {
@@ -139,9 +157,10 @@ public class PhysicalQuantityImpl extends HqdmObject implements PhysicalQuantity
         }
 
         /**
+         * Returns an instance of PhysicalQuantity created from the properties set on this builder.
          *
-         * @return
-         * @throws HqdmException
+         * @return The built PhysicalQuantity.
+         * @throws HqdmException If the PhysicalQuantity is missing any mandatory properties.
          */
         public PhysicalQuantity build() throws HqdmException {
             if (physicalQuantityImpl.hasValue(HAS_SUPERCLASS)

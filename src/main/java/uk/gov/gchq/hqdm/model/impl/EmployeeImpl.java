@@ -46,32 +46,40 @@ import uk.gov.gchq.hqdm.pojo.HqdmObject;
  */
 public class EmployeeImpl extends HqdmObject implements Employee {
     /**
+     * Constructs a new Employee.
      *
-     * @param iri
+     * @param iri IRI of the Employee.
      */
     public EmployeeImpl(final IRI iri) {
         super(EmployeeImpl.class, iri, EMPLOYEE);
     }
 
     /**
-     * Builder for EmployeeImpl.
+     * Builder for constructing instances of Employee.
      */
     public static class Builder {
-        /** */
+
         private final EmployeeImpl employeeImpl;
 
         /**
+         * Constructs a Builder for a new Employee.
          *
-         * @param iri
+         * @param iri IRI of the Employee.
          */
         public Builder(final IRI iri) {
             employeeImpl = new EmployeeImpl(iri);
         }
 
         /**
+         * A relationship type where a {@link SpatioTemporalExtent} may be aggregated into one or
+         * more others.
+         * <p>
+         * Note: This has the same meaning as, but different representation to, the
+         * {@link uk.gov.gchq.hqdm.model.Aggregation} entity type.
+         * </p>
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder aggregated_Into(final SpatioTemporalExtent spatioTemporalExtent) {
             employeeImpl.addValue(AGGREGATED_INTO, spatioTemporalExtent.getIri());
@@ -79,9 +87,11 @@ public class EmployeeImpl extends HqdmObject implements Employee {
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} has exactly one {@link Event} that is its beginning.
          *
-         * @param event
-         * @return
+         * @param event The Event.
+         * @return This builder.
          */
         public final Builder beginning(final Event event) {
             employeeImpl.addValue(BEGINNING, event.getIri());
@@ -89,9 +99,15 @@ public class EmployeeImpl extends HqdmObject implements Employee {
         }
 
         /**
+         * A relationship type where a {@link SpatioTemporalExtent} may consist of one or more
+         * others.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * <p>
+         * Note: This is the inverse of {@link uk.gov.gchq.hqdm.iri.HQDM#PART__OF}.
+         * </p>
+         *
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder consists__Of(final SpatioTemporalExtent spatioTemporalExtent) {
             employeeImpl.addValue(CONSISTS__OF, spatioTemporalExtent.getIri());
@@ -99,9 +115,11 @@ public class EmployeeImpl extends HqdmObject implements Employee {
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} has exactly one {@link Event} that is its ending.
          *
-         * @param event
-         * @return
+         * @param event The Event.
+         * @return This builder.
          */
         public final Builder ending(final Event event) {
             employeeImpl.addValue(ENDING, event.getIri());
@@ -109,9 +127,11 @@ public class EmployeeImpl extends HqdmObject implements Employee {
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.model.Thing} may be a member of one
+         * or more {@link Class}.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder member__Of(final Class clazz) {
             employeeImpl.addValue(MEMBER__OF, clazz.getIri());
@@ -119,9 +139,12 @@ public class EmployeeImpl extends HqdmObject implements Employee {
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a
+         * {@link uk.gov.gchq.hqdm.model.StateOfPerson} may be a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one or more {@link ClassOfStateOfPerson}.
          *
-         * @param classOfStateOfPerson
-         * @return
+         * @param classOfStateOfPerson The ClassOfStateOfPerson.
+         * @return This builder.
          */
         public final Builder member_Of(final ClassOfStateOfPerson classOfStateOfPerson) {
             employeeImpl.addValue(MEMBER_OF, classOfStateOfPerson.getIri());
@@ -129,9 +152,12 @@ public class EmployeeImpl extends HqdmObject implements Employee {
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF_KIND} relationship type where each
+         * {@link uk.gov.gchq.hqdm.model.Participant} is a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one or more {@link Role}.
          *
-         * @param role
-         * @return
+         * @param role The Role.
+         * @return This builder.
          */
         public final Builder member_Of_Kind_M(final Role role) {
             employeeImpl.addValue(MEMBER_OF_KIND, role.getIri());
@@ -139,9 +165,12 @@ public class EmployeeImpl extends HqdmObject implements Employee {
         }
 
         /**
+         * An {@link uk.gov.gchq.hqdm.iri.HQDM#AGGREGATED_INTO} relationship type where a
+         * {@link SpatioTemporalExtent} may be part of another and the whole has emergent properties
+         * and is more than just the sum of its parts.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder part__Of(final SpatioTemporalExtent spatioTemporalExtent) {
             employeeImpl.addValue(PART__OF, spatioTemporalExtent.getIri());
@@ -149,9 +178,17 @@ public class EmployeeImpl extends HqdmObject implements Employee {
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} may be {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} one or more
+         * {@link PossibleWorld}.
          *
-         * @param possibleWorld
-         * @return
+         * <p>
+         * Note: The relationship is optional because a {@link PossibleWorld} is not
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} any other {@link SpatioTemporalExtent}.
+         * </p>
+         *
+         * @param possibleWorld The PossibleWorld.
+         * @return This builder.
          */
         public final Builder part_Of_Possible_World_M(final PossibleWorld possibleWorld) {
             employeeImpl.addValue(PART_OF_POSSIBLE_WORLD, possibleWorld.getIri());
@@ -159,11 +196,12 @@ public class EmployeeImpl extends HqdmObject implements Employee {
         }
 
         /**
-         * A participant_in relationship type where an employee is a participant_in exactly one
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PARTICIPANT_IN} relationship type where an
+         * {@link Employee} is a {@link uk.gov.gchq.hqdm.iri.HQDM#PARTICIPANT_IN} exactly one
          * {@link Employment}.
          *
-         * @param employment
-         * @return
+         * @param employment The Employment.
+         * @return This builder.
          */
         public final Builder participant_In_M(final Employment employment) {
             employeeImpl.addValue(PARTICIPANT_IN, employment.getIri());
@@ -171,9 +209,12 @@ public class EmployeeImpl extends HqdmObject implements Employee {
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} may be a temporal part of one or more other
+         * {@link SpatioTemporalExtent}.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder temporal__Part_Of(final SpatioTemporalExtent spatioTemporalExtent) {
             employeeImpl.addValue(TEMPORAL__PART_OF, spatioTemporalExtent.getIri());
@@ -181,9 +222,12 @@ public class EmployeeImpl extends HqdmObject implements Employee {
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} relationship type where a
+         * {@link uk.gov.gchq.hqdm.model.StateOfPerson} may be a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} one or more {@link Person}.
          *
-         * @param person
-         * @return
+         * @param person The Person.
+         * @return This builder.
          */
         public final Builder temporal_Part_Of(final Person person) {
             employeeImpl.addValue(TEMPORAL_PART_OF, person.getIri());
@@ -191,9 +235,10 @@ public class EmployeeImpl extends HqdmObject implements Employee {
         }
 
         /**
+         * Returns an instance of Employee created from the properties set on this builder.
          *
-         * @return
-         * @throws HqdmException
+         * @return The built Employee.
+         * @throws HqdmException If the Employee is missing any mandatory properties.
          */
         public Employee build() throws HqdmException {
             if (employeeImpl.hasValue(AGGREGATED_INTO)

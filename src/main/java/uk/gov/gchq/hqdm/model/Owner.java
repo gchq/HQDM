@@ -15,7 +15,7 @@
 package uk.gov.gchq.hqdm.model;
 
 /**
- * A {@link StateOfParty} that is also a {@link Participant} that is a participant_in an
+ * A {@link StateOfParty} that is also a {@link Participant} that is a {@code participant_in} an
  * {@link Ownership}.
  */
 public interface Owner extends

@@ -15,8 +15,8 @@
 package uk.gov.gchq.hqdm.model;
 
 /**
- * A {@link StateOfPhysicalObject} that is also a {@link Participant} that is the participant_in an
- * {@link Ownership} that is owned.
+ * A {@link StateOfPhysicalObject} that is also a {@link Participant} that is the
+ * {@code participant_in} an {@link Ownership} that is owned.
  */
 public interface Asset extends Participant {
 }

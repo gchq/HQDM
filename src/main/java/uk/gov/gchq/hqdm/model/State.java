@@ -15,7 +15,7 @@
 package uk.gov.gchq.hqdm.model;
 
 /**
- * A {@link SpatioTemporalExtent} that is an {@link Individual} or a temporal_part_of some
+ * A {@link SpatioTemporalExtent} that is an {@link Individual} or a {@code temporal_part_of} some
  * {@link Individual}.
  */
 public interface State extends SpatioTemporalExtent {

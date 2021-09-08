@@ -42,34 +42,37 @@ import uk.gov.gchq.hqdm.pojo.HqdmObject;
  */
 public class KindOfActivityImpl extends HqdmObject implements KindOfActivity {
     /**
+     * Constructs a new KindOfActivity.
      *
-     * @param iri
+     * @param iri IRI of the KindOfActivity.
      */
     public KindOfActivityImpl(final IRI iri) {
         super(KindOfActivityImpl.class, iri, KIND_OF_ACTIVITY);
     }
 
     /**
-     * Builder for KindOfActivityImpl.
+     * Builder for constructing instances of KindOfActivity.
      */
     public static class Builder {
-        /** */
+
         private final KindOfActivityImpl kindOfActivityImpl;
 
         /**
+         * Constructs a Builder for a new KindOfActivity.
          *
-         * @param iri
+         * @param iri IRI of the KindOfActivity.
          */
         public Builder(final IRI iri) {
             kindOfActivityImpl = new KindOfActivityImpl(iri);
         }
 
         /**
-         * A relationship type where a member_of the kind_of_activity causes a member_of the
+         * A relationship type where a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the
+         * {@link KindOfActivity} causes a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the
          * {@link ClassOfEvent}.
          *
-         * @param classOfEvent
-         * @return
+         * @param classOfEvent The ClassOfEvent.
+         * @return This builder.
          */
         public final Builder causes_By_Class(final ClassOfEvent classOfEvent) {
             kindOfActivityImpl.addValue(CAUSES_BY_CLASS, classOfEvent.getIri());
@@ -77,9 +80,13 @@ public class KindOfActivityImpl extends HqdmObject implements KindOfActivity {
         }
 
         /**
+         * An inverse {@link uk.gov.gchq.hqdm.iri.HQDM#PART__OF_BY_CLASS} relationship type where a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one {@link ClassOfSpatioTemporalExtent}
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#CONSISTS_OF} another
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} a {@link ClassOfSpatioTemporalExtent}.
          *
-         * @param classOfSpatioTemporalExtent
-         * @return
+         * @param classOfSpatioTemporalExtent The ClassOfSpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder consists__Of_By_Class(
                 final ClassOfSpatioTemporalExtent classOfSpatioTemporalExtent) {
@@ -89,11 +96,13 @@ public class KindOfActivityImpl extends HqdmObject implements KindOfActivity {
         }
 
         /**
-         * A consists_of_by_class relationship type where a member_of a kind_of_activity has a
-         * member_of a {@link Role} as a participant.
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#CONSISTS_OF_BY_CLASS} relationship type where a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} a {@link KindOfActivity} has a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} a {@link Role} as a
+         * {@link uk.gov.gchq.hqdm.model.Participant}.
          *
-         * @param role
-         * @return
+         * @param role The Role.
+         * @return This builder.
          */
         public final Builder consists_Of_By_Class(final Role role) {
             kindOfActivityImpl.addValue(CONSISTS_OF_BY_CLASS, role.getIri());
@@ -101,11 +110,12 @@ public class KindOfActivityImpl extends HqdmObject implements KindOfActivity {
         }
 
         /**
-         * A relationship type where a member_of the kind_of_activity determines a member_of the
+         * A relationship type where a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the
+         * {@link KindOfActivity} determines a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the
          * {@link Class}.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder determines_By_Class(final Class clazz) {
             kindOfActivityImpl.addValue(DETERMINES_BY_CLASS, clazz.getIri());
@@ -113,9 +123,11 @@ public class KindOfActivityImpl extends HqdmObject implements KindOfActivity {
         }
 
         /**
+         * A relationship type where each {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the
+         * {@link Class} is a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the superclass.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder has_Superclass(final Class clazz) {
             kindOfActivityImpl.addValue(HAS_SUPERCLASS, clazz.getIri());
@@ -123,9 +135,11 @@ public class KindOfActivityImpl extends HqdmObject implements KindOfActivity {
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.model.Thing} may be a member of one
+         * or more {@link Class}.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder member__Of(final Class clazz) {
             kindOfActivityImpl.addValue(MEMBER__OF, clazz.getIri());
@@ -133,9 +147,11 @@ public class KindOfActivityImpl extends HqdmObject implements KindOfActivity {
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a {@link Class} may
+         * be a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one or more {@link ClassOfClass}.
          *
-         * @param classOfClass
-         * @return
+         * @param classOfClass The ClassOfClass.
+         * @return This builder.
          */
         public final Builder member_Of(final ClassOfClass classOfClass) {
             kindOfActivityImpl.addValue(MEMBER_OF, classOfClass.getIri());
@@ -143,9 +159,12 @@ public class KindOfActivityImpl extends HqdmObject implements KindOfActivity {
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a
+         * {@link ClassOfSpatioTemporalExtent} may be a member of one or more
+         * {@link ClassOfClassOfSpatioTemporalExtent}.
          *
-         * @param classOfClassOfSpatioTemporalExtent
-         * @return
+         * @param classOfClassOfSpatioTemporalExtent The ClassOfClassOfSpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder member_Of_(
                 final ClassOfClassOfSpatioTemporalExtent classOfClassOfSpatioTemporalExtent) {
@@ -154,9 +173,12 @@ public class KindOfActivityImpl extends HqdmObject implements KindOfActivity {
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} a
+         * {@link ClassOfSpatioTemporalExtent} is {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} some {@link ClassOfSpatioTemporalExtent}.
          *
-         * @param classOfSpatioTemporalExtent
-         * @return
+         * @param classOfSpatioTemporalExtent The ClassOfSpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder part__Of_By_Class(
                 final ClassOfSpatioTemporalExtent classOfSpatioTemporalExtent) {
@@ -165,11 +187,12 @@ public class KindOfActivityImpl extends HqdmObject implements KindOfActivity {
         }
 
         /**
-         * A relationship type where a member_of the kind_of_activity references a member_of the
+         * A relationship type where a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the
+         * {@link KindOfActivity} references a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the
          * {@link Class}.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder references_By_Class(final Class clazz) {
             kindOfActivityImpl.addValue(REFERENCES_BY_CLASS, clazz.getIri());
@@ -177,9 +200,10 @@ public class KindOfActivityImpl extends HqdmObject implements KindOfActivity {
         }
 
         /**
+         * Returns an instance of KindOfActivity created from the properties set on this builder.
          *
-         * @return
-         * @throws HqdmException
+         * @return The built KindOfActivity.
+         * @throws HqdmException If the KindOfActivity is missing any mandatory properties.
          */
         public KindOfActivity build() throws HqdmException {
             if (kindOfActivityImpl.hasValue(CAUSES_BY_CLASS)

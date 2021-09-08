@@ -38,32 +38,38 @@ import uk.gov.gchq.hqdm.pojo.HqdmObject;
  */
 public class PhysicalPropertyRangeImpl extends HqdmObject implements PhysicalPropertyRange {
     /**
+     * Constructs a new PhysicalPropertyRange.
      *
-     * @param iri
+     * @param iri IRI of the PhysicalPropertyRange.
      */
     public PhysicalPropertyRangeImpl(final IRI iri) {
         super(PhysicalPropertyRangeImpl.class, iri, PHYSICAL_PROPERTY_RANGE);
     }
 
     /**
-     * Builder for PhysicalPropertyRangeImpl.
+     * Builder for constructing instances of PhysicalPropertyRange.
      */
     public static class Builder {
-        /** */
+
         private final PhysicalPropertyRangeImpl physicalPropertyRangeImpl;
 
         /**
+         * Constructs a Builder for a new PhysicalPropertyRange.
          *
-         * @param iri
+         * @param iri IRI of the PhysicalPropertyRange.
          */
         public Builder(final IRI iri) {
             physicalPropertyRangeImpl = new PhysicalPropertyRangeImpl(iri);
         }
 
         /**
+         * An inverse {@link uk.gov.gchq.hqdm.iri.HQDM#PART__OF_BY_CLASS} relationship type where a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one {@link ClassOfSpatioTemporalExtent}
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#CONSISTS_OF} another
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} a {@link ClassOfSpatioTemporalExtent}.
          *
-         * @param classOfSpatioTemporalExtent
-         * @return
+         * @param classOfSpatioTemporalExtent The ClassOfSpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder consists__Of_By_Class(
                 final ClassOfSpatioTemporalExtent classOfSpatioTemporalExtent) {
@@ -73,9 +79,11 @@ public class PhysicalPropertyRangeImpl extends HqdmObject implements PhysicalPro
         }
 
         /**
+         * A relationship type where each {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the
+         * {@link Class} is a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the superclass.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder has_Superclass(final Class clazz) {
             physicalPropertyRangeImpl.addValue(HAS_SUPERCLASS, clazz.getIri());
@@ -83,9 +91,11 @@ public class PhysicalPropertyRangeImpl extends HqdmObject implements PhysicalPro
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.model.Thing} may be a member of one
+         * or more {@link Class}.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder member__Of(final Class clazz) {
             physicalPropertyRangeImpl.addValue(MEMBER__OF, clazz.getIri());
@@ -93,9 +103,11 @@ public class PhysicalPropertyRangeImpl extends HqdmObject implements PhysicalPro
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a {@link Class} may
+         * be a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one or more {@link ClassOfClass}.
          *
-         * @param classOfClass
-         * @return
+         * @param classOfClass The ClassOfClass.
+         * @return This builder.
          */
         public final Builder member_Of(final ClassOfClass classOfClass) {
             physicalPropertyRangeImpl.addValue(MEMBER_OF, classOfClass.getIri());
@@ -103,9 +115,12 @@ public class PhysicalPropertyRangeImpl extends HqdmObject implements PhysicalPro
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a
+         * {@link ClassOfSpatioTemporalExtent} may be a member of one or more
+         * {@link ClassOfClassOfSpatioTemporalExtent}.
          *
-         * @param classOfClassOfSpatioTemporalExtent
-         * @return
+         * @param classOfClassOfSpatioTemporalExtent The ClassOfClassOfSpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder member_Of_(
                 final ClassOfClassOfSpatioTemporalExtent classOfClassOfSpatioTemporalExtent) {
@@ -115,9 +130,12 @@ public class PhysicalPropertyRangeImpl extends HqdmObject implements PhysicalPro
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} a
+         * {@link ClassOfSpatioTemporalExtent} is {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} some {@link ClassOfSpatioTemporalExtent}.
          *
-         * @param classOfSpatioTemporalExtent
-         * @return
+         * @param classOfSpatioTemporalExtent The ClassOfSpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder part__Of_By_Class(
                 final ClassOfSpatioTemporalExtent classOfSpatioTemporalExtent) {
@@ -128,10 +146,10 @@ public class PhysicalPropertyRangeImpl extends HqdmObject implements PhysicalPro
 
         /**
          * A supertype_of relationship type where the members of each {@link PhysicalProperty} in
-         * the physical_property_range are members of the physical_property_range.
+         * the {@link PhysicalPropertyRange} are members of the {@link PhysicalPropertyRange}.
          *
-         * @param physicalProperty
-         * @return
+         * @param physicalProperty The PhysicalProperty.
+         * @return This builder.
          */
         public final Builder ranges_Over_M(final PhysicalProperty physicalProperty) {
             physicalPropertyRangeImpl.addValue(RANGES_OVER, physicalProperty.getIri());
@@ -139,9 +157,11 @@ public class PhysicalPropertyRangeImpl extends HqdmObject implements PhysicalPro
         }
 
         /**
+         * Returns an instance of PhysicalPropertyRange created from the properties set on this
+         * builder.
          *
-         * @return
-         * @throws HqdmException
+         * @return The built PhysicalPropertyRange.
+         * @throws HqdmException If the PhysicalPropertyRange is missing any mandatory properties.
          */
         public PhysicalPropertyRange build() throws HqdmException {
             if (physicalPropertyRangeImpl.hasValue(HAS_SUPERCLASS)

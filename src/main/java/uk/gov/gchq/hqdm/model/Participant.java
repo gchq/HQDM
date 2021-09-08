@@ -15,7 +15,7 @@
 package uk.gov.gchq.hqdm.model;
 
 /**
- * A {@link State} that is a participant_in an {@link Activity} or {@link Association}.
+ * A {@link State} that is a {@code participant_in} an {@link Activity} or {@link Association}.
  */
 public interface Participant extends StateOfPhysicalObject {
 }

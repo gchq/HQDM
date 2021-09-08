@@ -63,32 +63,40 @@ import uk.gov.gchq.hqdm.pojo.HqdmObject;
  */
 public class TransferOfOwnershipImpl extends HqdmObject implements TransferOfOwnership {
     /**
+     * Constructs a new TransferOfOwnership.
      *
-     * @param iri
+     * @param iri IRI of the TransferOfOwnership.
      */
     public TransferOfOwnershipImpl(final IRI iri) {
         super(TransferOfOwnershipImpl.class, iri, TRANSFER_OF_OWNERSHIP);
     }
 
     /**
-     * Builder for TransferOfOwnershipImpl.
+     * Builder for constructing instances of TransferOfOwnership.
      */
     public static class Builder {
-        /** */
+
         private final TransferOfOwnershipImpl transferOfOwnershipImpl;
 
         /**
+         * Constructs a Builder for a new TransferOfOwnership.
          *
-         * @param iri
+         * @param iri IRI of the TransferOfOwnership.
          */
         public Builder(final IRI iri) {
             transferOfOwnershipImpl = new TransferOfOwnershipImpl(iri);
         }
 
         /**
+         * A relationship type where a {@link SpatioTemporalExtent} may be aggregated into one or
+         * more others.
+         * <p>
+         * Note: This has the same meaning as, but different representation to, the
+         * {@link uk.gov.gchq.hqdm.model.Aggregation} entity type.
+         * </p>
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder aggregated_Into(final SpatioTemporalExtent spatioTemporalExtent) {
             transferOfOwnershipImpl.addValue(AGGREGATED_INTO, spatioTemporalExtent.getIri());
@@ -96,9 +104,11 @@ public class TransferOfOwnershipImpl extends HqdmObject implements TransferOfOwn
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} has exactly one {@link Event} that is its beginning.
          *
-         * @param event
-         * @return
+         * @param event The Event.
+         * @return This builder.
          */
         public final Builder beginning(final Event event) {
             transferOfOwnershipImpl.addValue(BEGINNING, event.getIri());
@@ -106,9 +116,11 @@ public class TransferOfOwnershipImpl extends HqdmObject implements TransferOfOwn
         }
 
         /**
+         * A relationship type where each {@link Activity} is the cause of one or more
+         * {@link Event}.
          *
-         * @param event
-         * @return
+         * @param event The Event.
+         * @return This builder.
          */
         public final Builder causes_M(final Event event) {
             transferOfOwnershipImpl.addValue(CAUSES, event.getIri());
@@ -116,11 +128,11 @@ public class TransferOfOwnershipImpl extends HqdmObject implements TransferOfOwn
         }
 
         /**
-         * A causes relationship type where a transfer_of_ownership causes exactly one
-         * {@link BeginningOfOwnership}.
+         * A causes relationship type where a {@link TransferOfOwnership}
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#CAUSES} exactly one {@link BeginningOfOwnership}.
          *
-         * @param beginningOfOwnership
-         * @return
+         * @param beginningOfOwnership The BeginningOfOwnership.
+         * @return This builder.
          */
         public final Builder causes_Beginning_M(final BeginningOfOwnership beginningOfOwnership) {
             transferOfOwnershipImpl.addValue(CAUSES_BEGINNING, beginningOfOwnership.getIri());
@@ -128,11 +140,11 @@ public class TransferOfOwnershipImpl extends HqdmObject implements TransferOfOwn
         }
 
         /**
-         * A causes relationship type where a transfer_of_ownership causes exactly one
+         * A causes relationship type where a {@link TransferOfOwnership} causes exactly one
          * {@link EndingOfOwnership}.
          *
-         * @param endingOfOwnership
-         * @return
+         * @param endingOfOwnership The EndingOfOwnership.
+         * @return This builder.
          */
         public final Builder causes_Ending_M(final EndingOfOwnership endingOfOwnership) {
             transferOfOwnershipImpl.addValue(CAUSES_ENDING, endingOfOwnership.getIri());
@@ -140,9 +152,15 @@ public class TransferOfOwnershipImpl extends HqdmObject implements TransferOfOwn
         }
 
         /**
+         * A relationship type where a {@link SpatioTemporalExtent} may consist of one or more
+         * others.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * <p>
+         * Note: This is the inverse of {@link uk.gov.gchq.hqdm.iri.HQDM#PART__OF}.
+         * </p>
+         *
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder consists__Of(final SpatioTemporalExtent spatioTemporalExtent) {
             transferOfOwnershipImpl.addValue(CONSISTS__OF, spatioTemporalExtent.getIri());
@@ -150,9 +168,12 @@ public class TransferOfOwnershipImpl extends HqdmObject implements TransferOfOwn
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#CONSISTS_OF} relationship type where an
+         * {@link Activity} may {@link uk.gov.gchq.hqdm.iri.HQDM#CONSISTS_OF} one or more other
+         * {@link Activity}.
          *
-         * @param activity
-         * @return
+         * @param activity The Activity.
+         * @return This builder.
          */
         public final Builder consists_Of(final Activity activity) {
             transferOfOwnershipImpl.addValue(CONSISTS_OF, activity.getIri());
@@ -160,11 +181,12 @@ public class TransferOfOwnershipImpl extends HqdmObject implements TransferOfOwn
         }
 
         /**
-         * A consists_of_participant relationship type where a transfer_of_ownership
-         * consists_of_participant exactly one {@link Transferor}.
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#CONSISTS_OF_PARTICIPANT} relationship type where a
+         * {@link TransferOfOwnership} {@link uk.gov.gchq.hqdm.iri.HQDM#CONSISTS_OF_PARTICIPANT}
+         * exactly one {@link Transferor}.
          *
-         * @param transferor
-         * @return
+         * @param transferor The Transferor.
+         * @return This builder.
          */
         public final Builder consists_Of_Participant(final Transferor transferor) {
             transferOfOwnershipImpl.addValue(CONSISTS_OF_PARTICIPANT, transferor.getIri());
@@ -172,11 +194,12 @@ public class TransferOfOwnershipImpl extends HqdmObject implements TransferOfOwn
         }
 
         /**
-         * A consists_of_participant relationship type where a transfer_of_ownership
-         * consists_of_participant exactly one {@link Transferee}.
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#CONSISTS_OF_PARTICIPANT} relationship type where a
+         * {@link TransferOfOwnership} {@link uk.gov.gchq.hqdm.iri.HQDM#CONSISTS_OF_PARTICIPANT}
+         * exactly one {@link Transferee}.
          *
-         * @param transferee
-         * @return
+         * @param transferee The Transferee.
+         * @return This builder.
          */
         public final Builder consists_Of_Participant_(final Transferee transferee) {
             transferOfOwnershipImpl.addValue(CONSISTS_OF_PARTICIPANT_, transferee.getIri());
@@ -184,9 +207,11 @@ public class TransferOfOwnershipImpl extends HqdmObject implements TransferOfOwn
         }
 
         /**
+         * A relationship type where an {@link Activity} may determine one or more {@link Thing} to
+         * be the case.
          *
-         * @param thing
-         * @return
+         * @param thing The Thing.
+         * @return This builder.
          */
         public final Builder determines(final Thing thing) {
             transferOfOwnershipImpl.addValue(DETERMINES, thing.getIri());
@@ -194,9 +219,11 @@ public class TransferOfOwnershipImpl extends HqdmObject implements TransferOfOwn
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} has exactly one {@link Event} that is its ending.
          *
-         * @param event
-         * @return
+         * @param event The Event.
+         * @return This builder.
          */
         public final Builder ending(final Event event) {
             transferOfOwnershipImpl.addValue(ENDING, event.getIri());
@@ -204,9 +231,10 @@ public class TransferOfOwnershipImpl extends HqdmObject implements TransferOfOwn
         }
 
         /**
+         * A relationship type where a {@link Thing} may be a member of one or more {@link Class}.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder member__Of(final Class clazz) {
             transferOfOwnershipImpl.addValue(MEMBER__OF, clazz.getIri());
@@ -214,9 +242,13 @@ public class TransferOfOwnershipImpl extends HqdmObject implements TransferOfOwn
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a
+         * {@link uk.gov.gchq.hqdm.model.SociallyConstructedActivity} may be a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one or more
+         * {@link ClassOfSociallyConstructedActivity}.
          *
-         * @param classOfSociallyConstructedActivity
-         * @return
+         * @param classOfSociallyConstructedActivity The ClassOfSociallyConstructedActivity.
+         * @return This builder.
          */
         public final Builder member_Of(
                 final ClassOfSociallyConstructedActivity classOfSociallyConstructedActivity) {
@@ -226,9 +258,12 @@ public class TransferOfOwnershipImpl extends HqdmObject implements TransferOfOwn
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF_KIND} relationship type where each
+         * {@link Activity} is a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one or more
+         * {@link KindOfActivity}.
          *
-         * @param kindOfActivity
-         * @return
+         * @param kindOfActivity The KindOfActivity.
+         * @return This builder.
          */
         public final Builder member_Of_Kind_M(final KindOfActivity kindOfActivity) {
             transferOfOwnershipImpl.addValue(MEMBER_OF_KIND, kindOfActivity.getIri());
@@ -236,9 +271,12 @@ public class TransferOfOwnershipImpl extends HqdmObject implements TransferOfOwn
         }
 
         /**
+         * An {@link uk.gov.gchq.hqdm.iri.HQDM#AGGREGATED_INTO} relationship type where a
+         * {@link SpatioTemporalExtent} may be part of another and the whole has emergent properties
+         * and is more than just the sum of its parts.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder part__Of(final SpatioTemporalExtent spatioTemporalExtent) {
             transferOfOwnershipImpl.addValue(PART__OF, spatioTemporalExtent.getIri());
@@ -246,11 +284,12 @@ public class TransferOfOwnershipImpl extends HqdmObject implements TransferOfOwn
         }
 
         /**
-         * A part_of relationship type where a transfer_of_ownership may be part_of not more than
-         * one {@link ExchangeOfGoodsAndMoney}.
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link TransferOfOwnership} may be {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} not more
+         * than one {@link ExchangeOfGoodsAndMoney}.
          *
-         * @param exchangeOfGoodsAndMoney
-         * @return
+         * @param exchangeOfGoodsAndMoney The ExchangeOfGoodsAndMoney.
+         * @return This builder.
          */
         public final Builder part_Of(final ExchangeOfGoodsAndMoney exchangeOfGoodsAndMoney) {
             transferOfOwnershipImpl.addValue(PART_OF, exchangeOfGoodsAndMoney.getIri());
@@ -258,9 +297,12 @@ public class TransferOfOwnershipImpl extends HqdmObject implements TransferOfOwn
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link uk.gov.gchq.hqdm.model.SociallyConstructedObject} may be a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} one or more {@link AgreementExecution}.
          *
-         * @param agreementExecution
-         * @return
+         * @param agreementExecution The AgreementExecution.
+         * @return This builder.
          */
         public final Builder part_Of_(final AgreementExecution agreementExecution) {
             transferOfOwnershipImpl.addValue(PART_OF_, agreementExecution.getIri());
@@ -268,9 +310,17 @@ public class TransferOfOwnershipImpl extends HqdmObject implements TransferOfOwn
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} may be {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} one or more
+         * {@link PossibleWorld}.
          *
-         * @param possibleWorld
-         * @return
+         * <p>
+         * Note: The relationship is optional because a {@link PossibleWorld} is not
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} any other {@link SpatioTemporalExtent}.
+         * </p>
+         *
+         * @param possibleWorld The PossibleWorld.
+         * @return This builder.
          */
         public final Builder part_Of_Possible_World_M(final PossibleWorld possibleWorld) {
             transferOfOwnershipImpl.addValue(PART_OF_POSSIBLE_WORLD, possibleWorld.getIri());
@@ -278,11 +328,11 @@ public class TransferOfOwnershipImpl extends HqdmObject implements TransferOfOwn
         }
 
         /**
-         * A references relationship type where a transfer_of_ownership references exactly one
+         * A references relationship type where a {@link TransferOfOwnership} references exactly one
          * {@link Asset}.
          *
-         * @param asset
-         * @return
+         * @param asset The Asset.
+         * @return This builder.
          */
         public final Builder references_M(final Asset asset) {
             transferOfOwnershipImpl.addValue(REFERENCES, asset.getIri());
@@ -290,9 +340,12 @@ public class TransferOfOwnershipImpl extends HqdmObject implements TransferOfOwn
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} relationship type where a
+         * {@link SpatioTemporalExtent} may be a temporal part of one or more other
+         * {@link SpatioTemporalExtent}.
          *
-         * @param spatioTemporalExtent
-         * @return
+         * @param spatioTemporalExtent The SpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder temporal__Part_Of(final SpatioTemporalExtent spatioTemporalExtent) {
             transferOfOwnershipImpl.addValue(TEMPORAL__PART_OF, spatioTemporalExtent.getIri());
@@ -300,9 +353,21 @@ public class TransferOfOwnershipImpl extends HqdmObject implements TransferOfOwn
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} relationship type where a
+         * {@link uk.gov.gchq.hqdm.model.State} may be a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} one or more {@link Individual}.
          *
-         * @param individual
-         * @return
+         * <p>
+         * Note: The relationship is optional because an {@link Individual} is not necessarily a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} another {@link Individual}, yet is a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} {@link uk.gov.gchq.hqdm.model.State} as well
+         * as {@link Individual}. This applies to all subtypes of
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#TEMPORAL_PART_OF} that are between a {@code state_of_X}
+         * and {@code X}.
+         * </p>
+         *
+         * @param individual The Individual.
+         * @return This builder.
          */
         public final Builder temporal_Part_Of(final Individual individual) {
             transferOfOwnershipImpl.addValue(TEMPORAL_PART_OF, individual.getIri());
@@ -310,9 +375,11 @@ public class TransferOfOwnershipImpl extends HqdmObject implements TransferOfOwn
         }
 
         /**
+         * Returns an instance of TransferOfOwnership created from the properties set on this
+         * builder.
          *
-         * @return
-         * @throws HqdmException
+         * @return The built TransferOfOwnership.
+         * @throws HqdmException If the TransferOfOwnership is missing any mandatory properties.
          */
         public TransferOfOwnership build() throws HqdmException {
             if (transferOfOwnershipImpl.hasValue(AGGREGATED_INTO)

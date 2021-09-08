@@ -38,32 +38,38 @@ import uk.gov.gchq.hqdm.pojo.HqdmObject;
  */
 public class PhysicalPropertyImpl extends HqdmObject implements PhysicalProperty {
     /**
+     * Constructs a new PhysicalProperty.
      *
-     * @param iri
+     * @param iri IRI of the PhysicalProperty.
      */
     public PhysicalPropertyImpl(final IRI iri) {
         super(PhysicalPropertyImpl.class, iri, PHYSICAL_PROPERTY);
     }
 
     /**
-     * Builder for PhysicalPropertyImpl.
+     * Builder for constructing instances of PhysicalProperty.
      */
     public static class Builder {
-        /** */
+
         private final PhysicalPropertyImpl physicalPropertyImpl;
 
         /**
+         * Constructs a Builder for a new PhysicalProperty.
          *
-         * @param iri
+         * @param iri IRI of the PhysicalProperty.
          */
         public Builder(final IRI iri) {
             physicalPropertyImpl = new PhysicalPropertyImpl(iri);
         }
 
         /**
+         * An inverse {@link uk.gov.gchq.hqdm.iri.HQDM#PART__OF_BY_CLASS} relationship type where a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one {@link ClassOfSpatioTemporalExtent}
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#CONSISTS_OF} another
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} a {@link ClassOfSpatioTemporalExtent}.
          *
-         * @param classOfSpatioTemporalExtent
-         * @return
+         * @param classOfSpatioTemporalExtent The ClassOfSpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder consists__Of_By_Class(
                 final ClassOfSpatioTemporalExtent classOfSpatioTemporalExtent) {
@@ -73,9 +79,11 @@ public class PhysicalPropertyImpl extends HqdmObject implements PhysicalProperty
         }
 
         /**
+         * A relationship type where each {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the
+         * {@link Class} is a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} the superclass.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder has_Superclass(final Class clazz) {
             physicalPropertyImpl.addValue(HAS_SUPERCLASS, clazz.getIri());
@@ -83,9 +91,11 @@ public class PhysicalPropertyImpl extends HqdmObject implements PhysicalProperty
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.model.Thing} may be a member of one
+         * or more {@link Class}.
          *
-         * @param clazz
-         * @return
+         * @param clazz The Class.
+         * @return This builder.
          */
         public final Builder member__Of(final Class clazz) {
             physicalPropertyImpl.addValue(MEMBER__OF, clazz.getIri());
@@ -93,11 +103,12 @@ public class PhysicalPropertyImpl extends HqdmObject implements PhysicalProperty
         }
 
         /**
-         * A member_of relationship type where a physical_property may be a member_of one or more
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a
+         * {@link PhysicalProperty} may be a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} one or more
          * {@link ClassOfPhysicalProperty}.
          *
-         * @param classOfPhysicalProperty
-         * @return
+         * @param classOfPhysicalProperty The ClassOfPhysicalProperty.
+         * @return This builder.
          */
         public final Builder member_Of(final ClassOfPhysicalProperty classOfPhysicalProperty) {
             physicalPropertyImpl.addValue(MEMBER_OF, classOfPhysicalProperty.getIri());
@@ -105,9 +116,12 @@ public class PhysicalPropertyImpl extends HqdmObject implements PhysicalProperty
         }
 
         /**
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a
+         * {@link ClassOfSpatioTemporalExtent} may be a member of one or more
+         * {@link ClassOfClassOfSpatioTemporalExtent}.
          *
-         * @param classOfClassOfSpatioTemporalExtent
-         * @return
+         * @param classOfClassOfSpatioTemporalExtent The ClassOfClassOfSpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder member_Of_(
                 final ClassOfClassOfSpatioTemporalExtent classOfClassOfSpatioTemporalExtent) {
@@ -116,11 +130,12 @@ public class PhysicalPropertyImpl extends HqdmObject implements PhysicalProperty
         }
 
         /**
-         * A member_of relationship type where a physical_property is a member_of exactly one
+         * A {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} relationship type where a
+         * {@link PhysicalProperty} is a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} exactly one
          * {@link KindOfPhysicalProperty}.
          *
-         * @param kindOfPhysicalProperty
-         * @return
+         * @param kindOfPhysicalProperty The KindOfPhysicalProperty.
+         * @return This builder.
          */
         public final Builder member_Of_Kind_M(final KindOfPhysicalProperty kindOfPhysicalProperty) {
             physicalPropertyImpl.addValue(MEMBER_OF_KIND, kindOfPhysicalProperty.getIri());
@@ -128,9 +143,12 @@ public class PhysicalPropertyImpl extends HqdmObject implements PhysicalProperty
         }
 
         /**
+         * A relationship type where a {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} a
+         * {@link ClassOfSpatioTemporalExtent} is {@link uk.gov.gchq.hqdm.iri.HQDM#PART_OF} a
+         * {@link uk.gov.gchq.hqdm.iri.HQDM#MEMBER_OF} some {@link ClassOfSpatioTemporalExtent}.
          *
-         * @param classOfSpatioTemporalExtent
-         * @return
+         * @param classOfSpatioTemporalExtent The ClassOfSpatioTemporalExtent.
+         * @return This builder.
          */
         public final Builder part__Of_By_Class(
                 final ClassOfSpatioTemporalExtent classOfSpatioTemporalExtent) {
@@ -139,9 +157,10 @@ public class PhysicalPropertyImpl extends HqdmObject implements PhysicalProperty
         }
 
         /**
+         * Returns an instance of PhysicalProperty created from the properties set on this builder.
          *
-         * @return
-         * @throws HqdmException
+         * @return The built PhysicalProperty.
+         * @throws HqdmException If the PhysicalProperty is missing any mandatory properties.
          */
         public PhysicalProperty build() throws HqdmException {
             if (physicalPropertyImpl.hasValue(HAS_SUPERCLASS)
