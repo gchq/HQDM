@@ -18,7 +18,7 @@
 
   <groupId>uk.gov.gchq.hqdm</groupId>
   <artifactId>hqdm</artifactId>
-  <version>1.0</version>
+  <version>1.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>HQDM</name>
@@ -48,11 +48,6 @@
       <artifactId>junit</artifactId>
       <version>4.13.1</version>
       <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.jena</groupId>
-      <artifactId>jena-arq</artifactId>
-      <version>4.0.0</version>
     </dependency>
   </dependencies>
 
