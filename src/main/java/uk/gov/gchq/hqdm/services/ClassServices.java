@@ -1087,4 +1087,14 @@ public class ClassServices {
         return new KindOfSystemComponentImpl(iri);
     }
 
+    /**
+     * Create a Role with an IRI.
+     *
+     * @param iri the IRI.
+     * @return a Role instance.
+     */
+    public static Role createRole(final IRI iri) {
+        return new RoleImpl(iri);
+    }
+
 }

@@ -814,16 +814,6 @@ public class SpatioTemporalExtentServices {
     }
 
     /**
-     * Create a Role with an IRI.
-     *
-     * @param iri the IRI.
-     * @return a Role instance.
-     */
-    public static Role createRole(final IRI iri) {
-        return new RoleImpl(iri);
-    }
-
-    /**
      * Create a SaleOfGoods with an IRI.
      *
      * @param iri the IRI.
