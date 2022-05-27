@@ -23,6 +23,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import uk.gov.gchq.hqdm.exception.HqdmException;
+import uk.gov.gchq.hqdm.iri.HQDM;
 import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.PointInTime;
 import uk.gov.gchq.hqdm.model.PossibleWorld;
@@ -40,22 +41,22 @@ public class HqdmObjectTest {
         final String beginDateTime = LocalDateTime.now().toString();
         final String endDate = LocalDate.now().toString();
 
-        final PointInTime beginEvent = new PointInTimeImpl.Builder(new IRI(BASE_URL + "date_1"))
-                .part_Of_Possible_World_M(possibleWorld)
-                .build();
+        final PointInTime beginEvent = new PointInTimeImpl(new IRI(BASE_URL + "date_1"));
+
+        beginEvent.addValue(HQDM.PART_OF_POSSIBLE_WORLD, possibleWorld.getIri());
         beginEvent.addStringValue(ENTITY_NAME, beginDateTime);
 
-        final PointInTime endEvent = new PointInTimeImpl.Builder(new IRI(BASE_URL + "date_2"))
-                .part_Of_Possible_World_M(possibleWorld)
-                .build();
+        final PointInTime endEvent = new PointInTimeImpl(new IRI(BASE_URL + "date_2"));
+
+        endEvent.addValue(HQDM.PART_OF_POSSIBLE_WORLD, possibleWorld.getIri());
         endEvent.addStringValue(ENTITY_NAME, endDate);
 
         final SpatioTemporalExtent object1 =
-                new SpatioTemporalExtentImpl.Builder(new IRI(BASE_URL + "Object1"))
-                        .beginning(beginEvent)
-                        .ending(endEvent)
-                        .part_Of_Possible_World_M(possibleWorld)
-                        .build();
+                new SpatioTemporalExtentImpl(new IRI(BASE_URL + "Object1"));
+
+        object1.addValue(HQDM.BEGINNING, beginEvent.getIri());
+        object1.addValue(HQDM.ENDING, endEvent.getIri());
+        object1.addValue(HQDM.PART_OF_POSSIBLE_WORLD, possibleWorld.getIri());
 
         Assert.assertTrue(beginEvent.toTriples()
                 .contains("^^<http://www.w3.org/2001/XMLSchema#dateTime>"));

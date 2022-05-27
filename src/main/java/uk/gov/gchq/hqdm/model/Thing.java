@@ -14,10 +14,21 @@
 
 package uk.gov.gchq.hqdm.model;
 
+import uk.gov.gchq.hqdm.iri.IRI;
+import uk.gov.gchq.hqdm.model.impl.ThingImpl;
 import uk.gov.gchq.hqdm.pojo.Top;
 
 /**
  * Anything that exists, real or imagined.
  */
 public interface Thing extends Top {
+    /**
+     * Create a Thing with an IRI.
+     *
+     * @param iri the IRI.
+     * @return a Thing instance.
+     */
+    public static Thing createThing(final IRI iri) {
+        return new ThingImpl(iri);
+    }
 }
