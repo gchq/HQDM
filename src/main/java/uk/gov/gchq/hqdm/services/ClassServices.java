@@ -808,16 +808,6 @@ public class ClassServices {
     }
 
     /**
-     * Create a Classification with an IRI.
-     *
-     * @param iri the IRI.
-     * @return a Classification instance.
-     */
-    public static Classification createClassification(final IRI iri) {
-        return new ClassificationImpl(iri);
-    }
-
-    /**
      * Create a KindOfActivity with an IRI.
      *
      * @param iri the IRI.

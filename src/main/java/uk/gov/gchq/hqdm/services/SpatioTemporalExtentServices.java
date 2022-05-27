@@ -70,16 +70,6 @@ public class SpatioTemporalExtentServices {
     }
 
     /**
-     * Create a Aggregation with an IRI.
-     *
-     * @param iri the IRI.
-     * @return a Aggregation instance.
-     */
-    public static Aggregation createAggregation(final IRI iri) {
-        return new AggregationImpl(iri);
-    }
-
-    /**
      * Create a AgreeContract with an IRI.
      *
      * @param iri the IRI.
@@ -180,16 +170,6 @@ public class SpatioTemporalExtentServices {
     }
 
     /**
-     * Create a Composition with an IRI.
-     *
-     * @param iri the IRI.
-     * @return a Composition instance.
-     */
-    public static Composition createComposition(final IRI iri) {
-        return new CompositionImpl(iri);
-    }
-
-    /**
      * Create a ContractExecution with an IRI.
      *
      * @param iri the IRI.
@@ -217,16 +197,6 @@ public class SpatioTemporalExtentServices {
      */
     public static Currency createCurrency(final IRI iri) {
         return new CurrencyImpl(iri);
-    }
-
-    /**
-     * Create a DefinedRelationship with an IRI.
-     *
-     * @param iri the IRI.
-     * @return a DefinedRelationship instance.
-     */
-    public static DefinedRelationship createDefinedRelationship(final IRI iri) {
-        return new DefinedRelationshipImpl(iri);
     }
 
     /**
@@ -307,16 +277,6 @@ public class SpatioTemporalExtentServices {
      */
     public static ExchangeOfGoodsAndMoney createExchangeOfGoodsAndMoney(final IRI iri) {
         return new ExchangeOfGoodsAndMoneyImpl(iri);
-    }
-
-    /**
-     * Create a Function_ with an IRI.
-     *
-     * @param iri the IRI.
-     * @return a Function_ instance.
-     */
-    public static Function_ createFunction(final IRI iri) {
-        return new FunctionImpl(iri);
     }
 
     /**
@@ -764,16 +724,6 @@ public class SpatioTemporalExtentServices {
     }
 
     /**
-     * Create a Relationship with an IRI.
-     *
-     * @param iri the IRI.
-     * @return a Relationship instance.
-     */
-    public static Relationship createRelationship(final IRI iri) {
-        return new RelationshipImpl(iri);
-    }
-
-    /**
      * Create a RepresentationByPattern with an IRI.
      *
      * @param iri the IRI.
@@ -854,16 +804,6 @@ public class SpatioTemporalExtentServices {
     }
 
     /**
-     * Create a Scale with an IRI.
-     *
-     * @param iri the IRI.
-     * @return a Scale instance.
-     */
-    public static Scale createScale(final IRI iri) {
-        return new ScaleImpl(iri);
-    }
-
-    /**
      * Create a Sign with an IRI.
      *
      * @param iri the IRI.
@@ -901,16 +841,6 @@ public class SpatioTemporalExtentServices {
      */
     public static SpatioTemporalExtent createSpatioTemporalExtent(final IRI iri) {
         return new SpatioTemporalExtentImpl(iri);
-    }
-
-    /**
-     * Create a Specialization with an IRI.
-     *
-     * @param iri the IRI.
-     * @return a Specialization instance.
-     */
-    public static Specialization createSpecialization(final IRI iri) {
-        return new SpecializationImpl(iri);
     }
 
     /**
@@ -1211,16 +1141,6 @@ public class SpatioTemporalExtentServices {
     }
 
     /**
-     * Create a TemporalComposition with an IRI.
-     *
-     * @param iri the IRI.
-     * @return a TemporalComposition instance.
-     */
-    public static TemporalComposition createTemporalComposition(final IRI iri) {
-        return new TemporalCompositionImpl(iri);
-    }
-
-    /**
      * Create a Thing with an IRI.
      *
      * @param iri the IRI.
@@ -1268,16 +1188,6 @@ public class SpatioTemporalExtentServices {
      */
     public static Transferor createTransferor(final IRI iri) {
         return new TransferorImpl(iri);
-    }
-
-    /**
-     * Create a UnitOfMeasure with an IRI.
-     *
-     * @param iri the IRI.
-     * @return a UnitOfMeasure instance.
-     */
-    public static UnitOfMeasure createUnitOfMeasure(final IRI iri) {
-        return new UnitOfMeasureImpl(iri);
     }
 
 }
