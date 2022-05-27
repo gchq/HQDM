@@ -1,162 +1,9 @@
 package uk.gov.gchq.hqdm.services;
 
 import uk.gov.gchq.hqdm.iri.IRI;
+import uk.gov.gchq.hqdm.model.*;
 import uk.gov.gchq.hqdm.model.Class;
-import uk.gov.gchq.hqdm.model.ClassOfAbstractObject;
-import uk.gov.gchq.hqdm.model.ClassOfActivity;
-import uk.gov.gchq.hqdm.model.ClassOfAgreeContract;
-import uk.gov.gchq.hqdm.model.ClassOfAgreementExecution;
-import uk.gov.gchq.hqdm.model.ClassOfAgreementProcess;
-import uk.gov.gchq.hqdm.model.ClassOfAmountOfMoney;
-import uk.gov.gchq.hqdm.model.ClassOfAssociation;
-import uk.gov.gchq.hqdm.model.ClassOfBiologicalObject;
-import uk.gov.gchq.hqdm.model.ClassOfBiologicalSystem;
-import uk.gov.gchq.hqdm.model.ClassOfBiologicalSystemComponent;
-import uk.gov.gchq.hqdm.model.ClassOfClass;
-import uk.gov.gchq.hqdm.model.ClassOfClassOfSpatioTemporalExtent;
-import uk.gov.gchq.hqdm.model.ClassOfContractExecution;
-import uk.gov.gchq.hqdm.model.ClassOfContractProcess;
-import uk.gov.gchq.hqdm.model.ClassOfEvent;
-import uk.gov.gchq.hqdm.model.ClassOfFunctionalObject;
-import uk.gov.gchq.hqdm.model.ClassOfFunctionalSystem;
-import uk.gov.gchq.hqdm.model.ClassOfFunctionalSystemComponent;
-import uk.gov.gchq.hqdm.model.ClassOfInPlaceBiologicalComponent;
-import uk.gov.gchq.hqdm.model.ClassOfIndividual;
-import uk.gov.gchq.hqdm.model.ClassOfInstalledFunctionalSystemComponent;
-import uk.gov.gchq.hqdm.model.ClassOfInstalledObject;
-import uk.gov.gchq.hqdm.model.ClassOfIntentionallyConstructedObject;
-import uk.gov.gchq.hqdm.model.ClassOfOffer;
-import uk.gov.gchq.hqdm.model.ClassOfOrdinaryBiologicalObject;
-import uk.gov.gchq.hqdm.model.ClassOfOrdinaryFunctionalObject;
-import uk.gov.gchq.hqdm.model.ClassOfOrdinaryPhysicalObject;
-import uk.gov.gchq.hqdm.model.ClassOfOrganization;
-import uk.gov.gchq.hqdm.model.ClassOfOrganizationComponent;
-import uk.gov.gchq.hqdm.model.ClassOfParticipant;
-import uk.gov.gchq.hqdm.model.ClassOfParty;
-import uk.gov.gchq.hqdm.model.ClassOfPeriodOfTime;
-import uk.gov.gchq.hqdm.model.ClassOfPerson;
-import uk.gov.gchq.hqdm.model.ClassOfPersonInPosition;
-import uk.gov.gchq.hqdm.model.ClassOfPhysicalObject;
-import uk.gov.gchq.hqdm.model.ClassOfPhysicalProperty;
-import uk.gov.gchq.hqdm.model.ClassOfPhysicalQuantity;
-import uk.gov.gchq.hqdm.model.ClassOfPointInTime;
-import uk.gov.gchq.hqdm.model.ClassOfPosition;
-import uk.gov.gchq.hqdm.model.ClassOfPossibleWorld;
-import uk.gov.gchq.hqdm.model.ClassOfReachingAgreement;
-import uk.gov.gchq.hqdm.model.ClassOfRelationship;
-import uk.gov.gchq.hqdm.model.ClassOfRepresentation;
-import uk.gov.gchq.hqdm.model.ClassOfSalesProductInstance;
-import uk.gov.gchq.hqdm.model.ClassOfSign;
-import uk.gov.gchq.hqdm.model.ClassOfSociallyConstructedActivity;
-import uk.gov.gchq.hqdm.model.ClassOfSociallyConstructedObject;
-import uk.gov.gchq.hqdm.model.ClassOfSpatioTemporalExtent;
-import uk.gov.gchq.hqdm.model.ClassOfState;
-import uk.gov.gchq.hqdm.model.ClassOfStateOfActivity;
-import uk.gov.gchq.hqdm.model.ClassOfStateOfAmountOfMoney;
-import uk.gov.gchq.hqdm.model.ClassOfStateOfAssociation;
-import uk.gov.gchq.hqdm.model.ClassOfStateOfBiologicalObject;
-import uk.gov.gchq.hqdm.model.ClassOfStateOfBiologicalSystem;
-import uk.gov.gchq.hqdm.model.ClassOfStateOfBiologicalSystemComponent;
-import uk.gov.gchq.hqdm.model.ClassOfStateOfFunctionalObject;
-import uk.gov.gchq.hqdm.model.ClassOfStateOfFunctionalSystem;
-import uk.gov.gchq.hqdm.model.ClassOfStateOfFunctionalSystemComponent;
-import uk.gov.gchq.hqdm.model.ClassOfStateOfIntentionallyConstructedObject;
-import uk.gov.gchq.hqdm.model.ClassOfStateOfOrdinaryBiologicalObject;
-import uk.gov.gchq.hqdm.model.ClassOfStateOfOrdinaryFunctionalObject;
-import uk.gov.gchq.hqdm.model.ClassOfStateOfOrdinaryPhysicalObject;
-import uk.gov.gchq.hqdm.model.ClassOfStateOfOrganization;
-import uk.gov.gchq.hqdm.model.ClassOfStateOfOrganizationComponent;
-import uk.gov.gchq.hqdm.model.ClassOfStateOfParty;
-import uk.gov.gchq.hqdm.model.ClassOfStateOfPerson;
-import uk.gov.gchq.hqdm.model.ClassOfStateOfPhysicalObject;
-import uk.gov.gchq.hqdm.model.ClassOfStateOfPosition;
-import uk.gov.gchq.hqdm.model.ClassOfStateOfSalesProductInstance;
-import uk.gov.gchq.hqdm.model.ClassOfStateOfSign;
-import uk.gov.gchq.hqdm.model.ClassOfStateOfSociallyConstructedActivity;
-import uk.gov.gchq.hqdm.model.ClassOfStateOfSociallyConstructedObject;
-import uk.gov.gchq.hqdm.model.ClassOfStateOfSystem;
-import uk.gov.gchq.hqdm.model.ClassOfStateOfSystemComponent;
-import uk.gov.gchq.hqdm.model.ClassOfSystem;
-import uk.gov.gchq.hqdm.model.ClassOfSystemComponent;
-import uk.gov.gchq.hqdm.model.Classification;
-import uk.gov.gchq.hqdm.model.impl.ClassImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfAbstractObjectImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfActivityImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfAgreeContractImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfAgreementExecutionImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfAgreementProcessImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfAmountOfMoneyImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfAssociationImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfBiologicalObjectImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfBiologicalSystemComponentImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfBiologicalSystemImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfClassImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfClassOfSpatioTemporalExtentImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfContractExecutionImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfContractProcessImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfEventImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfFunctionalObjectImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfFunctionalSystemComponentImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfFunctionalSystemImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfInPlaceBiologicalComponentImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfIndividualImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfInstalledFunctionalSystemComponentImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfInstalledObjectImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfIntentionallyConstructedObjectImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfOfferImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfOrdinaryBiologicalObjectImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfOrdinaryFunctionalObjectImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfOrdinaryPhysicalObjectImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfOrganizationComponentImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfOrganizationImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfParticipantImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfPartyImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfPeriodOfTimeImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfPersonImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfPersonInPositionImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfPhysicalObjectImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfPhysicalPropertyImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfPhysicalQuantityImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfPointInTimeImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfPositionImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfPossibleWorldImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfReachingAgreementImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfRelationshipImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfRepresentationImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfSalesProductInstanceImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfSignImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfSociallyConstructedActivityImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfSociallyConstructedObjectImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfSpatioTemporalExtentImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfStateImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfStateOfActivityImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfStateOfAmountOfMoneyImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfStateOfAssociationImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfStateOfBiologicalObjectImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfStateOfBiologicalSystemComponentImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfStateOfBiologicalSystemImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfStateOfFunctionalObjectImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfStateOfFunctionalSystemComponentImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfStateOfFunctionalSystemImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfStateOfIntentionallyConstructedObjectImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfStateOfOrdinaryBiologicalObjectImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfStateOfOrdinaryFunctionalObjectImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfStateOfOrdinaryPhysicalObjectImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfStateOfOrganizationComponentImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfStateOfOrganizationImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfStateOfPartyImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfStateOfPersonImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfStateOfPhysicalObjectImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfStateOfPositionImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfStateOfSalesProductInstanceImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfStateOfSignImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfStateOfSociallyConstructedActivityImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfStateOfSociallyConstructedObjectImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfStateOfSystemComponentImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfStateOfSystemImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfSystemComponentImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassOfSystemImpl;
-import uk.gov.gchq.hqdm.model.impl.ClassificationImpl;
+import uk.gov.gchq.hqdm.model.impl.*;
 
 /**
  * Services related to HQDM Classes.
@@ -968,6 +815,276 @@ public class ClassServices {
      */
     public static Classification createClassification(final IRI iri) {
         return new ClassificationImpl(iri);
+    }
+
+    /**
+     * Create a KindOfActivity with an IRI.
+     *
+     * @param iri the IRI.
+     * @return a KindOfActivity instance.
+     */
+    public static KindOfActivity createKindOfActivity(final IRI iri) {
+        return new KindOfActivityImpl(iri);
+    }
+
+    /**
+     * Create a KindOfAssociation with an IRI.
+     *
+     * @param iri the IRI.
+     * @return a KindOfAssociation instance.
+     */
+    public static KindOfAssociation createKindOfAssociation(final IRI iri) {
+        return new KindOfAssociationImpl(iri);
+    }
+
+    /**
+     * Create a KindOfBiologicalObject with an IRI.
+     *
+     * @param iri the IRI.
+     * @return a KindOfBiologicalObject instance.
+     */
+    public static KindOfBiologicalObject createKindOfBiologicalObject(final IRI iri) {
+        return new KindOfBiologicalObjectImpl(iri);
+    }
+
+    /**
+     * Create a KindOfBiologicalSystem with an IRI.
+     *
+     * @param iri the IRI.
+     * @return a KindOfBiologicalSystem instance.
+     */
+    public static KindOfBiologicalSystem createKindOfBiologicalSystem(final IRI iri) {
+        return new KindOfBiologicalSystemImpl(iri);
+    }
+
+    /**
+     * Create a KindOfBiologicalSystemComponent with an IRI.
+     *
+     * @param iri the IRI.
+     * @return a KindOfBiologicalSystemComponent instance.
+     */
+    public static KindOfBiologicalSystemComponent 
+            createKindOfBiologicalSystemComponent(final IRI iri) {
+        return new KindOfBiologicalSystemComponentImpl(iri);
+    }
+
+    /**
+     * Create a KindOfFunctionalObject with an IRI.
+     *
+     * @param iri the IRI.
+     * @return a KindOfFunctionalObject instance.
+     */
+    public static KindOfFunctionalObject createKindOfFunctionalObject(final IRI iri) {
+        return new KindOfFunctionalObjectImpl(iri);
+    }
+
+    /**
+     * Create a KindOfFunctionalSystem with an IRI.
+     *
+     * @param iri the IRI.
+     * @return a KindOfFunctionalSystem instance.
+     */
+    public static KindOfFunctionalSystem createKindOfFunctionalSystem(final IRI iri) {
+        return new KindOfFunctionalSystemImpl(iri);
+    }
+
+    /**
+     * Create a KindOfFunctionalSystemComponent with an IRI.
+     *
+     * @param iri the IRI.
+     * @return a KindOfFunctionalSystemComponent instance.
+     */
+    public static KindOfFunctionalSystemComponent 
+            createKindOfFunctionalSystemComponent(final IRI iri) {
+        return new KindOfFunctionalSystemComponentImpl(iri);
+    }
+
+    /**
+     * Create a KindOfIndividual with an IRI.
+     *
+     * @param iri the IRI.
+     * @return a KindOfIndividual instance.
+     */
+    public static KindOfIndividual createKindOfIndividual(final IRI iri) {
+        return new KindOfIndividualImpl(iri);
+    }
+
+    /**
+     * Create a KindOfIntentionallyConstructedObject with an IRI.
+     *
+     * @param iri the IRI.
+     * @return a KindOfIntentionallyConstructedObject instance.
+     */
+    public static KindOfIntentionallyConstructedObject 
+            createKindOfIntentionallyConstructedObject(final IRI iri) {
+        return new KindOfIntentionallyConstructedObjectImpl(iri);
+    }
+
+    /**
+     * Create a KindOfOrdinaryBiologicalObject with an IRI.
+     *
+     * @param iri the IRI.
+     * @return a KindOfOrdinaryBiologicalObject instance.
+     */
+    public static KindOfOrdinaryBiologicalObject 
+            createKindOfOrdinaryBiologicalObject(final IRI iri) {
+        return new KindOfOrdinaryBiologicalObjectImpl(iri);
+    }
+
+    /**
+     * Create a KindOfOrdinaryFunctionalObject with an IRI.
+     *
+     * @param iri the IRI.
+     * @return a KindOfOrdinaryFunctionalObject instance.
+     */
+    public static KindOfOrdinaryFunctionalObject 
+            createKindOfOrdinaryFunctionalObject(final IRI iri) {
+        return new KindOfOrdinaryFunctionalObjectImpl(iri);
+    }
+
+    /**
+     * Create a KindOfOrdinaryPhysicalObject with an IRI.
+     *
+     * @param iri the IRI.
+     * @return a KindOfOrdinaryPhysicalObject instance.
+     */
+    public static KindOfOrdinaryPhysicalObject 
+            createKindOfOrdinaryPhysicalObject(final IRI iri) {
+        return new KindOfOrdinaryPhysicalObjectImpl(iri);
+    }
+
+    /**
+     * Create a KindOfOrganization with an IRI.
+     *
+     * @param iri the IRI.
+     * @return a KindOfOrganization instance.
+     */
+    public static KindOfOrganization createKindOfOrganization(final IRI iri) {
+        return new KindOfOrganizationImpl(iri);
+    }
+
+    /**
+     * Create a KindOfOrganizationComponent with an IRI.
+     *
+     * @param iri the IRI.
+     * @return a KindOfOrganizationComponent instance.
+     */
+    public static KindOfOrganizationComponent 
+            createKindOfOrganizationComponent(final IRI iri) {
+        return new KindOfOrganizationComponentImpl(iri);
+    }
+
+    /**
+     * Create a KindOfParty with an IRI.
+     *
+     * @param iri the IRI.
+     * @return a KindOfParty instance.
+     */
+    public static KindOfParty createKindOfParty(final IRI iri) {
+        return new KindOfPartyImpl(iri);
+    }
+
+    /**
+     * Create a KindOfPerson with an IRI.
+     *
+     * @param iri the IRI.
+     * @return a KindOfPerson instance.
+     */
+    public static KindOfPerson createKindOfPerson(final IRI iri) {
+        return new KindOfPersonImpl(iri);
+    }
+
+    /**
+     * Create a KindOfPhysicalObject with an IRI.
+     *
+     * @param iri the IRI.
+     * @return a KindOfPhysicalObject instance.
+     */
+    public static KindOfPhysicalObject createKindOfPhysicalObject(final IRI iri) {
+        return new KindOfPhysicalObjectImpl(iri);
+    }
+
+    /**
+     * Create a KindOfPhysicalProperty with an IRI.
+     *
+     * @param iri the IRI.
+     * @return a KindOfPhysicalProperty instance.
+     */
+    public static KindOfPhysicalProperty createKindOfPhysicalProperty(final IRI iri) {
+        return new KindOfPhysicalPropertyImpl(iri);
+    }
+
+    /**
+     * Create a KindOfPhysicalQuantity with an IRI.
+     *
+     * @param iri the IRI.
+     * @return a KindOfPhysicalQuantity instance.
+     */
+    public static KindOfPhysicalQuantity createKindOfPhysicalQuantity(final IRI iri) {
+        return new KindOfPhysicalQuantityImpl(iri);
+    }
+
+    /**
+     * Create a KindOfPosition with an IRI.
+     *
+     * @param iri the IRI.
+     * @return a KindOfPosition instance.
+     */
+    public static KindOfPosition createKindOfPosition(final IRI iri) {
+        return new KindOfPositionImpl(iri);
+    }
+
+    /**
+     * Create a KindOfRelationshipWithRestriction with an IRI.
+     *
+     * @param iri the IRI.
+     * @return a KindOfRelationshipWithRestriction instance.
+     */
+    public static KindOfRelationshipWithRestriction 
+            createKindOfRelationshipWithRestriction(final IRI iri) {
+        return new KindOfRelationshipWithRestrictionImpl(iri);
+    }
+
+    /**
+     * Create a KindOfRelationshipWithSignature with an IRI.
+     *
+     * @param iri the IRI.
+     * @return a KindOfRelationshipWithSignature instance.
+     */
+    public static KindOfRelationshipWithSignature 
+            createKindOfRelationshipWithSignature(final IRI iri) {
+        return new KindOfRelationshipWithSignatureImpl(iri);
+    }
+
+    /**
+     * Create a KindOfSociallyConstructedObject with an IRI.
+     *
+     * @param iri the IRI.
+     * @return a KindOfSociallyConstructedObject instance.
+     */
+    public static KindOfSociallyConstructedObject 
+            createKindOfSociallyConstructedObject(final IRI iri) {
+        return new KindOfSociallyConstructedObjectImpl(iri);
+    }
+
+    /**
+     * Create a KindOfSystem with an IRI.
+     *
+     * @param iri the IRI.
+     * @return a KindOfSystem instance.
+     */
+    public static KindOfSystem createKindOfSystem(final IRI iri) {
+        return new KindOfSystemImpl(iri);
+    }
+
+    /**
+     * Create a KindOfSystemComponent with an IRI.
+     *
+     * @param iri the IRI.
+     * @return a KindOfSystemComponent instance.
+     */
+    public static KindOfSystemComponent createKindOfSystemComponent(final IRI iri) {
+        return new KindOfSystemComponentImpl(iri);
     }
 
 }
