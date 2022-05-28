@@ -17,8 +17,6 @@ package uk.gov.gchq.hqdm.pojo;
 import java.util.Map;
 import java.util.Set;
 
-import uk.gov.gchq.hqdm.exception.HqdmException;
-
 /**
  * Top-level interface for HQDM objects.
  */
@@ -51,7 +49,7 @@ public interface Top {
      * @param predicates Predicates of the HQDM object.
      * @throws HqdmException If predicates could not be parsed.
      */
-    void setPredicates(Map<String, Set<Object>> predicates) throws HqdmException;
+    void setPredicates(Map<String, Set<Object>> predicates);
 
     /**
      * Add predicate and object String reference to entity.

@@ -20,7 +20,6 @@ import java.time.LocalDateTime;
 import org.junit.Assert;
 import org.junit.Test;
 
-import uk.gov.gchq.hqdm.exception.HqdmException;
 import uk.gov.gchq.hqdm.model.PointInTime;
 import uk.gov.gchq.hqdm.model.PossibleWorld;
 import uk.gov.gchq.hqdm.model.SpatioTemporalExtent;
@@ -31,7 +30,7 @@ import uk.gov.gchq.hqdm.model.impl.SpatioTemporalExtentImpl;
 public class HqdmObjectTest {
 
     @Test
-    public void testDateTimeFormattingForTriples() throws HqdmException {
+    public void testDateTimeFormattingForTriples() {
         final PossibleWorld possibleWorld = new PossibleWorldImpl("World");
         final String beginDateTime = LocalDateTime.now().toString();
         final String endDate = LocalDate.now().toString();
