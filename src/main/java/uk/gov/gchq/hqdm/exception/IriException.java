@@ -15,7 +15,7 @@
 package uk.gov.gchq.hqdm.exception;
 
 /**
- * Exception thrown to indicate that a string could not be parsed as an IRI reference.
+ * Exception thrown to indicate that a string could not be parsed as an String reference.
  */
 public class IriException extends HqdmException {
 

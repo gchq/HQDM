@@ -14,9 +14,7 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.IN_PLACE_BIOLOGICAL_COMPONENT;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.InPlaceBiologicalComponent;
 import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
@@ -28,10 +26,10 @@ public class InPlaceBiologicalComponentImpl extends HqdmObject
     /**
      * Constructs a new InPlaceBiologicalComponent.
      *
-     * @param iri IRI of the InPlaceBiologicalComponent.
+     * @param id String of the InPlaceBiologicalComponent.
      */
-    public InPlaceBiologicalComponentImpl(final IRI iri) {
-        super(InPlaceBiologicalComponentImpl.class, iri, IN_PLACE_BIOLOGICAL_COMPONENT);
+    public InPlaceBiologicalComponentImpl(final String id) {
+        super(id);
     }
 
 }

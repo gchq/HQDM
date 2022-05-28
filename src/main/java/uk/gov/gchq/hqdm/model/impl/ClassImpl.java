@@ -14,9 +14,7 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.CLASS;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.Class;
 import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
@@ -27,10 +25,10 @@ public class ClassImpl extends HqdmObject implements Class {
     /**
      * Constructs a new Class.
      *
-     * @param iri IRI of the Class.
+     * @param id String of the Class.
      */
-    public ClassImpl(final IRI iri) {
-        super(ClassImpl.class, iri, CLASS);
+    public ClassImpl(final String id) {
+        super(id);
     }
 
 }

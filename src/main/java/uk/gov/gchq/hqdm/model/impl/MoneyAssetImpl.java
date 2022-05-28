@@ -14,9 +14,7 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.MONEY_ASSET;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.MoneyAsset;
 import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
@@ -27,10 +25,10 @@ public class MoneyAssetImpl extends HqdmObject implements MoneyAsset {
     /**
      * Constructs a new MoneyAsset.
      *
-     * @param iri IRI of the MoneyAsset.
+     * @param id String of the MoneyAsset.
      */
-    public MoneyAssetImpl(final IRI iri) {
-        super(MoneyAssetImpl.class, iri, MONEY_ASSET);
+    public MoneyAssetImpl(final String id) {
+        super(id);
     }
 
 }

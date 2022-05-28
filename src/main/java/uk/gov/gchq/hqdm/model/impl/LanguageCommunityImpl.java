@@ -14,9 +14,7 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.LANGUAGE_COMMUNITY;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.LanguageCommunity;
 import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
@@ -27,10 +25,10 @@ public class LanguageCommunityImpl extends HqdmObject implements LanguageCommuni
     /**
      * Constructs a new LanguageCommunity.
      *
-     * @param iri IRI of the LanguageCommunity.
+     * @param id String of the LanguageCommunity.
      */
-    public LanguageCommunityImpl(final IRI iri) {
-        super(LanguageCommunityImpl.class, iri, LANGUAGE_COMMUNITY);
+    public LanguageCommunityImpl(final String id) {
+        super(id);
     }
 
 }

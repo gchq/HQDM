@@ -14,9 +14,7 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.PLAN;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.Plan;
 import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
@@ -27,10 +25,10 @@ public class PlanImpl extends HqdmObject implements Plan {
     /**
      * Constructs a new Plan.
      *
-     * @param iri IRI of the Plan.
+     * @param id String of the Plan.
      */
-    public PlanImpl(final IRI iri) {
-        super(PlanImpl.class, iri, PLAN);
+    public PlanImpl(final String id) {
+        super(id);
     }
 
 }

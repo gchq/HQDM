@@ -14,9 +14,7 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.CLASS_OF_PERIOD_OF_TIME;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.ClassOfPeriodOfTime;
 import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
@@ -27,10 +25,10 @@ public class ClassOfPeriodOfTimeImpl extends HqdmObject implements ClassOfPeriod
     /**
      * Constructs a new ClassOfPeriodOfTime.
      *
-     * @param iri IRI of the ClassOfPeriodOfTime.
+     * @param id String of the ClassOfPeriodOfTime.
      */
-    public ClassOfPeriodOfTimeImpl(final IRI iri) {
-        super(ClassOfPeriodOfTimeImpl.class, iri, CLASS_OF_PERIOD_OF_TIME);
+    public ClassOfPeriodOfTimeImpl(final String id) {
+        super(id);
     }
 
 }

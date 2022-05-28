@@ -14,9 +14,7 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.ENUMERATED_CLASS;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.EnumeratedClass;
 import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
@@ -27,10 +25,10 @@ public class EnumeratedClassImpl extends HqdmObject implements EnumeratedClass {
     /**
      * Constructs a new EnumeratedClass.
      *
-     * @param iri IRI of the EnumeratedClass.
+     * @param id String of the EnumeratedClass.
      */
-    public EnumeratedClassImpl(final IRI iri) {
-        super(EnumeratedClassImpl.class, iri, ENUMERATED_CLASS);
+    public EnumeratedClassImpl(final String id) {
+        super(id);
     }
 
 }

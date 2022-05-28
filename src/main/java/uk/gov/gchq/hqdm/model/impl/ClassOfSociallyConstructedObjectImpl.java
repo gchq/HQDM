@@ -14,9 +14,7 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.CLASS_OF_SOCIALLY_CONSTRUCTED_OBJECT;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.ClassOfSociallyConstructedObject;
 import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
@@ -28,11 +26,10 @@ public class ClassOfSociallyConstructedObjectImpl extends HqdmObject
     /**
      * Constructs a new ClassOfSociallyConstructedObject.
      *
-     * @param iri IRI of the ClassOfSociallyConstructedObject.
+     * @param id String of the ClassOfSociallyConstructedObject.
      */
-    public ClassOfSociallyConstructedObjectImpl(final IRI iri) {
-        super(ClassOfSociallyConstructedObjectImpl.class, iri,
-                CLASS_OF_SOCIALLY_CONSTRUCTED_OBJECT);
+    public ClassOfSociallyConstructedObjectImpl(final String id) {
+        super(id);
     }
 
 }

@@ -14,9 +14,7 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.CLASS_OF_CONTRACT_PROCESS;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.ClassOfContractProcess;
 import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
@@ -27,10 +25,10 @@ public class ClassOfContractProcessImpl extends HqdmObject implements ClassOfCon
     /**
      * Constructs a new ClassOfContractProcess.
      *
-     * @param iri IRI of the ClassOfContractProcess.
+     * @param id String of the ClassOfContractProcess.
      */
-    public ClassOfContractProcessImpl(final IRI iri) {
-        super(ClassOfContractProcessImpl.class, iri, CLASS_OF_CONTRACT_PROCESS);
+    public ClassOfContractProcessImpl(final String id) {
+        super(id);
     }
 
 }

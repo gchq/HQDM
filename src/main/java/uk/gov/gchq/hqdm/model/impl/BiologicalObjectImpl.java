@@ -14,9 +14,7 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.BIOLOGICAL_OBJECT;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.BiologicalObject;
 import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
@@ -27,10 +25,10 @@ public class BiologicalObjectImpl extends HqdmObject implements BiologicalObject
     /**
      * Constructs a new BiologicalObject.
      *
-     * @param iri IRI of the BiologicalObject.
+     * @param id String of the BiologicalObject.
      */
-    public BiologicalObjectImpl(final IRI iri) {
-        super(BiologicalObjectImpl.class, iri, BIOLOGICAL_OBJECT);
+    public BiologicalObjectImpl(final String id) {
+        super(id);
     }
 
 }

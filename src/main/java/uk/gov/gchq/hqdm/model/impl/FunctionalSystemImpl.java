@@ -14,9 +14,7 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.FUNCTIONAL_SYSTEM;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.FunctionalSystem;
 import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
@@ -27,10 +25,10 @@ public class FunctionalSystemImpl extends HqdmObject implements FunctionalSystem
     /**
      * Constructs a new FunctionalSystem.
      *
-     * @param iri IRI of the FunctionalSystem.
+     * @param id String of the FunctionalSystem.
      */
-    public FunctionalSystemImpl(final IRI iri) {
-        super(FunctionalSystemImpl.class, iri, FUNCTIONAL_SYSTEM);
+    public FunctionalSystemImpl(final String id) {
+        super(id);
     }
 
 }

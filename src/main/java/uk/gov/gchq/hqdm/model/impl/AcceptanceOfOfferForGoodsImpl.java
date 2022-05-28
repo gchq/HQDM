@@ -14,9 +14,7 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.ACCEPTANCE_OF_OFFER_FOR_GOODS;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.AcceptanceOfOfferForGoods;
 import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
@@ -28,10 +26,10 @@ public class AcceptanceOfOfferForGoodsImpl extends HqdmObject
     /**
      * Constructs a new AcceptanceOfOfferForGoods.
      *
-     * @param iri IRI of the AcceptanceOfOfferForGoods.
+     * @param id String of the AcceptanceOfOfferForGoods.
      */
-    public AcceptanceOfOfferForGoodsImpl(final IRI iri) {
-        super(AcceptanceOfOfferForGoodsImpl.class, iri, ACCEPTANCE_OF_OFFER_FOR_GOODS);
+    public AcceptanceOfOfferForGoodsImpl(final String id) {
+        super(id);
     }
 
 }

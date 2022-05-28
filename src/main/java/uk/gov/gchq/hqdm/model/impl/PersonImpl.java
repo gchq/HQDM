@@ -14,9 +14,7 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.PERSON;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.Person;
 import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
@@ -27,10 +25,10 @@ public class PersonImpl extends HqdmObject implements Person {
     /**
      * Constructs a new Person.
      *
-     * @param iri IRI of the Person.
+     * @param id String of the Person.
      */
-    public PersonImpl(final IRI iri) {
-        super(PersonImpl.class, iri, PERSON);
+    public PersonImpl(final String id) {
+        super(id);
     }
 
 }

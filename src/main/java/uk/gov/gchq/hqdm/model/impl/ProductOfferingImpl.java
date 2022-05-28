@@ -14,9 +14,7 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.PRODUCT_OFFERING;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.ProductOffering;
 import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
@@ -27,10 +25,10 @@ public class ProductOfferingImpl extends HqdmObject implements ProductOffering {
     /**
      * Constructs a new ProductOffering.
      *
-     * @param iri IRI of the ProductOffering.
+     * @param id String of the ProductOffering.
      */
-    public ProductOfferingImpl(final IRI iri) {
-        super(ProductOfferingImpl.class, iri, PRODUCT_OFFERING);
+    public ProductOfferingImpl(final String id) {
+        super(id);
     }
 
 }

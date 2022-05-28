@@ -14,9 +14,7 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.ASSET;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.Asset;
 import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
@@ -27,10 +25,10 @@ public class AssetImpl extends HqdmObject implements Asset {
     /**
      * Constructs a new Asset.
      *
-     * @param iri IRI of the Asset.
+     * @param id String of the Asset.
      */
-    public AssetImpl(final IRI iri) {
-        super(AssetImpl.class, iri, ASSET);
+    public AssetImpl(final String id) {
+        super(id);
     }
 
 }

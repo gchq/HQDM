@@ -14,9 +14,7 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.CLASS_OF_ORDINARY_FUNCTIONAL_OBJECT;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.ClassOfOrdinaryFunctionalObject;
 import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
@@ -28,10 +26,10 @@ public class ClassOfOrdinaryFunctionalObjectImpl extends HqdmObject
     /**
      * Constructs a new ClassOfOrdinaryFunctionalObject.
      *
-     * @param iri IRI of the ClassOfOrdinaryFunctionalObject.
+     * @param id String of the ClassOfOrdinaryFunctionalObject.
      */
-    public ClassOfOrdinaryFunctionalObjectImpl(final IRI iri) {
-        super(ClassOfOrdinaryFunctionalObjectImpl.class, iri, CLASS_OF_ORDINARY_FUNCTIONAL_OBJECT);
+    public ClassOfOrdinaryFunctionalObjectImpl(final String id) {
+        super(id);
     }
 
 }

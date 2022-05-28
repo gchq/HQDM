@@ -14,9 +14,7 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.SPECIALIZATION;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.Specialization;
 import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
@@ -27,10 +25,10 @@ public class SpecializationImpl extends HqdmObject implements Specialization {
     /**
      * Constructs a new Specialization.
      *
-     * @param iri IRI of the Specialization.
+     * @param id String of the Specialization.
      */
-    public SpecializationImpl(final IRI iri) {
-        super(SpecializationImpl.class, iri, SPECIALIZATION);
+    public SpecializationImpl(final String id) {
+        super(id);
     }
 
 }

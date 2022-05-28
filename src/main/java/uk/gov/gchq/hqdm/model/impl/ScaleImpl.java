@@ -14,9 +14,7 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.SCALE;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.Scale;
 import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
@@ -27,10 +25,10 @@ public class ScaleImpl extends HqdmObject implements Scale {
     /**
      * Constructs a new Scale.
      *
-     * @param iri IRI of the Scale.
+     * @param id String of the Scale.
      */
-    public ScaleImpl(final IRI iri) {
-        super(ScaleImpl.class, iri, SCALE);
+    public ScaleImpl(final String id) {
+        super(id);
     }
 
 }

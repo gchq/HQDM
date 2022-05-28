@@ -14,9 +14,7 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.PHYSICAL_QUANTITY;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.PhysicalQuantity;
 import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
@@ -27,10 +25,10 @@ public class PhysicalQuantityImpl extends HqdmObject implements PhysicalQuantity
     /**
      * Constructs a new PhysicalQuantity.
      *
-     * @param iri IRI of the PhysicalQuantity.
+     * @param id String of the PhysicalQuantity.
      */
-    public PhysicalQuantityImpl(final IRI iri) {
-        super(PhysicalQuantityImpl.class, iri, PHYSICAL_QUANTITY);
+    public PhysicalQuantityImpl(final String id) {
+        super(id);
     }
 
 }

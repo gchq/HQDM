@@ -14,9 +14,7 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.CLASS_OF_SYSTEM_COMPONENT;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.ClassOfSystemComponent;
 import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
@@ -27,10 +25,10 @@ public class ClassOfSystemComponentImpl extends HqdmObject implements ClassOfSys
     /**
      * Constructs a new ClassOfSystemComponent.
      *
-     * @param iri IRI of the ClassOfSystemComponent.
+     * @param id String of the ClassOfSystemComponent.
      */
-    public ClassOfSystemComponentImpl(final IRI iri) {
-        super(ClassOfSystemComponentImpl.class, iri, CLASS_OF_SYSTEM_COMPONENT);
+    public ClassOfSystemComponentImpl(final String id) {
+        super(id);
     }
 
 }

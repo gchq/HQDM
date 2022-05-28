@@ -14,9 +14,7 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.SALE_OF_GOODS;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.SaleOfGoods;
 import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
@@ -27,10 +25,10 @@ public class SaleOfGoodsImpl extends HqdmObject implements SaleOfGoods {
     /**
      * Constructs a new SaleOfGoods.
      *
-     * @param iri IRI of the SaleOfGoods.
+     * @param id String of the SaleOfGoods.
      */
-    public SaleOfGoodsImpl(final IRI iri) {
-        super(SaleOfGoodsImpl.class, iri, SALE_OF_GOODS);
+    public SaleOfGoodsImpl(final String id) {
+        super(id);
     }
 
 }

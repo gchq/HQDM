@@ -14,9 +14,7 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.REPRESENTATION_BY_PATTERN;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.RepresentationByPattern;
 import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
@@ -27,10 +25,10 @@ public class RepresentationByPatternImpl extends HqdmObject implements Represent
     /**
      * Constructs a new RepresentationByPattern.
      *
-     * @param iri IRI of the RepresentationByPattern.
+     * @param id String of the RepresentationByPattern.
      */
-    public RepresentationByPatternImpl(final IRI iri) {
-        super(RepresentationByPatternImpl.class, iri, REPRESENTATION_BY_PATTERN);
+    public RepresentationByPatternImpl(final String id) {
+        super(id);
     }
 
 }

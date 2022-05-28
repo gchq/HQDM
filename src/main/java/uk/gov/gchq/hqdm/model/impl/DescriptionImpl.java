@@ -14,9 +14,7 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.DESCRIPTION;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.Description;
 import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
@@ -27,10 +25,10 @@ public class DescriptionImpl extends HqdmObject implements Description {
     /**
      * Constructs a new Description.
      *
-     * @param iri IRI of the Description.
+     * @param id String of the Description.
      */
-    public DescriptionImpl(final IRI iri) {
-        super(DescriptionImpl.class, iri, DESCRIPTION);
+    public DescriptionImpl(final String id) {
+        super(id);
     }
 
 }

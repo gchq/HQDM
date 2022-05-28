@@ -14,9 +14,7 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.STATE_OF_POSITION;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.StateOfPosition;
 import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
@@ -27,10 +25,10 @@ public class StateOfPositionImpl extends HqdmObject implements StateOfPosition {
     /**
      * Constructs a new StateOfPosition.
      *
-     * @param iri IRI of the StateOfPosition.
+     * @param id String of the StateOfPosition.
      */
-    public StateOfPositionImpl(final IRI iri) {
-        super(StateOfPositionImpl.class, iri, STATE_OF_POSITION);
+    public StateOfPositionImpl(final String id) {
+        super(id);
     }
 
 }

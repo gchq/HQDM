@@ -14,9 +14,7 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.COMPOSITION;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.Composition;
 import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
@@ -27,10 +25,10 @@ public class CompositionImpl extends HqdmObject implements Composition {
     /**
      * Constructs a new Composition.
      *
-     * @param iri IRI of the Composition.
+     * @param id String of the Composition.
      */
-    public CompositionImpl(final IRI iri) {
-        super(CompositionImpl.class, iri, COMPOSITION);
+    public CompositionImpl(final String id) {
+        super(id);
     }
 
 }

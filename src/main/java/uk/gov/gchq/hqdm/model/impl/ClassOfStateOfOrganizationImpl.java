@@ -14,9 +14,7 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.CLASS_OF_STATE_OF_ORGANIZATION;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.ClassOfStateOfOrganization;
 import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
@@ -28,10 +26,10 @@ public class ClassOfStateOfOrganizationImpl extends HqdmObject
     /**
      * Constructs a new ClassOfStateOfOrganization.
      *
-     * @param iri IRI of the ClassOfStateOfOrganization.
+     * @param id String of the ClassOfStateOfOrganization.
      */
-    public ClassOfStateOfOrganizationImpl(final IRI iri) {
-        super(ClassOfStateOfOrganizationImpl.class, iri, CLASS_OF_STATE_OF_ORGANIZATION);
+    public ClassOfStateOfOrganizationImpl(final String id) {
+        super(id);
     }
 
 }

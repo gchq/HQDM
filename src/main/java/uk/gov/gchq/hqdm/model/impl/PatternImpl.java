@@ -14,9 +14,7 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.PATTERN;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.Pattern;
 import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
@@ -27,10 +25,10 @@ public class PatternImpl extends HqdmObject implements Pattern {
     /**
      * Constructs a new Pattern.
      *
-     * @param iri IRI of the Pattern.
+     * @param id String of the Pattern.
      */
-    public PatternImpl(final IRI iri) {
-        super(PatternImpl.class, iri, PATTERN);
+    public PatternImpl(final String id) {
+        super(id);
     }
 
 }

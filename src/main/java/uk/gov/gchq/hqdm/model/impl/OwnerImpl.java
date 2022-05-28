@@ -14,9 +14,7 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.OWNER;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.Owner;
 import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
@@ -27,10 +25,10 @@ public class OwnerImpl extends HqdmObject implements Owner {
     /**
      * Constructs a new Owner.
      *
-     * @param iri IRI of the Owner.
+     * @param id String of the Owner.
      */
-    public OwnerImpl(final IRI iri) {
-        super(OwnerImpl.class, iri, OWNER);
+    public OwnerImpl(final String id) {
+        super(id);
     }
 
 }

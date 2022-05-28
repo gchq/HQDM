@@ -14,9 +14,7 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.KIND_OF_SYSTEM;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.KindOfSystem;
 import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
@@ -27,10 +25,10 @@ public class KindOfSystemImpl extends HqdmObject implements KindOfSystem {
     /**
      * Constructs a new KindOfSystem.
      *
-     * @param iri IRI of the KindOfSystem.
+     * @param id String of the KindOfSystem.
      */
-    public KindOfSystemImpl(final IRI iri) {
-        super(KindOfSystemImpl.class, iri, KIND_OF_SYSTEM);
+    public KindOfSystemImpl(final String id) {
+        super(id);
     }
 
 }

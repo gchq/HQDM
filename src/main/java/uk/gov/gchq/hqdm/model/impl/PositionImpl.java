@@ -14,9 +14,7 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.POSITION;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.Position;
 import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
@@ -27,10 +25,10 @@ public class PositionImpl extends HqdmObject implements Position {
     /**
      * Constructs a new Position.
      *
-     * @param iri IRI of the Position.
+     * @param id String of the Position.
      */
-    public PositionImpl(final IRI iri) {
-        super(PositionImpl.class, iri, POSITION);
+    public PositionImpl(final String id) {
+        super(id);
     }
 
 }

@@ -14,20 +14,12 @@
 
 package uk.gov.gchq.hqdm.pojo;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.ENTITY_CLASS_NAME;
-import static uk.gov.gchq.hqdm.iri.HQDM.ENTITY_NAME;
-import static uk.gov.gchq.hqdm.iri.RDFS.RDF_TYPE;
-
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
-import java.util.regex.Pattern;
-import java.util.stream.Collectors;
 
-import uk.gov.gchq.hqdm.exception.IriException;
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.Thing;
 
 /**
@@ -35,81 +27,55 @@ import uk.gov.gchq.hqdm.model.Thing;
  */
 public abstract class HqdmObject implements Thing {
 
-    private static final Pattern DATE_PATTERN = Pattern.compile("\\d{4}-\\d{2}-\\d{2}");
-    private static final Pattern DATE_TIME_PATTERN = Pattern
-            .compile("\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}.*");
+    private String id;
 
-    private IRI iri;
-
-    private final Map<IRI, Set<Object>> predicates = new HashMap<>();
-
-    /**
-     * Constructs a new instance of a {@code HqdmObject}.
-     */
-    public HqdmObject() {}
+    private final Map<String, Set<Object>> predicates = new HashMap<>();
 
     /**
      * Constructs a new {@code HqdmObject}.
      *
-     * @param clazz Class of HQDM object.
-     * @param iri IRI of the HQDM object.
-     * @param rdfType IRI definition of HQDM object type.
+     * @param id String of the HQDM object.
      */
-    public HqdmObject(final Class clazz, final IRI iri, final IRI rdfType) {
-        addStringValue(ENTITY_CLASS_NAME, clazz.getName());
-        this.iri = iri;
-        addValue(RDF_TYPE, rdfType);
+    public HqdmObject(final String id) {
+        this.id = id;
     }
 
     /**
      * {@inheritDoc}
      */
-    public IRI getIri() {
-        return iri;
+    public String getId() {
+        return id;
     }
 
     /**
      * {@inheritDoc}
      */
-    public void setIri(final IRI iri) {
-        this.iri = iri;
-    }
-
-    /**
-     * Return the {@link uk.gov.gchq.hqdm.iri.HQDM#ENTITY_NAME} value of the entity.
-     *
-     * @return Name of the entity.
-     */
-    public String getName() {
-        final Set<Object> names = value(ENTITY_NAME);
-        if (names != null && !names.isEmpty()) {
-            return (String) names.iterator().next();
-        }
-        return null;
+    public void setId(final String id) {
+        this.id = id;
     }
 
     /**
      * {@inheritDoc}
      */
-    public Map<IRI, Set<Object>> getPredicates() {
+    public Map<String, Set<Object>> getPredicates() {
         return predicates;
     }
 
     /**
      * {@inheritDoc}
      */
-    public void setPredicates(final Map<IRI, Set<Object>> predicates) throws IriException {
-        // Convert some values to IRIs if necessary - required when deserializing the
+    public void setPredicates(final Map<String, Set<Object>> predicates) {
+        // Convert some values to Strings if necessary - required when deserializing the
         // object.
         if (!predicates.isEmpty()) {
             this.predicates.clear();
-            for (final Map.Entry<IRI, Set<Object>> entry : predicates.entrySet()) {
+            for (final Map.Entry<String, Set<Object>> entry : predicates.entrySet()) {
                 final Object value = entry.getValue().iterator().next();
-                final IRI key = entry.getKey();
+                final String key = entry.getKey();
                 if (value instanceof Map) {
                     final Map valueMap = (Map) value;
                     this.predicates.remove(key);
-                    this.addValue(key, new IRI(valueMap.get("iri").toString()));
+                    this.addValue(key, new String(valueMap.get("id").toString()));
                 } else {
                     this.predicates.put(key, entry.getValue());
                 }
@@ -120,62 +86,62 @@ public abstract class HqdmObject implements Thing {
     /**
      * {@inheritDoc}
      */
-    public void addValue(final IRI predicateIri, final IRI value) {
-        final Set<Object> values = predicates.computeIfAbsent(predicateIri, k -> new HashSet<>());
+    public void addValue(final String predicateId, final String value) {
+        final Set<Object> values = predicates.computeIfAbsent(predicateId, k -> new HashSet<>());
         values.add(value);
     }
 
     /**
      * {@inheritDoc}
      */
-    public void addStringValue(final IRI predicateIri, final String value) {
-        final Set<Object> values = predicates.computeIfAbsent(predicateIri, k -> new HashSet<>());
+    public void addStringValue(final String predicateId, final String value) {
+        final Set<Object> values = predicates.computeIfAbsent(predicateId, k -> new HashSet<>());
         values.add(value);
     }
 
     /**
      * {@inheritDoc}
      */
-    public void addRealValue(final IRI predicateIri, final double value) {
-        final Set<Object> values = predicates.computeIfAbsent(predicateIri, k -> new HashSet<>());
+    public void addRealValue(final String predicateId, final double value) {
+        final Set<Object> values = predicates.computeIfAbsent(predicateId, k -> new HashSet<>());
         values.add(value);
     }
 
     /**
      * {@inheritDoc}
      */
-    public Set<Object> value(final IRI iri) {
-        return predicates.get(iri);
+    public Set<Object> value(final String id) {
+        return predicates.get(id);
     }
 
     /**
      * {@inheritDoc}
      */
-    public boolean hasValue(final IRI value) {
+    public boolean hasValue(final String value) {
         return predicates.containsKey(value);
     }
 
     /**
      * {@inheritDoc}
      */
-    public boolean hasThisValue(final IRI predicateIri, final IRI value) {
-        final Set<Object> values = predicates.get(predicateIri);
+    public boolean hasThisValue(final String predicateId, final String value) {
+        final Set<Object> values = predicates.get(predicateId);
         return values != null && values.contains(value);
     }
 
     /**
      * {@inheritDoc}
      */
-    public boolean hasThisStringValue(final IRI predicateIri, final String value) {
-        final Set<Object> values = predicates.get(predicateIri);
+    public boolean hasThisStringValue(final String predicateId, final String value) {
+        final Set<Object> values = predicates.get(predicateId);
         return values != null && values.contains(value);
     }
 
     /**
      * {@inheritDoc}
      */
-    public boolean hasThisStringValueIgnoreCase(final IRI predicateIri, final String value) {
-        final Set<Object> values = predicates.get(predicateIri);
+    public boolean hasThisStringValueIgnoreCase(final String predicateId, final String value) {
+        final Set<Object> values = predicates.get(predicateId);
         if (values != null) {
             for (final Object object : values) {
                 if (value.equalsIgnoreCase(object.toString())) {
@@ -189,8 +155,8 @@ public abstract class HqdmObject implements Thing {
     /**
      * {@inheritDoc}
      */
-    public boolean hasThisStringValueFuzzy(final IRI predicateIri, final String value) {
-        final Set<Object> values = predicates.get(predicateIri);
+    public boolean hasThisStringValueFuzzy(final String predicateId, final String value) {
+        final Set<Object> values = predicates.get(predicateId);
         if (values != null) {
             for (final Object object : values) {
                 if (object.toString().toLowerCase().contains(value.toLowerCase())) {
@@ -199,46 +165,6 @@ public abstract class HqdmObject implements Thing {
             }
         }
         return false;
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public String toTriples() {
-        final StringBuilder builder = new StringBuilder();
-        builder.append('<');
-        builder.append(iri.toString());
-        builder.append('>');
-        builder.append(' ');
-
-        final String predicatesStr = predicates.entrySet().stream().map(v -> {
-            final String predicate = "<" + v.getKey().toString() + "> ";
-            return v
-                    .getValue()
-                    .stream()
-                    .map(vv -> predicate + toTripleString(vv)).collect(Collectors.joining(";\n"));
-        }).collect(Collectors.joining(";\n"));
-
-        builder.append(predicatesStr);
-        builder.append(".\n");
-        return builder.toString();
-    }
-
-    private String toTripleString(final Object object) {
-        final String stringValue = object.toString();
-        if (object instanceof IRI) {
-            return "<" + stringValue + ">";
-        } else if (DATE_TIME_PATTERN.matcher(stringValue).matches()) {
-            return "\"" + object + "\"^^<http://www.w3.org/2001/XMLSchema#dateTime>";
-        } else if (DATE_PATTERN.matcher(stringValue).matches()) {
-            return "\"" + object + "\"^^<http://www.w3.org/2001/XMLSchema#date>";
-        } else if (object instanceof String) {
-            return "\"\"\"" + object + "\"\"\"^^<http://www.w3.org/2001/XMLSchema#string>";
-        } else if (object instanceof Integer || object instanceof Long) {
-            return "\"" + object + "\"^^<http://www.w3.org/2001/XMLSchema#integer>";
-        } else {
-            return "\"\"\"" + stringValue + "\"\"\"";
-        }
     }
 
     /**
@@ -259,7 +185,7 @@ public abstract class HqdmObject implements Thing {
             });
             builder.append("]\n");
         });
-        return "HQDMObject{" + "getIri=" + iri + "\n    values=\n" + builder.toString() + '}';
+        return "HQDMObject{" + "getId=" + id + "\n    values=\n" + builder.toString() + '}';
     }
 
     /**
@@ -280,7 +206,7 @@ public abstract class HqdmObject implements Thing {
             return false;
         }
         final HqdmObject that = (HqdmObject) object;
-        return Objects.equals(iri, that.iri);
+        return Objects.equals(id, that.id);
     }
 
     /**
@@ -290,6 +216,6 @@ public abstract class HqdmObject implements Thing {
      */
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), iri);
+        return Objects.hash(super.hashCode(), id);
     }
 }

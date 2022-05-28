@@ -14,9 +14,7 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.PHYSICAL_PROPERTY_RANGE;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.PhysicalPropertyRange;
 import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
@@ -27,10 +25,10 @@ public class PhysicalPropertyRangeImpl extends HqdmObject implements PhysicalPro
     /**
      * Constructs a new PhysicalPropertyRange.
      *
-     * @param iri IRI of the PhysicalPropertyRange.
+     * @param id String of the PhysicalPropertyRange.
      */
-    public PhysicalPropertyRangeImpl(final IRI iri) {
-        super(PhysicalPropertyRangeImpl.class, iri, PHYSICAL_PROPERTY_RANGE);
+    public PhysicalPropertyRangeImpl(final String id) {
+        super(id);
     }
 
 }

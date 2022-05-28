@@ -14,9 +14,7 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.IDENTIFICATION_OF_PHYSICAL_QUANTITY;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.IdentificationOfPhysicalQuantity;
 import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
@@ -28,10 +26,10 @@ public class IdentificationOfPhysicalQuantityImpl extends HqdmObject
     /**
      * Constructs a new IdentificationOfPhysicalQuantity.
      *
-     * @param iri IRI of the IdentificationOfPhysicalQuantity.
+     * @param id String of the IdentificationOfPhysicalQuantity.
      */
-    public IdentificationOfPhysicalQuantityImpl(final IRI iri) {
-        super(IdentificationOfPhysicalQuantityImpl.class, iri, IDENTIFICATION_OF_PHYSICAL_QUANTITY);
+    public IdentificationOfPhysicalQuantityImpl(final String id) {
+        super(id);
     }
 
 }

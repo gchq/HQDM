@@ -14,9 +14,7 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.CLASS_OF_RELATIONSHIP;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.ClassOfRelationship;
 import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
@@ -27,10 +25,10 @@ public class ClassOfRelationshipImpl extends HqdmObject implements ClassOfRelati
     /**
      * Constructs a new ClassOfRelationship.
      *
-     * @param iri IRI of the ClassOfRelationship.
+     * @param id String of the ClassOfRelationship.
      */
-    public ClassOfRelationshipImpl(final IRI iri) {
-        super(ClassOfRelationshipImpl.class, iri, CLASS_OF_RELATIONSHIP);
+    public ClassOfRelationshipImpl(final String id) {
+        super(id);
     }
 
 }

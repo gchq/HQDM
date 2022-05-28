@@ -14,9 +14,7 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.CLASS_OF_AMOUNT_OF_MONEY;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.ClassOfAmountOfMoney;
 import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
@@ -27,10 +25,10 @@ public class ClassOfAmountOfMoneyImpl extends HqdmObject implements ClassOfAmoun
     /**
      * Constructs a new ClassOfAmountOfMoney.
      *
-     * @param iri IRI of the ClassOfAmountOfMoney.
+     * @param id String of the ClassOfAmountOfMoney.
      */
-    public ClassOfAmountOfMoneyImpl(final IRI iri) {
-        super(ClassOfAmountOfMoneyImpl.class, iri, CLASS_OF_AMOUNT_OF_MONEY);
+    public ClassOfAmountOfMoneyImpl(final String id) {
+        super(id);
     }
 
 }

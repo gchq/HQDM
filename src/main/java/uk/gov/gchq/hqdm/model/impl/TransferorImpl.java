@@ -14,9 +14,7 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.TRANSFEROR;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.Transferor;
 import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
@@ -27,10 +25,10 @@ public class TransferorImpl extends HqdmObject implements Transferor {
     /**
      * Constructs a new Transferor.
      *
-     * @param iri IRI of the Transferor.
+     * @param id String of the Transferor.
      */
-    public TransferorImpl(final IRI iri) {
-        super(TransferorImpl.class, iri, TRANSFEROR);
+    public TransferorImpl(final String id) {
+        super(id);
     }
 
 }

@@ -14,9 +14,7 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.ASSOCIATION;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.Association;
 import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
@@ -27,10 +25,10 @@ public class AssociationImpl extends HqdmObject implements Association {
     /**
      * Constructs a new Association.
      *
-     * @param iri IRI of the Association.
+     * @param id String of the Association.
      */
-    public AssociationImpl(final IRI iri) {
-        super(AssociationImpl.class, iri, ASSOCIATION);
+    public AssociationImpl(final String id) {
+        super(id);
     }
 
 }

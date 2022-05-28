@@ -14,9 +14,7 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.UNIT_OF_MEASURE;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.UnitOfMeasure;
 import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
@@ -27,10 +25,10 @@ public class UnitOfMeasureImpl extends HqdmObject implements UnitOfMeasure {
     /**
      * Constructs a new UnitOfMeasure.
      *
-     * @param iri IRI of the UnitOfMeasure.
+     * @param id String of the UnitOfMeasure.
      */
-    public UnitOfMeasureImpl(final IRI iri) {
-        super(UnitOfMeasureImpl.class, iri, UNIT_OF_MEASURE);
+    public UnitOfMeasureImpl(final String id) {
+        super(id);
     }
 
 }

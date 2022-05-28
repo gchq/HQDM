@@ -14,9 +14,7 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.IDENTIFICATION;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.Identification;
 import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
@@ -27,10 +25,10 @@ public class IdentificationImpl extends HqdmObject implements Identification {
     /**
      * Constructs a new Identification.
      *
-     * @param iri IRI of the Identification.
+     * @param id String of the Identification.
      */
-    public IdentificationImpl(final IRI iri) {
-        super(IdentificationImpl.class, iri, IDENTIFICATION);
+    public IdentificationImpl(final String id) {
+        super(id);
     }
 
 }

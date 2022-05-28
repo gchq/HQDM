@@ -14,9 +14,7 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.CLASS_OF_SIGN;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.ClassOfSign;
 import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
@@ -27,10 +25,10 @@ public class ClassOfSignImpl extends HqdmObject implements ClassOfSign {
     /**
      * Constructs a new ClassOfSign.
      *
-     * @param iri IRI of the ClassOfSign.
+     * @param id String of the ClassOfSign.
      */
-    public ClassOfSignImpl(final IRI iri) {
-        super(ClassOfSignImpl.class, iri, CLASS_OF_SIGN);
+    public ClassOfSignImpl(final String id) {
+        super(id);
     }
 
 }

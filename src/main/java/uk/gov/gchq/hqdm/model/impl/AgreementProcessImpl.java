@@ -14,9 +14,7 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.AGREEMENT_PROCESS;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.AgreementProcess;
 import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
@@ -27,10 +25,10 @@ public class AgreementProcessImpl extends HqdmObject implements AgreementProcess
     /**
      * Constructs a new AgreementProcess.
      *
-     * @param iri IRI of the AgreementProcess.
+     * @param id String of the AgreementProcess.
      */
-    public AgreementProcessImpl(final IRI iri) {
-        super(AgreementProcessImpl.class, iri, AGREEMENT_PROCESS);
+    public AgreementProcessImpl(final String id) {
+        super(id);
     }
 
 }

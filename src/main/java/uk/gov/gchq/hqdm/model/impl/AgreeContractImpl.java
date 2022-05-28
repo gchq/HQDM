@@ -14,9 +14,7 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.AGREE_CONTRACT;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.AgreeContract;
 import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
@@ -27,10 +25,10 @@ public class AgreeContractImpl extends HqdmObject implements AgreeContract {
     /**
      * Constructs a new AgreeContract.
      *
-     * @param iri IRI of the AgreeContract.
+     * @param id String of the AgreeContract.
      */
-    public AgreeContractImpl(final IRI iri) {
-        super(AgreeContractImpl.class, iri, AGREE_CONTRACT);
+    public AgreeContractImpl(final String id) {
+        super(id);
     }
 
 }

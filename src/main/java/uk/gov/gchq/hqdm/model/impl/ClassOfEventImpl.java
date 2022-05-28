@@ -14,9 +14,7 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.CLASS_OF_EVENT;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.ClassOfEvent;
 import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
@@ -27,10 +25,10 @@ public class ClassOfEventImpl extends HqdmObject implements ClassOfEvent {
     /**
      * Constructs a new ClassOfEvent.
      *
-     * @param iri IRI of the ClassOfEvent.
+     * @param id String of the ClassOfEvent.
      */
-    public ClassOfEventImpl(final IRI iri) {
-        super(ClassOfEventImpl.class, iri, CLASS_OF_EVENT);
+    public ClassOfEventImpl(final String id) {
+        super(id);
     }
 
 }
