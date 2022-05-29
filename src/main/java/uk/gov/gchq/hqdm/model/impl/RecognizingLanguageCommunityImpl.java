@@ -16,7 +16,6 @@ package uk.gov.gchq.hqdm.model.impl;
 
 
 import uk.gov.gchq.hqdm.model.RecognizingLanguageCommunity;
-import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of RecognizingLanguageCommunity.
