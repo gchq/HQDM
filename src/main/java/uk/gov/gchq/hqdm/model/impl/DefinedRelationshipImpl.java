@@ -14,11 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.DEFINED_RELATIONSHIP;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.DefinedRelationship;
-import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of DefinedRelationship.
@@ -27,10 +24,10 @@ public class DefinedRelationshipImpl extends HqdmObject implements DefinedRelati
     /**
      * Constructs a new DefinedRelationship.
      *
-     * @param iri IRI of the DefinedRelationship.
+     * @param id String of the DefinedRelationship.
      */
-    public DefinedRelationshipImpl(final IRI iri) {
-        super(DefinedRelationshipImpl.class, iri, DEFINED_RELATIONSHIP);
+    public DefinedRelationshipImpl(final String id) {
+        super(id);
     }
 
 }

@@ -14,11 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.FUNCTION_;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.Function_;
-import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of Function.
@@ -27,10 +24,10 @@ public class FunctionImpl extends HqdmObject implements Function_ {
     /**
      * Constructs a new Function_.
      *
-     * @param iri IRI of the Function_.
+     * @param id String of the Function_.
      */
-    public FunctionImpl(final IRI iri) {
-        super(FunctionImpl.class, iri, FUNCTION_);
+    public FunctionImpl(final String id) {
+        super(id);
     }
 
 }

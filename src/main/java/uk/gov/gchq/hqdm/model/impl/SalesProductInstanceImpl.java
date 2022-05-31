@@ -14,11 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.SALES_PRODUCT_INSTANCE;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.SalesProductInstance;
-import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of SalesProductInstance.
@@ -27,10 +24,10 @@ public class SalesProductInstanceImpl extends HqdmObject implements SalesProduct
     /**
      * Constructs a new SalesProductInstance.
      *
-     * @param iri IRI of the SalesProductInstance.
+     * @param id String of the SalesProductInstance.
      */
-    public SalesProductInstanceImpl(final IRI iri) {
-        super(SalesProductInstanceImpl.class, iri, SALES_PRODUCT_INSTANCE);
+    public SalesProductInstanceImpl(final String id) {
+        super(id);
     }
 
 }

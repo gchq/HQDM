@@ -14,28 +14,20 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.THING;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.Thing;
-import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of Thing.
  */
 public class ThingImpl extends HqdmObject implements Thing {
     /**
-     * Constructs a new Thing with no IRI.
-     */
-    public ThingImpl() {}
-
-    /**
      * Constructs a new Thing.
      *
-     * @param iri IRI of the Thing.
+     * @param id String of the Thing.
      */
-    public ThingImpl(final IRI iri) {
-        super(ThingImpl.class, iri, THING);
+    public ThingImpl(final String id) {
+        super(id);
     }
 
 }

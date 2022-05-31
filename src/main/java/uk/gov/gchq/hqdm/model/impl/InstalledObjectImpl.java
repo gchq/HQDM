@@ -14,11 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.INSTALLED_OBJECT;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.InstalledObject;
-import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of InstalledObject.
@@ -27,10 +24,10 @@ public class InstalledObjectImpl extends HqdmObject implements InstalledObject {
     /**
      * Constructs a new InstalledObject.
      *
-     * @param iri IRI of the InstalledObject.
+     * @param id String of the InstalledObject.
      */
-    public InstalledObjectImpl(final IRI iri) {
-        super(InstalledObjectImpl.class, iri, INSTALLED_OBJECT);
+    public InstalledObjectImpl(final String id) {
+        super(id);
     }
 
 }

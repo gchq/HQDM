@@ -14,7 +14,6 @@
 
 package uk.gov.gchq.hqdm.model;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.impl.ThingImpl;
 import uk.gov.gchq.hqdm.pojo.Top;
 
@@ -23,12 +22,12 @@ import uk.gov.gchq.hqdm.pojo.Top;
  */
 public interface Thing extends Top {
     /**
-     * Create a Thing with an IRI.
+     * Create a Thing with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a Thing instance.
      */
-    public static Thing createThing(final IRI iri) {
-        return new ThingImpl(iri);
+    public static Thing createThing(final String id) {
+        return new ThingImpl(id);
     }
 }

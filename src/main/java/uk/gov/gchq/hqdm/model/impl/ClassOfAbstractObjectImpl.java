@@ -14,11 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.CLASS_OF_ABSTRACT_OBJECT;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.ClassOfAbstractObject;
-import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of ClassOfAbstractObject.
@@ -27,10 +24,10 @@ public class ClassOfAbstractObjectImpl extends HqdmObject implements ClassOfAbst
     /**
      * Constructs a new ClassOfAbstractObject.
      *
-     * @param iri IRI of the ClassOfAbstractObject.
+     * @param id String of the ClassOfAbstractObject.
      */
-    public ClassOfAbstractObjectImpl(final IRI iri) {
-        super(ClassOfAbstractObjectImpl.class, iri, CLASS_OF_ABSTRACT_OBJECT);
+    public ClassOfAbstractObjectImpl(final String id) {
+        super(id);
     }
 
 }

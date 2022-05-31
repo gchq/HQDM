@@ -14,11 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.KIND_OF_ORGANIZATION;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.KindOfOrganization;
-import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of KindOfOrganization.
@@ -27,10 +24,10 @@ public class KindOfOrganizationImpl extends HqdmObject implements KindOfOrganiza
     /**
      * Constructs a new KindOfOrganization.
      *
-     * @param iri IRI of the KindOfOrganization.
+     * @param id String of the KindOfOrganization.
      */
-    public KindOfOrganizationImpl(final IRI iri) {
-        super(KindOfOrganizationImpl.class, iri, KIND_OF_ORGANIZATION);
+    public KindOfOrganizationImpl(final String id) {
+        super(id);
     }
 
 }

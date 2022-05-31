@@ -14,11 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.CONTRACT_PROCESS;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.ContractProcess;
-import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of ContractProcess.
@@ -27,10 +24,10 @@ public class ContractProcessImpl extends HqdmObject implements ContractProcess {
     /**
      * Constructs a new ContractProcess.
      *
-     * @param iri IRI of the ContractProcess.
+     * @param id String of the ContractProcess.
      */
-    public ContractProcessImpl(final IRI iri) {
-        super(ContractProcessImpl.class, iri, CONTRACT_PROCESS);
+    public ContractProcessImpl(final String id) {
+        super(id);
     }
 
 }

@@ -14,11 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.TEMPORAL_COMPOSITION;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.TemporalComposition;
-import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of TemporalComposition.
@@ -27,10 +24,10 @@ public class TemporalCompositionImpl extends HqdmObject implements TemporalCompo
     /**
      * Constructs a new TemporalComposition.
      *
-     * @param iri IRI of the TemporalComposition.
+     * @param id String of the TemporalComposition.
      */
-    public TemporalCompositionImpl(final IRI iri) {
-        super(TemporalCompositionImpl.class, iri, TEMPORAL_COMPOSITION);
+    public TemporalCompositionImpl(final String id) {
+        super(id);
     }
 
 }

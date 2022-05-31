@@ -14,11 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.CLASS_OF_PARTICIPANT;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.ClassOfParticipant;
-import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of ClassOfParticipant.
@@ -27,10 +24,10 @@ public class ClassOfParticipantImpl extends HqdmObject implements ClassOfPartici
     /**
      * Constructs a new ClassOfParticipant.
      *
-     * @param iri IRI of the ClassOfParticipant.
+     * @param id String of the ClassOfParticipant.
      */
-    public ClassOfParticipantImpl(final IRI iri) {
-        super(ClassOfParticipantImpl.class, iri, CLASS_OF_PARTICIPANT);
+    public ClassOfParticipantImpl(final String id) {
+        super(id);
     }
 
 }

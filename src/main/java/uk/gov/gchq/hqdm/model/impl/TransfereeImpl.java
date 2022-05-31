@@ -14,11 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.TRANSFEREE;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.Transferee;
-import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of Transferee.
@@ -27,10 +24,10 @@ public class TransfereeImpl extends HqdmObject implements Transferee {
     /**
      * Constructs a new Transferee.
      *
-     * @param iri IRI of the Transferee.
+     * @param id String of the Transferee.
      */
-    public TransfereeImpl(final IRI iri) {
-        super(TransfereeImpl.class, iri, TRANSFEREE);
+    public TransfereeImpl(final String id) {
+        super(id);
     }
 
 }

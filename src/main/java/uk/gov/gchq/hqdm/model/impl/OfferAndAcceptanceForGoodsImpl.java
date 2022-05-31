@@ -14,11 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.OFFER_AND_ACCEPTANCE_FOR_GOODS;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.OfferAndAcceptanceForGoods;
-import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of OfferAndAcceptanceForGoods.
@@ -28,10 +25,10 @@ public class OfferAndAcceptanceForGoodsImpl extends HqdmObject
     /**
      * Constructs a new OfferAndAcceptanceForGoods.
      *
-     * @param iri IRI of the OfferAndAcceptanceForGoods.
+     * @param id String of the OfferAndAcceptanceForGoods.
      */
-    public OfferAndAcceptanceForGoodsImpl(final IRI iri) {
-        super(OfferAndAcceptanceForGoodsImpl.class, iri, OFFER_AND_ACCEPTANCE_FOR_GOODS);
+    public OfferAndAcceptanceForGoodsImpl(final String id) {
+        super(id);
     }
 
 }

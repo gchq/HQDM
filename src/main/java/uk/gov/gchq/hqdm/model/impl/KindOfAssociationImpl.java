@@ -14,11 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.KIND_OF_ASSOCIATION;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.KindOfAssociation;
-import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of KindOfAssociation.
@@ -27,10 +24,10 @@ public class KindOfAssociationImpl extends HqdmObject implements KindOfAssociati
     /**
      * Constructs a new KindOfAssociation.
      *
-     * @param iri IRI of the KindOfAssociation.
+     * @param id String of the KindOfAssociation.
      */
-    public KindOfAssociationImpl(final IRI iri) {
-        super(KindOfAssociationImpl.class, iri, KIND_OF_ASSOCIATION);
+    public KindOfAssociationImpl(final String id) {
+        super(id);
     }
 
 }

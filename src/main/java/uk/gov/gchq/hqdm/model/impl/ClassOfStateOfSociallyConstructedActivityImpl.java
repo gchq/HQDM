@@ -14,11 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.CLASS_OF_STATE_OF_SOCIALLY_CONSTRUCTED_ACTIVITY;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.ClassOfStateOfSociallyConstructedActivity;
-import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of ClassOfStateOfSociallyConstructedActivity.
@@ -28,11 +25,10 @@ public class ClassOfStateOfSociallyConstructedActivityImpl extends HqdmObject
     /**
      * Constructs a new ClassOfStateOfSociallyConstructedActivity.
      *
-     * @param iri IRI of the ClassOfStateOfSociallyConstructedActivity.
+     * @param id String of the ClassOfStateOfSociallyConstructedActivity.
      */
-    public ClassOfStateOfSociallyConstructedActivityImpl(final IRI iri) {
-        super(ClassOfStateOfSociallyConstructedActivityImpl.class, iri,
-                CLASS_OF_STATE_OF_SOCIALLY_CONSTRUCTED_ACTIVITY);
+    public ClassOfStateOfSociallyConstructedActivityImpl(final String id) {
+        super(id);
     }
 
 }

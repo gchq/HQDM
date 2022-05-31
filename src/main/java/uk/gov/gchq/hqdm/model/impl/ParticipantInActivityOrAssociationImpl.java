@@ -14,11 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.PARTICIPANT_IN_ACTIVITY_OR_ASSOCIATION;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.ParticipantInActivityOrAssociation;
-import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of ParticipantInActivityOrAssociation.
@@ -28,11 +25,10 @@ public class ParticipantInActivityOrAssociationImpl extends HqdmObject
     /**
      * Constructs a new ParticipantInActivityOrAssociation.
      *
-     * @param iri IRI of the ParticipantInActivityOrAssociation.
+     * @param id String of the ParticipantInActivityOrAssociation.
      */
-    public ParticipantInActivityOrAssociationImpl(final IRI iri) {
-        super(ParticipantInActivityOrAssociationImpl.class, iri,
-                PARTICIPANT_IN_ACTIVITY_OR_ASSOCIATION);
+    public ParticipantInActivityOrAssociationImpl(final String id) {
+        super(id);
     }
 
 }

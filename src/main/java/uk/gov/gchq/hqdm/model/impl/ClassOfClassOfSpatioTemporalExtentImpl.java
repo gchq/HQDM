@@ -14,11 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.CLASS_OF_CLASS_OF_SPATIO_TEMPORAL_EXTENT;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.ClassOfClassOfSpatioTemporalExtent;
-import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of ClassOfClassOfSpatioTemporalExtent.
@@ -28,11 +25,10 @@ public class ClassOfClassOfSpatioTemporalExtentImpl extends HqdmObject
     /**
      * Constructs a new ClassOfClassOfSpatioTemporalExtent.
      *
-     * @param iri IRI of the ClassOfClassOfSpatioTemporalExtent.
+     * @param id String of the ClassOfClassOfSpatioTemporalExtent.
      */
-    public ClassOfClassOfSpatioTemporalExtentImpl(final IRI iri) {
-        super(ClassOfClassOfSpatioTemporalExtentImpl.class, iri,
-                CLASS_OF_CLASS_OF_SPATIO_TEMPORAL_EXTENT);
+    public ClassOfClassOfSpatioTemporalExtentImpl(final String id) {
+        super(id);
     }
 
 }

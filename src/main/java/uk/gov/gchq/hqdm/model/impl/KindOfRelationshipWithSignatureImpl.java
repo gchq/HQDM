@@ -14,11 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.KIND_OF_RELATIONSHIP_WITH_SIGNATURE;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.KindOfRelationshipWithSignature;
-import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of KindOfRelationshipWithSignature.
@@ -28,10 +25,10 @@ public class KindOfRelationshipWithSignatureImpl extends HqdmObject
     /**
      * Constructs a new KindOfRelationshipWithSignature.
      *
-     * @param iri IRI of the KindOfRelationshipWithSignature.
+     * @param id String of the KindOfRelationshipWithSignature.
      */
-    public KindOfRelationshipWithSignatureImpl(final IRI iri) {
-        super(KindOfRelationshipWithSignatureImpl.class, iri, KIND_OF_RELATIONSHIP_WITH_SIGNATURE);
+    public KindOfRelationshipWithSignatureImpl(final String id) {
+        super(id);
     }
 
 }

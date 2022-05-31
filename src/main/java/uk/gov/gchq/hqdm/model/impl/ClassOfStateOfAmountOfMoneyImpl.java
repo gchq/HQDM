@@ -14,11 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.CLASS_OF_STATE_OF_AMOUNT_OF_MONEY;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.ClassOfStateOfAmountOfMoney;
-import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of ClassOfStateOfAmountOfMoney.
@@ -28,10 +25,10 @@ public class ClassOfStateOfAmountOfMoneyImpl extends HqdmObject
     /**
      * Constructs a new ClassOfStateOfAmountOfMoney.
      *
-     * @param iri IRI of the ClassOfStateOfAmountOfMoney.
+     * @param id String of the ClassOfStateOfAmountOfMoney.
      */
-    public ClassOfStateOfAmountOfMoneyImpl(final IRI iri) {
-        super(ClassOfStateOfAmountOfMoneyImpl.class, iri, CLASS_OF_STATE_OF_AMOUNT_OF_MONEY);
+    public ClassOfStateOfAmountOfMoneyImpl(final String id) {
+        super(id);
     }
 
 }

@@ -14,11 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.SIGN;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.Sign;
-import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of Sign.
@@ -27,10 +24,10 @@ public class SignImpl extends HqdmObject implements Sign {
     /**
      * Constructs a new Sign.
      *
-     * @param iri IRI of the Sign.
+     * @param id String of the Sign.
      */
-    public SignImpl(final IRI iri) {
-        super(SignImpl.class, iri, SIGN);
+    public SignImpl(final String id) {
+        super(id);
     }
 
 }

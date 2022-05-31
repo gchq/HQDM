@@ -14,11 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.CURRENCY;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.Currency;
-import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of Currency.
@@ -27,10 +24,10 @@ public class CurrencyImpl extends HqdmObject implements Currency {
     /**
      * Constructs a new Currency.
      *
-     * @param iri IRI of the Currency.
+     * @param id String of the Currency.
      */
-    public CurrencyImpl(final IRI iri) {
-        super(CurrencyImpl.class, iri, CURRENCY);
+    public CurrencyImpl(final String id) {
+        super(id);
     }
 
 }
