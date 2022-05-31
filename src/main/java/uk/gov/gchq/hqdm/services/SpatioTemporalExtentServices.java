@@ -7,17 +7,6 @@ import uk.gov.gchq.hqdm.model.impl.*;
  * Utilities for building and generating HQDM objects.
  */
 public class SpatioTemporalExtentServices {
-    /**
-     * Generate a new PointInTime.
-     *
-     * @param eventTime Entity name of the point in time.
-     * @return The generated PointInTime.
-     */
-    public static PointInTime event(final String eventTime) {
-        final PointInTime timeEvent = new PointInTimeImpl(eventTime);
-
-        return timeEvent;
-    }
 
     /**
      * Create a AbstractObject with an String.
