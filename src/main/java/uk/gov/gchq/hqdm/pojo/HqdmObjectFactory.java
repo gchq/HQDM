@@ -29,6 +29,7 @@ import uk.gov.gchq.hqdm.exception.HqdmException;
 import uk.gov.gchq.hqdm.iri.HqdmIri;
 import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.Thing;
+import uk.gov.gchq.hqdm.util.Pair;
 
 /**
  * Object factory for building HQDM Java objects from RDF triples.

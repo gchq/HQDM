@@ -14,12 +14,9 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.MEMBER__OF;
 import static uk.gov.gchq.hqdm.iri.HQDM.THING;
 
-import uk.gov.gchq.hqdm.exception.HqdmException;
 import uk.gov.gchq.hqdm.iri.IRI;
-import uk.gov.gchq.hqdm.model.Class;
 import uk.gov.gchq.hqdm.model.Thing;
 import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
@@ -41,45 +38,4 @@ public class ThingImpl extends HqdmObject implements Thing {
         super(ThingImpl.class, iri, THING);
     }
 
-    /**
-     * Builder for constructing instances of Thing.
-     */
-    public static class Builder {
-
-        private final ThingImpl thing;
-
-        /**
-         * Constructs a Builder for a new Thing.
-         *
-         * @param iri IRI of the Thing.
-         */
-        public Builder(final IRI iri) {
-            thing = new ThingImpl(iri);
-        }
-
-        /**
-         * A relationship type where a {@link Thing} may be a member of one or more {@link Class}.
-         *
-         * @param clazz Class of the Thing.
-         * @return This builder.
-         */
-        public final Builder member__Of(final Class clazz) {
-            thing.addValue(MEMBER__OF, clazz.getIri());
-            return this;
-        }
-
-        /**
-         * Returns an instance of Thing created from the properties set on this builder.
-         *
-         * @return The built Thing.
-         * @throws HqdmException If the Thing is missing any mandatory properties.
-         */
-        public Thing build() throws HqdmException {
-            if (thing.hasValue(MEMBER__OF)
-                    && thing.value(MEMBER__OF).isEmpty()) {
-                throw new HqdmException("Property Not Set: member__of");
-            }
-            return thing;
-        }
-    }
 }

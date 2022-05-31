@@ -16,7 +16,6 @@ package uk.gov.gchq.hqdm.model.impl;
 
 import static uk.gov.gchq.hqdm.iri.HQDM.PARTICIPANT_IN_ACTIVITY_OR_ASSOCIATION;
 
-import uk.gov.gchq.hqdm.exception.HqdmException;
 import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.ParticipantInActivityOrAssociation;
 import uk.gov.gchq.hqdm.pojo.HqdmObject;
@@ -36,33 +35,4 @@ public class ParticipantInActivityOrAssociationImpl extends HqdmObject
                 PARTICIPANT_IN_ACTIVITY_OR_ASSOCIATION);
     }
 
-    /**
-     * Builder for constructing instances of ParticipantInActivityOrAssociation.
-     */
-    public static class Builder {
-
-        private final ParticipantInActivityOrAssociationImpl participantInActivityOrAssociationImpl;
-
-        /**
-         * Constructs a Builder for a new ParticipantInActivityOrAssociation.
-         *
-         * @param iri IRI of the ParticipantInActivityOrAssociation.
-         */
-        public Builder(final IRI iri) {
-            participantInActivityOrAssociationImpl =
-                    new ParticipantInActivityOrAssociationImpl(iri);
-        }
-
-        /**
-         * Returns an instance of ParticipantInActivityOrAssociation created from the properties set
-         * on this builder.
-         *
-         * @return The built ParticipantInActivityOrAssociation.
-         * @throws HqdmException If the ParticipantInActivityOrAssociation is missing any mandatory
-         *         properties.
-         */
-        public ParticipantInActivityOrAssociation build() throws HqdmException {
-            return participantInActivityOrAssociationImpl;
-        }
-    }
 }
