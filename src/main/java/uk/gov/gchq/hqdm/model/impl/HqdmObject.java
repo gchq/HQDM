@@ -218,4 +218,19 @@ public abstract class HqdmObject implements Thing {
     public int hashCode() {
         return Objects.hash(super.hashCode(), id);
     }
+
+    /**
+     * Remove a predicate value.
+     *
+     * @param predicateId {@link String}
+     * @param value {@link String}
+     * */
+    public void removeValue(final String predicateId, final String value) {
+        if (predicates.containsKey(predicateId)) {
+            final var v = predicates.get(predicateId);
+            if (v.contains(value)) {
+                v.remove(value);
+            }
+        }
+    }
 }

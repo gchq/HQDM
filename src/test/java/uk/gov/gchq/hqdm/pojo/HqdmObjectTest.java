@@ -26,6 +26,7 @@ import uk.gov.gchq.hqdm.model.SpatioTemporalExtent;
 import uk.gov.gchq.hqdm.model.impl.PointInTimeImpl;
 import uk.gov.gchq.hqdm.model.impl.PossibleWorldImpl;
 import uk.gov.gchq.hqdm.model.impl.SpatioTemporalExtentImpl;
+import uk.gov.gchq.hqdm.model.impl.ThingImpl;
 
 public class HqdmObjectTest {
 
@@ -52,5 +53,28 @@ public class HqdmObjectTest {
 
         Assert.assertEquals(beginDateTime, beginEvent.getId());
         Assert.assertEquals(endDate, endEvent.getId());
+    }
+
+    @Test
+    public void testDeleteValueFromThing() {
+        final var t = new ThingImpl("test");
+
+        // Add a predicate and confirm it is present.
+        t.addValue("testpredicate", "testvalue");
+        Assert.assertTrue(t.hasThisValue("testpredicate", "testvalue"));
+
+        // Delete a non-existent predicate and make sure the test predicate
+        // is still present.
+        t.removeValue("testpredicate2", "testvalue2");
+        Assert.assertTrue(t.hasThisValue("testpredicate", "testvalue"));
+
+        // Delete a non-existent value for the predicate and make sure
+        // the test value is still present.
+        t.removeValue("testpredicate", "testvalue3");
+        Assert.assertTrue(t.hasThisValue("testpredicate", "testvalue"));
+
+        // Remove the test predicate and make sure it is no longer present.
+        t.removeValue("testpredicate", "testvalue");
+        Assert.assertFalse(t.hasThisValue("testpredicate", "testvalue"));
     }
 }

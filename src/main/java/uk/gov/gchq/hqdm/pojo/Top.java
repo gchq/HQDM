@@ -127,4 +127,11 @@ public interface Top {
      */
     boolean hasThisStringValueFuzzy(String predicateId, String value);
 
+    /**
+     * Remove a predicate value.
+     *
+     * @param predicateId the id {@link String} of the predicate.
+     * @param value the value {@link String} to be removed.
+    */
+    void removeValue(String predicateId, String value);
 }
