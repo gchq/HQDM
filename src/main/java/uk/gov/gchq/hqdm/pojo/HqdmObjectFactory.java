@@ -25,8 +25,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-import org.apache.jena.atlas.lib.Pair;
-
 import uk.gov.gchq.hqdm.exception.HqdmException;
 import uk.gov.gchq.hqdm.iri.HqdmIri;
 import uk.gov.gchq.hqdm.iri.IRI;
