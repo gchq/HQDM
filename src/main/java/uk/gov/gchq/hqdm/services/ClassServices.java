@@ -7,7 +7,6 @@ import uk.gov.gchq.hqdm.model.impl.*;
 
 /**
  * Services related to HQDM Classes.
- *
  * */
 public class ClassServices {
     /**

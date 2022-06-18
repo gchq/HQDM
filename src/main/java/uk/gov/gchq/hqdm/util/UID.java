@@ -4,7 +4,6 @@ import java.util.UUID;
 
 /**
  * Class to generate unique IDs.
- *
  * */
 public class UID {
     /**

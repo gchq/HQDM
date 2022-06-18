@@ -3,9 +3,8 @@ package uk.gov.gchq.hqdm.util;
 
 /**
  * A utility Pair with Left (L) and Right (R) values.
- *
- * @param L the type of the Left element.
- * @param R the type of the Right element.
+ * L the type of the Left element.
+ * R the type of the Right element.
  *
  * */
 public class Pair<L, R> {

@@ -1,33 +1,13 @@
 package uk.gov.gchq.hqdm.services;
 
-import uk.gov.gchq.hqdm.iri.HQDM;
 import uk.gov.gchq.hqdm.iri.IRI;
-import uk.gov.gchq.hqdm.iri.IriBase;
 import uk.gov.gchq.hqdm.model.*;
 import uk.gov.gchq.hqdm.model.impl.*;
-import uk.gov.gchq.hqdm.util.UID;
 
 /**
  * Utilities for building and generating HQDM objects.
  */
 public class SpatioTemporalExtentServices {
-    /**
-     * Generate a new PointInTime.
-     *
-     * @param eventTime Entity name of the point in time.
-     * @param pw The PossibleWorld the PointInTime is a part of.
-     * @param baseIri IriBase of the PointInTime.
-     * @return The generated PointInTime.
-     */
-    public static PointInTime event(final String eventTime, final PossibleWorld pw,
-            final IriBase baseIri) {
-        final PointInTime timeEvent = new PointInTimeImpl(new IRI(baseIri, UID.uid()));
-
-        timeEvent.addValue(HQDM.PART_OF_POSSIBLE_WORLD, pw.getIri());
-        timeEvent.addStringValue(HQDM.ENTITY_NAME, eventTime);
-
-        return timeEvent;
-    }
 
     /**
      * Create a AbstractObject with an IRI.

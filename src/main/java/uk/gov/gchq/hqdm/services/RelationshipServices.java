@@ -24,47 +24,16 @@ import uk.gov.gchq.hqdm.model.impl.UnitOfMeasureImpl;
 
 /**
  * Methods for creating Relationsip objects.
- *
  * */
 public class RelationshipServices {
     /**
-     * Create a Specialization with an IRI.
+     * Create a Aggregation with an IRI.
      *
      * @param iri the IRI.
-     * @return a Specialization instance.
+     * @return a Aggregation instance.
      */
-    public static Specialization createSpecialization(final IRI iri) {
-        return new SpecializationImpl(iri);
-    }
-
-    /**
-     * Create a Scale with an IRI.
-     *
-     * @param iri the IRI.
-     * @return a Scale instance.
-     */
-    public static Scale createScale(final IRI iri) {
-        return new ScaleImpl(iri);
-    }
-
-    /**
-     * Create a UnitOfMeasure with an IRI.
-     *
-     * @param iri the IRI.
-     * @return a UnitOfMeasure instance.
-     */
-    public static UnitOfMeasure createUnitOfMeasure(final IRI iri) {
-        return new UnitOfMeasureImpl(iri);
-    }
-
-    /**
-     * Create a Function_ with an IRI.
-     *
-     * @param iri the IRI.
-     * @return a Function_ instance.
-     */
-    public static Function_ createFunction(final IRI iri) {
-        return new FunctionImpl(iri);
+    public static Aggregation createAggregation(final IRI iri) {
+        return new AggregationImpl(iri);
     }
 
     /**
@@ -78,16 +47,6 @@ public class RelationshipServices {
     }
 
     /**
-     * Create a TemporalComposition with an IRI.
-     *
-     * @param iri the IRI.
-     * @return a TemporalComposition instance.
-     */
-    public static TemporalComposition createTemporalComposition(final IRI iri) {
-        return new TemporalCompositionImpl(iri);
-    }
-
-    /**
      * Create a Composition with an IRI.
      *
      * @param iri the IRI.
@@ -98,13 +57,23 @@ public class RelationshipServices {
     }
 
     /**
-     * Create a Aggregation with an IRI.
+     * Create a DefinedRelationship with an IRI.
      *
      * @param iri the IRI.
-     * @return a Aggregation instance.
+     * @return a DefinedRelationship instance.
      */
-    public static Aggregation createAggregation(final IRI iri) {
-        return new AggregationImpl(iri);
+    public static DefinedRelationship createDefinedRelationship(final IRI iri) {
+        return new DefinedRelationshipImpl(iri);
+    }
+
+    /**
+     * Create a Function_ with an IRI.
+     *
+     * @param iri the IRI.
+     * @return a Function_ instance.
+     */
+    public static Function_ createFunction(final IRI iri) {
+        return new FunctionImpl(iri);
     }
 
     /**
@@ -118,13 +87,43 @@ public class RelationshipServices {
     }
 
     /**
-     * Create a DefinedRelationship with an IRI.
+     * Create a Scale with an IRI.
      *
      * @param iri the IRI.
-     * @return a DefinedRelationship instance.
+     * @return a Scale instance.
      */
-    public static DefinedRelationship createDefinedRelationship(final IRI iri) {
-        return new DefinedRelationshipImpl(iri);
+    public static Scale createScale(final IRI iri) {
+        return new ScaleImpl(iri);
+    }
+
+    /**
+     * Create a Specialization with an IRI.
+     *
+     * @param iri the IRI.
+     * @return a Specialization instance.
+     */
+    public static Specialization createSpecialization(final IRI iri) {
+        return new SpecializationImpl(iri);
+    }
+
+    /**
+     * Create a TemporalComposition with an IRI.
+     *
+     * @param iri the IRI.
+     * @return a TemporalComposition instance.
+     */
+    public static TemporalComposition createTemporalComposition(final IRI iri) {
+        return new TemporalCompositionImpl(iri);
+    }
+
+    /**
+     * Create a UnitOfMeasure with an IRI.
+     *
+     * @param iri the IRI.
+     * @return a UnitOfMeasure instance.
+     */
+    public static UnitOfMeasure createUnitOfMeasure(final IRI iri) {
+        return new UnitOfMeasureImpl(iri);
     }
 
 }
