@@ -14,11 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.SALES_PRODUCT_VERSION;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.SalesProductVersion;
-import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of SalesProductVersion.
@@ -27,10 +24,10 @@ public class SalesProductVersionImpl extends HqdmObject implements SalesProductV
     /**
      * Constructs a new SalesProductVersion.
      *
-     * @param iri IRI of the SalesProductVersion.
+     * @param id String of the SalesProductVersion.
      */
-    public SalesProductVersionImpl(final IRI iri) {
-        super(SalesProductVersionImpl.class, iri, SALES_PRODUCT_VERSION);
+    public SalesProductVersionImpl(final String id) {
+        super(id);
     }
 
 }

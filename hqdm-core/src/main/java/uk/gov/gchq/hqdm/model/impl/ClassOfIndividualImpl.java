@@ -14,11 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.CLASS_OF_INDIVIDUAL;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.ClassOfIndividual;
-import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of ClassOfIndividual.
@@ -27,10 +24,10 @@ public class ClassOfIndividualImpl extends HqdmObject implements ClassOfIndividu
     /**
      * Constructs a new ClassOfIndividual.
      *
-     * @param iri IRI of the ClassOfIndividual.
+     * @param id String of the ClassOfIndividual.
      */
-    public ClassOfIndividualImpl(final IRI iri) {
-        super(ClassOfIndividualImpl.class, iri, CLASS_OF_INDIVIDUAL);
+    public ClassOfIndividualImpl(final String id) {
+        super(id);
     }
 
 }

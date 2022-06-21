@@ -14,11 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.CLASS_OF_STATE_OF_FUNCTIONAL_SYSTEM_COMPONENT;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.ClassOfStateOfFunctionalSystemComponent;
-import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of ClassOfStateOfFunctionalSystemComponent.
@@ -28,11 +25,10 @@ public class ClassOfStateOfFunctionalSystemComponentImpl extends HqdmObject
     /**
      * Constructs a new ClassOfStateOfFunctionalSystemComponent.
      *
-     * @param iri IRI of the ClassOfStateOfFunctionalSystemComponent.
+     * @param id String of the ClassOfStateOfFunctionalSystemComponent.
      */
-    public ClassOfStateOfFunctionalSystemComponentImpl(final IRI iri) {
-        super(ClassOfStateOfFunctionalSystemComponentImpl.class, iri,
-                CLASS_OF_STATE_OF_FUNCTIONAL_SYSTEM_COMPONENT);
+    public ClassOfStateOfFunctionalSystemComponentImpl(final String id) {
+        super(id);
     }
 
 }

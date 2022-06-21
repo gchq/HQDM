@@ -14,11 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.CLASS_OF_PHYSICAL_OBJECT;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.ClassOfPhysicalObject;
-import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of ClassOfPhysicalObject.
@@ -27,10 +24,10 @@ public class ClassOfPhysicalObjectImpl extends HqdmObject implements ClassOfPhys
     /**
      * Constructs a new ClassOfPhysicalObject.
      *
-     * @param iri IRI of the ClassOfPhysicalObject.
+     * @param id String of the ClassOfPhysicalObject.
      */
-    public ClassOfPhysicalObjectImpl(final IRI iri) {
-        super(ClassOfPhysicalObjectImpl.class, iri, CLASS_OF_PHYSICAL_OBJECT);
+    public ClassOfPhysicalObjectImpl(final String id) {
+        super(id);
     }
 
 }

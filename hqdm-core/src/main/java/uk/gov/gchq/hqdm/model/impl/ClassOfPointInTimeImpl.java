@@ -14,11 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.CLASS_OF_POINT_IN_TIME;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.ClassOfPointInTime;
-import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of ClassOfPointInTime.
@@ -27,10 +24,10 @@ public class ClassOfPointInTimeImpl extends HqdmObject implements ClassOfPointIn
     /**
      * Constructs a new ClassOfPointInTime.
      *
-     * @param iri IRI of the ClassOfPointInTime.
+     * @param id String of the ClassOfPointInTime.
      */
-    public ClassOfPointInTimeImpl(final IRI iri) {
-        super(ClassOfPointInTimeImpl.class, iri, CLASS_OF_POINT_IN_TIME);
+    public ClassOfPointInTimeImpl(final String id) {
+        super(id);
     }
 
 }

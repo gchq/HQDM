@@ -14,11 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.BEGINNING_OF_OWNERSHIP;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.BeginningOfOwnership;
-import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of BeginningOfOwnership.
@@ -27,10 +24,10 @@ public class BeginningOfOwnershipImpl extends HqdmObject implements BeginningOfO
     /**
      * Constructs a BeginningOfOwnership.
      *
-     * @param iri IRI of the BeginningOfOwnership.
+     * @param id String of the BeginningOfOwnership.
      */
-    public BeginningOfOwnershipImpl(final IRI iri) {
-        super(BeginningOfOwnershipImpl.class, iri, BEGINNING_OF_OWNERSHIP);
+    public BeginningOfOwnershipImpl(final String id) {
+        super(id);
     }
 
 }

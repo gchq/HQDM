@@ -14,11 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.AGREEMENT_EXECUTION;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.AgreementExecution;
-import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of AgreementExecution.
@@ -27,10 +24,10 @@ public class AgreementExecutionImpl extends HqdmObject implements AgreementExecu
     /**
      * Constructs a new AgreementExecution.
      *
-     * @param iri IRI of the AgreementExecution.
+     * @param id String of the AgreementExecution.
      */
-    public AgreementExecutionImpl(final IRI iri) {
-        super(AgreementExecutionImpl.class, iri, AGREEMENT_EXECUTION);
+    public AgreementExecutionImpl(final String id) {
+        super(id);
     }
 
 }

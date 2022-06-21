@@ -1,1103 +1,1090 @@
-/*
- * Copyright 2021 Crown Copyright
- *
- * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
- * in compliance with the License. You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software distributed under the License
- * is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
- * or implied. See the License for the specific language governing permissions and limitations under
- * the License.
- */
-
 package uk.gov.gchq.hqdm.services;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.*;
 import uk.gov.gchq.hqdm.model.Class;
 import uk.gov.gchq.hqdm.model.impl.*;
 
 /**
- * Services for creating HQDM classes.
- */
+ * Services related to HQDM Classes.
+ *
+ * */
 public class ClassServices {
     /**
-     * Create a Class with an IRI.
+     * Create a Class with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a Class instance.
      */
-    public static Class createClass(final IRI iri) {
-        return new ClassImpl(iri);
+    public static Class createClass(final String id) {
+        return new ClassImpl(id);
     }
 
     /**
-     * Create a ClassOfAbstractObject with an IRI.
+     * Create a ClassOfAbstractObject with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfAbstractObject instance.
      */
-    public static ClassOfAbstractObject createClassOfAbstractObject(final IRI iri) {
-        return new ClassOfAbstractObjectImpl(iri);
+    public static ClassOfAbstractObject createClassOfAbstractObject(final String id) {
+        return new ClassOfAbstractObjectImpl(id);
     }
 
     /**
-     * Create a ClassOfActivity with an IRI.
+     * Create a ClassOfActivity with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfActivity instance.
      */
-    public static ClassOfActivity createClassOfActivity(final IRI iri) {
-        return new ClassOfActivityImpl(iri);
+    public static ClassOfActivity createClassOfActivity(final String id) {
+        return new ClassOfActivityImpl(id);
     }
 
     /**
-     * Create a ClassOfAgreeContract with an IRI.
+     * Create a ClassOfAgreeContract with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfAgreeContract instance.
      */
-    public static ClassOfAgreeContract createClassOfAgreeContract(final IRI iri) {
-        return new ClassOfAgreeContractImpl(iri);
+    public static ClassOfAgreeContract createClassOfAgreeContract(final String id) {
+        return new ClassOfAgreeContractImpl(id);
     }
 
     /**
-     * Create a ClassOfAgreementExecution with an IRI.
+     * Create a ClassOfAgreementExecution with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfAgreementExecution instance.
      */
-    public static ClassOfAgreementExecution createClassOfAgreementExecution(final IRI iri) {
-        return new ClassOfAgreementExecutionImpl(iri);
+    public static ClassOfAgreementExecution createClassOfAgreementExecution(final String id) {
+        return new ClassOfAgreementExecutionImpl(id);
     }
 
     /**
-     * Create a ClassOfAgreementProcess with an IRI.
+     * Create a ClassOfAgreementProcess with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfAgreementProcess instance.
      */
-    public static ClassOfAgreementProcess createClassOfAgreementProcess(final IRI iri) {
-        return new ClassOfAgreementProcessImpl(iri);
+    public static ClassOfAgreementProcess createClassOfAgreementProcess(final String id) {
+        return new ClassOfAgreementProcessImpl(id);
     }
 
     /**
-     * Create a ClassOfAmountOfMoney with an IRI.
+     * Create a ClassOfAmountOfMoney with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfAmountOfMoney instance.
      */
-    public static ClassOfAmountOfMoney createClassOfAmountOfMoney(final IRI iri) {
-        return new ClassOfAmountOfMoneyImpl(iri);
+    public static ClassOfAmountOfMoney createClassOfAmountOfMoney(final String id) {
+        return new ClassOfAmountOfMoneyImpl(id);
     }
 
     /**
-     * Create a ClassOfAssociation with an IRI.
+     * Create a ClassOfAssociation with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfAssociation instance.
      */
-    public static ClassOfAssociation createClassOfAssociation(final IRI iri) {
-        return new ClassOfAssociationImpl(iri);
+    public static ClassOfAssociation createClassOfAssociation(final String id) {
+        return new ClassOfAssociationImpl(id);
     }
 
     /**
-     * Create a ClassOfBiologicalObject with an IRI.
+     * Create a ClassOfBiologicalObject with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfBiologicalObject instance.
      */
-    public static ClassOfBiologicalObject createClassOfBiologicalObject(final IRI iri) {
-        return new ClassOfBiologicalObjectImpl(iri);
+    public static ClassOfBiologicalObject createClassOfBiologicalObject(final String id) {
+        return new ClassOfBiologicalObjectImpl(id);
     }
 
     /**
-     * Create a ClassOfBiologicalSystem with an IRI.
+     * Create a ClassOfBiologicalSystem with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfBiologicalSystem instance.
      */
-    public static ClassOfBiologicalSystem createClassOfBiologicalSystem(final IRI iri) {
-        return new ClassOfBiologicalSystemImpl(iri);
+    public static ClassOfBiologicalSystem createClassOfBiologicalSystem(final String id) {
+        return new ClassOfBiologicalSystemImpl(id);
     }
 
     /**
-     * Create a ClassOfBiologicalSystemComponent with an IRI.
+     * Create a ClassOfBiologicalSystemComponent with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfBiologicalSystemComponent instance.
      */
-    public static ClassOfBiologicalSystemComponent 
-            createClassOfBiologicalSystemComponent(final IRI iri) {
-        return new ClassOfBiologicalSystemComponentImpl(iri);
-    }
+    public static ClassOfBiologicalSystemComponent
+        createClassOfBiologicalSystemComponent(final String id) {
+            return new ClassOfBiologicalSystemComponentImpl(id);
+        }
 
     /**
-     * Create a ClassOfClass with an IRI.
+     * Create a ClassOfClass with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfClass instance.
      */
-    public static ClassOfClass createClassOfClass(final IRI iri) {
-        return new ClassOfClassImpl(iri);
+    public static ClassOfClass createClassOfClass(final String id) {
+        return new ClassOfClassImpl(id);
     }
 
     /**
-     * Create a ClassOfClassOfSpatioTemporalExtent with an IRI.
+     * Create a ClassOfClassOfSpatioTemporalExtent with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfClassOfSpatioTemporalExtent instance.
      */
-    public static ClassOfClassOfSpatioTemporalExtent 
-            createClassOfClassOfSpatioTemporalExtent(final IRI iri) {
-        return new ClassOfClassOfSpatioTemporalExtentImpl(iri);
-    }
+    public static ClassOfClassOfSpatioTemporalExtent
+        createClassOfClassOfSpatioTemporalExtent(final String id) {
+            return new ClassOfClassOfSpatioTemporalExtentImpl(id);
+        }
 
     /**
-     * Create a ClassOfContractExecution with an IRI.
+     * Create a ClassOfContractExecution with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfContractExecution instance.
      */
-    public static ClassOfContractExecution createClassOfContractExecution(final IRI iri) {
-        return new ClassOfContractExecutionImpl(iri);
+    public static ClassOfContractExecution createClassOfContractExecution(final String id) {
+        return new ClassOfContractExecutionImpl(id);
     }
 
     /**
-     * Create a ClassOfContractProcess with an IRI.
+     * Create a ClassOfContractProcess with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfContractProcess instance.
      */
-    public static ClassOfContractProcess createClassOfContractProcess(final IRI iri) {
-        return new ClassOfContractProcessImpl(iri);
+    public static ClassOfContractProcess createClassOfContractProcess(final String id) {
+        return new ClassOfContractProcessImpl(id);
     }
 
     /**
-     * Create a ClassOfEvent with an IRI.
+     * Create a ClassOfEvent with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfEvent instance.
      */
-    public static ClassOfEvent createClassOfEvent(final IRI iri) {
-        return new ClassOfEventImpl(iri);
+    public static ClassOfEvent createClassOfEvent(final String id) {
+        return new ClassOfEventImpl(id);
     }
 
     /**
-     * Create a ClassOfFunctionalObject with an IRI.
+     * Create a ClassOfFunctionalObject with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfFunctionalObject instance.
      */
-    public static ClassOfFunctionalObject createClassOfFunctionalObject(final IRI iri) {
-        return new ClassOfFunctionalObjectImpl(iri);
+    public static ClassOfFunctionalObject createClassOfFunctionalObject(final String id) {
+        return new ClassOfFunctionalObjectImpl(id);
     }
 
     /**
-     * Create a ClassOfFunctionalSystem with an IRI.
+     * Create a ClassOfFunctionalSystem with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfFunctionalSystem instance.
      */
-    public static ClassOfFunctionalSystem createClassOfFunctionalSystem(final IRI iri) {
-        return new ClassOfFunctionalSystemImpl(iri);
+    public static ClassOfFunctionalSystem createClassOfFunctionalSystem(final String id) {
+        return new ClassOfFunctionalSystemImpl(id);
     }
 
     /**
-     * Create a ClassOfFunctionalSystemComponent with an IRI.
+     * Create a ClassOfFunctionalSystemComponent with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfFunctionalSystemComponent instance.
      */
-    public static ClassOfFunctionalSystemComponent 
-            createClassOfFunctionalSystemComponent(final IRI iri) {
-        return new ClassOfFunctionalSystemComponentImpl(iri);
-    }
+    public static ClassOfFunctionalSystemComponent
+        createClassOfFunctionalSystemComponent(final String id) {
+            return new ClassOfFunctionalSystemComponentImpl(id);
+        }
 
     /**
-     * Create a ClassOfInPlaceBiologicalComponent with an IRI.
+     * Create a ClassOfInPlaceBiologicalComponent with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfInPlaceBiologicalComponent instance.
      */
-    public static ClassOfInPlaceBiologicalComponent 
-            createClassOfInPlaceBiologicalComponent(final IRI iri) {
-        return new ClassOfInPlaceBiologicalComponentImpl(iri);
-    }
+    public static ClassOfInPlaceBiologicalComponent
+        createClassOfInPlaceBiologicalComponent(final String id) {
+            return new ClassOfInPlaceBiologicalComponentImpl(id);
+        }
 
     /**
-     * Create a ClassOfIndividual with an IRI.
+     * Create a ClassOfIndividual with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfIndividual instance.
      */
-    public static ClassOfIndividual createClassOfIndividual(final IRI iri) {
-        return new ClassOfIndividualImpl(iri);
+    public static ClassOfIndividual createClassOfIndividual(final String id) {
+        return new ClassOfIndividualImpl(id);
     }
 
     /**
-     * Create a ClassOfInstalledFunctionalSystemComponent with an IRI.
+     * Create a ClassOfInstalledFunctionalSystemComponent with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfInstalledFunctionalSystemComponent instance.
      */
-    public static ClassOfInstalledFunctionalSystemComponent 
-            createClassOfInstalledFunctionalSystemComponent(final IRI iri) {
-        return new ClassOfInstalledFunctionalSystemComponentImpl(iri);
-    }
+    public static ClassOfInstalledFunctionalSystemComponent
+        createClassOfInstalledFunctionalSystemComponent(final String id) {
+            return new ClassOfInstalledFunctionalSystemComponentImpl(id);
+        }
 
     /**
-     * Create a ClassOfInstalledObject with an IRI.
+     * Create a ClassOfInstalledObject with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfInstalledObject instance.
      */
-    public static ClassOfInstalledObject createClassOfInstalledObject(final IRI iri) {
-        return new ClassOfInstalledObjectImpl(iri);
+    public static ClassOfInstalledObject createClassOfInstalledObject(final String id) {
+        return new ClassOfInstalledObjectImpl(id);
     }
 
     /**
-     * Create a ClassOfIntentionallyConstructedObject with an IRI.
+     * Create a ClassOfIntentionallyConstructedObject with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfIntentionallyConstructedObject instance.
      */
-    public static ClassOfIntentionallyConstructedObject 
-            createClassOfIntentionallyConstructedObject(final IRI iri) {
-        return new ClassOfIntentionallyConstructedObjectImpl(iri);
-    }
+    public static ClassOfIntentionallyConstructedObject
+        createClassOfIntentionallyConstructedObject(final String id) {
+            return new ClassOfIntentionallyConstructedObjectImpl(id);
+        }
 
     /**
-     * Create a ClassOfOffer with an IRI.
+     * Create a ClassOfOffer with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfOffer instance.
      */
-    public static ClassOfOffer createClassOfOffer(final IRI iri) {
-        return new ClassOfOfferImpl(iri);
+    public static ClassOfOffer createClassOfOffer(final String id) {
+        return new ClassOfOfferImpl(id);
     }
 
     /**
-     * Create a ClassOfOrdinaryBiologicalObject with an IRI.
+     * Create a ClassOfOrdinaryBiologicalObject with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfOrdinaryBiologicalObject instance.
      */
-    public static ClassOfOrdinaryBiologicalObject 
-            createClassOfOrdinaryBiologicalObject(final IRI iri) {
-        return new ClassOfOrdinaryBiologicalObjectImpl(iri);
-    }
+    public static ClassOfOrdinaryBiologicalObject
+        createClassOfOrdinaryBiologicalObject(final String id) {
+            return new ClassOfOrdinaryBiologicalObjectImpl(id);
+        }
 
     /**
-     * Create a ClassOfOrdinaryFunctionalObject with an IRI.
+     * Create a ClassOfOrdinaryFunctionalObject with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfOrdinaryFunctionalObject instance.
      */
-    public static ClassOfOrdinaryFunctionalObject 
-            createClassOfOrdinaryFunctionalObject(final IRI iri) {
-        return new ClassOfOrdinaryFunctionalObjectImpl(iri);
-    }
+    public static ClassOfOrdinaryFunctionalObject
+        createClassOfOrdinaryFunctionalObject(final String id) {
+            return new ClassOfOrdinaryFunctionalObjectImpl(id);
+        }
 
     /**
-     * Create a ClassOfOrdinaryPhysicalObject with an IRI.
+     * Create a ClassOfOrdinaryPhysicalObject with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfOrdinaryPhysicalObject instance.
      */
-    public static ClassOfOrdinaryPhysicalObject 
-            createClassOfOrdinaryPhysicalObject(final IRI iri) {
-        return new ClassOfOrdinaryPhysicalObjectImpl(iri);
-    }
+    public static ClassOfOrdinaryPhysicalObject
+        createClassOfOrdinaryPhysicalObject(final String id) {
+            return new ClassOfOrdinaryPhysicalObjectImpl(id);
+        }
 
     /**
-     * Create a ClassOfOrganization with an IRI.
+     * Create a ClassOfOrganization with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfOrganization instance.
      */
-    public static ClassOfOrganization createClassOfOrganization(final IRI iri) {
-        return new ClassOfOrganizationImpl(iri);
+    public static ClassOfOrganization createClassOfOrganization(final String id) {
+        return new ClassOfOrganizationImpl(id);
     }
 
     /**
-     * Create a ClassOfOrganizationComponent with an IRI.
+     * Create a ClassOfOrganizationComponent with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfOrganizationComponent instance.
      */
-    public static ClassOfOrganizationComponent createClassOfOrganizationComponent(final IRI iri) {
-        return new ClassOfOrganizationComponentImpl(iri);
+    public static ClassOfOrganizationComponent createClassOfOrganizationComponent(final String id) {
+        return new ClassOfOrganizationComponentImpl(id);
     }
 
     /**
-     * Create a ClassOfParticipant with an IRI.
+     * Create a ClassOfParticipant with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfParticipant instance.
      */
-    public static ClassOfParticipant createClassOfParticipant(final IRI iri) {
-        return new ClassOfParticipantImpl(iri);
+    public static ClassOfParticipant createClassOfParticipant(final String id) {
+        return new ClassOfParticipantImpl(id);
     }
 
     /**
-     * Create a ClassOfParty with an IRI.
+     * Create a ClassOfParty with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfParty instance.
      */
-    public static ClassOfParty createClassOfParty(final IRI iri) {
-        return new ClassOfPartyImpl(iri);
+    public static ClassOfParty createClassOfParty(final String id) {
+        return new ClassOfPartyImpl(id);
     }
 
     /**
-     * Create a ClassOfPeriodOfTime with an IRI.
+     * Create a ClassOfPeriodOfTime with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfPeriodOfTime instance.
      */
-    public static ClassOfPeriodOfTime createClassOfPeriodOfTime(final IRI iri) {
-        return new ClassOfPeriodOfTimeImpl(iri);
+    public static ClassOfPeriodOfTime createClassOfPeriodOfTime(final String id) {
+        return new ClassOfPeriodOfTimeImpl(id);
     }
 
     /**
-     * Create a ClassOfPerson with an IRI.
+     * Create a ClassOfPerson with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfPerson instance.
      */
-    public static ClassOfPerson createClassOfPerson(final IRI iri) {
-        return new ClassOfPersonImpl(iri);
+    public static ClassOfPerson createClassOfPerson(final String id) {
+        return new ClassOfPersonImpl(id);
     }
 
     /**
-     * Create a ClassOfPersonInPosition with an IRI.
+     * Create a ClassOfPersonInPosition with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfPersonInPosition instance.
      */
-    public static ClassOfPersonInPosition createClassOfPersonInPosition(final IRI iri) {
-        return new ClassOfPersonInPositionImpl(iri);
+    public static ClassOfPersonInPosition createClassOfPersonInPosition(final String id) {
+        return new ClassOfPersonInPositionImpl(id);
     }
 
     /**
-     * Create a ClassOfPhysicalObject with an IRI.
+     * Create a ClassOfPhysicalObject with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfPhysicalObject instance.
      */
-    public static ClassOfPhysicalObject createClassOfPhysicalObject(final IRI iri) {
-        return new ClassOfPhysicalObjectImpl(iri);
+    public static ClassOfPhysicalObject createClassOfPhysicalObject(final String id) {
+        return new ClassOfPhysicalObjectImpl(id);
     }
 
     /**
-     * Create a ClassOfPhysicalProperty with an IRI.
+     * Create a ClassOfPhysicalProperty with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfPhysicalProperty instance.
      */
-    public static ClassOfPhysicalProperty createClassOfPhysicalProperty(final IRI iri) {
-        return new ClassOfPhysicalPropertyImpl(iri);
+    public static ClassOfPhysicalProperty createClassOfPhysicalProperty(final String id) {
+        return new ClassOfPhysicalPropertyImpl(id);
     }
 
     /**
-     * Create a ClassOfPhysicalQuantity with an IRI.
+     * Create a ClassOfPhysicalQuantity with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfPhysicalQuantity instance.
      */
-    public static ClassOfPhysicalQuantity createClassOfPhysicalQuantity(final IRI iri) {
-        return new ClassOfPhysicalQuantityImpl(iri);
+    public static ClassOfPhysicalQuantity createClassOfPhysicalQuantity(final String id) {
+        return new ClassOfPhysicalQuantityImpl(id);
     }
 
     /**
-     * Create a ClassOfPointInTime with an IRI.
+     * Create a ClassOfPointInTime with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfPointInTime instance.
      */
-    public static ClassOfPointInTime createClassOfPointInTime(final IRI iri) {
-        return new ClassOfPointInTimeImpl(iri);
+    public static ClassOfPointInTime createClassOfPointInTime(final String id) {
+        return new ClassOfPointInTimeImpl(id);
     }
 
     /**
-     * Create a ClassOfPosition with an IRI.
+     * Create a ClassOfPosition with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfPosition instance.
      */
-    public static ClassOfPosition createClassOfPosition(final IRI iri) {
-        return new ClassOfPositionImpl(iri);
+    public static ClassOfPosition createClassOfPosition(final String id) {
+        return new ClassOfPositionImpl(id);
     }
 
     /**
-     * Create a ClassOfPossibleWorld with an IRI.
+     * Create a ClassOfPossibleWorld with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfPossibleWorld instance.
      */
-    public static ClassOfPossibleWorld createClassOfPossibleWorld(final IRI iri) {
-        return new ClassOfPossibleWorldImpl(iri);
+    public static ClassOfPossibleWorld createClassOfPossibleWorld(final String id) {
+        return new ClassOfPossibleWorldImpl(id);
     }
 
     /**
-     * Create a ClassOfReachingAgreement with an IRI.
+     * Create a ClassOfReachingAgreement with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfReachingAgreement instance.
      */
-    public static ClassOfReachingAgreement createClassOfReachingAgreement(final IRI iri) {
-        return new ClassOfReachingAgreementImpl(iri);
+    public static ClassOfReachingAgreement createClassOfReachingAgreement(final String id) {
+        return new ClassOfReachingAgreementImpl(id);
     }
 
     /**
-     * Create a ClassOfRelationship with an IRI.
+     * Create a ClassOfRelationship with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfRelationship instance.
      */
-    public static ClassOfRelationship createClassOfRelationship(final IRI iri) {
-        return new ClassOfRelationshipImpl(iri);
+    public static ClassOfRelationship createClassOfRelationship(final String id) {
+        return new ClassOfRelationshipImpl(id);
     }
 
     /**
-     * Create a ClassOfRepresentation with an IRI.
+     * Create a ClassOfRepresentation with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfRepresentation instance.
      */
-    public static ClassOfRepresentation createClassOfRepresentation(final IRI iri) {
-        return new ClassOfRepresentationImpl(iri);
+    public static ClassOfRepresentation createClassOfRepresentation(final String id) {
+        return new ClassOfRepresentationImpl(id);
     }
 
     /**
-     * Create a ClassOfSalesProductInstance with an IRI.
+     * Create a ClassOfSalesProductInstance with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfSalesProductInstance instance.
      */
-    public static ClassOfSalesProductInstance createClassOfSalesProductInstance(final IRI iri) {
-        return new ClassOfSalesProductInstanceImpl(iri);
+    public static ClassOfSalesProductInstance createClassOfSalesProductInstance(final String id) {
+        return new ClassOfSalesProductInstanceImpl(id);
     }
 
     /**
-     * Create a ClassOfSign with an IRI.
+     * Create a ClassOfSign with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfSign instance.
      */
-    public static ClassOfSign createClassOfSign(final IRI iri) {
-        return new ClassOfSignImpl(iri);
+    public static ClassOfSign createClassOfSign(final String id) {
+        return new ClassOfSignImpl(id);
     }
 
     /**
-     * Create a ClassOfSociallyConstructedActivity with an IRI.
+     * Create a ClassOfSociallyConstructedActivity with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfSociallyConstructedActivity instance.
      */
-    public static ClassOfSociallyConstructedActivity 
-            createClassOfSociallyConstructedActivity(final IRI iri) {
-        return new ClassOfSociallyConstructedActivityImpl(iri);
-    }
+    public static ClassOfSociallyConstructedActivity
+        createClassOfSociallyConstructedActivity(final String id) {
+            return new ClassOfSociallyConstructedActivityImpl(id);
+        }
 
     /**
-     * Create a ClassOfSociallyConstructedObject with an IRI.
+     * Create a ClassOfSociallyConstructedObject with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfSociallyConstructedObject instance.
      */
-    public static ClassOfSociallyConstructedObject 
-            createClassOfSociallyConstructedObject(final IRI iri) {
-        return new ClassOfSociallyConstructedObjectImpl(iri);
-    }
+    public static ClassOfSociallyConstructedObject
+        createClassOfSociallyConstructedObject(final String id) {
+            return new ClassOfSociallyConstructedObjectImpl(id);
+        }
 
     /**
-     * Create a ClassOfSpatioTemporalExtent with an IRI.
+     * Create a ClassOfSpatioTemporalExtent with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfSpatioTemporalExtent instance.
      */
-    public static ClassOfSpatioTemporalExtent 
-            createClassOfSpatioTemporalExtent(final IRI iri) {
-        return new ClassOfSpatioTemporalExtentImpl(iri);
-    }
+    public static ClassOfSpatioTemporalExtent
+        createClassOfSpatioTemporalExtent(final String id) {
+            return new ClassOfSpatioTemporalExtentImpl(id);
+        }
 
     /**
-     * Create a ClassOfState with an IRI.
+     * Create a ClassOfState with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfState instance.
      */
-    public static ClassOfState createClassOfState(final IRI iri) {
-        return new ClassOfStateImpl(iri);
+    public static ClassOfState createClassOfState(final String id) {
+        return new ClassOfStateImpl(id);
     }
 
     /**
-     * Create a ClassOfStateOfActivity with an IRI.
+     * Create a ClassOfStateOfActivity with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfStateOfActivity instance.
      */
-    public static ClassOfStateOfActivity createClassOfStateOfActivity(final IRI iri) {
-        return new ClassOfStateOfActivityImpl(iri);
+    public static ClassOfStateOfActivity createClassOfStateOfActivity(final String id) {
+        return new ClassOfStateOfActivityImpl(id);
     }
 
     /**
-     * Create a ClassOfStateOfAmountOfMoney with an IRI.
+     * Create a ClassOfStateOfAmountOfMoney with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfStateOfAmountOfMoney instance.
      */
-    public static ClassOfStateOfAmountOfMoney createClassOfStateOfAmountOfMoney(final IRI iri) {
-        return new ClassOfStateOfAmountOfMoneyImpl(iri);
+    public static ClassOfStateOfAmountOfMoney createClassOfStateOfAmountOfMoney(final String id) {
+        return new ClassOfStateOfAmountOfMoneyImpl(id);
     }
 
     /**
-     * Create a ClassOfStateOfAssociation with an IRI.
+     * Create a ClassOfStateOfAssociation with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfStateOfAssociation instance.
      */
-    public static ClassOfStateOfAssociation createClassOfStateOfAssociation(final IRI iri) {
-        return new ClassOfStateOfAssociationImpl(iri);
+    public static ClassOfStateOfAssociation createClassOfStateOfAssociation(final String id) {
+        return new ClassOfStateOfAssociationImpl(id);
     }
 
     /**
-     * Create a ClassOfStateOfBiologicalObject with an IRI.
+     * Create a ClassOfStateOfBiologicalObject with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfStateOfBiologicalObject instance.
      */
-    public static ClassOfStateOfBiologicalObject 
-            createClassOfStateOfBiologicalObject(final IRI iri) {
-        return new ClassOfStateOfBiologicalObjectImpl(iri);
-    }
+    public static ClassOfStateOfBiologicalObject
+        createClassOfStateOfBiologicalObject(final String id) {
+            return new ClassOfStateOfBiologicalObjectImpl(id);
+        }
 
     /**
-     * Create a ClassOfStateOfBiologicalSystem with an IRI.
+     * Create a ClassOfStateOfBiologicalSystem with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfStateOfBiologicalSystem instance.
      */
-    public static ClassOfStateOfBiologicalSystem 
-            createClassOfStateOfBiologicalSystem(final IRI iri) {
-        return new ClassOfStateOfBiologicalSystemImpl(iri);
-    }
+    public static ClassOfStateOfBiologicalSystem
+        createClassOfStateOfBiologicalSystem(final String id) {
+            return new ClassOfStateOfBiologicalSystemImpl(id);
+        }
 
     /**
-     * Create a ClassOfStateOfBiologicalSystemComponent with an IRI.
+     * Create a ClassOfStateOfBiologicalSystemComponent with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfStateOfBiologicalSystemComponent instance.
      */
-    public static ClassOfStateOfBiologicalSystemComponent 
-            createClassOfStateOfBiologicalSystemComponent(final IRI iri) {
-        return new ClassOfStateOfBiologicalSystemComponentImpl(iri);
-    }
+    public static ClassOfStateOfBiologicalSystemComponent
+        createClassOfStateOfBiologicalSystemComponent(final String id) {
+            return new ClassOfStateOfBiologicalSystemComponentImpl(id);
+        }
 
     /**
-     * Create a ClassOfStateOfFunctionalObject with an IRI.
+     * Create a ClassOfStateOfFunctionalObject with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfStateOfFunctionalObject instance.
      */
-    public static ClassOfStateOfFunctionalObject 
-            createClassOfStateOfFunctionalObject(final IRI iri) {
-        return new ClassOfStateOfFunctionalObjectImpl(iri);
-    }
+    public static ClassOfStateOfFunctionalObject
+        createClassOfStateOfFunctionalObject(final String id) {
+            return new ClassOfStateOfFunctionalObjectImpl(id);
+        }
 
     /**
-     * Create a ClassOfStateOfFunctionalSystem with an IRI.
+     * Create a ClassOfStateOfFunctionalSystem with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfStateOfFunctionalSystem instance.
      */
-    public static ClassOfStateOfFunctionalSystem 
-            createClassOfStateOfFunctionalSystem(final IRI iri) {
-        return new ClassOfStateOfFunctionalSystemImpl(iri);
-    }
+    public static ClassOfStateOfFunctionalSystem
+        createClassOfStateOfFunctionalSystem(final String id) {
+            return new ClassOfStateOfFunctionalSystemImpl(id);
+        }
 
     /**
-     * Create a ClassOfStateOfFunctionalSystemComponent with an IRI.
+     * Create a ClassOfStateOfFunctionalSystemComponent with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfStateOfFunctionalSystemComponent instance.
      */
-    public static ClassOfStateOfFunctionalSystemComponent 
-            createClassOfStateOfFunctionalSystemComponent(final IRI iri) {
-        return new ClassOfStateOfFunctionalSystemComponentImpl(iri);
-    }
+    public static ClassOfStateOfFunctionalSystemComponent
+        createClassOfStateOfFunctionalSystemComponent(final String id) {
+            return new ClassOfStateOfFunctionalSystemComponentImpl(id);
+        }
 
     /**
-     * Create a ClassOfStateOfIntentionallyConstructedObject with an IRI.
+     * Create a ClassOfStateOfIntentionallyConstructedObject with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfStateOfIntentionallyConstructedObject instance.
      */
-    public static ClassOfStateOfIntentionallyConstructedObject 
-            createClassOfStateOfIntentionallyConstructedObject(final IRI iri) {
-        return new ClassOfStateOfIntentionallyConstructedObjectImpl(iri);
-    }
+    public static ClassOfStateOfIntentionallyConstructedObject
+        createClassOfStateOfIntentionallyConstructedObject(final String id) {
+            return new ClassOfStateOfIntentionallyConstructedObjectImpl(id);
+        }
 
     /**
-     * Create a ClassOfStateOfOrdinaryBiologicalObject with an IRI.
+     * Create a ClassOfStateOfOrdinaryBiologicalObject with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfStateOfOrdinaryBiologicalObject instance.
      */
-    public static ClassOfStateOfOrdinaryBiologicalObject 
-            createClassOfStateOfOrdinaryBiologicalObject(final IRI iri) {
-        return new ClassOfStateOfOrdinaryBiologicalObjectImpl(iri);
-    }
+    public static ClassOfStateOfOrdinaryBiologicalObject
+        createClassOfStateOfOrdinaryBiologicalObject(final String id) {
+            return new ClassOfStateOfOrdinaryBiologicalObjectImpl(id);
+        }
 
     /**
-     * Create a ClassOfStateOfOrdinaryFunctionalObject with an IRI.
+     * Create a ClassOfStateOfOrdinaryFunctionalObject with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfStateOfOrdinaryFunctionalObject instance.
      */
-    public static ClassOfStateOfOrdinaryFunctionalObject 
-            createClassOfStateOfOrdinaryFunctionalObject(final IRI iri) {
-        return new ClassOfStateOfOrdinaryFunctionalObjectImpl(iri);
-    }
+    public static ClassOfStateOfOrdinaryFunctionalObject
+        createClassOfStateOfOrdinaryFunctionalObject(final String id) {
+            return new ClassOfStateOfOrdinaryFunctionalObjectImpl(id);
+        }
 
     /**
-     * Create a ClassOfStateOfOrdinaryPhysicalObject with an IRI.
+     * Create a ClassOfStateOfOrdinaryPhysicalObject with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfStateOfOrdinaryPhysicalObject instance.
      */
-    public static ClassOfStateOfOrdinaryPhysicalObject 
-            createClassOfStateOfOrdinaryPhysicalObject(final IRI iri) {
-        return new ClassOfStateOfOrdinaryPhysicalObjectImpl(iri);
-    }
+    public static ClassOfStateOfOrdinaryPhysicalObject
+        createClassOfStateOfOrdinaryPhysicalObject(final String id) {
+            return new ClassOfStateOfOrdinaryPhysicalObjectImpl(id);
+        }
 
     /**
-     * Create a ClassOfStateOfOrganization with an IRI.
+     * Create a ClassOfStateOfOrganization with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfStateOfOrganization instance.
      */
-    public static ClassOfStateOfOrganization 
-            createClassOfStateOfOrganization(final IRI iri) {
-        return new ClassOfStateOfOrganizationImpl(iri);
-    }
+    public static ClassOfStateOfOrganization
+        createClassOfStateOfOrganization(final String id) {
+            return new ClassOfStateOfOrganizationImpl(id);
+        }
 
     /**
-     * Create a ClassOfStateOfOrganizationComponent with an IRI.
+     * Create a ClassOfStateOfOrganizationComponent with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfStateOfOrganizationComponent instance.
      */
-    public static ClassOfStateOfOrganizationComponent 
-            createClassOfStateOfOrganizationComponent(final IRI iri) {
-        return new ClassOfStateOfOrganizationComponentImpl(iri);
-    }
+    public static ClassOfStateOfOrganizationComponent
+        createClassOfStateOfOrganizationComponent(final String id) {
+            return new ClassOfStateOfOrganizationComponentImpl(id);
+        }
 
     /**
-     * Create a ClassOfStateOfParty with an IRI.
+     * Create a ClassOfStateOfParty with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfStateOfParty instance.
      */
-    public static ClassOfStateOfParty createClassOfStateOfParty(final IRI iri) {
-        return new ClassOfStateOfPartyImpl(iri);
+    public static ClassOfStateOfParty createClassOfStateOfParty(final String id) {
+        return new ClassOfStateOfPartyImpl(id);
     }
 
     /**
-     * Create a ClassOfStateOfPerson with an IRI.
+     * Create a ClassOfStateOfPerson with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfStateOfPerson instance.
      */
-    public static ClassOfStateOfPerson createClassOfStateOfPerson(final IRI iri) {
-        return new ClassOfStateOfPersonImpl(iri);
+    public static ClassOfStateOfPerson createClassOfStateOfPerson(final String id) {
+        return new ClassOfStateOfPersonImpl(id);
     }
 
     /**
-     * Create a ClassOfStateOfPhysicalObject with an IRI.
+     * Create a ClassOfStateOfPhysicalObject with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfStateOfPhysicalObject instance.
      */
-    public static ClassOfStateOfPhysicalObject createClassOfStateOfPhysicalObject(final IRI iri) {
-        return new ClassOfStateOfPhysicalObjectImpl(iri);
+    public static ClassOfStateOfPhysicalObject createClassOfStateOfPhysicalObject(final String id) {
+        return new ClassOfStateOfPhysicalObjectImpl(id);
     }
 
     /**
-     * Create a ClassOfStateOfPosition with an IRI.
+     * Create a ClassOfStateOfPosition with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfStateOfPosition instance.
      */
-    public static ClassOfStateOfPosition createClassOfStateOfPosition(final IRI iri) {
-        return new ClassOfStateOfPositionImpl(iri);
+    public static ClassOfStateOfPosition createClassOfStateOfPosition(final String id) {
+        return new ClassOfStateOfPositionImpl(id);
     }
 
     /**
-     * Create a ClassOfStateOfSalesProductInstance with an IRI.
+     * Create a ClassOfStateOfSalesProductInstance with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfStateOfSalesProductInstance instance.
      */
-    public static ClassOfStateOfSalesProductInstance 
-            createClassOfStateOfSalesProductInstance(final IRI iri) {
-        return new ClassOfStateOfSalesProductInstanceImpl(iri);
-    }
+    public static ClassOfStateOfSalesProductInstance
+        createClassOfStateOfSalesProductInstance(final String id) {
+            return new ClassOfStateOfSalesProductInstanceImpl(id);
+        }
 
     /**
-     * Create a ClassOfStateOfSign with an IRI.
+     * Create a ClassOfStateOfSign with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfStateOfSign instance.
      */
-    public static ClassOfStateOfSign createClassOfStateOfSign(final IRI iri) {
-        return new ClassOfStateOfSignImpl(iri);
+    public static ClassOfStateOfSign createClassOfStateOfSign(final String id) {
+        return new ClassOfStateOfSignImpl(id);
     }
 
     /**
-     * Create a ClassOfStateOfSociallyConstructedActivity with an IRI.
+     * Create a ClassOfStateOfSociallyConstructedActivity with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfStateOfSociallyConstructedActivity instance.
      */
-    public static ClassOfStateOfSociallyConstructedActivity 
-            createClassOfStateOfSociallyConstructedActivity(final IRI iri) {
-        return new ClassOfStateOfSociallyConstructedActivityImpl(iri);
-    }
+    public static ClassOfStateOfSociallyConstructedActivity
+        createClassOfStateOfSociallyConstructedActivity(final String id) {
+            return new ClassOfStateOfSociallyConstructedActivityImpl(id);
+        }
 
     /**
-     * Create a ClassOfStateOfSociallyConstructedObject with an IRI.
+     * Create a ClassOfStateOfSociallyConstructedObject with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfStateOfSociallyConstructedObject instance.
      */
-    public static ClassOfStateOfSociallyConstructedObject 
-            createClassOfStateOfSociallyConstructedObject(final IRI iri) {
-        return new ClassOfStateOfSociallyConstructedObjectImpl(iri);
-    }
+    public static ClassOfStateOfSociallyConstructedObject
+        createClassOfStateOfSociallyConstructedObject(final String id) {
+            return new ClassOfStateOfSociallyConstructedObjectImpl(id);
+        }
 
     /**
-     * Create a ClassOfStateOfSystem with an IRI.
+     * Create a ClassOfStateOfSystem with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfStateOfSystem instance.
      */
-    public static ClassOfStateOfSystem createClassOfStateOfSystem(final IRI iri) {
-        return new ClassOfStateOfSystemImpl(iri);
+    public static ClassOfStateOfSystem createClassOfStateOfSystem(final String id) {
+        return new ClassOfStateOfSystemImpl(id);
     }
 
     /**
-     * Create a ClassOfStateOfSystemComponent with an IRI.
+     * Create a ClassOfStateOfSystemComponent with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfStateOfSystemComponent instance.
      */
-    public static ClassOfStateOfSystemComponent createClassOfStateOfSystemComponent(final IRI iri) {
-        return new ClassOfStateOfSystemComponentImpl(iri);
-    }
+    public static ClassOfStateOfSystemComponent
+        createClassOfStateOfSystemComponent(final String id) {
+            return new ClassOfStateOfSystemComponentImpl(id);
+        }
 
     /**
-     * Create a ClassOfSystem with an IRI.
+     * Create a ClassOfSystem with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfSystem instance.
      */
-    public static ClassOfSystem createClassOfSystem(final IRI iri) {
-        return new ClassOfSystemImpl(iri);
+    public static ClassOfSystem createClassOfSystem(final String id) {
+        return new ClassOfSystemImpl(id);
     }
 
     /**
-     * Create a ClassOfSystemComponent with an IRI.
+     * Create a ClassOfSystemComponent with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a ClassOfSystemComponent instance.
      */
-    public static ClassOfSystemComponent createClassOfSystemComponent(final IRI iri) {
-        return new ClassOfSystemComponentImpl(iri);
+    public static ClassOfSystemComponent createClassOfSystemComponent(final String id) {
+        return new ClassOfSystemComponentImpl(id);
     }
 
     /**
-     * Create a KindOfActivity with an IRI.
+     * Create a KindOfActivity with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a KindOfActivity instance.
      */
-    public static KindOfActivity createKindOfActivity(final IRI iri) {
-        return new KindOfActivityImpl(iri);
+    public static KindOfActivity createKindOfActivity(final String id) {
+        return new KindOfActivityImpl(id);
     }
 
     /**
-     * Create a KindOfAssociation with an IRI.
+     * Create a KindOfAssociation with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a KindOfAssociation instance.
      */
-    public static KindOfAssociation createKindOfAssociation(final IRI iri) {
-        return new KindOfAssociationImpl(iri);
+    public static KindOfAssociation createKindOfAssociation(final String id) {
+        return new KindOfAssociationImpl(id);
     }
 
     /**
-     * Create a KindOfBiologicalObject with an IRI.
+     * Create a KindOfBiologicalObject with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a KindOfBiologicalObject instance.
      */
-    public static KindOfBiologicalObject createKindOfBiologicalObject(final IRI iri) {
-        return new KindOfBiologicalObjectImpl(iri);
+    public static KindOfBiologicalObject createKindOfBiologicalObject(final String id) {
+        return new KindOfBiologicalObjectImpl(id);
     }
 
     /**
-     * Create a KindOfBiologicalSystem with an IRI.
+     * Create a KindOfBiologicalSystem with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a KindOfBiologicalSystem instance.
      */
-    public static KindOfBiologicalSystem createKindOfBiologicalSystem(final IRI iri) {
-        return new KindOfBiologicalSystemImpl(iri);
+    public static KindOfBiologicalSystem createKindOfBiologicalSystem(final String id) {
+        return new KindOfBiologicalSystemImpl(id);
     }
 
     /**
-     * Create a KindOfBiologicalSystemComponent with an IRI.
+     * Create a KindOfBiologicalSystemComponent with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a KindOfBiologicalSystemComponent instance.
      */
-    public static KindOfBiologicalSystemComponent 
-            createKindOfBiologicalSystemComponent(final IRI iri) {
-        return new KindOfBiologicalSystemComponentImpl(iri);
-    }
+    public static KindOfBiologicalSystemComponent
+        createKindOfBiologicalSystemComponent(final String id) {
+            return new KindOfBiologicalSystemComponentImpl(id);
+        }
 
     /**
-     * Create a KindOfFunctionalObject with an IRI.
+     * Create a KindOfFunctionalObject with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a KindOfFunctionalObject instance.
      */
-    public static KindOfFunctionalObject createKindOfFunctionalObject(final IRI iri) {
-        return new KindOfFunctionalObjectImpl(iri);
+    public static KindOfFunctionalObject createKindOfFunctionalObject(final String id) {
+        return new KindOfFunctionalObjectImpl(id);
     }
 
     /**
-     * Create a KindOfFunctionalSystem with an IRI.
+     * Create a KindOfFunctionalSystem with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a KindOfFunctionalSystem instance.
      */
-    public static KindOfFunctionalSystem createKindOfFunctionalSystem(final IRI iri) {
-        return new KindOfFunctionalSystemImpl(iri);
+    public static KindOfFunctionalSystem createKindOfFunctionalSystem(final String id) {
+        return new KindOfFunctionalSystemImpl(id);
     }
 
     /**
-     * Create a KindOfFunctionalSystemComponent with an IRI.
+     * Create a KindOfFunctionalSystemComponent with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a KindOfFunctionalSystemComponent instance.
      */
-    public static KindOfFunctionalSystemComponent 
-            createKindOfFunctionalSystemComponent(final IRI iri) {
-        return new KindOfFunctionalSystemComponentImpl(iri);
-    }
+    public static KindOfFunctionalSystemComponent
+        createKindOfFunctionalSystemComponent(final String id) {
+            return new KindOfFunctionalSystemComponentImpl(id);
+        }
 
     /**
-     * Create a KindOfIndividual with an IRI.
+     * Create a KindOfIndividual with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a KindOfIndividual instance.
      */
-    public static KindOfIndividual createKindOfIndividual(final IRI iri) {
-        return new KindOfIndividualImpl(iri);
+    public static KindOfIndividual createKindOfIndividual(final String id) {
+        return new KindOfIndividualImpl(id);
     }
 
     /**
-     * Create a KindOfIntentionallyConstructedObject with an IRI.
+     * Create a KindOfIntentionallyConstructedObject with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a KindOfIntentionallyConstructedObject instance.
      */
-    public static KindOfIntentionallyConstructedObject 
-            createKindOfIntentionallyConstructedObject(final IRI iri) {
-        return new KindOfIntentionallyConstructedObjectImpl(iri);
-    }
+    public static KindOfIntentionallyConstructedObject
+        createKindOfIntentionallyConstructedObject(final String id) {
+            return new KindOfIntentionallyConstructedObjectImpl(id);
+        }
 
     /**
-     * Create a KindOfOrdinaryBiologicalObject with an IRI.
+     * Create a KindOfOrdinaryBiologicalObject with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a KindOfOrdinaryBiologicalObject instance.
      */
-    public static KindOfOrdinaryBiologicalObject 
-            createKindOfOrdinaryBiologicalObject(final IRI iri) {
-        return new KindOfOrdinaryBiologicalObjectImpl(iri);
-    }
+    public static KindOfOrdinaryBiologicalObject
+        createKindOfOrdinaryBiologicalObject(final String id) {
+            return new KindOfOrdinaryBiologicalObjectImpl(id);
+        }
 
     /**
-     * Create a KindOfOrdinaryFunctionalObject with an IRI.
+     * Create a KindOfOrdinaryFunctionalObject with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a KindOfOrdinaryFunctionalObject instance.
      */
-    public static KindOfOrdinaryFunctionalObject 
-            createKindOfOrdinaryFunctionalObject(final IRI iri) {
-        return new KindOfOrdinaryFunctionalObjectImpl(iri);
-    }
+    public static KindOfOrdinaryFunctionalObject
+        createKindOfOrdinaryFunctionalObject(final String id) {
+            return new KindOfOrdinaryFunctionalObjectImpl(id);
+        }
 
     /**
-     * Create a KindOfOrdinaryPhysicalObject with an IRI.
+     * Create a KindOfOrdinaryPhysicalObject with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a KindOfOrdinaryPhysicalObject instance.
      */
-    public static KindOfOrdinaryPhysicalObject 
-            createKindOfOrdinaryPhysicalObject(final IRI iri) {
-        return new KindOfOrdinaryPhysicalObjectImpl(iri);
-    }
+    public static KindOfOrdinaryPhysicalObject
+        createKindOfOrdinaryPhysicalObject(final String id) {
+            return new KindOfOrdinaryPhysicalObjectImpl(id);
+        }
 
     /**
-     * Create a KindOfOrganization with an IRI.
+     * Create a KindOfOrganization with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a KindOfOrganization instance.
      */
-    public static KindOfOrganization createKindOfOrganization(final IRI iri) {
-        return new KindOfOrganizationImpl(iri);
+    public static KindOfOrganization createKindOfOrganization(final String id) {
+        return new KindOfOrganizationImpl(id);
     }
 
     /**
-     * Create a KindOfOrganizationComponent with an IRI.
+     * Create a KindOfOrganizationComponent with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a KindOfOrganizationComponent instance.
      */
-    public static KindOfOrganizationComponent 
-            createKindOfOrganizationComponent(final IRI iri) {
-        return new KindOfOrganizationComponentImpl(iri);
-    }
+    public static KindOfOrganizationComponent
+        createKindOfOrganizationComponent(final String id) {
+            return new KindOfOrganizationComponentImpl(id);
+        }
 
     /**
-     * Create a KindOfParty with an IRI.
+     * Create a KindOfParty with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a KindOfParty instance.
      */
-    public static KindOfParty createKindOfParty(final IRI iri) {
-        return new KindOfPartyImpl(iri);
+    public static KindOfParty createKindOfParty(final String id) {
+        return new KindOfPartyImpl(id);
     }
 
     /**
-     * Create a KindOfPerson with an IRI.
+     * Create a KindOfPerson with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a KindOfPerson instance.
      */
-    public static KindOfPerson createKindOfPerson(final IRI iri) {
-        return new KindOfPersonImpl(iri);
+    public static KindOfPerson createKindOfPerson(final String id) {
+        return new KindOfPersonImpl(id);
     }
 
     /**
-     * Create a KindOfPhysicalObject with an IRI.
+     * Create a KindOfPhysicalObject with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a KindOfPhysicalObject instance.
      */
-    public static KindOfPhysicalObject createKindOfPhysicalObject(final IRI iri) {
-        return new KindOfPhysicalObjectImpl(iri);
+    public static KindOfPhysicalObject createKindOfPhysicalObject(final String id) {
+        return new KindOfPhysicalObjectImpl(id);
     }
 
     /**
-     * Create a KindOfPhysicalProperty with an IRI.
+     * Create a KindOfPhysicalProperty with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a KindOfPhysicalProperty instance.
      */
-    public static KindOfPhysicalProperty createKindOfPhysicalProperty(final IRI iri) {
-        return new KindOfPhysicalPropertyImpl(iri);
+    public static KindOfPhysicalProperty createKindOfPhysicalProperty(final String id) {
+        return new KindOfPhysicalPropertyImpl(id);
     }
 
     /**
-     * Create a KindOfPhysicalQuantity with an IRI.
+     * Create a KindOfPhysicalQuantity with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a KindOfPhysicalQuantity instance.
      */
-    public static KindOfPhysicalQuantity createKindOfPhysicalQuantity(final IRI iri) {
-        return new KindOfPhysicalQuantityImpl(iri);
+    public static KindOfPhysicalQuantity createKindOfPhysicalQuantity(final String id) {
+        return new KindOfPhysicalQuantityImpl(id);
     }
 
     /**
-     * Create a KindOfPosition with an IRI.
+     * Create a KindOfPosition with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a KindOfPosition instance.
      */
-    public static KindOfPosition createKindOfPosition(final IRI iri) {
-        return new KindOfPositionImpl(iri);
+    public static KindOfPosition createKindOfPosition(final String id) {
+        return new KindOfPositionImpl(id);
     }
 
     /**
-     * Create a KindOfRelationshipWithRestriction with an IRI.
+     * Create a KindOfRelationshipWithRestriction with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a KindOfRelationshipWithRestriction instance.
      */
-    public static KindOfRelationshipWithRestriction 
-            createKindOfRelationshipWithRestriction(final IRI iri) {
-        return new KindOfRelationshipWithRestrictionImpl(iri);
-    }
+    public static KindOfRelationshipWithRestriction
+        createKindOfRelationshipWithRestriction(final String id) {
+            return new KindOfRelationshipWithRestrictionImpl(id);
+        }
 
     /**
-     * Create a KindOfRelationshipWithSignature with an IRI.
+     * Create a KindOfRelationshipWithSignature with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a KindOfRelationshipWithSignature instance.
      */
-    public static KindOfRelationshipWithSignature 
-            createKindOfRelationshipWithSignature(final IRI iri) {
-        return new KindOfRelationshipWithSignatureImpl(iri);
-    }
+    public static KindOfRelationshipWithSignature
+        createKindOfRelationshipWithSignature(final String id) {
+            return new KindOfRelationshipWithSignatureImpl(id);
+        }
 
     /**
-     * Create a KindOfSociallyConstructedObject with an IRI.
+     * Create a KindOfSociallyConstructedObject with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a KindOfSociallyConstructedObject instance.
      */
-    public static KindOfSociallyConstructedObject 
-            createKindOfSociallyConstructedObject(final IRI iri) {
-        return new KindOfSociallyConstructedObjectImpl(iri);
-    }
+    public static KindOfSociallyConstructedObject
+        createKindOfSociallyConstructedObject(final String id) {
+            return new KindOfSociallyConstructedObjectImpl(id);
+        }
 
     /**
-     * Create a KindOfSystem with an IRI.
+     * Create a KindOfSystem with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a KindOfSystem instance.
      */
-    public static KindOfSystem createKindOfSystem(final IRI iri) {
-        return new KindOfSystemImpl(iri);
+    public static KindOfSystem createKindOfSystem(final String id) {
+        return new KindOfSystemImpl(id);
     }
 
     /**
-     * Create a KindOfSystemComponent with an IRI.
+     * Create a KindOfSystemComponent with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a KindOfSystemComponent instance.
      */
-    public static KindOfSystemComponent createKindOfSystemComponent(final IRI iri) {
-        return new KindOfSystemComponentImpl(iri);
+    public static KindOfSystemComponent createKindOfSystemComponent(final String id) {
+        return new KindOfSystemComponentImpl(id);
     }
 
     /**
-     * Create a Role with an IRI.
+     * Create a Role with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a Role instance.
      */
-    public static Role createRole(final IRI iri) {
-        return new RoleImpl(iri);
+    public static Role createRole(final String id) {
+        return new RoleImpl(id);
     }
 
 }

@@ -14,11 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.CLASS_OF_PARTY;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.ClassOfParty;
-import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of ClassOfParty.
@@ -27,10 +24,10 @@ public class ClassOfPartyImpl extends HqdmObject implements ClassOfParty {
     /**
      * Constructs a new ClassOfParty.
      *
-     * @param iri IRI of the ClassOfParty.
+     * @param id String of the ClassOfParty.
      */
-    public ClassOfPartyImpl(final IRI iri) {
-        super(ClassOfPartyImpl.class, iri, CLASS_OF_PARTY);
+    public ClassOfPartyImpl(final String id) {
+        super(id);
     }
 
 }

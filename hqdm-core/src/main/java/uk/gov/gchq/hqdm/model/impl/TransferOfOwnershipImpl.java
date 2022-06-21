@@ -14,11 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.TRANSFER_OF_OWNERSHIP;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.TransferOfOwnership;
-import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of TransferOfOwnership.
@@ -27,10 +24,10 @@ public class TransferOfOwnershipImpl extends HqdmObject implements TransferOfOwn
     /**
      * Constructs a new TransferOfOwnership.
      *
-     * @param iri IRI of the TransferOfOwnership.
+     * @param id String of the TransferOfOwnership.
      */
-    public TransferOfOwnershipImpl(final IRI iri) {
-        super(TransferOfOwnershipImpl.class, iri, TRANSFER_OF_OWNERSHIP);
+    public TransferOfOwnershipImpl(final String id) {
+        super(id);
     }
 
 }

@@ -14,11 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.STATE_OF_LANGUAGE_COMMUNITY;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.StateOfLanguageCommunity;
-import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of StateOfLanguageCommunity.
@@ -27,10 +24,10 @@ public class StateOfLanguageCommunityImpl extends HqdmObject implements StateOfL
     /**
      * Constructs a new StateOfLanguageCommunity.
      *
-     * @param iri IRI of the StateOfLanguageCommunity.
+     * @param id String of the StateOfLanguageCommunity.
      */
-    public StateOfLanguageCommunityImpl(final IRI iri) {
-        super(StateOfLanguageCommunityImpl.class, iri, STATE_OF_LANGUAGE_COMMUNITY);
+    public StateOfLanguageCommunityImpl(final String id) {
+        super(id);
     }
 
 }

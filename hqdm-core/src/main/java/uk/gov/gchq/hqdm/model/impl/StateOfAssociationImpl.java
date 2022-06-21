@@ -14,11 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.STATE_OF_ASSOCIATION;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.StateOfAssociation;
-import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of StateOfAssociation.
@@ -27,10 +24,10 @@ public class StateOfAssociationImpl extends HqdmObject implements StateOfAssocia
     /**
      * Constructs a new StateOfAssociation.
      *
-     * @param iri IRI of the StateOfAssociation.
+     * @param id String of the StateOfAssociation.
      */
-    public StateOfAssociationImpl(final IRI iri) {
-        super(StateOfAssociationImpl.class, iri, STATE_OF_ASSOCIATION);
+    public StateOfAssociationImpl(final String id) {
+        super(id);
     }
 
 }

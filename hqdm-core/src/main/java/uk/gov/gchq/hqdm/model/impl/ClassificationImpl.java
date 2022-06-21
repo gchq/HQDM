@@ -14,11 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.CLASSIFICATION;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.Classification;
-import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of Classification.
@@ -27,10 +24,10 @@ public class ClassificationImpl extends HqdmObject implements Classification {
     /**
      * Constructs a new Classification.
      *
-     * @param iri IRI of the Classification.
+     * @param id String of the Classification.
      */
-    public ClassificationImpl(final IRI iri) {
-        super(ClassificationImpl.class, iri, CLASSIFICATION);
+    public ClassificationImpl(final String id) {
+        super(id);
     }
 
 }

@@ -14,11 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.PRODUCT_BRAND;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.ProductBrand;
-import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of ProductBrand.
@@ -27,10 +24,10 @@ public class ProductBrandImpl extends HqdmObject implements ProductBrand {
     /**
      * Constructs a new ProductBrand.
      *
-     * @param iri IRI of the ProductBrand.
+     * @param id String of the ProductBrand.
      */
-    public ProductBrandImpl(final IRI iri) {
-        super(ProductBrandImpl.class, iri, PRODUCT_BRAND);
+    public ProductBrandImpl(final String id) {
+        super(id);
     }
 
 }

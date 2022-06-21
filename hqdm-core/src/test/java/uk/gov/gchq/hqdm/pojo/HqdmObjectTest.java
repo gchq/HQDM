@@ -14,53 +14,67 @@
 
 package uk.gov.gchq.hqdm.pojo;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.ENTITY_NAME;
-
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 import org.junit.Assert;
 import org.junit.Test;
 
-import uk.gov.gchq.hqdm.exception.HqdmException;
-import uk.gov.gchq.hqdm.iri.HQDM;
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.PointInTime;
 import uk.gov.gchq.hqdm.model.PossibleWorld;
 import uk.gov.gchq.hqdm.model.SpatioTemporalExtent;
 import uk.gov.gchq.hqdm.model.impl.PointInTimeImpl;
 import uk.gov.gchq.hqdm.model.impl.PossibleWorldImpl;
 import uk.gov.gchq.hqdm.model.impl.SpatioTemporalExtentImpl;
+import uk.gov.gchq.hqdm.model.impl.ThingImpl;
 
 public class HqdmObjectTest {
-    private static final String BASE_URL = "http://example.com/text#";
 
     @Test
-    public void testDateTimeFormattingForTriples() throws HqdmException {
-        final PossibleWorld possibleWorld = new PossibleWorldImpl(new IRI(BASE_URL + "World"));
+    public void testDateTimeFormattingForTriples() {
+        final PossibleWorld possibleWorld = new PossibleWorldImpl("World");
         final String beginDateTime = LocalDateTime.now().toString();
         final String endDate = LocalDate.now().toString();
 
-        final PointInTime beginEvent = new PointInTimeImpl(new IRI(BASE_URL + "date_1"));
+        final PointInTime beginEvent = new PointInTimeImpl(beginDateTime);
 
-        beginEvent.addValue(HQDM.PART_OF_POSSIBLE_WORLD, possibleWorld.getIri());
-        beginEvent.addStringValue(ENTITY_NAME, beginDateTime);
+        beginEvent.addValue("HQDM.PART_OF_POSSIBLE_WORLD", possibleWorld.getId());
 
-        final PointInTime endEvent = new PointInTimeImpl(new IRI(BASE_URL + "date_2"));
+        final PointInTime endEvent = new PointInTimeImpl(endDate);
 
-        endEvent.addValue(HQDM.PART_OF_POSSIBLE_WORLD, possibleWorld.getIri());
-        endEvent.addStringValue(ENTITY_NAME, endDate);
+        endEvent.addValue("HQDM.PART_OF_POSSIBLE_WORLD", possibleWorld.getId());
 
         final SpatioTemporalExtent object1 =
-                new SpatioTemporalExtentImpl(new IRI(BASE_URL + "Object1"));
+                new SpatioTemporalExtentImpl("Object1");
 
-        object1.addValue(HQDM.BEGINNING, beginEvent.getIri());
-        object1.addValue(HQDM.ENDING, endEvent.getIri());
-        object1.addValue(HQDM.PART_OF_POSSIBLE_WORLD, possibleWorld.getIri());
+        object1.addValue("HQDM.BEGINNING", beginEvent.getId());
+        object1.addValue("HQDM.ENDING", endEvent.getId());
+        object1.addValue("HQDM.PART_OF_POSSIBLE_WORLD", possibleWorld.getId());
 
-        Assert.assertTrue(beginEvent.toTriples()
-                .contains("^^<http://www.w3.org/2001/XMLSchema#dateTime>"));
-        Assert.assertTrue(endEvent.toTriples()
-                .contains("^^<http://www.w3.org/2001/XMLSchema#date>"));
+        Assert.assertEquals(beginDateTime, beginEvent.getId());
+        Assert.assertEquals(endDate, endEvent.getId());
+    }
+
+    @Test
+    public void testDeleteValueFromThing() {
+        final var t = new ThingImpl("test");
+
+        // Add a predicate and confirm it is present.
+        t.addValue("testpredicate", "testvalue");
+        Assert.assertTrue(t.hasThisValue("testpredicate", "testvalue"));
+
+        // Delete a non-existent predicate and make sure the test predicate
+        // is still present.
+        t.removeValue("testpredicate2", "testvalue2");
+        Assert.assertTrue(t.hasThisValue("testpredicate", "testvalue"));
+
+        // Delete a non-existent value for the predicate and make sure
+        // the test value is still present.
+        t.removeValue("testpredicate", "testvalue3");
+        Assert.assertTrue(t.hasThisValue("testpredicate", "testvalue"));
+
+        // Remove the test predicate and make sure it is no longer present.
+        t.removeValue("testpredicate", "testvalue");
+        Assert.assertFalse(t.hasThisValue("testpredicate", "testvalue"));
     }
 }

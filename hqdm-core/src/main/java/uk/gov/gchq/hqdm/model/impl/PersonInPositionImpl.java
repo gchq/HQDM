@@ -14,11 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.PERSON_IN_POSITION;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.PersonInPosition;
-import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of PersonInPosition.
@@ -27,10 +24,10 @@ public class PersonInPositionImpl extends HqdmObject implements PersonInPosition
     /**
      * Constructs a new PersonInPosition.
      *
-     * @param iri IRI of the PersonInPosition.
+     * @param id String of the PersonInPosition.
      */
-    public PersonInPositionImpl(final IRI iri) {
-        super(PersonInPositionImpl.class, iri, PERSON_IN_POSITION);
+    public PersonInPositionImpl(final String id) {
+        super(id);
     }
 
 }

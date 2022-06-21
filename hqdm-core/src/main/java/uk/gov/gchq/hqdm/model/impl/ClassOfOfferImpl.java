@@ -14,11 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.CLASS_OF_OFFER;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.ClassOfOffer;
-import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of ClassOfOffer.
@@ -27,10 +24,10 @@ public class ClassOfOfferImpl extends HqdmObject implements ClassOfOffer {
     /**
      * Constructs a new ClassOfOffer.
      *
-     * @param iri IRI of the ClassOfOffer.
+     * @param id String of the ClassOfOffer.
      */
-    public ClassOfOfferImpl(final IRI iri) {
-        super(ClassOfOfferImpl.class, iri, CLASS_OF_OFFER);
+    public ClassOfOfferImpl(final String id) {
+        super(id);
     }
 
 }

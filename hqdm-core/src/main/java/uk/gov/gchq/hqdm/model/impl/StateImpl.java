@@ -14,11 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.STATE;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.State;
-import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of State.
@@ -27,10 +24,10 @@ public class StateImpl extends HqdmObject implements State {
     /**
      * Constructs a new State.
      *
-     * @param iri IRI of the State.
+     * @param id String of the State.
      */
-    public StateImpl(final IRI iri) {
-        super(StateImpl.class, iri, STATE);
+    public StateImpl(final String id) {
+        super(id);
     }
 
 }

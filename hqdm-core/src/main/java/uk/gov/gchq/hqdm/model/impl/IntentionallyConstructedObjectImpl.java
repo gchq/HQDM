@@ -14,11 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.INTENTIONALLY_CONSTRUCTED_OBJECT;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.IntentionallyConstructedObject;
-import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of IntentionallyConstructedObject.
@@ -28,10 +25,10 @@ public class IntentionallyConstructedObjectImpl extends HqdmObject
     /**
      * Constructs a new IntentionallyConstructedObject.
      *
-     * @param iri IRI of the IntentionallyConstructedObject.
+     * @param id String of the IntentionallyConstructedObject.
      */
-    public IntentionallyConstructedObjectImpl(final IRI iri) {
-        super(IntentionallyConstructedObjectImpl.class, iri, INTENTIONALLY_CONSTRUCTED_OBJECT);
+    public IntentionallyConstructedObjectImpl(final String id) {
+        super(id);
     }
 
 }

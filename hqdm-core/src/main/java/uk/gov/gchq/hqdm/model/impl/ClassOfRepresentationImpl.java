@@ -14,11 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.CLASS_OF_REPRESENTATION;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.ClassOfRepresentation;
-import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of ClassOfRepresentation.
@@ -27,10 +24,10 @@ public class ClassOfRepresentationImpl extends HqdmObject implements ClassOfRepr
     /**
      * Constructs a new ClassOfRepresentation.
      *
-     * @param iri IRI of the ClassOfRepresentation.
+     * @param id String of the ClassOfRepresentation.
      */
-    public ClassOfRepresentationImpl(final IRI iri) {
-        super(ClassOfRepresentationImpl.class, iri, CLASS_OF_REPRESENTATION);
+    public ClassOfRepresentationImpl(final String id) {
+        super(id);
     }
 
 }

@@ -14,11 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.DEFINITION;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.Definition;
-import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of Definition.
@@ -27,10 +24,10 @@ public class DefinitionImpl extends HqdmObject implements Definition {
     /**
      * Constructs a new Definition.
      *
-     * @param iri IRI of the Definition.
+     * @param id String of the Definition.
      */
-    public DefinitionImpl(final IRI iri) {
-        super(DefinitionImpl.class, iri, DEFINITION);
+    public DefinitionImpl(final String id) {
+        super(id);
     }
 
 }

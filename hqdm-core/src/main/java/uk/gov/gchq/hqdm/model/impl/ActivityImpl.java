@@ -14,11 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.ACTIVITY;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.Activity;
-import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of Activity.
@@ -27,10 +24,10 @@ public class ActivityImpl extends HqdmObject implements Activity {
     /**
      * Constructs a new Activity.
      *
-     * @param iri IRI of the Activity.
+     * @param id String of the Activity.
      */
-    public ActivityImpl(final IRI iri) {
-        super(ActivityImpl.class, iri, ACTIVITY);
+    public ActivityImpl(final String id) {
+        super(id);
     }
 
 }
