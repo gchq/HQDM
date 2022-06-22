@@ -16,7 +16,6 @@ package uk.gov.gchq.hqdm.rdf;
 
 import static uk.gov.gchq.hqdm.rdf.iri.RDFS.RDF_TYPE;
 
-import java.lang.reflect.Constructor;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -37,8 +36,6 @@ import uk.gov.gchq.hqdm.services.SpatioTemporalExtentServices;
  * Object factory for building HQDM Java objects from RDF triples.
  */
 public final class HqdmObjectFactory {
-
-    private static final Map<String, Constructor> CONSTRUCTOR_MAP = new HashMap<>();
 
     private HqdmObjectFactory() {}
 
