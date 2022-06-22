@@ -1,3 +1,17 @@
+/*
+ * Copyright 2021 Crown Copyright
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
+ * in compliance with the License. You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under the License
+ * is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
+ * or implied. See the License for the specific language governing permissions and limitations under
+ * the License.
+ */
+
 package uk.gov.gchq.hqdm.services;
 
 import java.lang.reflect.InvocationHandler;
@@ -11,9 +25,8 @@ import uk.gov.gchq.hqdm.model.impl.ThingImpl;
 import uk.gov.gchq.hqdm.pojo.Top;
 
 /**
- * Services related to HQDM Classes.
- *
- * */
+ * Services to create dynamic proxies.
+ */
 public class DynamicObjects {
 
     /**
@@ -22,8 +35,9 @@ public class DynamicObjects {
      * @param <T> The subtypes of {@link Thing} that we want to implement.
      * @param <U> The subtype of {@link Thing} that we want to return.
      * @param id the {@link Thing} id {@link String}
+     * @param returnType the type to cast the return value to.
      * @param c the array of classes we need to implement.
-     * @return a U
+     * @return an object of type U.
     */
     public static <T extends Thing, U extends Thing> U create(
             final String id, 
@@ -39,6 +53,8 @@ public class DynamicObjects {
      *
      * @param <T> The subtypes of {@link Thing} that we want to implement.
      * @param <U> The subtype of {@link Thing} that we want to return.
+     * @param t the {@link Thing} to delegate the interfaces to.
+     * @param returnType the type to cast the return value to.
      * @param c the array of classes we need to implement.
      * @return a U
     */

@@ -47,7 +47,6 @@ public interface Top {
      * Set the predications of the HQDM object.
      *
      * @param predicates Predicates of the HQDM object.
-     * @throws HqdmException If predicates could not be parsed.
      */
     void setPredicates(Map<String, Set<Object>> predicates);
 
