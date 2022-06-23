@@ -14,7 +14,6 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.ClassOfStateOfIntentionallyConstructedObject;
 
 /**
@@ -30,5 +29,4 @@ public class ClassOfStateOfIntentionallyConstructedObjectImpl extends HqdmObject
     public ClassOfStateOfIntentionallyConstructedObjectImpl(final String id) {
         super(id);
     }
-
 }

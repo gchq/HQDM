@@ -14,7 +14,6 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.Specialization;
 
 /**
@@ -29,5 +28,4 @@ public class SpecializationImpl extends HqdmObject implements Specialization {
     public SpecializationImpl(final String id) {
         super(id);
     }
-
 }

@@ -318,8 +318,7 @@ public class SpatioTemporalExtentServices {
      * @param id the String.
      * @return a IdentificationOfPhysicalQuantity instance.
      */
-    public static IdentificationOfPhysicalQuantity 
-            createIdentificationOfPhysicalQuantity(final String id) {
+    public static IdentificationOfPhysicalQuantity createIdentificationOfPhysicalQuantity(final String id) {
         return new IdentificationOfPhysicalQuantityImpl(id);
     }
 
@@ -349,8 +348,7 @@ public class SpatioTemporalExtentServices {
      * @param id the String.
      * @return a InstalledFunctionalSystemComponent instance.
      */
-    public static InstalledFunctionalSystemComponent 
-            createInstalledFunctionalSystemComponent(final String id) {
+    public static InstalledFunctionalSystemComponent createInstalledFunctionalSystemComponent(final String id) {
         return new InstalledFunctionalSystemComponentImpl(id);
     }
 
@@ -370,8 +368,7 @@ public class SpatioTemporalExtentServices {
      * @param id the String.
      * @return a IntentionallyConstructedObject instance.
      */
-    public static IntentionallyConstructedObject 
-            createIntentionallyConstructedObject(final String id) {
+    public static IntentionallyConstructedObject createIntentionallyConstructedObject(final String id) {
         return new IntentionallyConstructedObjectImpl(id);
     }
 
@@ -521,8 +518,7 @@ public class SpatioTemporalExtentServices {
      * @param id the String.
      * @return a ParticipantInActivityOrAssociation instance.
      */
-    public static ParticipantInActivityOrAssociation 
-            createParticipantInActivityOrAssociation(final String id) {
+    public static ParticipantInActivityOrAssociation createParticipantInActivityOrAssociation(final String id) {
         return new ParticipantInActivityOrAssociationImpl(id);
     }
 
@@ -902,8 +898,7 @@ public class SpatioTemporalExtentServices {
      * @param id the String.
      * @return a StateOfBiologicalSystemComponent instance.
      */
-    public static StateOfBiologicalSystemComponent 
-            createStateOfBiologicalSystemComponent(final String id) {
+    public static StateOfBiologicalSystemComponent createStateOfBiologicalSystemComponent(final String id) {
         return new StateOfBiologicalSystemComponentImpl(id);
     }
 
@@ -933,8 +928,7 @@ public class SpatioTemporalExtentServices {
      * @param id the String.
      * @return a StateOfFunctionalSystemComponent instance.
      */
-    public static StateOfFunctionalSystemComponent 
-            createStateOfFunctionalSystemComponent(final String id) {
+    public static StateOfFunctionalSystemComponent createStateOfFunctionalSystemComponent(final String id) {
         return new StateOfFunctionalSystemComponentImpl(id);
     }
 
@@ -944,8 +938,7 @@ public class SpatioTemporalExtentServices {
      * @param id the String.
      * @return a StateOfIntentionallyConstructedObject instance.
      */
-    public static StateOfIntentionallyConstructedObject 
-            createStateOfIntentionallyConstructedObject(final String id) {
+    public static StateOfIntentionallyConstructedObject createStateOfIntentionallyConstructedObject(final String id) {
         return new StateOfIntentionallyConstructedObjectImpl(id);
     }
 
@@ -965,8 +958,7 @@ public class SpatioTemporalExtentServices {
      * @param id the String.
      * @return a StateOfOrdinaryBiologicalObject instance.
      */
-    public static StateOfOrdinaryBiologicalObject 
-            createStateOfOrdinaryBiologicalObject(final String id) {
+    public static StateOfOrdinaryBiologicalObject createStateOfOrdinaryBiologicalObject(final String id) {
         return new StateOfOrdinaryBiologicalObjectImpl(id);
     }
 
@@ -976,8 +968,7 @@ public class SpatioTemporalExtentServices {
      * @param id the String.
      * @return a StateOfOrdinaryFunctionalObject instance.
      */
-    public static StateOfOrdinaryFunctionalObject 
-            createStateOfOrdinaryFunctionalObject(final String id) {
+    public static StateOfOrdinaryFunctionalObject createStateOfOrdinaryFunctionalObject(final String id) {
         return new StateOfOrdinaryFunctionalObjectImpl(id);
     }
 
@@ -987,8 +978,7 @@ public class SpatioTemporalExtentServices {
      * @param id the String.
      * @return a StateOfOrdinaryPhysicalObject instance.
      */
-    public static StateOfOrdinaryPhysicalObject 
-            createStateOfOrdinaryPhysicalObject(final String id) {
+    public static StateOfOrdinaryPhysicalObject createStateOfOrdinaryPhysicalObject(final String id) {
         return new StateOfOrdinaryPhysicalObjectImpl(id);
     }
 
@@ -1078,8 +1068,7 @@ public class SpatioTemporalExtentServices {
      * @param id the String.
      * @return a StateOfSociallyConstructedActivity instance.
      */
-    public static StateOfSociallyConstructedActivity 
-            createStateOfSociallyConstructedActivity(final String id) {
+    public static StateOfSociallyConstructedActivity createStateOfSociallyConstructedActivity(final String id) {
         return new StateOfSociallyConstructedActivityImpl(id);
     }
 
@@ -1089,8 +1078,7 @@ public class SpatioTemporalExtentServices {
      * @param id the String.
      * @return a StateOfSociallyConstructedObject instance.
      */
-    public static StateOfSociallyConstructedObject 
-            createStateOfSociallyConstructedObject(final String id) {
+    public static StateOfSociallyConstructedObject createStateOfSociallyConstructedObject(final String id) {
         return new StateOfSociallyConstructedObjectImpl(id);
     }
 
@@ -1183,5 +1171,4 @@ public class SpatioTemporalExtentServices {
     public static Transferor createTransferor(final String id) {
         return new TransferorImpl(id);
     }
-
 }

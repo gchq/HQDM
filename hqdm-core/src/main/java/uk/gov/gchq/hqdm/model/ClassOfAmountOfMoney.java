@@ -18,8 +18,6 @@ package uk.gov.gchq.hqdm.model;
  * A {@link ClassOfStateOfAmountOfMoney}, that is also a {@link ClassOfSociallyConstructedObject},
  * and a {@link ClassOfPhysicalObject} that is {@link AmountOfMoney} or any of its subsets.
  */
-public interface ClassOfAmountOfMoney extends
-        ClassOfStateOfAmountOfMoney,
-        ClassOfSociallyConstructedObject,
-        ClassOfPhysicalObject {
+public interface ClassOfAmountOfMoney
+                extends ClassOfStateOfAmountOfMoney, ClassOfSociallyConstructedObject, ClassOfPhysicalObject {
 }

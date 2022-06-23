@@ -223,8 +223,8 @@ public abstract class HqdmObject implements Thing {
      * Remove a predicate value.
      *
      * @param predicateId {@link String}
-     * @param value {@link String}
-     * */
+     * @param value       {@link String}
+     */
     public void removeValue(final String predicateId, final String value) {
         if (predicates.containsKey(predicateId)) {
             final var v = predicates.get(predicateId);

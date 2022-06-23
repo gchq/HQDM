@@ -14,7 +14,6 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.BiologicalSystem;
 
 /**
@@ -29,5 +28,4 @@ public class BiologicalSystemImpl extends HqdmObject implements BiologicalSystem
     public BiologicalSystemImpl(final String id) {
         super(id);
     }
-
 }

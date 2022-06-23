@@ -14,7 +14,6 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.AgreementExecution;
 
 /**
@@ -29,5 +28,4 @@ public class AgreementExecutionImpl extends HqdmObject implements AgreementExecu
     public AgreementExecutionImpl(final String id) {
         super(id);
     }
-
 }

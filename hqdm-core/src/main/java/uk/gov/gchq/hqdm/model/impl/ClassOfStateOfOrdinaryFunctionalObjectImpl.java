@@ -14,7 +14,6 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.ClassOfStateOfOrdinaryFunctionalObject;
 
 /**
@@ -30,5 +29,4 @@ public class ClassOfStateOfOrdinaryFunctionalObjectImpl extends HqdmObject
     public ClassOfStateOfOrdinaryFunctionalObjectImpl(final String id) {
         super(id);
     }
-
 }

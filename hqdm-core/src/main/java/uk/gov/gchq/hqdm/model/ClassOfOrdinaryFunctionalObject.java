@@ -19,8 +19,6 @@ package uk.gov.gchq.hqdm.model;
  * and a {@link ClassOfOrdinaryPhysicalObject} that is {@link OrdinaryFunctionalObject} or any of
  * its subsets.
  */
-public interface ClassOfOrdinaryFunctionalObject extends
-        ClassOfStateOfOrdinaryFunctionalObject,
-        ClassOfFunctionalObject,
-        ClassOfOrdinaryPhysicalObject {
+public interface ClassOfOrdinaryFunctionalObject
+                extends ClassOfStateOfOrdinaryFunctionalObject, ClassOfFunctionalObject, ClassOfOrdinaryPhysicalObject {
 }

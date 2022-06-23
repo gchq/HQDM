@@ -14,7 +14,6 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.Pattern;
 
 /**
@@ -29,5 +28,4 @@ public class PatternImpl extends HqdmObject implements Pattern {
     public PatternImpl(final String id) {
         super(id);
     }
-
 }

@@ -14,7 +14,6 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.ClassOfContractExecution;
 
 /**
@@ -29,5 +28,4 @@ public class ClassOfContractExecutionImpl extends HqdmObject implements ClassOfC
     public ClassOfContractExecutionImpl(final String id) {
         super(id);
     }
-
 }

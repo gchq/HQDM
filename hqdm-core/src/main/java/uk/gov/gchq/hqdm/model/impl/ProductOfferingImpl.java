@@ -14,7 +14,6 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.ProductOffering;
 
 /**
@@ -29,5 +28,4 @@ public class ProductOfferingImpl extends HqdmObject implements ProductOffering {
     public ProductOfferingImpl(final String id) {
         super(id);
     }
-
 }

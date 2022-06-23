@@ -14,7 +14,6 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.KindOfBiologicalObject;
 
 /**
@@ -29,5 +28,4 @@ public class KindOfBiologicalObjectImpl extends HqdmObject implements KindOfBiol
     public KindOfBiologicalObjectImpl(final String id) {
         super(id);
     }
-
 }

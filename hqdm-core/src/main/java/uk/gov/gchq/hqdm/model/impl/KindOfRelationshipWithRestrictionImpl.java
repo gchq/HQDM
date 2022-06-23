@@ -14,14 +14,12 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.KindOfRelationshipWithRestriction;
 
 /**
  * An implementation of KindOfRelationshipWithRestriction.
  */
-public class KindOfRelationshipWithRestrictionImpl extends HqdmObject
-        implements KindOfRelationshipWithRestriction {
+public class KindOfRelationshipWithRestrictionImpl extends HqdmObject implements KindOfRelationshipWithRestriction {
     /**
      * Constructs a new KindOfRelationshipWithRestriction.
      *
@@ -30,5 +28,4 @@ public class KindOfRelationshipWithRestrictionImpl extends HqdmObject
     public KindOfRelationshipWithRestrictionImpl(final String id) {
         super(id);
     }
-
 }

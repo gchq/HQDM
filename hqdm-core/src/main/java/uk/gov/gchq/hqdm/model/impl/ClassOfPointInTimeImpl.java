@@ -14,7 +14,6 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.ClassOfPointInTime;
 
 /**
@@ -29,5 +28,4 @@ public class ClassOfPointInTimeImpl extends HqdmObject implements ClassOfPointIn
     public ClassOfPointInTimeImpl(final String id) {
         super(id);
     }
-
 }

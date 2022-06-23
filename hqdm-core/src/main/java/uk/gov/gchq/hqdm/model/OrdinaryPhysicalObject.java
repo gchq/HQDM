@@ -17,7 +17,5 @@ package uk.gov.gchq.hqdm.model;
 /**
  * A {@link PhysicalObject} that does not survive changing all its parts at once.
  */
-public interface OrdinaryPhysicalObject extends
-        PhysicalObject,
-        StateOfOrdinaryPhysicalObject {
+public interface OrdinaryPhysicalObject extends PhysicalObject, StateOfOrdinaryPhysicalObject {
 }

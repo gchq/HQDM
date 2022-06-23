@@ -14,7 +14,6 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.UnitOfMeasure;
 
 /**
@@ -29,5 +28,4 @@ public class UnitOfMeasureImpl extends HqdmObject implements UnitOfMeasure {
     public UnitOfMeasureImpl(final String id) {
         super(id);
     }
-
 }

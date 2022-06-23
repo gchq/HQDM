@@ -14,7 +14,6 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.ContractProcess;
 
 /**
@@ -29,5 +28,4 @@ public class ContractProcessImpl extends HqdmObject implements ContractProcess {
     public ContractProcessImpl(final String id) {
         super(id);
     }
-
 }

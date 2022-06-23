@@ -14,7 +14,6 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.Party;
 
 /**
@@ -29,5 +28,4 @@ public class PartyImpl extends HqdmObject implements Party {
     public PartyImpl(final String id) {
         super(id);
     }
-
 }

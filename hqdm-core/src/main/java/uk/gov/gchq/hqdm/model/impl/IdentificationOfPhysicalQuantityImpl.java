@@ -14,14 +14,12 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.IdentificationOfPhysicalQuantity;
 
 /**
  * An implementation of IdentificationOfPhysicalQuantity.
  */
-public class IdentificationOfPhysicalQuantityImpl extends HqdmObject
-        implements IdentificationOfPhysicalQuantity {
+public class IdentificationOfPhysicalQuantityImpl extends HqdmObject implements IdentificationOfPhysicalQuantity {
     /**
      * Constructs a new IdentificationOfPhysicalQuantity.
      *
@@ -30,5 +28,4 @@ public class IdentificationOfPhysicalQuantityImpl extends HqdmObject
     public IdentificationOfPhysicalQuantityImpl(final String id) {
         super(id);
     }
-
 }

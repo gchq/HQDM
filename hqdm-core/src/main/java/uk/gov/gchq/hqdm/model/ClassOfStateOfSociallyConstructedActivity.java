@@ -18,7 +18,6 @@ package uk.gov.gchq.hqdm.model;
  * A {@link ClassOfStateOfSociallyConstructedObject} that is
  * {@link StateOfSociallyConstructedObject} or any of its subsets.
  */
-public interface ClassOfStateOfSociallyConstructedActivity extends
-        ClassOfStateOfSociallyConstructedObject,
-        ClassOfStateOfActivity {
+public interface ClassOfStateOfSociallyConstructedActivity
+                extends ClassOfStateOfSociallyConstructedObject, ClassOfStateOfActivity {
 }

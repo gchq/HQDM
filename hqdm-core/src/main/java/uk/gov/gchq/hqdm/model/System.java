@@ -18,7 +18,5 @@ package uk.gov.gchq.hqdm.model;
  * An {@link OrdinaryPhysicalObject} that is an organized or connected group of
  * {@link PhysicalObject}.
  */
-public interface System extends
-        StateOfSystem,
-        OrdinaryPhysicalObject {
+public interface System extends StateOfSystem, OrdinaryPhysicalObject {
 }

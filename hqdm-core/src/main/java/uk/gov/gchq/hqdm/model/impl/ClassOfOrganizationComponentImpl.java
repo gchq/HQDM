@@ -14,14 +14,12 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.ClassOfOrganizationComponent;
 
 /**
  * An implementation of ClassOfOrganizationComponent.
  */
-public class ClassOfOrganizationComponentImpl extends HqdmObject
-        implements ClassOfOrganizationComponent {
+public class ClassOfOrganizationComponentImpl extends HqdmObject implements ClassOfOrganizationComponent {
     /**
      * Constructs a new ClassOfOrganizationComponent.
      *
@@ -30,5 +28,4 @@ public class ClassOfOrganizationComponentImpl extends HqdmObject
     public ClassOfOrganizationComponentImpl(final String id) {
         super(id);
     }
-
 }

@@ -14,14 +14,12 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.ClassOfFunctionalSystemComponent;
 
 /**
  * An implementation of ClassOfFunctionalSystemComponent.
  */
-public class ClassOfFunctionalSystemComponentImpl extends HqdmObject
-        implements ClassOfFunctionalSystemComponent {
+public class ClassOfFunctionalSystemComponentImpl extends HqdmObject implements ClassOfFunctionalSystemComponent {
     /**
      * Constructs a new ClassOfFunctionalSystemComponent.
      *
@@ -30,5 +28,4 @@ public class ClassOfFunctionalSystemComponentImpl extends HqdmObject
     public ClassOfFunctionalSystemComponentImpl(final String id) {
         super(id);
     }
-
 }

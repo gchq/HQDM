@@ -14,7 +14,6 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.LanguageCommunity;
 
 /**
@@ -29,5 +28,4 @@ public class LanguageCommunityImpl extends HqdmObject implements LanguageCommuni
     public LanguageCommunityImpl(final String id) {
         super(id);
     }
-
 }

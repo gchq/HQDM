@@ -14,7 +14,6 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.Transferor;
 
 /**
@@ -29,5 +28,4 @@ public class TransferorImpl extends HqdmObject implements Transferor {
     public TransferorImpl(final String id) {
         super(id);
     }
-
 }

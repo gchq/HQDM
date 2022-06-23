@@ -14,7 +14,6 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.RepresentationByPattern;
 
 /**
@@ -29,5 +28,4 @@ public class RepresentationByPatternImpl extends HqdmObject implements Represent
     public RepresentationByPatternImpl(final String id) {
         super(id);
     }
-
 }

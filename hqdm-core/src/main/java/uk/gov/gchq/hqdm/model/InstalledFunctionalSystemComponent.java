@@ -18,8 +18,6 @@ package uk.gov.gchq.hqdm.model;
  * Any {@link InstalledObject} that is also a {@link StateOfOrdinaryFunctionalObject} and a
  * {@link StateOfFunctionalSystemComponent}.
  */
-public interface InstalledFunctionalSystemComponent extends
-        StateOfFunctionalSystemComponent,
-        InstalledObject,
-        StateOfOrdinaryFunctionalObject {
+public interface InstalledFunctionalSystemComponent
+                extends StateOfFunctionalSystemComponent, InstalledObject, StateOfOrdinaryFunctionalObject {
 }

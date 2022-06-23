@@ -14,14 +14,12 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.OfferAndAcceptanceForGoods;
 
 /**
  * An implementation of OfferAndAcceptanceForGoods.
  */
-public class OfferAndAcceptanceForGoodsImpl extends HqdmObject
-        implements OfferAndAcceptanceForGoods {
+public class OfferAndAcceptanceForGoodsImpl extends HqdmObject implements OfferAndAcceptanceForGoods {
     /**
      * Constructs a new OfferAndAcceptanceForGoods.
      *
@@ -30,5 +28,4 @@ public class OfferAndAcceptanceForGoodsImpl extends HqdmObject
     public OfferAndAcceptanceForGoodsImpl(final String id) {
         super(id);
     }
-
 }

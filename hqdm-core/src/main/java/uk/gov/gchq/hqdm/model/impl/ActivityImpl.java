@@ -14,7 +14,6 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.Activity;
 
 /**
@@ -29,5 +28,4 @@ public class ActivityImpl extends HqdmObject implements Activity {
     public ActivityImpl(final String id) {
         super(id);
     }
-
 }

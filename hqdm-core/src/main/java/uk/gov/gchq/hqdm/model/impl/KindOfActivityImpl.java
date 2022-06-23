@@ -14,7 +14,6 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.KindOfActivity;
 
 /**
@@ -29,5 +28,4 @@ public class KindOfActivityImpl extends HqdmObject implements KindOfActivity {
     public KindOfActivityImpl(final String id) {
         super(id);
     }
-
 }

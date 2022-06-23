@@ -14,7 +14,6 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.ClassOfStateOfSign;
 
 /**
@@ -29,5 +28,4 @@ public class ClassOfStateOfSignImpl extends HqdmObject implements ClassOfStateOf
     public ClassOfStateOfSignImpl(final String id) {
         super(id);
     }
-
 }

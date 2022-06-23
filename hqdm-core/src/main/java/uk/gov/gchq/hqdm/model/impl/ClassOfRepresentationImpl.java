@@ -14,7 +14,6 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.ClassOfRepresentation;
 
 /**
@@ -29,5 +28,4 @@ public class ClassOfRepresentationImpl extends HqdmObject implements ClassOfRepr
     public ClassOfRepresentationImpl(final String id) {
         super(id);
     }
-
 }

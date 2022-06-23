@@ -14,7 +14,6 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.DefinedRelationship;
 
 /**
@@ -29,5 +28,4 @@ public class DefinedRelationshipImpl extends HqdmObject implements DefinedRelati
     public DefinedRelationshipImpl(final String id) {
         super(id);
     }
-
 }

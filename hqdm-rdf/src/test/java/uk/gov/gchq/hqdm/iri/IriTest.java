@@ -31,8 +31,7 @@ public class IriTest {
 
     /**
      * Test creating a new IRI successfully.
-     *
-     * */
+     */
     @Test
     public void testCreateIriSuccess1() {
         final var iri = new IRI("http://www.w3.org/1999/02/22-rdf-syntax-ns#type");
@@ -44,8 +43,7 @@ public class IriTest {
 
     /**
      * Test creating a new IRI successfully.
-     *
-     * */
+     */
     @Test
     public void testCreateIriSuccess2() {
         final var iri = new IRI(new IriBase("rdf", "http://www.w3.org/1999/02/22-rdf-syntax-ns#"), "type");
@@ -57,11 +55,9 @@ public class IriTest {
 
     /**
      * Test creating a new IRI that fails.
-     *
-     * */
+     */
     @Test(expected = IriException.class)
     public void testCreateIriFail() {
         new IRI("bad iri");
     }
-
 }

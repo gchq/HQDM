@@ -14,14 +14,12 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.ClassOfStateOfFunctionalObject;
 
 /**
  * An implementation of ClassOfStateOfFunctionalObject.
  */
-public class ClassOfStateOfFunctionalObjectImpl extends HqdmObject
-        implements ClassOfStateOfFunctionalObject {
+public class ClassOfStateOfFunctionalObjectImpl extends HqdmObject implements ClassOfStateOfFunctionalObject {
     /**
      * Constructs a new ClassOfStateOfFunctionalObject.
      *
@@ -30,5 +28,4 @@ public class ClassOfStateOfFunctionalObjectImpl extends HqdmObject
     public ClassOfStateOfFunctionalObjectImpl(final String id) {
         super(id);
     }
-
 }

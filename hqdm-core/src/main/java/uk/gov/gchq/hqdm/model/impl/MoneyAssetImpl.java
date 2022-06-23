@@ -14,7 +14,6 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.MoneyAsset;
 
 /**
@@ -29,5 +28,4 @@ public class MoneyAssetImpl extends HqdmObject implements MoneyAsset {
     public MoneyAssetImpl(final String id) {
         super(id);
     }
-
 }

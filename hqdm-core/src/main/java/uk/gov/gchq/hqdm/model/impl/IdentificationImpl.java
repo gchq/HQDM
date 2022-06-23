@@ -14,7 +14,6 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.Identification;
 
 /**
@@ -29,5 +28,4 @@ public class IdentificationImpl extends HqdmObject implements Identification {
     public IdentificationImpl(final String id) {
         super(id);
     }
-
 }

@@ -14,7 +14,6 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.RepresentationBySign;
 
 /**
@@ -29,5 +28,4 @@ public class RepresentationBySignImpl extends HqdmObject implements Representati
     public RepresentationBySignImpl(final String id) {
         super(id);
     }
-
 }

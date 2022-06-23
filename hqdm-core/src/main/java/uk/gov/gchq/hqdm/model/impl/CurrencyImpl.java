@@ -14,7 +14,6 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.Currency;
 
 /**
@@ -29,5 +28,4 @@ public class CurrencyImpl extends HqdmObject implements Currency {
     public CurrencyImpl(final String id) {
         super(id);
     }
-
 }

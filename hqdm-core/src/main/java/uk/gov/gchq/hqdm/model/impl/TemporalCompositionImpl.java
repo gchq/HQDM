@@ -14,7 +14,6 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.TemporalComposition;
 
 /**
@@ -29,5 +28,4 @@ public class TemporalCompositionImpl extends HqdmObject implements TemporalCompo
     public TemporalCompositionImpl(final String id) {
         super(id);
     }
-
 }

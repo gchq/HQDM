@@ -54,7 +54,7 @@ public interface Top {
      * Add predicate and object String reference to entity.
      *
      * @param predicateId Predicate String.
-     * @param objectId String of the object.
+     * @param objectId    String of the object.
      */
     void addValue(String predicateId, String objectId);
 
@@ -62,7 +62,7 @@ public interface Top {
      * Add predicate String and string value to object.
      *
      * @param predicateId Predicate String.
-     * @param value String value.
+     * @param value       String value.
      */
     void addStringValue(String predicateId, String value);
 
@@ -70,7 +70,7 @@ public interface Top {
      * Add predicate String and real number value to object.
      *
      * @param predicateId Predicate String.
-     * @param value Real number value.
+     * @param value       Real number value.
      */
     void addRealValue(String predicateId, double value);
 
@@ -94,7 +94,7 @@ public interface Top {
      * Does the entity have a given predicate and String value.
      *
      * @param predicateId Predicate String.
-     * @param value Object String.
+     * @param value       Object String.
      * @return True if has this String value.
      */
     boolean hasThisValue(String predicateId, String value);
@@ -103,7 +103,7 @@ public interface Top {
      * Does the entity have a given predicate and string value.
      *
      * @param predicateId Predicate String.
-     * @param value String value.
+     * @param value       String value.
      * @return True if has this string value.
      */
     boolean hasThisStringValue(String predicateId, String value);
@@ -112,7 +112,7 @@ public interface Top {
      * Does the entity have a given predicate and string value (case-insensitive).
      *
      * @param predicateId Predicate String.
-     * @param value Case-insensitive string value.
+     * @param value       Case-insensitive string value.
      * @return True if has this string value.
      */
     boolean hasThisStringValueIgnoreCase(String predicateId, String value);
@@ -121,7 +121,7 @@ public interface Top {
      * Does the entity have a given predicate and string value.
      *
      * @param predicateId Predicate String.
-     * @param value String value.
+     * @param value       String value.
      * @return True if has fuzzy string value.
      */
     boolean hasThisStringValueFuzzy(String predicateId, String value);
@@ -130,7 +130,7 @@ public interface Top {
      * Remove a predicate value.
      *
      * @param predicateId the id {@link String} of the predicate.
-     * @param value the value {@link String} to be removed.
-    */
+     * @param value       the value {@link String} to be removed.
+     */
     void removeValue(String predicateId, String value);
 }

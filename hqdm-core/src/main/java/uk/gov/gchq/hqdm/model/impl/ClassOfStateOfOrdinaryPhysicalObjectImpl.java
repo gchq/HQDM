@@ -14,7 +14,6 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.ClassOfStateOfOrdinaryPhysicalObject;
 
 /**
@@ -30,5 +29,4 @@ public class ClassOfStateOfOrdinaryPhysicalObjectImpl extends HqdmObject
     public ClassOfStateOfOrdinaryPhysicalObjectImpl(final String id) {
         super(id);
     }
-
 }

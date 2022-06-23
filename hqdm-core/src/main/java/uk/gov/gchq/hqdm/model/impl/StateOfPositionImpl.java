@@ -14,7 +14,6 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.StateOfPosition;
 
 /**
@@ -29,5 +28,4 @@ public class StateOfPositionImpl extends HqdmObject implements StateOfPosition {
     public StateOfPositionImpl(final String id) {
         super(id);
     }
-
 }

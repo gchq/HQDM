@@ -25,7 +25,7 @@ public class HqdmIri extends IRI {
     /**
      * Constructs a new IRI to define a HQDM resource.
      *
-     * @param base IRI base namespace.
+     * @param base     IRI base namespace.
      * @param resource HQDM resource name.
      */
     public HqdmIri(final IriBase base, final String resource) {

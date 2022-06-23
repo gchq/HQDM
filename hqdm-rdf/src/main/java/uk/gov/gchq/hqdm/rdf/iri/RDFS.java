@@ -19,7 +19,8 @@ package uk.gov.gchq.hqdm.rdf.iri;
  */
 public final class RDFS {
 
-    private RDFS() {}
+    private RDFS() {
+    }
 
     /**
      * Base namespace of the RDF Concepts Vocabulary (RDF).
@@ -30,12 +31,11 @@ public final class RDFS {
      *
      * @see <a href= "https://www.w3.org/TR/rdf-schema/">https://www.w3.org/TR/rdf-schema/</a>
      */
-    public static final IriBase RDF =
-            new IriBase("rdf", "http://www.w3.org/1999/02/22-rdf-syntax-ns#");
+    public static final IriBase RDF = new IriBase("rdf", "http://www.w3.org/1999/02/22-rdf-syntax-ns#");
 
     /**
-     * {@code rdf:type} is an instance of {@code rdf:Property} that is used to state that a resource
-     * is an instance of a class.
+     * {@code rdf:type} is an instance of {@code rdf:Property} that is used to state that a resource is
+     * an instance of a class.
      */
     public static final IRI RDF_TYPE = new IRI(RDF, "type");
 
@@ -43,14 +43,13 @@ public final class RDFS {
      * Base namespace of the RDF Schema vocabulary (RDFS).
      *
      * <p>
-     * RDF Schema provides a data-modelling vocabulary for RDF data. RDF Schema is an extension of
-     * the basic RDF vocabulary.
+     * RDF Schema provides a data-modelling vocabulary for RDF data. RDF Schema is an extension of the
+     * basic RDF vocabulary.
      * </p>
      *
      * @see <a href= "https://www.w3.org/TR/rdf-schema/">https://www.w3.org/TR/rdf-schema/</a>
      */
-    public static final IriBase RDFS =
-            new IriBase("rdfs", "http://www.w3.org/2000/01/rdf-schema#");
+    public static final IriBase RDFS = new IriBase("rdfs", "http://www.w3.org/2000/01/rdf-schema#");
 
     /**
      * The class {@code rdfs:Literal} is the class of literal values such as strings and integers.

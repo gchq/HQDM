@@ -26,23 +26,18 @@ import uk.gov.gchq.hqdm.model.Person;
 
 /**
  * Test creation of dynamic objects.
- *
- * */
+ */
 public class DynamicObjectsTest {
 
     /**
      * Test that we can create an object with multiple interfaces.
-     *
-     * */
+     */
     @Test
     public void testCreate() {
 
         // Create the object with three interfaces.
-        final Person p = DynamicObjects.create("id1", Person.class, new Class[]{
-            Person.class,
-            Participant.class,
-            Party.class
-        });
+        final Person p = DynamicObjects.create("id1", Person.class,
+                new Class[] { Person.class, Participant.class, Party.class });
 
         // Verify that the object implements all three interfaces and has the right id.
         assertTrue(p instanceof Person);
@@ -53,8 +48,7 @@ public class DynamicObjectsTest {
 
     /**
      * Test that we can add an interface to an existing object.
-     *
-     * */
+     */
     @Test
     public void testAddInterface() {
 
@@ -68,11 +62,8 @@ public class DynamicObjectsTest {
         assertEquals("id1", p1.getId());
 
         // Add two more interfaces to the object - this time return it as a Participant.
-        final Participant p2 = DynamicObjects.implementInterfaces(p1, Participant.class, new Class[]{
-                Person.class,
-                Participant.class,
-                Party.class
-        });
+        final Participant p2 = DynamicObjects.implementInterfaces(p1, Participant.class,
+                new Class[] { Person.class, Participant.class, Party.class });
 
         // Verify that the object implements all three interfaces and has the right id.
         assertTrue(p2 instanceof Person);

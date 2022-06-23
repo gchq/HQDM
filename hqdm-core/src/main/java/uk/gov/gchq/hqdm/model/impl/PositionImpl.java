@@ -14,7 +14,6 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.Position;
 
 /**
@@ -29,5 +28,4 @@ public class PositionImpl extends HqdmObject implements Position {
     public PositionImpl(final String id) {
         super(id);
     }
-
 }

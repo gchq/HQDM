@@ -23,7 +23,5 @@ package uk.gov.gchq.hqdm.model;
  * what it is.
  * </p>
  */
-public interface IntentionallyConstructedObject extends
-        Individual,
-        StateOfIntentionallyConstructedObject {
+public interface IntentionallyConstructedObject extends Individual, StateOfIntentionallyConstructedObject {
 }

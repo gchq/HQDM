@@ -18,8 +18,5 @@ package uk.gov.gchq.hqdm.model;
  * An {@link IntentionallyConstructedObject} that is a replaceable {@code component_of} a
  * {@link FunctionalSystem}.
  */
-public interface FunctionalSystemComponent extends
-        FunctionalObject,
-        StateOfFunctionalSystemComponent,
-        SystemComponent {
+public interface FunctionalSystemComponent extends FunctionalObject, StateOfFunctionalSystemComponent, SystemComponent {
 }

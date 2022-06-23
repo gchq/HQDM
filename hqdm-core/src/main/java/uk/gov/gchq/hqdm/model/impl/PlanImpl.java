@@ -14,7 +14,6 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.Plan;
 
 /**
@@ -29,5 +28,4 @@ public class PlanImpl extends HqdmObject implements Plan {
     public PlanImpl(final String id) {
         super(id);
     }
-
 }

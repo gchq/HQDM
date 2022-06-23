@@ -14,7 +14,6 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.ClassOfSystemComponent;
 
 /**
@@ -29,5 +28,4 @@ public class ClassOfSystemComponentImpl extends HqdmObject implements ClassOfSys
     public ClassOfSystemComponentImpl(final String id) {
         super(id);
     }
-
 }

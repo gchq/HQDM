@@ -18,8 +18,6 @@ package uk.gov.gchq.hqdm.model;
  * An {@link InstalledObject} that is also a {@link StateOfOrdinaryBiologicalObject} and a
  * {@link StateOfSystemComponent}.
  */
-public interface InPlaceBiologicalComponent extends
-        StateOfBiologicalSystemComponent,
-        InstalledObject,
-        StateOfOrdinaryBiologicalObject {
+public interface InPlaceBiologicalComponent
+                extends StateOfBiologicalSystemComponent, InstalledObject, StateOfOrdinaryBiologicalObject {
 }

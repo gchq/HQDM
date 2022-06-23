@@ -14,14 +14,12 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.RecognizingLanguageCommunity;
 
 /**
  * An implementation of RecognizingLanguageCommunity.
  */
-public class RecognizingLanguageCommunityImpl extends HqdmObject
-        implements RecognizingLanguageCommunity {
+public class RecognizingLanguageCommunityImpl extends HqdmObject implements RecognizingLanguageCommunity {
     /**
      * Constructs a new RecognizingLanguageCommunity.
      *
@@ -30,5 +28,4 @@ public class RecognizingLanguageCommunityImpl extends HqdmObject
     public RecognizingLanguageCommunityImpl(final String id) {
         super(id);
     }
-
 }

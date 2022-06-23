@@ -36,9 +36,8 @@ import uk.gov.gchq.hqdm.model.impl.TemporalCompositionImpl;
 import uk.gov.gchq.hqdm.model.impl.UnitOfMeasureImpl;
 
 /**
- * Methods for creating Relationsip objects.
- *
- * */
+ * Methods for creating HQDM Relationship objects.
+ */
 public class RelationshipServices {
     /**
      * Create a Specialization with an String.
@@ -139,5 +138,4 @@ public class RelationshipServices {
     public static DefinedRelationship createDefinedRelationship(final String id) {
         return new DefinedRelationshipImpl(id);
     }
-
 }

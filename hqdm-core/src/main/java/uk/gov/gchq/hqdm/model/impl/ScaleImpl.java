@@ -14,7 +14,6 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.Scale;
 
 /**
@@ -29,5 +28,4 @@ public class ScaleImpl extends HqdmObject implements Scale {
     public ScaleImpl(final String id) {
         super(id);
     }
-
 }

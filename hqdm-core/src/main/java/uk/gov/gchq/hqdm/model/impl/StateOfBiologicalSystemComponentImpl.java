@@ -14,14 +14,12 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.StateOfBiologicalSystemComponent;
 
 /**
  * An implementation of StateOfBiologicalSystemComponent.
  */
-public class StateOfBiologicalSystemComponentImpl extends HqdmObject
-        implements StateOfBiologicalSystemComponent {
+public class StateOfBiologicalSystemComponentImpl extends HqdmObject implements StateOfBiologicalSystemComponent {
     /**
      * Constructs a new StateOfBiologicalSystemComponent.
      *
@@ -30,5 +28,4 @@ public class StateOfBiologicalSystemComponentImpl extends HqdmObject
     public StateOfBiologicalSystemComponentImpl(final String id) {
         super(id);
     }
-
 }

@@ -18,7 +18,5 @@ package uk.gov.gchq.hqdm.model;
  * A {@link StateOfParty} that is also a {@link System} that is a {@link Person} or an
  * {@link Organization}.
  */
-public interface Party extends
-        StateOfParty,
-        System {
+public interface Party extends StateOfParty, System {
 }

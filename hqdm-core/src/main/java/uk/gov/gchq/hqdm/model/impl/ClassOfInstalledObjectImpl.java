@@ -14,7 +14,6 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.ClassOfInstalledObject;
 
 /**
@@ -29,5 +28,4 @@ public class ClassOfInstalledObjectImpl extends HqdmObject implements ClassOfIns
     public ClassOfInstalledObjectImpl(final String id) {
         super(id);
     }
-
 }

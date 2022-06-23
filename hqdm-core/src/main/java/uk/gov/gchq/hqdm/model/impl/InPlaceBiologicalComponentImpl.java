@@ -14,14 +14,12 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.InPlaceBiologicalComponent;
 
 /**
  * An implementation of InPlaceBiologicalComponent.
  */
-public class InPlaceBiologicalComponentImpl extends HqdmObject
-        implements InPlaceBiologicalComponent {
+public class InPlaceBiologicalComponentImpl extends HqdmObject implements InPlaceBiologicalComponent {
     /**
      * Constructs a new InPlaceBiologicalComponent.
      *
@@ -30,5 +28,4 @@ public class InPlaceBiologicalComponentImpl extends HqdmObject
     public InPlaceBiologicalComponentImpl(final String id) {
         super(id);
     }
-
 }

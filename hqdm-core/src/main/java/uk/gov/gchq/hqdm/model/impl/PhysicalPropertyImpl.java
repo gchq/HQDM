@@ -14,7 +14,6 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.PhysicalProperty;
 
 /**
@@ -29,5 +28,4 @@ public class PhysicalPropertyImpl extends HqdmObject implements PhysicalProperty
     public PhysicalPropertyImpl(final String id) {
         super(id);
     }
-
 }

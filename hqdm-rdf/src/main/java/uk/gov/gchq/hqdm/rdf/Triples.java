@@ -26,8 +26,7 @@ import uk.gov.gchq.hqdm.rdf.iri.IRI;
 public abstract class Triples {
 
     private static final Pattern DATE_PATTERN = Pattern.compile("\\d{4}-\\d{2}-\\d{2}");
-    private static final Pattern DATE_TIME_PATTERN = Pattern
-            .compile("\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}.*");
+    private static final Pattern DATE_TIME_PATTERN = Pattern.compile("\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}.*");
 
     /**
      * Convert Thing to triples.
@@ -44,10 +43,7 @@ public abstract class Triples {
 
         final String predicatesStr = thing.getPredicates().entrySet().stream().map(v -> {
             final String predicate = "<" + v.getKey().toString() + "> ";
-            return v
-                    .getValue()
-                    .stream()
-                    .map(vv -> predicate + toTripleString(vv)).collect(Collectors.joining(";\n"));
+            return v.getValue().stream().map(vv -> predicate + toTripleString(vv)).collect(Collectors.joining(";\n"));
         }).collect(Collectors.joining(";\n"));
 
         builder.append(predicatesStr);
@@ -60,7 +56,7 @@ public abstract class Triples {
      *
      * @param object the Object to convert.
      * @return {@link String}
-    */
+     */
     private static String toTripleString(final Object object) {
         final String stringValue = object.toString();
         if (object instanceof IRI) {
@@ -77,5 +73,4 @@ public abstract class Triples {
             return "\"\"\"" + stringValue + "\"\"\"";
         }
     }
-
 }

@@ -14,7 +14,6 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.ClassOfPhysicalObject;
 
 /**
@@ -29,5 +28,4 @@ public class ClassOfPhysicalObjectImpl extends HqdmObject implements ClassOfPhys
     public ClassOfPhysicalObjectImpl(final String id) {
         super(id);
     }
-
 }

@@ -14,7 +14,6 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.Employee;
 
 /**
@@ -29,5 +28,4 @@ public class EmployeeImpl extends HqdmObject implements Employee {
     public EmployeeImpl(final String id) {
         super(id);
     }
-
 }

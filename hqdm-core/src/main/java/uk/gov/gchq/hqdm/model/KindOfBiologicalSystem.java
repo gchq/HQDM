@@ -18,7 +18,5 @@ package uk.gov.gchq.hqdm.model;
  * A {@link ClassOfBiologicalSystem} that is also a {@link KindOfSystem} all of whose members have a
  * natural {@link Role} that they play.
  */
-public interface KindOfBiologicalSystem extends
-        ClassOfBiologicalSystem,
-        KindOfSystem {
+public interface KindOfBiologicalSystem extends ClassOfBiologicalSystem, KindOfSystem {
 }

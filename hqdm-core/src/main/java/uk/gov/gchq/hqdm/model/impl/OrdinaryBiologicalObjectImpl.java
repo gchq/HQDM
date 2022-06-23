@@ -14,7 +14,6 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.OrdinaryBiologicalObject;
 
 /**
@@ -29,5 +28,4 @@ public class OrdinaryBiologicalObjectImpl extends HqdmObject implements Ordinary
     public OrdinaryBiologicalObjectImpl(final String id) {
         super(id);
     }
-
 }

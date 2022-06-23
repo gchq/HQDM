@@ -14,14 +14,12 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.ClassOfStateOfSystemComponent;
 
 /**
  * An implementation of ClassOfStateOfSystemComponent.
  */
-public class ClassOfStateOfSystemComponentImpl extends HqdmObject
-        implements ClassOfStateOfSystemComponent {
+public class ClassOfStateOfSystemComponentImpl extends HqdmObject implements ClassOfStateOfSystemComponent {
     /**
      * Constructs a new ClassOfStateOfSystemComponent.
      *
@@ -30,5 +28,4 @@ public class ClassOfStateOfSystemComponentImpl extends HqdmObject
     public ClassOfStateOfSystemComponentImpl(final String id) {
         super(id);
     }
-
 }

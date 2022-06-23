@@ -14,7 +14,6 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.KindOfFunctionalObject;
 
 /**
@@ -29,5 +28,4 @@ public class KindOfFunctionalObjectImpl extends HqdmObject implements KindOfFunc
     public KindOfFunctionalObjectImpl(final String id) {
         super(id);
     }
-
 }

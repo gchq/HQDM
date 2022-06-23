@@ -14,7 +14,6 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.PossibleWorld;
 
 /**
@@ -29,5 +28,4 @@ public class PossibleWorldImpl extends HqdmObject implements PossibleWorld {
     public PossibleWorldImpl(final String id) {
         super(id);
     }
-
 }

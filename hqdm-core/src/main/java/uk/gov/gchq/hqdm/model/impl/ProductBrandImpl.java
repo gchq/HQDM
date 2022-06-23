@@ -14,7 +14,6 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.ProductBrand;
 
 /**
@@ -29,5 +28,4 @@ public class ProductBrandImpl extends HqdmObject implements ProductBrand {
     public ProductBrandImpl(final String id) {
         super(id);
     }
-
 }

@@ -14,14 +14,12 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.ClassOfAgreementExecution;
 
 /**
  * An implementation of ClassOfAgreementExecution.
  */
-public class ClassOfAgreementExecutionImpl extends HqdmObject
-        implements ClassOfAgreementExecution {
+public class ClassOfAgreementExecutionImpl extends HqdmObject implements ClassOfAgreementExecution {
     /**
      * Constructs a new ClassOfAgreementExecution.
      *
@@ -30,5 +28,4 @@ public class ClassOfAgreementExecutionImpl extends HqdmObject
     public ClassOfAgreementExecutionImpl(final String id) {
         super(id);
     }
-
 }

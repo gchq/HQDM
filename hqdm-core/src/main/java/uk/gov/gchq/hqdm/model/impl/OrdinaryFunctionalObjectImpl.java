@@ -14,7 +14,6 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.OrdinaryFunctionalObject;
 
 /**
@@ -29,5 +28,4 @@ public class OrdinaryFunctionalObjectImpl extends HqdmObject implements Ordinary
     public OrdinaryFunctionalObjectImpl(final String id) {
         super(id);
     }
-
 }

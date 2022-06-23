@@ -14,14 +14,12 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.TransferOfOwnershipOfMoney;
 
 /**
  * An implementation of TransferOfOwnershipOfMoney.
  */
-public class TransferOfOwnershipOfMoneyImpl extends HqdmObject
-        implements TransferOfOwnershipOfMoney {
+public class TransferOfOwnershipOfMoneyImpl extends HqdmObject implements TransferOfOwnershipOfMoney {
     /**
      * Constructs a new TransferOfOwnershipOfMoney.
      *
@@ -30,5 +28,4 @@ public class TransferOfOwnershipOfMoneyImpl extends HqdmObject
     public TransferOfOwnershipOfMoneyImpl(final String id) {
         super(id);
     }
-
 }

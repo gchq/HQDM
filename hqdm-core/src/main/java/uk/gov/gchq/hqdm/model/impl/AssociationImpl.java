@@ -14,7 +14,6 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.Association;
 
 /**
@@ -29,5 +28,4 @@ public class AssociationImpl extends HqdmObject implements Association {
     public AssociationImpl(final String id) {
         super(id);
     }
-
 }

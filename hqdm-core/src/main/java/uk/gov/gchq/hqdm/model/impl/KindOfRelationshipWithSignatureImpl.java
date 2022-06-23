@@ -14,14 +14,12 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.KindOfRelationshipWithSignature;
 
 /**
  * An implementation of KindOfRelationshipWithSignature.
  */
-public class KindOfRelationshipWithSignatureImpl extends HqdmObject
-        implements KindOfRelationshipWithSignature {
+public class KindOfRelationshipWithSignatureImpl extends HqdmObject implements KindOfRelationshipWithSignature {
     /**
      * Constructs a new KindOfRelationshipWithSignature.
      *
@@ -30,5 +28,4 @@ public class KindOfRelationshipWithSignatureImpl extends HqdmObject
     public KindOfRelationshipWithSignatureImpl(final String id) {
         super(id);
     }
-
 }

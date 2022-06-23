@@ -14,7 +14,6 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.ClassOfStateOfSystem;
 
 /**
@@ -29,5 +28,4 @@ public class ClassOfStateOfSystemImpl extends HqdmObject implements ClassOfState
     public ClassOfStateOfSystemImpl(final String id) {
         super(id);
     }
-
 }
