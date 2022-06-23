@@ -14,11 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.STATE_OF_FUNCTIONAL_SYSTEM;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.StateOfFunctionalSystem;
-import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of StateOfFunctionalSystem.
@@ -27,10 +24,10 @@ public class StateOfFunctionalSystemImpl extends HqdmObject implements StateOfFu
     /**
      * Constructs a new StateOfFunctionalSystem.
      *
-     * @param iri IRI of the StateOfFunctionalSystem.
+     * @param id String of the StateOfFunctionalSystem.
      */
-    public StateOfFunctionalSystemImpl(final IRI iri) {
-        super(StateOfFunctionalSystemImpl.class, iri, STATE_OF_FUNCTIONAL_SYSTEM);
+    public StateOfFunctionalSystemImpl(final String id) {
+        super(id);
     }
 
 }

@@ -12,7 +12,7 @@
  * the License.
  */
 
-package uk.gov.gchq.hqdm.iri;
+package uk.gov.gchq.hqdm.rdf.iri;
 
 import java.util.Objects;
 

@@ -12,7 +12,7 @@
  * the License.
  */
 
-package uk.gov.gchq.hqdm.iri;
+package uk.gov.gchq.hqdm.rdf.iri;
 
 /**
  * IRI definitions for HQDM entities and associations.
@@ -25,13 +25,12 @@ public final class HQDM {
     public static final IriBase HQDM = new IriBase("hqdm", "http://www.semanticweb.org/hqdm#");
 
     /** A unique identifier for a particular HQDM entity. */
+    @Deprecated
     public static final HqdmIri ENTITY_ID = new HqdmIri(HQDM, "data_uniqueID");
 
     /** A human-interpretable name for a particular HQDM entity. */
+    @Deprecated
     public static final HqdmIri ENTITY_NAME = new HqdmIri(HQDM, "data_EntityName");
-
-    /** Class name of the HQDM Object to which a particular entity belongs. */
-    public static final HqdmIri ENTITY_CLASS_NAME = new HqdmIri(HQDM, "class_name");
 
     // =======================================================================
     // Entities

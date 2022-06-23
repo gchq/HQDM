@@ -14,11 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.CLASS_OF_STATE_OF_BIOLOGICAL_SYSTEM;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.ClassOfStateOfBiologicalSystem;
-import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of ClassOfStateOfBiologicalSystem.
@@ -28,10 +25,10 @@ public class ClassOfStateOfBiologicalSystemImpl extends HqdmObject
     /**
      * Constructs a new ClassOfStateOfBiologicalSystem.
      *
-     * @param iri IRI of the ClassOfStateOfBiologicalSystem.
+     * @param id String of the ClassOfStateOfBiologicalSystem.
      */
-    public ClassOfStateOfBiologicalSystemImpl(final IRI iri) {
-        super(ClassOfStateOfBiologicalSystemImpl.class, iri, CLASS_OF_STATE_OF_BIOLOGICAL_SYSTEM);
+    public ClassOfStateOfBiologicalSystemImpl(final String id) {
+        super(id);
     }
 
 }

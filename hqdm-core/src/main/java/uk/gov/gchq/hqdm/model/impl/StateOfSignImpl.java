@@ -14,11 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.STATE_OF_SIGN;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.StateOfSign;
-import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of StateOfSign.
@@ -27,10 +24,10 @@ public class StateOfSignImpl extends HqdmObject implements StateOfSign {
     /**
      * Constructs a new StateOfSign.
      *
-     * @param iri IRI of the StateOfSign.
+     * @param id String of the StateOfSign.
      */
-    public StateOfSignImpl(final IRI iri) {
-        super(StateOfSignImpl.class, iri, STATE_OF_SIGN);
+    public StateOfSignImpl(final String id) {
+        super(id);
     }
 
 }

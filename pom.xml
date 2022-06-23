@@ -37,13 +37,17 @@
         <maven.javadoc.failOnError>false</maven.javadoc.failOnError>
         <maven.compiler.release>15</maven.compiler.release>
     </properties>
-
     <modules>
         <module>hqdm-core</module>
+        <module>hqdm-rdf</module>
     </modules>
-    
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>uk.gov.gchq.hqdm</groupId>
+                <artifactId>hqdm-core</artifactId>
+                <version>1.1-SNAPSHOT</version>
+            </dependency>
             <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>

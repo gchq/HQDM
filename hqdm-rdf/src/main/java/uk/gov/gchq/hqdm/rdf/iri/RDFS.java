@@ -12,7 +12,7 @@
  * the License.
  */
 
-package uk.gov.gchq.hqdm.iri;
+package uk.gov.gchq.hqdm.rdf.iri;
 
 /**
  * RDF Schema IRI definitions.
@@ -50,11 +50,21 @@ public final class RDFS {
      * @see <a href= "https://www.w3.org/TR/rdf-schema/">https://www.w3.org/TR/rdf-schema/</a>
      */
     public static final IriBase RDFS =
-            new IriBase("rdfs", "t");
+            new IriBase("rdfs", "http://www.w3.org/2000/01/rdf-schema#");
 
     /**
      * The class {@code rdfs:Literal} is the class of literal values such as strings and integers.
      * Property values such as textual strings are examples of RDF literals.
      */
     public static final IRI RDFS_LITERAL = new IRI(RDFS, "Literal");
+
+    /**
+     * The predicate {@code rdfs:subClassOf} is used to state that one class is a sub-class of another.
+     */
+    public static final IRI RDFS_SUB_CLASS_OF = new IRI(RDFS, "subClassOf");
+
+    /**
+     * The predicate {@code rdfs:class} is used to define that an object is a class.
+     */
+    public static final IRI RDFS_CLASS = new IRI(RDFS, "class");
 }

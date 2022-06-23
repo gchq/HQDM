@@ -14,11 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.KIND_OF_RELATIONSHIP_WITH_RESTRICTION;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.KindOfRelationshipWithRestriction;
-import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of KindOfRelationshipWithRestriction.
@@ -28,11 +25,10 @@ public class KindOfRelationshipWithRestrictionImpl extends HqdmObject
     /**
      * Constructs a new KindOfRelationshipWithRestriction.
      *
-     * @param iri IRI of the KindOfRelationshipWithRestriction.
+     * @param id String of the KindOfRelationshipWithRestriction.
      */
-    public KindOfRelationshipWithRestrictionImpl(final IRI iri) {
-        super(KindOfRelationshipWithRestrictionImpl.class, iri,
-                KIND_OF_RELATIONSHIP_WITH_RESTRICTION);
+    public KindOfRelationshipWithRestrictionImpl(final String id) {
+        super(id);
     }
 
 }

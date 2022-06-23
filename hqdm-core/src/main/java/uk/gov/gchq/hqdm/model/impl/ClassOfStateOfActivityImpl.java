@@ -14,11 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.CLASS_OF_STATE_OF_ACTIVITY;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.ClassOfStateOfActivity;
-import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of ClassOfStateOfActivity.
@@ -27,10 +24,10 @@ public class ClassOfStateOfActivityImpl extends HqdmObject implements ClassOfSta
     /**
      * Constructs a new ClassOfStateOfActivity.
      *
-     * @param iri IRI of the ClassOfStateOfActivity.
+     * @param id String of the ClassOfStateOfActivity.
      */
-    public ClassOfStateOfActivityImpl(final IRI iri) {
-        super(ClassOfStateOfActivityImpl.class, iri, CLASS_OF_STATE_OF_ACTIVITY);
+    public ClassOfStateOfActivityImpl(final String id) {
+        super(id);
     }
 
 }

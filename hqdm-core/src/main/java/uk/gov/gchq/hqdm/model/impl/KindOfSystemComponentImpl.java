@@ -14,11 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.KIND_OF_SYSTEM_COMPONENT;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.KindOfSystemComponent;
-import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of KindOfSystemComponent.
@@ -27,10 +24,10 @@ public class KindOfSystemComponentImpl extends HqdmObject implements KindOfSyste
     /**
      * Constructs a new KindOfSystemComponent.
      *
-     * @param iri IRI of the KindOfSystemComponent.
+     * @param id String of the KindOfSystemComponent.
      */
-    public KindOfSystemComponentImpl(final IRI iri) {
-        super(KindOfSystemComponentImpl.class, iri, KIND_OF_SYSTEM_COMPONENT);
+    public KindOfSystemComponentImpl(final String id) {
+        super(id);
     }
 
 }

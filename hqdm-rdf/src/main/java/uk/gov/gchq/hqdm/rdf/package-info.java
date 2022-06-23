@@ -13,7 +13,6 @@
  */
 
 /**
- * Classes for constructing and using Internationalized Resource Identifiers (IRIs) with HQDM
- * objects.
+ * Classes for constructing HQDM entities as Java objects.
  */
-package uk.gov.gchq.hqdm.iri;
+package uk.gov.gchq.hqdm.rdf;

@@ -14,11 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.PRICE;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.Price;
-import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of Price.
@@ -27,10 +24,10 @@ public class PriceImpl extends HqdmObject implements Price {
     /**
      * Constructs a new Price.
      *
-     * @param iri IRI of the Price.
+     * @param id String of the Price.
      */
-    public PriceImpl(final IRI iri) {
-        super(PriceImpl.class, iri, PRICE);
+    public PriceImpl(final String id) {
+        super(id);
     }
 
 }

@@ -12,18 +12,18 @@
  * the License.
  */
 
-package uk.gov.gchq.hqdm.iri;
+package uk.gov.gchq.hqdm.rdf.iri;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.Objects;
 
-import uk.gov.gchq.hqdm.exception.IriException;
+import uk.gov.gchq.hqdm.rdf.exception.IriException;
 
 /**
  * An implementation of Internationalized Resource Identifiers.
  */
 public class IRI {
-
-    private IriBase base;
 
     private String resource;
 
@@ -36,9 +36,7 @@ public class IRI {
      * @param resource Resource name.
      */
     public IRI(final IriBase base, final String resource) {
-        this.base = base;
-        this.resource = resource;
-        this.iri = base.getNamespace() + resource;
+        fromString(base.getNamespace() + resource);
     }
 
     /**
@@ -52,39 +50,12 @@ public class IRI {
     }
 
     /**
-     * The namespace of the IRI.
-     *
-     * @return IRI namespace.
-     */
-    public IriBase getBase() {
-        return base;
-    }
-
-    /**
-     * Set the IriBase namespace of the IRI.
-     *
-     * @param base IRI namespace.
-     */
-    public void setBase(final IriBase base) {
-        this.base = base;
-    }
-
-    /**
      * The name of the resource.
      *
      * @return Resource name.
      */
     public String getResource() {
         return resource;
-    }
-
-    /**
-     * Set the resource name.
-     *
-     * @param resource Resource name.
-     */
-    public void setResource(final String resource) {
-        this.resource = resource;
     }
 
     /**
@@ -97,15 +68,19 @@ public class IRI {
     }
 
     /**
-     * Set the IRI string.
+     * Convert a {@link String} to an IRI.
      *
-     * @param iri IRI string.
+     * @param iri {@link String}
+     * @throws IriException if the {@link String} is not a valid URL.
      */
-    public void setIri(final String iri) {
-        this.iri = iri;
-    }
-
     private void fromString(final String iri) throws IriException {
+        try {
+            new URL(iri);
+            this.iri = iri;
+        } catch (final MalformedURLException m) {
+            throw new IriException("Cannot parse IRI: " + iri);
+        }
+
         int index = iri.lastIndexOf('#');
         if (index < 0) {
             index = iri.lastIndexOf('/');
@@ -113,11 +88,9 @@ public class IRI {
         if (index < 0) {
             throw new IriException("Cannot parse IRI: " + iri);
         } else {
-            final String baseString = iri.substring(0, index + 1);
-            this.base = new IriBase(baseString, baseString);
             this.resource = iri.substring(index + 1);
-            this.iri = base.getNamespace() + resource;
         }
+
     }
 
     /**
@@ -144,12 +117,12 @@ public class IRI {
         if (!(object instanceof IRI)) {
             return false;
         }
-        final IRI iri = (IRI) object;
-        return Objects.equals(base, iri.base) && Objects.equals(resource, iri.resource);
+        final IRI other = (IRI) object;
+        return Objects.equals(this.iri, other.iri);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(base, resource);
+        return iri.hashCode();
     }
 }

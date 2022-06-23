@@ -14,11 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.REACHING_AGREEMENT;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.ReachingAgreement;
-import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of ReachingAgreement.
@@ -27,10 +24,10 @@ public class ReachingAgreementImpl extends HqdmObject implements ReachingAgreeme
     /**
      * Constructs a new ReachingAgreement.
      *
-     * @param iri IRI of the ReachingAgreement.
+     * @param id String of the ReachingAgreement.
      */
-    public ReachingAgreementImpl(final IRI iri) {
-        super(ReachingAgreementImpl.class, iri, REACHING_AGREEMENT);
+    public ReachingAgreementImpl(final String id) {
+        super(id);
     }
 
 }

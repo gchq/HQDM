@@ -13,6 +13,7 @@
  */
 
 /**
- * Services related to HQDM classes.
- * */
-package uk.gov.gchq.hqdm.services;
+ * Classes for constructing and using Internationalized Resource Identifiers (IRIs) with HQDM
+ * objects.
+ */
+package uk.gov.gchq.hqdm.rdf.iri;

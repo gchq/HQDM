@@ -14,11 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.EMPLOYEE;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.Employee;
-import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of Employee.
@@ -27,10 +24,10 @@ public class EmployeeImpl extends HqdmObject implements Employee {
     /**
      * Constructs a new Employee.
      *
-     * @param iri IRI of the Employee.
+     * @param id String of the Employee.
      */
-    public EmployeeImpl(final IRI iri) {
-        super(EmployeeImpl.class, iri, EMPLOYEE);
+    public EmployeeImpl(final String id) {
+        super(id);
     }
 
 }

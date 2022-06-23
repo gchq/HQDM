@@ -15,4 +15,4 @@
 /**
  * Exceptions arising from HQDM code.
  */
-package uk.gov.gchq.hqdm.exception;
+package uk.gov.gchq.hqdm.rdf.exception;

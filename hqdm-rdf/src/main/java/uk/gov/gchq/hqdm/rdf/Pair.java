@@ -12,7 +12,7 @@
  * the License.
  */
 
-package uk.gov.gchq.hqdm.util;
+package uk.gov.gchq.hqdm.rdf;
 
 
 /**
@@ -39,24 +39,6 @@ public class Pair<L, R> {
     }
 
     /**
-     * Setter for the Left element.
-     *
-     * @param left the left element of type L
-     */
-    public void setLeft(final L left) {
-        this.left = left;
-    }
-
-    /**
-     * Setter for the Right element.
-     *
-     * @param right the right element of type R
-     */
-    public void setRight(final R right) {
-        this.right = right;
-    }
-
-    /**
      * Getter for the Left element.
      *
      * @return the left element of type L
@@ -73,4 +55,15 @@ public class Pair<L, R> {
     public R getRight() {
         return right;
     }
+
+    /**
+     * Convert a Pair to a {@link String}.
+     *
+     * @return {@link String}
+     * */
+    public String toString() {
+        return "{ left=" + left + ", right=" + right + "}";
+    }
 }
+
+

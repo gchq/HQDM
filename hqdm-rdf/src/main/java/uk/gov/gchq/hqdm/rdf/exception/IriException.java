@@ -12,46 +12,46 @@
  * the License.
  */
 
-package uk.gov.gchq.hqdm.exception;
+package uk.gov.gchq.hqdm.rdf.exception;
 
 /**
- * Superclass of exceptions arising from HQDM code.
+ * Exception thrown to indicate that a string could not be parsed as an IRI reference.
  */
-public class HqdmException extends RuntimeException {
+public class IriException extends RuntimeException {
 
     /**
-     * Constructs a new HqdmException with null as its detail message. The cause is not initialized,
+     * Constructs a new IriException with null as its detail message. The cause is not initialized,
      * and may subsequently be initialized by a call to {@link #initCause(Throwable)}.
      */
-    public HqdmException() {
+    public IriException() {
         super();
     }
 
     /**
-     * Constructs a new HqdmException with the specified detail message. The cause is not
+     * Constructs a new IriException with the specified detail message. The cause is not
      * initialized, and may subsequently be initialized by a call to {@link #initCause(Throwable)}.
      *
      * @param message The detail message. The detail message is saved for later retrieval by the
      *        {@link #getMessage()} method.
      */
-    public HqdmException(final String message) {
+    public IriException(final String message) {
         super(message);
     }
 
     /**
-     * Constructs a new HqdmException with the specified cause and a detail message of (cause==null
-     * ? null : cause.toString()) (which typically contains the class and detail message of cause).
+     * Constructs a new IriException with the specified cause and a detail message of (cause==null ?
+     * null : cause.toString()) (which typically contains the class and detail message of cause).
      *
      * @param cause The cause (which is saved for later retrieval by the {@link #getCause()}
      *        method). (A {@code null} value is permitted, and indicates that the cause is
      *        nonexistent or unknown.)
      */
-    public HqdmException(final Throwable cause) {
+    public IriException(final Throwable cause) {
         super(cause);
     }
 
     /**
-     * Constructs a new HqdmException with the specified detail message and cause.
+     * Constructs a new IriException with the specified detail message and cause.
      *
      * @param message The detail message (which is saved for later retrieval by the
      *        {@link #getMessage()} method).
@@ -59,7 +59,7 @@ public class HqdmException extends RuntimeException {
      *        method). (A {@code null} value is permitted, and indicates that the cause is
      *        nonexistent or unknown.)
      */
-    public HqdmException(final String message, final Throwable cause) {
+    public IriException(final String message, final Throwable cause) {
         super(message, cause);
     }
 }

@@ -14,11 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.RECOGNIZING_LANGUAGE_COMMUNITY;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.RecognizingLanguageCommunity;
-import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of RecognizingLanguageCommunity.
@@ -28,10 +25,10 @@ public class RecognizingLanguageCommunityImpl extends HqdmObject
     /**
      * Constructs a new RecognizingLanguageCommunity.
      *
-     * @param iri IRI of the RecognizingLanguageCommunity.
+     * @param id String of the RecognizingLanguageCommunity.
      */
-    public RecognizingLanguageCommunityImpl(final IRI iri) {
-        super(RecognizingLanguageCommunityImpl.class, iri, RECOGNIZING_LANGUAGE_COMMUNITY);
+    public RecognizingLanguageCommunityImpl(final String id) {
+        super(id);
     }
 
 }

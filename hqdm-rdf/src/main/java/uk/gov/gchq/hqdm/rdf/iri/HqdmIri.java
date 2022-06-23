@@ -12,9 +12,9 @@
  * the License.
  */
 
-package uk.gov.gchq.hqdm.iri;
+package uk.gov.gchq.hqdm.rdf.iri;
 
-import uk.gov.gchq.hqdm.exception.IriException;
+import uk.gov.gchq.hqdm.rdf.exception.IriException;
 
 /**
  * An implementation of Internationalized Resource Identifiers for defining HQDM entities and

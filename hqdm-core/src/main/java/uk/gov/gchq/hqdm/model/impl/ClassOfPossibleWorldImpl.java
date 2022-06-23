@@ -14,11 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.CLASS_OF_POSSIBLE_WORLD;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.ClassOfPossibleWorld;
-import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of ClassOfPossibleWorld.
@@ -27,10 +24,10 @@ public class ClassOfPossibleWorldImpl extends HqdmObject implements ClassOfPossi
     /**
      * Constructs a new ClassOfPossibleWorld.
      *
-     * @param iri IRI of the ClassOfPossibleWorld.
+     * @param id String of the ClassOfPossibleWorld.
      */
-    public ClassOfPossibleWorldImpl(final IRI iri) {
-        super(ClassOfPossibleWorldImpl.class, iri, CLASS_OF_POSSIBLE_WORLD);
+    public ClassOfPossibleWorldImpl(final String id) {
+        super(id);
     }
 
 }

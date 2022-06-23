@@ -14,7 +14,6 @@
 
 package uk.gov.gchq.hqdm.services;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.Aggregation;
 import uk.gov.gchq.hqdm.model.Classification;
 import uk.gov.gchq.hqdm.model.Composition;
@@ -37,107 +36,108 @@ import uk.gov.gchq.hqdm.model.impl.TemporalCompositionImpl;
 import uk.gov.gchq.hqdm.model.impl.UnitOfMeasureImpl;
 
 /**
- * Service for creating Relationships object.
- */
+ * Methods for creating Relationsip objects.
+ *
+ * */
 public class RelationshipServices {
     /**
-     * Create a Aggregation with an IRI.
+     * Create a Specialization with an String.
      *
-     * @param iri the IRI.
-     * @return a Aggregation instance.
-     */
-    public static Aggregation createAggregation(final IRI iri) {
-        return new AggregationImpl(iri);
-    }
-
-    /**
-     * Create a Classification with an IRI.
-     *
-     * @param iri the IRI.
-     * @return a Classification instance.
-     */
-    public static Classification createClassification(final IRI iri) {
-        return new ClassificationImpl(iri);
-    }
-
-    /**
-     * Create a Composition with an IRI.
-     *
-     * @param iri the IRI.
-     * @return a Composition instance.
-     */
-    public static Composition createComposition(final IRI iri) {
-        return new CompositionImpl(iri);
-    }
-
-    /**
-     * Create a DefinedRelationship with an IRI.
-     *
-     * @param iri the IRI.
-     * @return a DefinedRelationship instance.
-     */
-    public static DefinedRelationship createDefinedRelationship(final IRI iri) {
-        return new DefinedRelationshipImpl(iri);
-    }
-
-    /**
-     * Create a Function_ with an IRI.
-     *
-     * @param iri the IRI.
-     * @return a Function_ instance.
-     */
-    public static Function_ createFunction(final IRI iri) {
-        return new FunctionImpl(iri);
-    }
-
-    /**
-     * Create a Relationship with an IRI.
-     *
-     * @param iri the IRI.
-     * @return a Relationship instance.
-     */
-    public static Relationship createRelationship(final IRI iri) {
-        return new RelationshipImpl(iri);
-    }
-
-    /**
-     * Create a Scale with an IRI.
-     *
-     * @param iri the IRI.
-     * @return a Scale instance.
-     */
-    public static Scale createScale(final IRI iri) {
-        return new ScaleImpl(iri);
-    }
-
-    /**
-     * Create a Specialization with an IRI.
-     *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a Specialization instance.
      */
-    public static Specialization createSpecialization(final IRI iri) {
-        return new SpecializationImpl(iri);
+    public static Specialization createSpecialization(final String id) {
+        return new SpecializationImpl(id);
     }
 
     /**
-     * Create a TemporalComposition with an IRI.
+     * Create a Scale with an String.
      *
-     * @param iri the IRI.
-     * @return a TemporalComposition instance.
+     * @param id the String.
+     * @return a Scale instance.
      */
-    public static TemporalComposition createTemporalComposition(final IRI iri) {
-        return new TemporalCompositionImpl(iri);
+    public static Scale createScale(final String id) {
+        return new ScaleImpl(id);
     }
 
     /**
-     * Create a UnitOfMeasure with an IRI.
+     * Create a UnitOfMeasure with an String.
      *
-     * @param iri the IRI.
+     * @param id the String.
      * @return a UnitOfMeasure instance.
      */
-    public static UnitOfMeasure createUnitOfMeasure(final IRI iri) {
-        return new UnitOfMeasureImpl(iri);
+    public static UnitOfMeasure createUnitOfMeasure(final String id) {
+        return new UnitOfMeasureImpl(id);
+    }
+
+    /**
+     * Create a Function_ with an String.
+     *
+     * @param id the String.
+     * @return a Function_ instance.
+     */
+    public static Function_ createFunction(final String id) {
+        return new FunctionImpl(id);
+    }
+
+    /**
+     * Create a Classification with an String.
+     *
+     * @param id the String.
+     * @return a Classification instance.
+     */
+    public static Classification createClassification(final String id) {
+        return new ClassificationImpl(id);
+    }
+
+    /**
+     * Create a TemporalComposition with an String.
+     *
+     * @param id the String.
+     * @return a TemporalComposition instance.
+     */
+    public static TemporalComposition createTemporalComposition(final String id) {
+        return new TemporalCompositionImpl(id);
+    }
+
+    /**
+     * Create a Composition with an String.
+     *
+     * @param id the String.
+     * @return a Composition instance.
+     */
+    public static Composition createComposition(final String id) {
+        return new CompositionImpl(id);
+    }
+
+    /**
+     * Create a Aggregation with an String.
+     *
+     * @param id the String.
+     * @return a Aggregation instance.
+     */
+    public static Aggregation createAggregation(final String id) {
+        return new AggregationImpl(id);
+    }
+
+    /**
+     * Create a Relationship with an String.
+     *
+     * @param id the String.
+     * @return a Relationship instance.
+     */
+    public static Relationship createRelationship(final String id) {
+        return new RelationshipImpl(id);
+    }
+
+    /**
+     * Create a DefinedRelationship with an String.
+     *
+     * @param id the String.
+     * @return a DefinedRelationship instance.
+     */
+    public static DefinedRelationship createDefinedRelationship(final String id) {
+        return new DefinedRelationshipImpl(id);
     }
 
 }

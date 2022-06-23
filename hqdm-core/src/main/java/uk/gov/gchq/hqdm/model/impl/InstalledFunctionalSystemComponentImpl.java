@@ -14,11 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-import static uk.gov.gchq.hqdm.iri.HQDM.INSTALLED_FUNCTIONAL_SYSTEM_COMPONENT;
 
-import uk.gov.gchq.hqdm.iri.IRI;
 import uk.gov.gchq.hqdm.model.InstalledFunctionalSystemComponent;
-import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of InstalledFunctionalSystemComponent.
@@ -28,11 +25,10 @@ public class InstalledFunctionalSystemComponentImpl extends HqdmObject
     /**
      * Constructs a new InstalledFunctionalSystemComponent.
      *
-     * @param iri IRI of the InstalledFunctionalSystemComponent.
+     * @param id String of the InstalledFunctionalSystemComponent.
      */
-    public InstalledFunctionalSystemComponentImpl(final IRI iri) {
-        super(InstalledFunctionalSystemComponentImpl.class, iri,
-                INSTALLED_FUNCTIONAL_SYSTEM_COMPONENT);
+    public InstalledFunctionalSystemComponentImpl(final String id) {
+        super(id);
     }
 
 }
