@@ -88,7 +88,7 @@ public class DynamicObjects {
         private Object target;
 
         /**
-         * Constructor accetping the thing to be proxied.
+         * Constructor accepting the thing to be proxied.
          *
          * @param target the Object to be proxied.
         */
