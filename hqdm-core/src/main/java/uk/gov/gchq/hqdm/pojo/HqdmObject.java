@@ -34,7 +34,7 @@ public abstract class HqdmObject implements Thing {
     /**
      * Constructs a new {@code HqdmObject}.
      *
-     * @param id String of the HQDM object.
+     * @param id ID of the HQDM object.
      */
     public HqdmObject(final String id) {
         this.id = id;
@@ -86,9 +86,16 @@ public abstract class HqdmObject implements Thing {
     /**
      * {@inheritDoc}
      */
-    public void addValue(final String predicateId, final String value) {
+    public Set<Object> value(final String predicateId) {
+        return predicates.get(predicateId);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public void addValue(final String predicateId, final String objectId) {
         final Set<Object> values = predicates.computeIfAbsent(predicateId, k -> new HashSet<>());
-        values.add(value);
+        values.add(objectId);
     }
 
     /**
@@ -110,23 +117,28 @@ public abstract class HqdmObject implements Thing {
     /**
      * {@inheritDoc}
      */
-    public Set<Object> value(final String id) {
-        return predicates.get(id);
+    public void removeValue(final String predicateId, final String value) {
+        if (predicates.containsKey(predicateId)) {
+            final var v = predicates.get(predicateId);
+            if (v.contains(value)) {
+                v.remove(value);
+            }
+        }
     }
 
     /**
      * {@inheritDoc}
      */
-    public boolean hasValue(final String value) {
-        return predicates.containsKey(value);
+    public boolean hasValue(final String predicateId) {
+        return predicates.containsKey(predicateId);
     }
 
     /**
      * {@inheritDoc}
      */
-    public boolean hasThisValue(final String predicateId, final String value) {
+    public boolean hasThisValue(final String predicateId, final String objectId) {
         final Set<Object> values = predicates.get(predicateId);
-        return values != null && values.contains(value);
+        return values != null && values.contains(objectId);
     }
 
     /**
@@ -217,20 +229,5 @@ public abstract class HqdmObject implements Thing {
     @Override
     public int hashCode() {
         return Objects.hash(super.hashCode(), id);
-    }
-
-    /**
-     * Remove a predicate value.
-     *
-     * @param predicateId {@link String}
-     * @param value       {@link String}
-     */
-    public void removeValue(final String predicateId, final String value) {
-        if (predicates.containsKey(predicateId)) {
-            final var v = predicates.get(predicateId);
-            if (v.contains(value)) {
-                v.remove(value);
-            }
-        }
     }
 }

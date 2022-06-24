@@ -30,35 +30,35 @@ import uk.gov.gchq.hqdm.pojo.Top;
 public class DynamicObjects {
 
     /**
-     * Try to create a Proxy that implements the set of specified interfaces.
+     * Create a Proxy that implements the set of specified interfaces.
      *
-     * @param <T>        The subtypes of {@link Thing} that we want to implement.
-     * @param <U>        The subtype of {@link Thing} that we want to return.
-     * @param id         The {@link Thing} id {@link String}
+     * @param <T>        The subtypes of {@link Thing} to implement.
+     * @param <U>        The subtype of {@link Thing} to return.
+     * @param id         ID of the {@link Thing} to create.
      * @param returnType The type to cast the return value to.
-     * @param c          The array of classes we need to implement.
+     * @param classes    The array of classes to implement.
      * @return An object of type U.
      */
     public static <T extends Thing, U extends Thing> U create(final String id, final java.lang.Class<U> returnType,
-            final java.lang.Class<T>[] c) {
+            final java.lang.Class<T>[] classes) {
 
-        return (U) implementInterfaces((T) new ThingImpl(id), returnType, c);
+        return (U) implementInterfaces((T) new ThingImpl(id), returnType, classes);
     }
 
     /**
-     * Try to create a Proxy that implements the set of specified interfaces, for an existing object.
+     * Create a Proxy that implements the set of specified interfaces, for an existing object.
      *
-     * @param <T>        The subtypes of {@link Thing} that we want to implement.
-     * @param <U>        The subtype of {@link Thing} that we want to return.
-     * @param t          The {@link Thing} to delegate the interfaces to.
+     * @param <T>        The subtypes of {@link Thing} to implement.
+     * @param <U>        The subtype of {@link Thing} to return.
+     * @param thing      The {@link Thing} to delegate the interfaces to.
      * @param returnType The type to cast the return value to.
-     * @param c          The array of classes we need to implement.
-     * @return A U.
+     * @param classes    The array of classes to implement.
+     * @return An object of type U.
      */
-    public static <T extends Thing, U extends Thing> U implementInterfaces(final T t,
-            final java.lang.Class<U> returnType, final java.lang.Class<T>[] c) {
+    public static <T extends Thing, U extends Thing> U implementInterfaces(final T thing,
+            final java.lang.Class<U> returnType, final java.lang.Class<T>[] classes) {
         try {
-            return (U) Proxy.newProxyInstance(ClassServices.class.getClassLoader(), c, new ThingHandler(t));
+            return (U) Proxy.newProxyInstance(ClassServices.class.getClassLoader(), classes, new ThingHandler(thing));
 
         } catch (final Exception e) {
             return null;

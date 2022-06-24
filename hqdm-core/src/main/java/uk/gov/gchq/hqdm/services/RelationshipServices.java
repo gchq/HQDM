@@ -42,7 +42,7 @@ public class RelationshipServices {
     /**
      * Create a Specialization with an String.
      *
-     * @param id The ID of the Specialization.
+     * @param id ID of the Specialization.
      * @return A Specialization instance.
      */
     public static Specialization createSpecialization(final String id) {
@@ -52,7 +52,7 @@ public class RelationshipServices {
     /**
      * Create a Scale with an String.
      *
-     * @param id The ID of the Scale.
+     * @param id ID of the Scale.
      * @return A Scale instance.
      */
     public static Scale createScale(final String id) {
@@ -62,7 +62,7 @@ public class RelationshipServices {
     /**
      * Create a UnitOfMeasure with an String.
      *
-     * @param id The ID of the UnitOfMeasure.
+     * @param id ID of the UnitOfMeasure.
      * @return A UnitOfMeasure instance.
      */
     public static UnitOfMeasure createUnitOfMeasure(final String id) {
@@ -72,7 +72,7 @@ public class RelationshipServices {
     /**
      * Create a Function_ with an String.
      *
-     * @param id The ID of the .
+     * @param id ID of the .
      * @return A Function_ instance.
      */
     public static Function_ createFunction(final String id) {
@@ -82,7 +82,7 @@ public class RelationshipServices {
     /**
      * Create a Classification with an String.
      *
-     * @param id The ID of the Classification.
+     * @param id ID of the Classification.
      * @return A Classification instance.
      */
     public static Classification createClassification(final String id) {
@@ -92,7 +92,7 @@ public class RelationshipServices {
     /**
      * Create a TemporalComposition with an String.
      *
-     * @param id The ID of the TemporalComposition.
+     * @param id ID of the TemporalComposition.
      * @return A TemporalComposition instance.
      */
     public static TemporalComposition createTemporalComposition(final String id) {
@@ -102,7 +102,7 @@ public class RelationshipServices {
     /**
      * Create a Composition with an String.
      *
-     * @param id The ID of the Composition.
+     * @param id ID of the Composition.
      * @return A Composition instance.
      */
     public static Composition createComposition(final String id) {
@@ -112,7 +112,7 @@ public class RelationshipServices {
     /**
      * Create a Aggregation with an String.
      *
-     * @param id The ID of the Aggregation.
+     * @param id ID of the Aggregation.
      * @return A Aggregation instance.
      */
     public static Aggregation createAggregation(final String id) {
@@ -122,7 +122,7 @@ public class RelationshipServices {
     /**
      * Create a Relationship with an String.
      *
-     * @param id The ID of the Relationship.
+     * @param id ID of the Relationship.
      * @return A Relationship instance.
      */
     public static Relationship createRelationship(final String id) {
@@ -132,7 +132,7 @@ public class RelationshipServices {
     /**
      * Create a DefinedRelationship with an String.
      *
-     * @param id The ID of the DefinedRelationship.
+     * @param id ID of the DefinedRelationship.
      * @return A DefinedRelationship instance.
      */
     public static DefinedRelationship createDefinedRelationship(final String id) {

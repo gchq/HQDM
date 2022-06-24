@@ -52,18 +52,20 @@ public final class RDFS {
     public static final IriBase RDFS = new IriBase("rdfs", "http://www.w3.org/2000/01/rdf-schema#");
 
     /**
+     * This is the class of resources that are RDF classes.
+     */
+    public static final IRI RDFS_CLASS = new IRI(RDFS, "class");
+
+    /**
      * The class {@code rdfs:Literal} is the class of literal values such as strings and integers.
      * Property values such as textual strings are examples of RDF literals.
      */
     public static final IRI RDFS_LITERAL = new IRI(RDFS, "Literal");
 
     /**
-     * The predicate {@code rdfs:subClassOf} is used to state that one class is a sub-class of another.
+     * The property {@code rdfs:subClassOf} is an instance of {@code rdf:Property} that is used to state
+     * that all the instances of one class are instances of another.
      */
     public static final IRI RDFS_SUB_CLASS_OF = new IRI(RDFS, "subClassOf");
 
-    /**
-     * The predicate {@code rdfs:class} is used to define that an object is a class.
-     */
-    public static final IRI RDFS_CLASS = new IRI(RDFS, "class");
 }

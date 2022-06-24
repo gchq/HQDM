@@ -48,7 +48,7 @@ public final class HqdmObjectFactory {
      * @param hqdmType IRI definition of HQDM object type defined in
      *                 {@link uk.gov.gchq.hqdm.rdf.iri.HQDM}.
      * @param iri      IRI of the object.
-     * @return The constructed HQDM Object.
+     * @return The constructed HQDM object.
      * @throws HqdmException If the HqdmObject could not be built.
      */
     public static <T extends Thing> T create(final HqdmIri hqdmType, final IRI iri) throws HqdmException {
@@ -60,7 +60,7 @@ public final class HqdmObjectFactory {
      *
      * @param iri   IRI of the object.
      * @param pairs Object attributes.
-     * @return The constructed HQDM Object.
+     * @return The constructed HQDM object.
      * @throws HqdmException If the HqdmObject could not be built.
      */
     public static Thing create(final String iri, final List<Pair<String, String>> pairs) throws HqdmException {
@@ -103,8 +103,8 @@ public final class HqdmObjectFactory {
     /**
      * Convert a list of IRI Strings to class names.
      *
-     * @param iris List of {@link IRI}
-     * @return Array of Class
+     * @param iris List of {@link IRI}.
+     * @return Array of Class.
      */
     private static <T extends Thing> java.lang.Class<T>[] irisToClasses(final List<IRI> iris) {
         final List<java.lang.Class<? extends Thing>> classes = new ArrayList<>(3);
