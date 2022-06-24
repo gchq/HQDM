@@ -12,7 +12,7 @@
  * the License.
  */
 
-package uk.gov.gchq.hqdm.model.impl;
+package uk.gov.gchq.hqdm.pojo;
 
 import java.util.HashMap;
 import java.util.HashSet;

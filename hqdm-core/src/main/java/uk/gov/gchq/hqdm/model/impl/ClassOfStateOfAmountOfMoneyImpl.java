@@ -15,6 +15,7 @@
 package uk.gov.gchq.hqdm.model.impl;
 
 import uk.gov.gchq.hqdm.model.ClassOfStateOfAmountOfMoney;
+import uk.gov.gchq.hqdm.model.HqdmObject;
 
 /**
  * An implementation of ClassOfStateOfAmountOfMoney.

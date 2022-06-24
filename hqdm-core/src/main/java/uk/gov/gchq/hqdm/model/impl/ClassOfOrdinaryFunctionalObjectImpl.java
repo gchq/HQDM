@@ -15,6 +15,7 @@
 package uk.gov.gchq.hqdm.model.impl;
 
 import uk.gov.gchq.hqdm.model.ClassOfOrdinaryFunctionalObject;
+import uk.gov.gchq.hqdm.model.HqdmObject;
 
 /**
  * An implementation of ClassOfOrdinaryFunctionalObject.

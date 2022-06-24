@@ -15,6 +15,7 @@
 package uk.gov.gchq.hqdm.model.impl;
 
 import uk.gov.gchq.hqdm.model.Activity;
+import uk.gov.gchq.hqdm.model.HqdmObject;
 
 /**
  * An implementation of Activity.

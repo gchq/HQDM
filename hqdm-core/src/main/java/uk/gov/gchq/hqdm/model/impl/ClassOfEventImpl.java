@@ -15,6 +15,7 @@
 package uk.gov.gchq.hqdm.model.impl;
 
 import uk.gov.gchq.hqdm.model.ClassOfEvent;
+import uk.gov.gchq.hqdm.model.HqdmObject;
 
 /**
  * An implementation of ClassOfEvent.
