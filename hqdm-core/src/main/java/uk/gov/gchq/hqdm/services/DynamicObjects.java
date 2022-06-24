@@ -25,7 +25,7 @@ import uk.gov.gchq.hqdm.model.impl.ThingImpl;
 import uk.gov.gchq.hqdm.pojo.Top;
 
 /**
- * Services to create dynamic proxies.
+ * Service for creating dynamic proxies.
  */
 public class DynamicObjects {
 
@@ -34,10 +34,10 @@ public class DynamicObjects {
      *
      * @param <T>        The subtypes of {@link Thing} that we want to implement.
      * @param <U>        The subtype of {@link Thing} that we want to return.
-     * @param id         the {@link Thing} id {@link String}
-     * @param returnType the type to cast the return value to.
-     * @param c          the array of classes we need to implement.
-     * @return an object of type U.
+     * @param id         The {@link Thing} id {@link String}
+     * @param returnType The type to cast the return value to.
+     * @param c          The array of classes we need to implement.
+     * @return An object of type U.
      */
     public static <T extends Thing, U extends Thing> U create(final String id, final java.lang.Class<U> returnType,
             final java.lang.Class<T>[] c) {
@@ -50,10 +50,10 @@ public class DynamicObjects {
      *
      * @param <T>        The subtypes of {@link Thing} that we want to implement.
      * @param <U>        The subtype of {@link Thing} that we want to return.
-     * @param t          the {@link Thing} to delegate the interfaces to.
-     * @param returnType the type to cast the return value to.
-     * @param c          the array of classes we need to implement.
-     * @return a U
+     * @param t          The {@link Thing} to delegate the interfaces to.
+     * @param returnType The type to cast the return value to.
+     * @param c          The array of classes we need to implement.
+     * @return A U.
      */
     public static <T extends Thing, U extends Thing> U implementInterfaces(final T t,
             final java.lang.Class<U> returnType, final java.lang.Class<T>[] c) {
@@ -70,16 +70,16 @@ public class DynamicObjects {
      */
     private static class ThingHandler implements InvocationHandler {
 
-        // The methods to be proxied.
+        /** The methods to be proxied. */
         private final Map<String, Method> methods = new HashMap<>();
 
-        // The object to be proxied.
+        /** The object to be proxied. */
         private Object target;
 
         /**
          * Constructor accepting the thing to be proxied.
          *
-         * @param target the Object to be proxied.
+         * @param target The Object to be proxied.
          */
         public ThingHandler(final Object target) {
             this.target = target;

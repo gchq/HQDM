@@ -19,14 +19,14 @@ import uk.gov.gchq.hqdm.model.Class;
 import uk.gov.gchq.hqdm.model.impl.*;
 
 /**
- * Services for creating HQDM Classes.
+ * Service for creating HQDM Classes.
  */
 public class ClassServices {
     /**
      * Create a Class with an String.
      *
-     * @param id the String.
-     * @return a Class instance.
+     * @param id The ID of the Class.
+     * @return A Class instance.
      */
     public static Class createClass(final String id) {
         return new ClassImpl(id);
@@ -35,8 +35,8 @@ public class ClassServices {
     /**
      * Create a ClassOfAbstractObject with an String.
      *
-     * @param id the String.
-     * @return a ClassOfAbstractObject instance.
+     * @param id The ID of the ClassOfAbstractObject.
+     * @return A ClassOfAbstractObject instance.
      */
     public static ClassOfAbstractObject createClassOfAbstractObject(final String id) {
         return new ClassOfAbstractObjectImpl(id);
@@ -45,8 +45,8 @@ public class ClassServices {
     /**
      * Create a ClassOfActivity with an String.
      *
-     * @param id the String.
-     * @return a ClassOfActivity instance.
+     * @param id The ID of the ClassOfActivity.
+     * @return A ClassOfActivity instance.
      */
     public static ClassOfActivity createClassOfActivity(final String id) {
         return new ClassOfActivityImpl(id);
@@ -55,8 +55,8 @@ public class ClassServices {
     /**
      * Create a ClassOfAgreeContract with an String.
      *
-     * @param id the String.
-     * @return a ClassOfAgreeContract instance.
+     * @param id The ID of the ClassOfAgreeContract.
+     * @return A ClassOfAgreeContract instance.
      */
     public static ClassOfAgreeContract createClassOfAgreeContract(final String id) {
         return new ClassOfAgreeContractImpl(id);
@@ -65,8 +65,8 @@ public class ClassServices {
     /**
      * Create a ClassOfAgreementExecution with an String.
      *
-     * @param id the String.
-     * @return a ClassOfAgreementExecution instance.
+     * @param id The ID of the ClassOfAgreementExecution.
+     * @return A ClassOfAgreementExecution instance.
      */
     public static ClassOfAgreementExecution createClassOfAgreementExecution(final String id) {
         return new ClassOfAgreementExecutionImpl(id);
@@ -75,8 +75,8 @@ public class ClassServices {
     /**
      * Create a ClassOfAgreementProcess with an String.
      *
-     * @param id the String.
-     * @return a ClassOfAgreementProcess instance.
+     * @param id The ID of the ClassOfAgreementProcess.
+     * @return A ClassOfAgreementProcess instance.
      */
     public static ClassOfAgreementProcess createClassOfAgreementProcess(final String id) {
         return new ClassOfAgreementProcessImpl(id);
@@ -85,8 +85,8 @@ public class ClassServices {
     /**
      * Create a ClassOfAmountOfMoney with an String.
      *
-     * @param id the String.
-     * @return a ClassOfAmountOfMoney instance.
+     * @param id The ID of the ClassOfAmountOfMoney.
+     * @return A ClassOfAmountOfMoney instance.
      */
     public static ClassOfAmountOfMoney createClassOfAmountOfMoney(final String id) {
         return new ClassOfAmountOfMoneyImpl(id);
@@ -95,8 +95,8 @@ public class ClassServices {
     /**
      * Create a ClassOfAssociation with an String.
      *
-     * @param id the String.
-     * @return a ClassOfAssociation instance.
+     * @param id The ID of the ClassOfAssociation.
+     * @return A ClassOfAssociation instance.
      */
     public static ClassOfAssociation createClassOfAssociation(final String id) {
         return new ClassOfAssociationImpl(id);
@@ -105,8 +105,8 @@ public class ClassServices {
     /**
      * Create a ClassOfBiologicalObject with an String.
      *
-     * @param id the String.
-     * @return a ClassOfBiologicalObject instance.
+     * @param id The ID of the ClassOfBiologicalObject.
+     * @return A ClassOfBiologicalObject instance.
      */
     public static ClassOfBiologicalObject createClassOfBiologicalObject(final String id) {
         return new ClassOfBiologicalObjectImpl(id);
@@ -115,8 +115,8 @@ public class ClassServices {
     /**
      * Create a ClassOfBiologicalSystem with an String.
      *
-     * @param id the String.
-     * @return a ClassOfBiologicalSystem instance.
+     * @param id The ID of the ClassOfBiologicalSystem.
+     * @return A ClassOfBiologicalSystem instance.
      */
     public static ClassOfBiologicalSystem createClassOfBiologicalSystem(final String id) {
         return new ClassOfBiologicalSystemImpl(id);
@@ -125,8 +125,8 @@ public class ClassServices {
     /**
      * Create a ClassOfBiologicalSystemComponent with an String.
      *
-     * @param id the String.
-     * @return a ClassOfBiologicalSystemComponent instance.
+     * @param id The ID of the ClassOfBiologicalSystemComponent.
+     * @return A ClassOfBiologicalSystemComponent instance.
      */
     public static ClassOfBiologicalSystemComponent createClassOfBiologicalSystemComponent(final String id) {
         return new ClassOfBiologicalSystemComponentImpl(id);
@@ -135,8 +135,8 @@ public class ClassServices {
     /**
      * Create a ClassOfClass with an String.
      *
-     * @param id the String.
-     * @return a ClassOfClass instance.
+     * @param id The ID of the ClassOfClass.
+     * @return A ClassOfClass instance.
      */
     public static ClassOfClass createClassOfClass(final String id) {
         return new ClassOfClassImpl(id);
@@ -145,8 +145,8 @@ public class ClassServices {
     /**
      * Create a ClassOfClassOfSpatioTemporalExtent with an String.
      *
-     * @param id the String.
-     * @return a ClassOfClassOfSpatioTemporalExtent instance.
+     * @param id The ID of the ClassOfClassOfSpatioTemporalExtent.
+     * @return A ClassOfClassOfSpatioTemporalExtent instance.
      */
     public static ClassOfClassOfSpatioTemporalExtent createClassOfClassOfSpatioTemporalExtent(final String id) {
         return new ClassOfClassOfSpatioTemporalExtentImpl(id);
@@ -155,8 +155,8 @@ public class ClassServices {
     /**
      * Create a ClassOfContractExecution with an String.
      *
-     * @param id the String.
-     * @return a ClassOfContractExecution instance.
+     * @param id The ID of the ClassOfContractExecution.
+     * @return A ClassOfContractExecution instance.
      */
     public static ClassOfContractExecution createClassOfContractExecution(final String id) {
         return new ClassOfContractExecutionImpl(id);
@@ -165,8 +165,8 @@ public class ClassServices {
     /**
      * Create a ClassOfContractProcess with an String.
      *
-     * @param id the String.
-     * @return a ClassOfContractProcess instance.
+     * @param id The ID of the ClassOfContractProcess.
+     * @return A ClassOfContractProcess instance.
      */
     public static ClassOfContractProcess createClassOfContractProcess(final String id) {
         return new ClassOfContractProcessImpl(id);
@@ -175,8 +175,8 @@ public class ClassServices {
     /**
      * Create a ClassOfEvent with an String.
      *
-     * @param id the String.
-     * @return a ClassOfEvent instance.
+     * @param id The ID of the ClassOfEvent.
+     * @return A ClassOfEvent instance.
      */
     public static ClassOfEvent createClassOfEvent(final String id) {
         return new ClassOfEventImpl(id);
@@ -185,8 +185,8 @@ public class ClassServices {
     /**
      * Create a ClassOfFunctionalObject with an String.
      *
-     * @param id the String.
-     * @return a ClassOfFunctionalObject instance.
+     * @param id The ID of the ClassOfFunctionalObject.
+     * @return A ClassOfFunctionalObject instance.
      */
     public static ClassOfFunctionalObject createClassOfFunctionalObject(final String id) {
         return new ClassOfFunctionalObjectImpl(id);
@@ -195,8 +195,8 @@ public class ClassServices {
     /**
      * Create a ClassOfFunctionalSystem with an String.
      *
-     * @param id the String.
-     * @return a ClassOfFunctionalSystem instance.
+     * @param id The ID of the ClassOfFunctionalSystem.
+     * @return A ClassOfFunctionalSystem instance.
      */
     public static ClassOfFunctionalSystem createClassOfFunctionalSystem(final String id) {
         return new ClassOfFunctionalSystemImpl(id);
@@ -205,8 +205,8 @@ public class ClassServices {
     /**
      * Create a ClassOfFunctionalSystemComponent with an String.
      *
-     * @param id the String.
-     * @return a ClassOfFunctionalSystemComponent instance.
+     * @param id The ID of the ClassOfFunctionalSystemComponent.
+     * @return A ClassOfFunctionalSystemComponent instance.
      */
     public static ClassOfFunctionalSystemComponent createClassOfFunctionalSystemComponent(final String id) {
         return new ClassOfFunctionalSystemComponentImpl(id);
@@ -215,8 +215,8 @@ public class ClassServices {
     /**
      * Create a ClassOfInPlaceBiologicalComponent with an String.
      *
-     * @param id the String.
-     * @return a ClassOfInPlaceBiologicalComponent instance.
+     * @param id The ID of the ClassOfInPlaceBiologicalComponent.
+     * @return A ClassOfInPlaceBiologicalComponent instance.
      */
     public static ClassOfInPlaceBiologicalComponent createClassOfInPlaceBiologicalComponent(final String id) {
         return new ClassOfInPlaceBiologicalComponentImpl(id);
@@ -225,8 +225,8 @@ public class ClassServices {
     /**
      * Create a ClassOfIndividual with an String.
      *
-     * @param id the String.
-     * @return a ClassOfIndividual instance.
+     * @param id The ID of the ClassOfIndividual.
+     * @return A ClassOfIndividual instance.
      */
     public static ClassOfIndividual createClassOfIndividual(final String id) {
         return new ClassOfIndividualImpl(id);
@@ -235,8 +235,8 @@ public class ClassServices {
     /**
      * Create a ClassOfInstalledFunctionalSystemComponent with an String.
      *
-     * @param id the String.
-     * @return a ClassOfInstalledFunctionalSystemComponent instance.
+     * @param id The ID of the ClassOfInstalledFunctionalSystemComponent.
+     * @return A ClassOfInstalledFunctionalSystemComponent instance.
      */
     public static ClassOfInstalledFunctionalSystemComponent createClassOfInstalledFunctionalSystemComponent(
             final String id) {
@@ -246,8 +246,8 @@ public class ClassServices {
     /**
      * Create a ClassOfInstalledObject with an String.
      *
-     * @param id the String.
-     * @return a ClassOfInstalledObject instance.
+     * @param id The ID of the ClassOfInstalledObject.
+     * @return A ClassOfInstalledObject instance.
      */
     public static ClassOfInstalledObject createClassOfInstalledObject(final String id) {
         return new ClassOfInstalledObjectImpl(id);
@@ -256,8 +256,8 @@ public class ClassServices {
     /**
      * Create a ClassOfIntentionallyConstructedObject with an String.
      *
-     * @param id the String.
-     * @return a ClassOfIntentionallyConstructedObject instance.
+     * @param id The ID of the ClassOfIntentionallyConstructedObject.
+     * @return A ClassOfIntentionallyConstructedObject instance.
      */
     public static ClassOfIntentionallyConstructedObject createClassOfIntentionallyConstructedObject(final String id) {
         return new ClassOfIntentionallyConstructedObjectImpl(id);
@@ -266,8 +266,8 @@ public class ClassServices {
     /**
      * Create a ClassOfOffer with an String.
      *
-     * @param id the String.
-     * @return a ClassOfOffer instance.
+     * @param id The ID of the ClassOfOffer.
+     * @return A ClassOfOffer instance.
      */
     public static ClassOfOffer createClassOfOffer(final String id) {
         return new ClassOfOfferImpl(id);
@@ -276,8 +276,8 @@ public class ClassServices {
     /**
      * Create a ClassOfOrdinaryBiologicalObject with an String.
      *
-     * @param id the String.
-     * @return a ClassOfOrdinaryBiologicalObject instance.
+     * @param id The ID of the ClassOfOrdinaryBiologicalObject.
+     * @return A ClassOfOrdinaryBiologicalObject instance.
      */
     public static ClassOfOrdinaryBiologicalObject createClassOfOrdinaryBiologicalObject(final String id) {
         return new ClassOfOrdinaryBiologicalObjectImpl(id);
@@ -286,8 +286,8 @@ public class ClassServices {
     /**
      * Create a ClassOfOrdinaryFunctionalObject with an String.
      *
-     * @param id the String.
-     * @return a ClassOfOrdinaryFunctionalObject instance.
+     * @param id The ID of the ClassOfOrdinaryFunctionalObject.
+     * @return A ClassOfOrdinaryFunctionalObject instance.
      */
     public static ClassOfOrdinaryFunctionalObject createClassOfOrdinaryFunctionalObject(final String id) {
         return new ClassOfOrdinaryFunctionalObjectImpl(id);
@@ -296,8 +296,8 @@ public class ClassServices {
     /**
      * Create a ClassOfOrdinaryPhysicalObject with an String.
      *
-     * @param id the String.
-     * @return a ClassOfOrdinaryPhysicalObject instance.
+     * @param id The ID of the ClassOfOrdinaryPhysicalObject.
+     * @return A ClassOfOrdinaryPhysicalObject instance.
      */
     public static ClassOfOrdinaryPhysicalObject createClassOfOrdinaryPhysicalObject(final String id) {
         return new ClassOfOrdinaryPhysicalObjectImpl(id);
@@ -306,8 +306,8 @@ public class ClassServices {
     /**
      * Create a ClassOfOrganization with an String.
      *
-     * @param id the String.
-     * @return a ClassOfOrganization instance.
+     * @param id The ID of the ClassOfOrganization.
+     * @return A ClassOfOrganization instance.
      */
     public static ClassOfOrganization createClassOfOrganization(final String id) {
         return new ClassOfOrganizationImpl(id);
@@ -316,8 +316,8 @@ public class ClassServices {
     /**
      * Create a ClassOfOrganizationComponent with an String.
      *
-     * @param id the String.
-     * @return a ClassOfOrganizationComponent instance.
+     * @param id The ID of the ClassOfOrganizationComponent.
+     * @return A ClassOfOrganizationComponent instance.
      */
     public static ClassOfOrganizationComponent createClassOfOrganizationComponent(final String id) {
         return new ClassOfOrganizationComponentImpl(id);
@@ -326,8 +326,8 @@ public class ClassServices {
     /**
      * Create a ClassOfParticipant with an String.
      *
-     * @param id the String.
-     * @return a ClassOfParticipant instance.
+     * @param id The ID of the ClassOfParticipant.
+     * @return A ClassOfParticipant instance.
      */
     public static ClassOfParticipant createClassOfParticipant(final String id) {
         return new ClassOfParticipantImpl(id);
@@ -336,8 +336,8 @@ public class ClassServices {
     /**
      * Create a ClassOfParty with an String.
      *
-     * @param id the String.
-     * @return a ClassOfParty instance.
+     * @param id The ID of the ClassOfParty.
+     * @return A ClassOfParty instance.
      */
     public static ClassOfParty createClassOfParty(final String id) {
         return new ClassOfPartyImpl(id);
@@ -346,8 +346,8 @@ public class ClassServices {
     /**
      * Create a ClassOfPeriodOfTime with an String.
      *
-     * @param id the String.
-     * @return a ClassOfPeriodOfTime instance.
+     * @param id The ID of the ClassOfPeriodOfTime.
+     * @return A ClassOfPeriodOfTime instance.
      */
     public static ClassOfPeriodOfTime createClassOfPeriodOfTime(final String id) {
         return new ClassOfPeriodOfTimeImpl(id);
@@ -356,8 +356,8 @@ public class ClassServices {
     /**
      * Create a ClassOfPerson with an String.
      *
-     * @param id the String.
-     * @return a ClassOfPerson instance.
+     * @param id The ID of the ClassOfPerson.
+     * @return A ClassOfPerson instance.
      */
     public static ClassOfPerson createClassOfPerson(final String id) {
         return new ClassOfPersonImpl(id);
@@ -366,8 +366,8 @@ public class ClassServices {
     /**
      * Create a ClassOfPersonInPosition with an String.
      *
-     * @param id the String.
-     * @return a ClassOfPersonInPosition instance.
+     * @param id The ID of the ClassOfPersonInPosition.
+     * @return A ClassOfPersonInPosition instance.
      */
     public static ClassOfPersonInPosition createClassOfPersonInPosition(final String id) {
         return new ClassOfPersonInPositionImpl(id);
@@ -376,8 +376,8 @@ public class ClassServices {
     /**
      * Create a ClassOfPhysicalObject with an String.
      *
-     * @param id the String.
-     * @return a ClassOfPhysicalObject instance.
+     * @param id The ID of the ClassOfPhysicalObject.
+     * @return A ClassOfPhysicalObject instance.
      */
     public static ClassOfPhysicalObject createClassOfPhysicalObject(final String id) {
         return new ClassOfPhysicalObjectImpl(id);
@@ -386,8 +386,8 @@ public class ClassServices {
     /**
      * Create a ClassOfPhysicalProperty with an String.
      *
-     * @param id the String.
-     * @return a ClassOfPhysicalProperty instance.
+     * @param id The ID of the ClassOfPhysicalProperty.
+     * @return A ClassOfPhysicalProperty instance.
      */
     public static ClassOfPhysicalProperty createClassOfPhysicalProperty(final String id) {
         return new ClassOfPhysicalPropertyImpl(id);
@@ -396,8 +396,8 @@ public class ClassServices {
     /**
      * Create a ClassOfPhysicalQuantity with an String.
      *
-     * @param id the String.
-     * @return a ClassOfPhysicalQuantity instance.
+     * @param id The ID of the ClassOfPhysicalQuantity.
+     * @return A ClassOfPhysicalQuantity instance.
      */
     public static ClassOfPhysicalQuantity createClassOfPhysicalQuantity(final String id) {
         return new ClassOfPhysicalQuantityImpl(id);
@@ -406,8 +406,8 @@ public class ClassServices {
     /**
      * Create a ClassOfPointInTime with an String.
      *
-     * @param id the String.
-     * @return a ClassOfPointInTime instance.
+     * @param id The ID of the ClassOfPointInTime.
+     * @return A ClassOfPointInTime instance.
      */
     public static ClassOfPointInTime createClassOfPointInTime(final String id) {
         return new ClassOfPointInTimeImpl(id);
@@ -416,8 +416,8 @@ public class ClassServices {
     /**
      * Create a ClassOfPosition with an String.
      *
-     * @param id the String.
-     * @return a ClassOfPosition instance.
+     * @param id The ID of the ClassOfPosition.
+     * @return A ClassOfPosition instance.
      */
     public static ClassOfPosition createClassOfPosition(final String id) {
         return new ClassOfPositionImpl(id);
@@ -426,8 +426,8 @@ public class ClassServices {
     /**
      * Create a ClassOfPossibleWorld with an String.
      *
-     * @param id the String.
-     * @return a ClassOfPossibleWorld instance.
+     * @param id The ID of the ClassOfPossibleWorld.
+     * @return A ClassOfPossibleWorld instance.
      */
     public static ClassOfPossibleWorld createClassOfPossibleWorld(final String id) {
         return new ClassOfPossibleWorldImpl(id);
@@ -436,8 +436,8 @@ public class ClassServices {
     /**
      * Create a ClassOfReachingAgreement with an String.
      *
-     * @param id the String.
-     * @return a ClassOfReachingAgreement instance.
+     * @param id The ID of the ClassOfReachingAgreement.
+     * @return A ClassOfReachingAgreement instance.
      */
     public static ClassOfReachingAgreement createClassOfReachingAgreement(final String id) {
         return new ClassOfReachingAgreementImpl(id);
@@ -446,8 +446,8 @@ public class ClassServices {
     /**
      * Create a ClassOfRelationship with an String.
      *
-     * @param id the String.
-     * @return a ClassOfRelationship instance.
+     * @param id The ID of the ClassOfRelationship.
+     * @return A ClassOfRelationship instance.
      */
     public static ClassOfRelationship createClassOfRelationship(final String id) {
         return new ClassOfRelationshipImpl(id);
@@ -456,8 +456,8 @@ public class ClassServices {
     /**
      * Create a ClassOfRepresentation with an String.
      *
-     * @param id the String.
-     * @return a ClassOfRepresentation instance.
+     * @param id The ID of the ClassOfRepresentation.
+     * @return A ClassOfRepresentation instance.
      */
     public static ClassOfRepresentation createClassOfRepresentation(final String id) {
         return new ClassOfRepresentationImpl(id);
@@ -466,8 +466,8 @@ public class ClassServices {
     /**
      * Create a ClassOfSalesProductInstance with an String.
      *
-     * @param id the String.
-     * @return a ClassOfSalesProductInstance instance.
+     * @param id The ID of the ClassOfSalesProductInstance.
+     * @return A ClassOfSalesProductInstance instance.
      */
     public static ClassOfSalesProductInstance createClassOfSalesProductInstance(final String id) {
         return new ClassOfSalesProductInstanceImpl(id);
@@ -476,8 +476,8 @@ public class ClassServices {
     /**
      * Create a ClassOfSign with an String.
      *
-     * @param id the String.
-     * @return a ClassOfSign instance.
+     * @param id The ID of the ClassOfSign.
+     * @return A ClassOfSign instance.
      */
     public static ClassOfSign createClassOfSign(final String id) {
         return new ClassOfSignImpl(id);
@@ -486,8 +486,8 @@ public class ClassServices {
     /**
      * Create a ClassOfSociallyConstructedActivity with an String.
      *
-     * @param id the String.
-     * @return a ClassOfSociallyConstructedActivity instance.
+     * @param id The ID of the ClassOfSociallyConstructedActivity.
+     * @return A ClassOfSociallyConstructedActivity instance.
      */
     public static ClassOfSociallyConstructedActivity createClassOfSociallyConstructedActivity(final String id) {
         return new ClassOfSociallyConstructedActivityImpl(id);
@@ -496,8 +496,8 @@ public class ClassServices {
     /**
      * Create a ClassOfSociallyConstructedObject with an String.
      *
-     * @param id the String.
-     * @return a ClassOfSociallyConstructedObject instance.
+     * @param id The ID of the ClassOfSociallyConstructedObject.
+     * @return A ClassOfSociallyConstructedObject instance.
      */
     public static ClassOfSociallyConstructedObject createClassOfSociallyConstructedObject(final String id) {
         return new ClassOfSociallyConstructedObjectImpl(id);
@@ -506,8 +506,8 @@ public class ClassServices {
     /**
      * Create a ClassOfSpatioTemporalExtent with an String.
      *
-     * @param id the String.
-     * @return a ClassOfSpatioTemporalExtent instance.
+     * @param id The ID of the ClassOfSpatioTemporalExtent.
+     * @return A ClassOfSpatioTemporalExtent instance.
      */
     public static ClassOfSpatioTemporalExtent createClassOfSpatioTemporalExtent(final String id) {
         return new ClassOfSpatioTemporalExtentImpl(id);
@@ -516,8 +516,8 @@ public class ClassServices {
     /**
      * Create a ClassOfState with an String.
      *
-     * @param id the String.
-     * @return a ClassOfState instance.
+     * @param id The ID of the ClassOfState.
+     * @return A ClassOfState instance.
      */
     public static ClassOfState createClassOfState(final String id) {
         return new ClassOfStateImpl(id);
@@ -526,8 +526,8 @@ public class ClassServices {
     /**
      * Create a ClassOfStateOfActivity with an String.
      *
-     * @param id the String.
-     * @return a ClassOfStateOfActivity instance.
+     * @param id The ID of the ClassOfStateOfActivity.
+     * @return A ClassOfStateOfActivity instance.
      */
     public static ClassOfStateOfActivity createClassOfStateOfActivity(final String id) {
         return new ClassOfStateOfActivityImpl(id);
@@ -536,8 +536,8 @@ public class ClassServices {
     /**
      * Create a ClassOfStateOfAmountOfMoney with an String.
      *
-     * @param id the String.
-     * @return a ClassOfStateOfAmountOfMoney instance.
+     * @param id The ID of the ClassOfStateOfAmountOfMoney.
+     * @return A ClassOfStateOfAmountOfMoney instance.
      */
     public static ClassOfStateOfAmountOfMoney createClassOfStateOfAmountOfMoney(final String id) {
         return new ClassOfStateOfAmountOfMoneyImpl(id);
@@ -546,8 +546,8 @@ public class ClassServices {
     /**
      * Create a ClassOfStateOfAssociation with an String.
      *
-     * @param id the String.
-     * @return a ClassOfStateOfAssociation instance.
+     * @param id The ID of the ClassOfStateOfAssociation.
+     * @return A ClassOfStateOfAssociation instance.
      */
     public static ClassOfStateOfAssociation createClassOfStateOfAssociation(final String id) {
         return new ClassOfStateOfAssociationImpl(id);
@@ -556,8 +556,8 @@ public class ClassServices {
     /**
      * Create a ClassOfStateOfBiologicalObject with an String.
      *
-     * @param id the String.
-     * @return a ClassOfStateOfBiologicalObject instance.
+     * @param id The ID of the ClassOfStateOfBiologicalObject.
+     * @return A ClassOfStateOfBiologicalObject instance.
      */
     public static ClassOfStateOfBiologicalObject createClassOfStateOfBiologicalObject(final String id) {
         return new ClassOfStateOfBiologicalObjectImpl(id);
@@ -566,8 +566,8 @@ public class ClassServices {
     /**
      * Create a ClassOfStateOfBiologicalSystem with an String.
      *
-     * @param id the String.
-     * @return a ClassOfStateOfBiologicalSystem instance.
+     * @param id The ID of the ClassOfStateOfBiologicalSystem.
+     * @return A ClassOfStateOfBiologicalSystem instance.
      */
     public static ClassOfStateOfBiologicalSystem createClassOfStateOfBiologicalSystem(final String id) {
         return new ClassOfStateOfBiologicalSystemImpl(id);
@@ -576,8 +576,8 @@ public class ClassServices {
     /**
      * Create a ClassOfStateOfBiologicalSystemComponent with an String.
      *
-     * @param id the String.
-     * @return a ClassOfStateOfBiologicalSystemComponent instance.
+     * @param id The ID of the ClassOfStateOfBiologicalSystemComponent.
+     * @return A ClassOfStateOfBiologicalSystemComponent instance.
      */
     public static ClassOfStateOfBiologicalSystemComponent createClassOfStateOfBiologicalSystemComponent(
             final String id) {
@@ -587,8 +587,8 @@ public class ClassServices {
     /**
      * Create a ClassOfStateOfFunctionalObject with an String.
      *
-     * @param id the String.
-     * @return a ClassOfStateOfFunctionalObject instance.
+     * @param id The ID of the ClassOfStateOfFunctionalObject.
+     * @return A ClassOfStateOfFunctionalObject instance.
      */
     public static ClassOfStateOfFunctionalObject createClassOfStateOfFunctionalObject(final String id) {
         return new ClassOfStateOfFunctionalObjectImpl(id);
@@ -597,8 +597,8 @@ public class ClassServices {
     /**
      * Create a ClassOfStateOfFunctionalSystem with an String.
      *
-     * @param id the String.
-     * @return a ClassOfStateOfFunctionalSystem instance.
+     * @param id The ID of the ClassOfStateOfFunctionalSystem.
+     * @return A ClassOfStateOfFunctionalSystem instance.
      */
     public static ClassOfStateOfFunctionalSystem createClassOfStateOfFunctionalSystem(final String id) {
         return new ClassOfStateOfFunctionalSystemImpl(id);
@@ -607,8 +607,8 @@ public class ClassServices {
     /**
      * Create a ClassOfStateOfFunctionalSystemComponent with an String.
      *
-     * @param id the String.
-     * @return a ClassOfStateOfFunctionalSystemComponent instance.
+     * @param id The ID of the ClassOfStateOfFunctionalSystemComponent.
+     * @return A ClassOfStateOfFunctionalSystemComponent instance.
      */
     public static ClassOfStateOfFunctionalSystemComponent createClassOfStateOfFunctionalSystemComponent(
             final String id) {
@@ -618,8 +618,8 @@ public class ClassServices {
     /**
      * Create a ClassOfStateOfIntentionallyConstructedObject with an String.
      *
-     * @param id the String.
-     * @return a ClassOfStateOfIntentionallyConstructedObject instance.
+     * @param id The ID of the ClassOfStateOfIntentionallyConstructedObject.
+     * @return A ClassOfStateOfIntentionallyConstructedObject instance.
      */
     public static ClassOfStateOfIntentionallyConstructedObject createClassOfStateOfIntentionallyConstructedObject(
             final String id) {
@@ -629,8 +629,8 @@ public class ClassServices {
     /**
      * Create a ClassOfStateOfOrdinaryBiologicalObject with an String.
      *
-     * @param id the String.
-     * @return a ClassOfStateOfOrdinaryBiologicalObject instance.
+     * @param id The ID of the ClassOfStateOfOrdinaryBiologicalObject.
+     * @return A ClassOfStateOfOrdinaryBiologicalObject instance.
      */
     public static ClassOfStateOfOrdinaryBiologicalObject createClassOfStateOfOrdinaryBiologicalObject(final String id) {
         return new ClassOfStateOfOrdinaryBiologicalObjectImpl(id);
@@ -639,8 +639,8 @@ public class ClassServices {
     /**
      * Create a ClassOfStateOfOrdinaryFunctionalObject with an String.
      *
-     * @param id the String.
-     * @return a ClassOfStateOfOrdinaryFunctionalObject instance.
+     * @param id The ID of the ClassOfStateOfOrdinaryFunctionalObject.
+     * @return A ClassOfStateOfOrdinaryFunctionalObject instance.
      */
     public static ClassOfStateOfOrdinaryFunctionalObject createClassOfStateOfOrdinaryFunctionalObject(final String id) {
         return new ClassOfStateOfOrdinaryFunctionalObjectImpl(id);
@@ -649,8 +649,8 @@ public class ClassServices {
     /**
      * Create a ClassOfStateOfOrdinaryPhysicalObject with an String.
      *
-     * @param id the String.
-     * @return a ClassOfStateOfOrdinaryPhysicalObject instance.
+     * @param id The ID of the ClassOfStateOfOrdinaryPhysicalObject.
+     * @return A ClassOfStateOfOrdinaryPhysicalObject instance.
      */
     public static ClassOfStateOfOrdinaryPhysicalObject createClassOfStateOfOrdinaryPhysicalObject(final String id) {
         return new ClassOfStateOfOrdinaryPhysicalObjectImpl(id);
@@ -659,8 +659,8 @@ public class ClassServices {
     /**
      * Create a ClassOfStateOfOrganization with an String.
      *
-     * @param id the String.
-     * @return a ClassOfStateOfOrganization instance.
+     * @param id The ID of the ClassOfStateOfOrganization.
+     * @return A ClassOfStateOfOrganization instance.
      */
     public static ClassOfStateOfOrganization createClassOfStateOfOrganization(final String id) {
         return new ClassOfStateOfOrganizationImpl(id);
@@ -669,8 +669,8 @@ public class ClassServices {
     /**
      * Create a ClassOfStateOfOrganizationComponent with an String.
      *
-     * @param id the String.
-     * @return a ClassOfStateOfOrganizationComponent instance.
+     * @param id The ID of the ClassOfStateOfOrganizationComponent.
+     * @return A ClassOfStateOfOrganizationComponent instance.
      */
     public static ClassOfStateOfOrganizationComponent createClassOfStateOfOrganizationComponent(final String id) {
         return new ClassOfStateOfOrganizationComponentImpl(id);
@@ -679,8 +679,8 @@ public class ClassServices {
     /**
      * Create a ClassOfStateOfParty with an String.
      *
-     * @param id the String.
-     * @return a ClassOfStateOfParty instance.
+     * @param id The ID of the ClassOfStateOfParty.
+     * @return A ClassOfStateOfParty instance.
      */
     public static ClassOfStateOfParty createClassOfStateOfParty(final String id) {
         return new ClassOfStateOfPartyImpl(id);
@@ -689,8 +689,8 @@ public class ClassServices {
     /**
      * Create a ClassOfStateOfPerson with an String.
      *
-     * @param id the String.
-     * @return a ClassOfStateOfPerson instance.
+     * @param id The ID of the ClassOfStateOfPerson.
+     * @return A ClassOfStateOfPerson instance.
      */
     public static ClassOfStateOfPerson createClassOfStateOfPerson(final String id) {
         return new ClassOfStateOfPersonImpl(id);
@@ -699,8 +699,8 @@ public class ClassServices {
     /**
      * Create a ClassOfStateOfPhysicalObject with an String.
      *
-     * @param id the String.
-     * @return a ClassOfStateOfPhysicalObject instance.
+     * @param id The ID of the ClassOfStateOfPhysicalObject.
+     * @return A ClassOfStateOfPhysicalObject instance.
      */
     public static ClassOfStateOfPhysicalObject createClassOfStateOfPhysicalObject(final String id) {
         return new ClassOfStateOfPhysicalObjectImpl(id);
@@ -709,8 +709,8 @@ public class ClassServices {
     /**
      * Create a ClassOfStateOfPosition with an String.
      *
-     * @param id the String.
-     * @return a ClassOfStateOfPosition instance.
+     * @param id The ID of the ClassOfStateOfPosition.
+     * @return A ClassOfStateOfPosition instance.
      */
     public static ClassOfStateOfPosition createClassOfStateOfPosition(final String id) {
         return new ClassOfStateOfPositionImpl(id);
@@ -719,8 +719,8 @@ public class ClassServices {
     /**
      * Create a ClassOfStateOfSalesProductInstance with an String.
      *
-     * @param id the String.
-     * @return a ClassOfStateOfSalesProductInstance instance.
+     * @param id The ID of the ClassOfStateOfSalesProductInstance.
+     * @return A ClassOfStateOfSalesProductInstance instance.
      */
     public static ClassOfStateOfSalesProductInstance createClassOfStateOfSalesProductInstance(final String id) {
         return new ClassOfStateOfSalesProductInstanceImpl(id);
@@ -729,8 +729,8 @@ public class ClassServices {
     /**
      * Create a ClassOfStateOfSign with an String.
      *
-     * @param id the String.
-     * @return a ClassOfStateOfSign instance.
+     * @param id The ID of the ClassOfStateOfSign.
+     * @return A ClassOfStateOfSign instance.
      */
     public static ClassOfStateOfSign createClassOfStateOfSign(final String id) {
         return new ClassOfStateOfSignImpl(id);
@@ -739,8 +739,8 @@ public class ClassServices {
     /**
      * Create a ClassOfStateOfSociallyConstructedActivity with an String.
      *
-     * @param id the String.
-     * @return a ClassOfStateOfSociallyConstructedActivity instance.
+     * @param id The ID of the ClassOfStateOfSociallyConstructedActivity.
+     * @return A ClassOfStateOfSociallyConstructedActivity instance.
      */
     public static ClassOfStateOfSociallyConstructedActivity createClassOfStateOfSociallyConstructedActivity(
             final String id) {
@@ -750,8 +750,8 @@ public class ClassServices {
     /**
      * Create a ClassOfStateOfSociallyConstructedObject with an String.
      *
-     * @param id the String.
-     * @return a ClassOfStateOfSociallyConstructedObject instance.
+     * @param id The ID of the ClassOfStateOfSociallyConstructedObject.
+     * @return A ClassOfStateOfSociallyConstructedObject instance.
      */
     public static ClassOfStateOfSociallyConstructedObject createClassOfStateOfSociallyConstructedObject(
             final String id) {
@@ -761,8 +761,8 @@ public class ClassServices {
     /**
      * Create a ClassOfStateOfSystem with an String.
      *
-     * @param id the String.
-     * @return a ClassOfStateOfSystem instance.
+     * @param id The ID of the ClassOfStateOfSystem.
+     * @return A ClassOfStateOfSystem instance.
      */
     public static ClassOfStateOfSystem createClassOfStateOfSystem(final String id) {
         return new ClassOfStateOfSystemImpl(id);
@@ -771,8 +771,8 @@ public class ClassServices {
     /**
      * Create a ClassOfStateOfSystemComponent with an String.
      *
-     * @param id the String.
-     * @return a ClassOfStateOfSystemComponent instance.
+     * @param id The ID of the ClassOfStateOfSystemComponent.
+     * @return A ClassOfStateOfSystemComponent instance.
      */
     public static ClassOfStateOfSystemComponent createClassOfStateOfSystemComponent(final String id) {
         return new ClassOfStateOfSystemComponentImpl(id);
@@ -781,8 +781,8 @@ public class ClassServices {
     /**
      * Create a ClassOfSystem with an String.
      *
-     * @param id the String.
-     * @return a ClassOfSystem instance.
+     * @param id The ID of the ClassOfSystem.
+     * @return A ClassOfSystem instance.
      */
     public static ClassOfSystem createClassOfSystem(final String id) {
         return new ClassOfSystemImpl(id);
@@ -791,8 +791,8 @@ public class ClassServices {
     /**
      * Create a ClassOfSystemComponent with an String.
      *
-     * @param id the String.
-     * @return a ClassOfSystemComponent instance.
+     * @param id The ID of the ClassOfSystemComponent.
+     * @return A ClassOfSystemComponent instance.
      */
     public static ClassOfSystemComponent createClassOfSystemComponent(final String id) {
         return new ClassOfSystemComponentImpl(id);
@@ -801,8 +801,8 @@ public class ClassServices {
     /**
      * Create a KindOfActivity with an String.
      *
-     * @param id the String.
-     * @return a KindOfActivity instance.
+     * @param id The ID of the KindOfActivity.
+     * @return A KindOfActivity instance.
      */
     public static KindOfActivity createKindOfActivity(final String id) {
         return new KindOfActivityImpl(id);
@@ -811,8 +811,8 @@ public class ClassServices {
     /**
      * Create a KindOfAssociation with an String.
      *
-     * @param id the String.
-     * @return a KindOfAssociation instance.
+     * @param id The ID of the KindOfAssociation.
+     * @return A KindOfAssociation instance.
      */
     public static KindOfAssociation createKindOfAssociation(final String id) {
         return new KindOfAssociationImpl(id);
@@ -821,8 +821,8 @@ public class ClassServices {
     /**
      * Create a KindOfBiologicalObject with an String.
      *
-     * @param id the String.
-     * @return a KindOfBiologicalObject instance.
+     * @param id The ID of the KindOfBiologicalObject.
+     * @return A KindOfBiologicalObject instance.
      */
     public static KindOfBiologicalObject createKindOfBiologicalObject(final String id) {
         return new KindOfBiologicalObjectImpl(id);
@@ -831,8 +831,8 @@ public class ClassServices {
     /**
      * Create a KindOfBiologicalSystem with an String.
      *
-     * @param id the String.
-     * @return a KindOfBiologicalSystem instance.
+     * @param id The ID of the KindOfBiologicalSystem.
+     * @return A KindOfBiologicalSystem instance.
      */
     public static KindOfBiologicalSystem createKindOfBiologicalSystem(final String id) {
         return new KindOfBiologicalSystemImpl(id);
@@ -841,8 +841,8 @@ public class ClassServices {
     /**
      * Create a KindOfBiologicalSystemComponent with an String.
      *
-     * @param id the String.
-     * @return a KindOfBiologicalSystemComponent instance.
+     * @param id The ID of the KindOfBiologicalSystemComponent.
+     * @return A KindOfBiologicalSystemComponent instance.
      */
     public static KindOfBiologicalSystemComponent createKindOfBiologicalSystemComponent(final String id) {
         return new KindOfBiologicalSystemComponentImpl(id);
@@ -851,8 +851,8 @@ public class ClassServices {
     /**
      * Create a KindOfFunctionalObject with an String.
      *
-     * @param id the String.
-     * @return a KindOfFunctionalObject instance.
+     * @param id The ID of the KindOfFunctionalObject.
+     * @return A KindOfFunctionalObject instance.
      */
     public static KindOfFunctionalObject createKindOfFunctionalObject(final String id) {
         return new KindOfFunctionalObjectImpl(id);
@@ -861,8 +861,8 @@ public class ClassServices {
     /**
      * Create a KindOfFunctionalSystem with an String.
      *
-     * @param id the String.
-     * @return a KindOfFunctionalSystem instance.
+     * @param id The ID of the KindOfFunctionalSystem.
+     * @return A KindOfFunctionalSystem instance.
      */
     public static KindOfFunctionalSystem createKindOfFunctionalSystem(final String id) {
         return new KindOfFunctionalSystemImpl(id);
@@ -871,8 +871,8 @@ public class ClassServices {
     /**
      * Create a KindOfFunctionalSystemComponent with an String.
      *
-     * @param id the String.
-     * @return a KindOfFunctionalSystemComponent instance.
+     * @param id The ID of the KindOfFunctionalSystemComponent.
+     * @return A KindOfFunctionalSystemComponent instance.
      */
     public static KindOfFunctionalSystemComponent createKindOfFunctionalSystemComponent(final String id) {
         return new KindOfFunctionalSystemComponentImpl(id);
@@ -881,8 +881,8 @@ public class ClassServices {
     /**
      * Create a KindOfIndividual with an String.
      *
-     * @param id the String.
-     * @return a KindOfIndividual instance.
+     * @param id The ID of the KindOfIndividual.
+     * @return A KindOfIndividual instance.
      */
     public static KindOfIndividual createKindOfIndividual(final String id) {
         return new KindOfIndividualImpl(id);
@@ -891,8 +891,8 @@ public class ClassServices {
     /**
      * Create a KindOfIntentionallyConstructedObject with an String.
      *
-     * @param id the String.
-     * @return a KindOfIntentionallyConstructedObject instance.
+     * @param id The ID of the KindOfIntentionallyConstructedObject.
+     * @return A KindOfIntentionallyConstructedObject instance.
      */
     public static KindOfIntentionallyConstructedObject createKindOfIntentionallyConstructedObject(final String id) {
         return new KindOfIntentionallyConstructedObjectImpl(id);
@@ -901,8 +901,8 @@ public class ClassServices {
     /**
      * Create a KindOfOrdinaryBiologicalObject with an String.
      *
-     * @param id the String.
-     * @return a KindOfOrdinaryBiologicalObject instance.
+     * @param id The ID of the KindOfOrdinaryBiologicalObject.
+     * @return A KindOfOrdinaryBiologicalObject instance.
      */
     public static KindOfOrdinaryBiologicalObject createKindOfOrdinaryBiologicalObject(final String id) {
         return new KindOfOrdinaryBiologicalObjectImpl(id);
@@ -911,8 +911,8 @@ public class ClassServices {
     /**
      * Create a KindOfOrdinaryFunctionalObject with an String.
      *
-     * @param id the String.
-     * @return a KindOfOrdinaryFunctionalObject instance.
+     * @param id The ID of the KindOfOrdinaryFunctionalObject.
+     * @return A KindOfOrdinaryFunctionalObject instance.
      */
     public static KindOfOrdinaryFunctionalObject createKindOfOrdinaryFunctionalObject(final String id) {
         return new KindOfOrdinaryFunctionalObjectImpl(id);
@@ -921,8 +921,8 @@ public class ClassServices {
     /**
      * Create a KindOfOrdinaryPhysicalObject with an String.
      *
-     * @param id the String.
-     * @return a KindOfOrdinaryPhysicalObject instance.
+     * @param id The ID of the KindOfOrdinaryPhysicalObject.
+     * @return A KindOfOrdinaryPhysicalObject instance.
      */
     public static KindOfOrdinaryPhysicalObject createKindOfOrdinaryPhysicalObject(final String id) {
         return new KindOfOrdinaryPhysicalObjectImpl(id);
@@ -931,8 +931,8 @@ public class ClassServices {
     /**
      * Create a KindOfOrganization with an String.
      *
-     * @param id the String.
-     * @return a KindOfOrganization instance.
+     * @param id The ID of the KindOfOrganization.
+     * @return A KindOfOrganization instance.
      */
     public static KindOfOrganization createKindOfOrganization(final String id) {
         return new KindOfOrganizationImpl(id);
@@ -941,8 +941,8 @@ public class ClassServices {
     /**
      * Create a KindOfOrganizationComponent with an String.
      *
-     * @param id the String.
-     * @return a KindOfOrganizationComponent instance.
+     * @param id The ID of the KindOfOrganizationComponent.
+     * @return A KindOfOrganizationComponent instance.
      */
     public static KindOfOrganizationComponent createKindOfOrganizationComponent(final String id) {
         return new KindOfOrganizationComponentImpl(id);
@@ -951,8 +951,8 @@ public class ClassServices {
     /**
      * Create a KindOfParty with an String.
      *
-     * @param id the String.
-     * @return a KindOfParty instance.
+     * @param id The ID of the KindOfParty.
+     * @return A KindOfParty instance.
      */
     public static KindOfParty createKindOfParty(final String id) {
         return new KindOfPartyImpl(id);
@@ -961,8 +961,8 @@ public class ClassServices {
     /**
      * Create a KindOfPerson with an String.
      *
-     * @param id the String.
-     * @return a KindOfPerson instance.
+     * @param id The ID of the KindOfPerson.
+     * @return A KindOfPerson instance.
      */
     public static KindOfPerson createKindOfPerson(final String id) {
         return new KindOfPersonImpl(id);
@@ -971,8 +971,8 @@ public class ClassServices {
     /**
      * Create a KindOfPhysicalObject with an String.
      *
-     * @param id the String.
-     * @return a KindOfPhysicalObject instance.
+     * @param id The ID of the KindOfPhysicalObject.
+     * @return A KindOfPhysicalObject instance.
      */
     public static KindOfPhysicalObject createKindOfPhysicalObject(final String id) {
         return new KindOfPhysicalObjectImpl(id);
@@ -981,8 +981,8 @@ public class ClassServices {
     /**
      * Create a KindOfPhysicalProperty with an String.
      *
-     * @param id the String.
-     * @return a KindOfPhysicalProperty instance.
+     * @param id The ID of the KindOfPhysicalProperty.
+     * @return A KindOfPhysicalProperty instance.
      */
     public static KindOfPhysicalProperty createKindOfPhysicalProperty(final String id) {
         return new KindOfPhysicalPropertyImpl(id);
@@ -991,8 +991,8 @@ public class ClassServices {
     /**
      * Create a KindOfPhysicalQuantity with an String.
      *
-     * @param id the String.
-     * @return a KindOfPhysicalQuantity instance.
+     * @param id The ID of the KindOfPhysicalQuantity.
+     * @return A KindOfPhysicalQuantity instance.
      */
     public static KindOfPhysicalQuantity createKindOfPhysicalQuantity(final String id) {
         return new KindOfPhysicalQuantityImpl(id);
@@ -1001,8 +1001,8 @@ public class ClassServices {
     /**
      * Create a KindOfPosition with an String.
      *
-     * @param id the String.
-     * @return a KindOfPosition instance.
+     * @param id The ID of the KindOfPosition.
+     * @return A KindOfPosition instance.
      */
     public static KindOfPosition createKindOfPosition(final String id) {
         return new KindOfPositionImpl(id);
@@ -1011,8 +1011,8 @@ public class ClassServices {
     /**
      * Create a KindOfRelationshipWithRestriction with an String.
      *
-     * @param id the String.
-     * @return a KindOfRelationshipWithRestriction instance.
+     * @param id The ID of the KindOfRelationshipWithRestriction.
+     * @return A KindOfRelationshipWithRestriction instance.
      */
     public static KindOfRelationshipWithRestriction createKindOfRelationshipWithRestriction(final String id) {
         return new KindOfRelationshipWithRestrictionImpl(id);
@@ -1021,8 +1021,8 @@ public class ClassServices {
     /**
      * Create a KindOfRelationshipWithSignature with an String.
      *
-     * @param id the String.
-     * @return a KindOfRelationshipWithSignature instance.
+     * @param id The ID of the KindOfRelationshipWithSignature.
+     * @return A KindOfRelationshipWithSignature instance.
      */
     public static KindOfRelationshipWithSignature createKindOfRelationshipWithSignature(final String id) {
         return new KindOfRelationshipWithSignatureImpl(id);
@@ -1031,8 +1031,8 @@ public class ClassServices {
     /**
      * Create a KindOfSociallyConstructedObject with an String.
      *
-     * @param id the String.
-     * @return a KindOfSociallyConstructedObject instance.
+     * @param id The ID of the KindOfSociallyConstructedObject.
+     * @return A KindOfSociallyConstructedObject instance.
      */
     public static KindOfSociallyConstructedObject createKindOfSociallyConstructedObject(final String id) {
         return new KindOfSociallyConstructedObjectImpl(id);
@@ -1041,8 +1041,8 @@ public class ClassServices {
     /**
      * Create a KindOfSystem with an String.
      *
-     * @param id the String.
-     * @return a KindOfSystem instance.
+     * @param id The ID of the KindOfSystem.
+     * @return A KindOfSystem instance.
      */
     public static KindOfSystem createKindOfSystem(final String id) {
         return new KindOfSystemImpl(id);
@@ -1051,8 +1051,8 @@ public class ClassServices {
     /**
      * Create a KindOfSystemComponent with an String.
      *
-     * @param id the String.
-     * @return a KindOfSystemComponent instance.
+     * @param id The ID of the KindOfSystemComponent.
+     * @return A KindOfSystemComponent instance.
      */
     public static KindOfSystemComponent createKindOfSystemComponent(final String id) {
         return new KindOfSystemComponentImpl(id);
@@ -1061,8 +1061,8 @@ public class ClassServices {
     /**
      * Create a Role with an String.
      *
-     * @param id the String.
-     * @return a Role instance.
+     * @param id The ID of the Role.
+     * @return A Role instance.
      */
     public static Role createRole(final String id) {
         return new RoleImpl(id);

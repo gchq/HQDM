@@ -25,8 +25,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a AbstractObject with an String.
      *
-     * @param id the String.
-     * @return a AbstractObject instance.
+     * @param id The ID of the AbstractObject.
+     * @return A AbstractObject instance.
      */
     public static AbstractObject createAbstractObject(final String id) {
         return new AbstractObjectImpl(id);
@@ -35,8 +35,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a AcceptanceOfOffer with an String.
      *
-     * @param id the String.
-     * @return a AcceptanceOfOffer instance.
+     * @param id The ID of the AcceptanceOfOffer.
+     * @return A AcceptanceOfOffer instance.
      */
     public static AcceptanceOfOffer createAcceptanceOfOffer(final String id) {
         return new AcceptanceOfOfferImpl(id);
@@ -45,8 +45,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a AcceptanceOfOfferForGoods with an String.
      *
-     * @param id the String.
-     * @return a AcceptanceOfOfferForGoods instance.
+     * @param id The ID of the AcceptanceOfOfferForGoods.
+     * @return A AcceptanceOfOfferForGoods instance.
      */
     public static AcceptanceOfOfferForGoods createAcceptanceOfOfferForGoods(final String id) {
         return new AcceptanceOfOfferForGoodsImpl(id);
@@ -55,8 +55,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a Activity with an String.
      *
-     * @param id the String.
-     * @return a Activity instance.
+     * @param id The ID of the Activity.
+     * @return A Activity instance.
      */
     public static Activity createActivity(final String id) {
         return new ActivityImpl(id);
@@ -65,8 +65,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a AgreeContract with an String.
      *
-     * @param id the String.
-     * @return a AgreeContract instance.
+     * @param id The ID of the AgreeContract.
+     * @return A AgreeContract instance.
      */
     public static AgreeContract createAgreeContract(final String id) {
         return new AgreeContractImpl(id);
@@ -75,8 +75,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a AgreementExecution with an String.
      *
-     * @param id the String.
-     * @return a AgreementExecution instance.
+     * @param id The ID of the AgreementExecution.
+     * @return A AgreementExecution instance.
      */
     public static AgreementExecution createAgreementExecution(final String id) {
         return new AgreementExecutionImpl(id);
@@ -85,8 +85,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a AgreementProcess with an String.
      *
-     * @param id the String.
-     * @return a AgreementProcess instance.
+     * @param id The ID of the AgreementProcess.
+     * @return A AgreementProcess instance.
      */
     public static AgreementProcess createAgreementProcess(final String id) {
         return new AgreementProcessImpl(id);
@@ -95,8 +95,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a AmountOfMoney with an String.
      *
-     * @param id the String.
-     * @return a AmountOfMoney instance.
+     * @param id The ID of the AmountOfMoney.
+     * @return A AmountOfMoney instance.
      */
     public static AmountOfMoney createAmountOfMoney(final String id) {
         return new AmountOfMoneyImpl(id);
@@ -105,8 +105,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a Asset with an String.
      *
-     * @param id the String.
-     * @return a Asset instance.
+     * @param id The ID of the Asset.
+     * @return A Asset instance.
      */
     public static Asset createAsset(final String id) {
         return new AssetImpl(id);
@@ -115,8 +115,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a Association with an String.
      *
-     * @param id the String.
-     * @return a Association instance.
+     * @param id The ID of the Association.
+     * @return A Association instance.
      */
     public static Association createAssociation(final String id) {
         return new AssociationImpl(id);
@@ -125,8 +125,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a BeginningOfOwnership with an String.
      *
-     * @param id the String.
-     * @return a BeginningOfOwnership instance.
+     * @param id The ID of the BeginningOfOwnership.
+     * @return A BeginningOfOwnership instance.
      */
     public static BeginningOfOwnership createBeginningOfOwnership(final String id) {
         return new BeginningOfOwnershipImpl(id);
@@ -135,8 +135,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a BiologicalObject with an String.
      *
-     * @param id the String.
-     * @return a BiologicalObject instance.
+     * @param id The ID of the BiologicalObject.
+     * @return A BiologicalObject instance.
      */
     public static BiologicalObject createBiologicalObject(final String id) {
         return new BiologicalObjectImpl(id);
@@ -145,8 +145,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a BiologicalSystem with an String.
      *
-     * @param id the String.
-     * @return a BiologicalSystem instance.
+     * @param id The ID of the BiologicalSystem.
+     * @return A BiologicalSystem instance.
      */
     public static BiologicalSystem createBiologicalSystem(final String id) {
         return new BiologicalSystemImpl(id);
@@ -155,8 +155,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a BiologicalSystemComponent with an String.
      *
-     * @param id the String.
-     * @return a BiologicalSystemComponent instance.
+     * @param id The ID of the BiologicalSystemComponent.
+     * @return A BiologicalSystemComponent instance.
      */
     public static BiologicalSystemComponent createBiologicalSystemComponent(final String id) {
         return new BiologicalSystemComponentImpl(id);
@@ -165,8 +165,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a ContractExecution with an String.
      *
-     * @param id the String.
-     * @return a ContractExecution instance.
+     * @param id The ID of the ContractExecution.
+     * @return A ContractExecution instance.
      */
     public static ContractExecution createContractExecution(final String id) {
         return new ContractExecutionImpl(id);
@@ -175,8 +175,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a ContractProcess with an String.
      *
-     * @param id the String.
-     * @return a ContractProcess instance.
+     * @param id The ID of the ContractProcess.
+     * @return A ContractProcess instance.
      */
     public static ContractProcess createContractProcess(final String id) {
         return new ContractProcessImpl(id);
@@ -185,8 +185,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a Currency with an String.
      *
-     * @param id the String.
-     * @return a Currency instance.
+     * @param id The ID of the Currency.
+     * @return A Currency instance.
      */
     public static Currency createCurrency(final String id) {
         return new CurrencyImpl(id);
@@ -195,8 +195,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a Definition with an String.
      *
-     * @param id the String.
-     * @return a Definition instance.
+     * @param id The ID of the Definition.
+     * @return A Definition instance.
      */
     public static Definition createDefinition(final String id) {
         return new DefinitionImpl(id);
@@ -205,8 +205,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a Description with an String.
      *
-     * @param id the String.
-     * @return a Description instance.
+     * @param id The ID of the Description.
+     * @return A Description instance.
      */
     public static Description createDescription(final String id) {
         return new DescriptionImpl(id);
@@ -215,8 +215,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a Employee with an String.
      *
-     * @param id the String.
-     * @return a Employee instance.
+     * @param id The ID of the Employee.
+     * @return A Employee instance.
      */
     public static Employee createEmployee(final String id) {
         return new EmployeeImpl(id);
@@ -225,8 +225,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a Employer with an String.
      *
-     * @param id the String.
-     * @return a Employer instance.
+     * @param id The ID of the Employer.
+     * @return A Employer instance.
      */
     public static Employer createEmployer(final String id) {
         return new EmployerImpl(id);
@@ -235,8 +235,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a Employment with an String.
      *
-     * @param id the String.
-     * @return a Employment instance.
+     * @param id The ID of the Employment.
+     * @return A Employment instance.
      */
     public static Employment createEmployment(final String id) {
         return new EmploymentImpl(id);
@@ -245,8 +245,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a EndingOfOwnership with an String.
      *
-     * @param id the String.
-     * @return a EndingOfOwnership instance.
+     * @param id The ID of the EndingOfOwnership.
+     * @return A EndingOfOwnership instance.
      */
     public static EndingOfOwnership createEndingOfOwnership(final String id) {
         return new EndingOfOwnershipImpl(id);
@@ -255,8 +255,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a Event with an String.
      *
-     * @param id the String.
-     * @return a Event instance.
+     * @param id The ID of the Event.
+     * @return A Event instance.
      */
     public static Event createEvent(final String id) {
         return new EventImpl(id);
@@ -265,8 +265,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a ExchangeOfGoodsAndMoney with an String.
      *
-     * @param id the String.
-     * @return a ExchangeOfGoodsAndMoney instance.
+     * @param id The ID of the ExchangeOfGoodsAndMoney.
+     * @return A ExchangeOfGoodsAndMoney instance.
      */
     public static ExchangeOfGoodsAndMoney createExchangeOfGoodsAndMoney(final String id) {
         return new ExchangeOfGoodsAndMoneyImpl(id);
@@ -275,8 +275,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a FunctionalObject with an String.
      *
-     * @param id the String.
-     * @return a FunctionalObject instance.
+     * @param id The ID of the FunctionalObject.
+     * @return A FunctionalObject instance.
      */
     public static FunctionalObject createFunctionalObject(final String id) {
         return new FunctionalObjectImpl(id);
@@ -285,8 +285,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a FunctionalSystem with an String.
      *
-     * @param id the String.
-     * @return a FunctionalSystem instance.
+     * @param id The ID of the FunctionalSystem.
+     * @return A FunctionalSystem instance.
      */
     public static FunctionalSystem createFunctionalSystem(final String id) {
         return new FunctionalSystemImpl(id);
@@ -295,8 +295,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a FunctionalSystemComponent with an String.
      *
-     * @param id the String.
-     * @return a FunctionalSystemComponent instance.
+     * @param id The ID of the FunctionalSystemComponent.
+     * @return A FunctionalSystemComponent instance.
      */
     public static FunctionalSystemComponent createFunctionalSystemComponent(final String id) {
         return new FunctionalSystemComponentImpl(id);
@@ -305,8 +305,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a Identification with an String.
      *
-     * @param id the String.
-     * @return a Identification instance.
+     * @param id The ID of the Identification.
+     * @return A Identification instance.
      */
     public static Identification createIdentification(final String id) {
         return new IdentificationImpl(id);
@@ -315,8 +315,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a IdentificationOfPhysicalQuantity with an String.
      *
-     * @param id the String.
-     * @return a IdentificationOfPhysicalQuantity instance.
+     * @param id The ID of the IdentificationOfPhysicalQuantity.
+     * @return A IdentificationOfPhysicalQuantity instance.
      */
     public static IdentificationOfPhysicalQuantity createIdentificationOfPhysicalQuantity(final String id) {
         return new IdentificationOfPhysicalQuantityImpl(id);
@@ -325,8 +325,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a InPlaceBiologicalComponent with an String.
      *
-     * @param id the String.
-     * @return a InPlaceBiologicalComponent instance.
+     * @param id The ID of the InPlaceBiologicalComponent.
+     * @return A InPlaceBiologicalComponent instance.
      */
     public static InPlaceBiologicalComponent createInPlaceBiologicalComponent(final String id) {
         return new InPlaceBiologicalComponentImpl(id);
@@ -335,8 +335,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a Individual with an String.
      *
-     * @param id the String.
-     * @return a Individual instance.
+     * @param id The ID of the Individual.
+     * @return A Individual instance.
      */
     public static Individual createIndividual(final String id) {
         return new IndividualImpl(id);
@@ -345,8 +345,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a InstalledFunctionalSystemComponent with an String.
      *
-     * @param id the String.
-     * @return a InstalledFunctionalSystemComponent instance.
+     * @param id The ID of the InstalledFunctionalSystemComponent.
+     * @return A InstalledFunctionalSystemComponent instance.
      */
     public static InstalledFunctionalSystemComponent createInstalledFunctionalSystemComponent(final String id) {
         return new InstalledFunctionalSystemComponentImpl(id);
@@ -355,8 +355,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a InstalledObject with an String.
      *
-     * @param id the String.
-     * @return a InstalledObject instance.
+     * @param id The ID of the InstalledObject.
+     * @return A InstalledObject instance.
      */
     public static InstalledObject createInstalledObject(final String id) {
         return new InstalledObjectImpl(id);
@@ -365,8 +365,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a IntentionallyConstructedObject with an String.
      *
-     * @param id the String.
-     * @return a IntentionallyConstructedObject instance.
+     * @param id The ID of the IntentionallyConstructedObject.
+     * @return A IntentionallyConstructedObject instance.
      */
     public static IntentionallyConstructedObject createIntentionallyConstructedObject(final String id) {
         return new IntentionallyConstructedObjectImpl(id);
@@ -375,8 +375,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a LanguageCommunity with an String.
      *
-     * @param id the String.
-     * @return a LanguageCommunity instance.
+     * @param id The ID of the LanguageCommunity.
+     * @return A LanguageCommunity instance.
      */
     public static LanguageCommunity createLanguageCommunity(final String id) {
         return new LanguageCommunityImpl(id);
@@ -385,8 +385,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a MoneyAsset with an String.
      *
-     * @param id the String.
-     * @return a MoneyAsset instance.
+     * @param id The ID of the MoneyAsset.
+     * @return A MoneyAsset instance.
      */
     public static MoneyAsset createMoneyAsset(final String id) {
         return new MoneyAssetImpl(id);
@@ -395,8 +395,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a Offer with an String.
      *
-     * @param id the String.
-     * @return a Offer instance.
+     * @param id The ID of the Offer.
+     * @return A Offer instance.
      */
     public static Offer createOffer(final String id) {
         return new OfferImpl(id);
@@ -405,8 +405,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a OfferAndAcceptanceForGoods with an String.
      *
-     * @param id the String.
-     * @return a OfferAndAcceptanceForGoods instance.
+     * @param id The ID of the OfferAndAcceptanceForGoods.
+     * @return A OfferAndAcceptanceForGoods instance.
      */
     public static OfferAndAcceptanceForGoods createOfferAndAcceptanceForGoods(final String id) {
         return new OfferAndAcceptanceForGoodsImpl(id);
@@ -415,8 +415,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a OfferForGoods with an String.
      *
-     * @param id the String.
-     * @return a OfferForGoods instance.
+     * @param id The ID of the OfferForGoods.
+     * @return A OfferForGoods instance.
      */
     public static OfferForGoods createOfferForGoods(final String id) {
         return new OfferForGoodsImpl(id);
@@ -425,8 +425,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a Offering with an String.
      *
-     * @param id the String.
-     * @return a Offering instance.
+     * @param id The ID of the Offering.
+     * @return A Offering instance.
      */
     public static Offering createOffering(final String id) {
         return new OfferingImpl(id);
@@ -435,8 +435,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a OrdinaryBiologicalObject with an String.
      *
-     * @param id the String.
-     * @return a OrdinaryBiologicalObject instance.
+     * @param id The ID of the OrdinaryBiologicalObject.
+     * @return A OrdinaryBiologicalObject instance.
      */
     public static OrdinaryBiologicalObject createOrdinaryBiologicalObject(final String id) {
         return new OrdinaryBiologicalObjectImpl(id);
@@ -445,8 +445,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a OrdinaryFunctionalObject with an String.
      *
-     * @param id the String.
-     * @return a OrdinaryFunctionalObject instance.
+     * @param id The ID of the OrdinaryFunctionalObject.
+     * @return A OrdinaryFunctionalObject instance.
      */
     public static OrdinaryFunctionalObject createOrdinaryFunctionalObject(final String id) {
         return new OrdinaryFunctionalObjectImpl(id);
@@ -455,8 +455,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a OrdinaryPhysicalObject with an String.
      *
-     * @param id the String.
-     * @return a OrdinaryPhysicalObject instance.
+     * @param id The ID of the OrdinaryPhysicalObject.
+     * @return A OrdinaryPhysicalObject instance.
      */
     public static OrdinaryPhysicalObject createOrdinaryPhysicalObject(final String id) {
         return new OrdinaryPhysicalObjectImpl(id);
@@ -465,8 +465,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a Organization with an String.
      *
-     * @param id the String.
-     * @return a Organization instance.
+     * @param id The ID of the Organization.
+     * @return A Organization instance.
      */
     public static Organization createOrganization(final String id) {
         return new OrganizationImpl(id);
@@ -475,8 +475,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a OrganizationComponent with an String.
      *
-     * @param id the String.
-     * @return a OrganizationComponent instance.
+     * @param id The ID of the OrganizationComponent.
+     * @return A OrganizationComponent instance.
      */
     public static OrganizationComponent createOrganizationComponent(final String id) {
         return new OrganizationComponentImpl(id);
@@ -485,8 +485,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a Owner with an String.
      *
-     * @param id the String.
-     * @return a Owner instance.
+     * @param id The ID of the Owner.
+     * @return A Owner instance.
      */
     public static Owner createOwner(final String id) {
         return new OwnerImpl(id);
@@ -495,8 +495,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a Ownership with an String.
      *
-     * @param id the String.
-     * @return a Ownership instance.
+     * @param id The ID of the Ownership.
+     * @return A Ownership instance.
      */
     public static Ownership createOwnership(final String id) {
         return new OwnershipImpl(id);
@@ -505,8 +505,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a Participant with an String.
      *
-     * @param id the String.
-     * @return a Participant instance.
+     * @param id The ID of the Participant.
+     * @return A Participant instance.
      */
     public static Participant createParticipant(final String id) {
         return new ParticipantImpl(id);
@@ -515,8 +515,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a ParticipantInActivityOrAssociation with an String.
      *
-     * @param id the String.
-     * @return a ParticipantInActivityOrAssociation instance.
+     * @param id The ID of the ParticipantInActivityOrAssociation.
+     * @return A ParticipantInActivityOrAssociation instance.
      */
     public static ParticipantInActivityOrAssociation createParticipantInActivityOrAssociation(final String id) {
         return new ParticipantInActivityOrAssociationImpl(id);
@@ -525,8 +525,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a Party with an String.
      *
-     * @param id the String.
-     * @return a Party instance.
+     * @param id The ID of the Party.
+     * @return A Party instance.
      */
     public static Party createParty(final String id) {
         return new PartyImpl(id);
@@ -535,8 +535,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a Pattern with an String.
      *
-     * @param id the String.
-     * @return a Pattern instance.
+     * @param id The ID of the Pattern.
+     * @return A Pattern instance.
      */
     public static Pattern createPattern(final String id) {
         return new PatternImpl(id);
@@ -545,8 +545,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a PeriodOfTime with an String.
      *
-     * @param id the String.
-     * @return a PeriodOfTime instance.
+     * @param id The ID of the PeriodOfTime.
+     * @return A PeriodOfTime instance.
      */
     public static PeriodOfTime createPeriodOfTime(final String id) {
         return new PeriodOfTimeImpl(id);
@@ -555,8 +555,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a Person with an String.
      *
-     * @param id the String.
-     * @return a Person instance.
+     * @param id The ID of the Person.
+     * @return A Person instance.
      */
     public static Person createPerson(final String id) {
         return new PersonImpl(id);
@@ -565,8 +565,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a PersonInPosition with an String.
      *
-     * @param id the String.
-     * @return a PersonInPosition instance.
+     * @param id The ID of the PersonInPosition.
+     * @return A PersonInPosition instance.
      */
     public static PersonInPosition createPersonInPosition(final String id) {
         return new PersonInPositionImpl(id);
@@ -575,8 +575,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a PhysicalObject with an String.
      *
-     * @param id the String.
-     * @return a PhysicalObject instance.
+     * @param id The ID of the PhysicalObject.
+     * @return A PhysicalObject instance.
      */
     public static PhysicalObject createPhysicalObject(final String id) {
         return new PhysicalObjectImpl(id);
@@ -585,8 +585,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a PhysicalProperty with an String.
      *
-     * @param id the String.
-     * @return a PhysicalProperty instance.
+     * @param id The ID of the PhysicalProperty.
+     * @return A PhysicalProperty instance.
      */
     public static PhysicalProperty createPhysicalProperty(final String id) {
         return new PhysicalPropertyImpl(id);
@@ -595,8 +595,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a PhysicalPropertyRange with an String.
      *
-     * @param id the String.
-     * @return a PhysicalPropertyRange instance.
+     * @param id The ID of the PhysicalPropertyRange.
+     * @return A PhysicalPropertyRange instance.
      */
     public static PhysicalPropertyRange createPhysicalPropertyRange(final String id) {
         return new PhysicalPropertyRangeImpl(id);
@@ -605,8 +605,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a PhysicalQuantity with an String.
      *
-     * @param id the String.
-     * @return a PhysicalQuantity instance.
+     * @param id The ID of the PhysicalQuantity.
+     * @return A PhysicalQuantity instance.
      */
     public static PhysicalQuantity createPhysicalQuantity(final String id) {
         return new PhysicalQuantityImpl(id);
@@ -615,8 +615,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a PhysicalQuantityRange with an String.
      *
-     * @param id the String.
-     * @return a PhysicalQuantityRange instance.
+     * @param id The ID of the PhysicalQuantityRange.
+     * @return A PhysicalQuantityRange instance.
      */
     public static PhysicalQuantityRange createPhysicalQuantityRange(final String id) {
         return new PhysicalQuantityRangeImpl(id);
@@ -625,8 +625,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a Plan with an String.
      *
-     * @param id the String.
-     * @return a Plan instance.
+     * @param id The ID of the Plan.
+     * @return A Plan instance.
      */
     public static Plan createPlan(final String id) {
         return new PlanImpl(id);
@@ -635,8 +635,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a PointInTime with an String.
      *
-     * @param id the String.
-     * @return a PointInTime instance.
+     * @param id The ID of the PointInTime.
+     * @return A PointInTime instance.
      */
     public static PointInTime createPointInTime(final String id) {
         return new PointInTimeImpl(id);
@@ -645,8 +645,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a Position with an String.
      *
-     * @param id the String.
-     * @return a Position instance.
+     * @param id The ID of the Position.
+     * @return A Position instance.
      */
     public static Position createPosition(final String id) {
         return new PositionImpl(id);
@@ -655,8 +655,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a PossibleWorld with an String.
      *
-     * @param id the String.
-     * @return a PossibleWorld instance.
+     * @param id The ID of the PossibleWorld.
+     * @return A PossibleWorld instance.
      */
     public static PossibleWorld createPossibleWorld(final String id) {
         return new PossibleWorldImpl(id);
@@ -665,8 +665,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a Price with an String.
      *
-     * @param id the String.
-     * @return a Price instance.
+     * @param id The ID of the Price.
+     * @return A Price instance.
      */
     public static Price createPrice(final String id) {
         return new PriceImpl(id);
@@ -675,8 +675,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a ProductBrand with an String.
      *
-     * @param id the String.
-     * @return a ProductBrand instance.
+     * @param id The ID of the ProductBrand.
+     * @return A ProductBrand instance.
      */
     public static ProductBrand createProductBrand(final String id) {
         return new ProductBrandImpl(id);
@@ -685,8 +685,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a ProductOffering with an String.
      *
-     * @param id the String.
-     * @return a ProductOffering instance.
+     * @param id The ID of the ProductOffering.
+     * @return A ProductOffering instance.
      */
     public static ProductOffering createProductOffering(final String id) {
         return new ProductOfferingImpl(id);
@@ -695,8 +695,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a ReachingAgreement with an String.
      *
-     * @param id the String.
-     * @return a ReachingAgreement instance.
+     * @param id The ID of the ReachingAgreement.
+     * @return A ReachingAgreement instance.
      */
     public static ReachingAgreement createReachingAgreement(final String id) {
         return new ReachingAgreementImpl(id);
@@ -705,8 +705,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a RecognizingLanguageCommunity with an String.
      *
-     * @param id the String.
-     * @return a RecognizingLanguageCommunity instance.
+     * @param id The ID of the RecognizingLanguageCommunity.
+     * @return A RecognizingLanguageCommunity instance.
      */
     public static RecognizingLanguageCommunity createRecognizingLanguageCommunity(final String id) {
         return new RecognizingLanguageCommunityImpl(id);
@@ -715,8 +715,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a RepresentationByPattern with an String.
      *
-     * @param id the String.
-     * @return a RepresentationByPattern instance.
+     * @param id The ID of the RepresentationByPattern.
+     * @return A RepresentationByPattern instance.
      */
     public static RepresentationByPattern createRepresentationByPattern(final String id) {
         return new RepresentationByPatternImpl(id);
@@ -725,8 +725,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a RepresentationBySign with an String.
      *
-     * @param id the String.
-     * @return a RepresentationBySign instance.
+     * @param id The ID of the RepresentationBySign.
+     * @return A RepresentationBySign instance.
      */
     public static RepresentationBySign createRepresentationBySign(final String id) {
         return new RepresentationBySignImpl(id);
@@ -735,8 +735,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a Requirement with an String.
      *
-     * @param id the String.
-     * @return a Requirement instance.
+     * @param id The ID of the Requirement.
+     * @return A Requirement instance.
      */
     public static Requirement createRequirement(final String id) {
         return new RequirementImpl(id);
@@ -745,8 +745,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a RequirementSpecification with an String.
      *
-     * @param id the String.
-     * @return a RequirementSpecification instance.
+     * @param id The ID of the RequirementSpecification.
+     * @return A RequirementSpecification instance.
      */
     public static RequirementSpecification createRequirementSpecification(final String id) {
         return new RequirementSpecificationImpl(id);
@@ -755,8 +755,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a SaleOfGoods with an String.
      *
-     * @param id the String.
-     * @return a SaleOfGoods instance.
+     * @param id The ID of the SaleOfGoods.
+     * @return A SaleOfGoods instance.
      */
     public static SaleOfGoods createSaleOfGoods(final String id) {
         return new SaleOfGoodsImpl(id);
@@ -765,8 +765,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a SalesProduct with an String.
      *
-     * @param id the String.
-     * @return a SalesProduct instance.
+     * @param id The ID of the SalesProduct.
+     * @return A SalesProduct instance.
      */
     public static SalesProduct createSalesProduct(final String id) {
         return new SalesProductImpl(id);
@@ -775,8 +775,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a SalesProductInstance with an String.
      *
-     * @param id the String.
-     * @return a SalesProductInstance instance.
+     * @param id The ID of the SalesProductInstance.
+     * @return A SalesProductInstance instance.
      */
     public static SalesProductInstance createSalesProductInstance(final String id) {
         return new SalesProductInstanceImpl(id);
@@ -785,8 +785,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a SalesProductVersion with an String.
      *
-     * @param id the String.
-     * @return a SalesProductVersion instance.
+     * @param id The ID of the SalesProductVersion.
+     * @return A SalesProductVersion instance.
      */
     public static SalesProductVersion createSalesProductVersion(final String id) {
         return new SalesProductVersionImpl(id);
@@ -795,8 +795,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a Sign with an String.
      *
-     * @param id the String.
-     * @return a Sign instance.
+     * @param id The ID of the Sign.
+     * @return A Sign instance.
      */
     public static Sign createSign(final String id) {
         return new SignImpl(id);
@@ -805,8 +805,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a SociallyConstructedActivity with an String.
      *
-     * @param id the String.
-     * @return a SociallyConstructedActivity instance.
+     * @param id The ID of the SociallyConstructedActivity.
+     * @return A SociallyConstructedActivity instance.
      */
     public static SociallyConstructedActivity createSociallyConstructedActivity(final String id) {
         return new SociallyConstructedActivityImpl(id);
@@ -815,8 +815,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a SociallyConstructedObject with an String.
      *
-     * @param id the String.
-     * @return a SociallyConstructedObject instance.
+     * @param id The ID of the SociallyConstructedObject.
+     * @return A SociallyConstructedObject instance.
      */
     public static SociallyConstructedObject createSociallyConstructedObject(final String id) {
         return new SociallyConstructedObjectImpl(id);
@@ -825,8 +825,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a SpatioTemporalExtent with an String.
      *
-     * @param id the String.
-     * @return a SpatioTemporalExtent instance.
+     * @param id The ID of the SpatioTemporalExtent.
+     * @return A SpatioTemporalExtent instance.
      */
     public static SpatioTemporalExtent createSpatioTemporalExtent(final String id) {
         return new SpatioTemporalExtentImpl(id);
@@ -835,8 +835,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a State with an String.
      *
-     * @param id the String.
-     * @return a State instance.
+     * @param id The ID of the State.
+     * @return A State instance.
      */
     public static State createState(final String id) {
         return new StateImpl(id);
@@ -845,8 +845,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a StateOfActivity with an String.
      *
-     * @param id the String.
-     * @return a StateOfActivity instance.
+     * @param id The ID of the StateOfActivity.
+     * @return A StateOfActivity instance.
      */
     public static StateOfActivity createStateOfActivity(final String id) {
         return new StateOfActivityImpl(id);
@@ -855,8 +855,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a StateOfAmountOfMoney with an String.
      *
-     * @param id the String.
-     * @return a StateOfAmountOfMoney instance.
+     * @param id The ID of the StateOfAmountOfMoney.
+     * @return A StateOfAmountOfMoney instance.
      */
     public static StateOfAmountOfMoney createStateOfAmountOfMoney(final String id) {
         return new StateOfAmountOfMoneyImpl(id);
@@ -865,8 +865,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a StateOfAssociation with an String.
      *
-     * @param id the String.
-     * @return a StateOfAssociation instance.
+     * @param id The ID of the StateOfAssociation.
+     * @return A StateOfAssociation instance.
      */
     public static StateOfAssociation createStateOfAssociation(final String id) {
         return new StateOfAssociationImpl(id);
@@ -875,8 +875,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a StateOfBiologicalObject with an String.
      *
-     * @param id the String.
-     * @return a StateOfBiologicalObject instance.
+     * @param id The ID of the StateOfBiologicalObject.
+     * @return A StateOfBiologicalObject instance.
      */
     public static StateOfBiologicalObject createStateOfBiologicalObject(final String id) {
         return new StateOfBiologicalObjectImpl(id);
@@ -885,8 +885,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a StateOfBiologicalSystem with an String.
      *
-     * @param id the String.
-     * @return a StateOfBiologicalSystem instance.
+     * @param id The ID of the StateOfBiologicalSystem.
+     * @return A StateOfBiologicalSystem instance.
      */
     public static StateOfBiologicalSystem createStateOfBiologicalSystem(final String id) {
         return new StateOfBiologicalSystemImpl(id);
@@ -895,8 +895,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a StateOfBiologicalSystemComponent with an String.
      *
-     * @param id the String.
-     * @return a StateOfBiologicalSystemComponent instance.
+     * @param id The ID of the StateOfBiologicalSystemComponent.
+     * @return A StateOfBiologicalSystemComponent instance.
      */
     public static StateOfBiologicalSystemComponent createStateOfBiologicalSystemComponent(final String id) {
         return new StateOfBiologicalSystemComponentImpl(id);
@@ -905,8 +905,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a StateOfFunctionalObject with an String.
      *
-     * @param id the String.
-     * @return a StateOfFunctionalObject instance.
+     * @param id The ID of the StateOfFunctionalObject.
+     * @return A StateOfFunctionalObject instance.
      */
     public static StateOfFunctionalObject createStateOfFunctionalObject(final String id) {
         return new StateOfFunctionalObjectImpl(id);
@@ -915,8 +915,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a StateOfFunctionalSystem with an String.
      *
-     * @param id the String.
-     * @return a StateOfFunctionalSystem instance.
+     * @param id The ID of the StateOfFunctionalSystem.
+     * @return A StateOfFunctionalSystem instance.
      */
     public static StateOfFunctionalSystem createStateOfFunctionalSystem(final String id) {
         return new StateOfFunctionalSystemImpl(id);
@@ -925,8 +925,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a StateOfFunctionalSystemComponent with an String.
      *
-     * @param id the String.
-     * @return a StateOfFunctionalSystemComponent instance.
+     * @param id The ID of the StateOfFunctionalSystemComponent.
+     * @return A StateOfFunctionalSystemComponent instance.
      */
     public static StateOfFunctionalSystemComponent createStateOfFunctionalSystemComponent(final String id) {
         return new StateOfFunctionalSystemComponentImpl(id);
@@ -935,8 +935,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a StateOfIntentionallyConstructedObject with an String.
      *
-     * @param id the String.
-     * @return a StateOfIntentionallyConstructedObject instance.
+     * @param id The ID of the StateOfIntentionallyConstructedObject.
+     * @return A StateOfIntentionallyConstructedObject instance.
      */
     public static StateOfIntentionallyConstructedObject createStateOfIntentionallyConstructedObject(final String id) {
         return new StateOfIntentionallyConstructedObjectImpl(id);
@@ -945,8 +945,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a StateOfLanguageCommunity with an String.
      *
-     * @param id the String.
-     * @return a StateOfLanguageCommunity instance.
+     * @param id The ID of the StateOfLanguageCommunity.
+     * @return A StateOfLanguageCommunity instance.
      */
     public static StateOfLanguageCommunity createStateOfLanguageCommunity(final String id) {
         return new StateOfLanguageCommunityImpl(id);
@@ -955,8 +955,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a StateOfOrdinaryBiologicalObject with an String.
      *
-     * @param id the String.
-     * @return a StateOfOrdinaryBiologicalObject instance.
+     * @param id The ID of the StateOfOrdinaryBiologicalObject.
+     * @return A StateOfOrdinaryBiologicalObject instance.
      */
     public static StateOfOrdinaryBiologicalObject createStateOfOrdinaryBiologicalObject(final String id) {
         return new StateOfOrdinaryBiologicalObjectImpl(id);
@@ -965,8 +965,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a StateOfOrdinaryFunctionalObject with an String.
      *
-     * @param id the String.
-     * @return a StateOfOrdinaryFunctionalObject instance.
+     * @param id The ID of the StateOfOrdinaryFunctionalObject.
+     * @return A StateOfOrdinaryFunctionalObject instance.
      */
     public static StateOfOrdinaryFunctionalObject createStateOfOrdinaryFunctionalObject(final String id) {
         return new StateOfOrdinaryFunctionalObjectImpl(id);
@@ -975,8 +975,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a StateOfOrdinaryPhysicalObject with an String.
      *
-     * @param id the String.
-     * @return a StateOfOrdinaryPhysicalObject instance.
+     * @param id The ID of the StateOfOrdinaryPhysicalObject.
+     * @return A StateOfOrdinaryPhysicalObject instance.
      */
     public static StateOfOrdinaryPhysicalObject createStateOfOrdinaryPhysicalObject(final String id) {
         return new StateOfOrdinaryPhysicalObjectImpl(id);
@@ -985,8 +985,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a StateOfOrganization with an String.
      *
-     * @param id the String.
-     * @return a StateOfOrganization instance.
+     * @param id The ID of the StateOfOrganization.
+     * @return A StateOfOrganization instance.
      */
     public static StateOfOrganization createStateOfOrganization(final String id) {
         return new StateOfOrganizationImpl(id);
@@ -995,8 +995,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a StateOfOrganizationComponent with an String.
      *
-     * @param id the String.
-     * @return a StateOfOrganizationComponent instance.
+     * @param id The ID of the StateOfOrganizationComponent.
+     * @return A StateOfOrganizationComponent instance.
      */
     public static StateOfOrganizationComponent createStateOfOrganizationComponent(final String id) {
         return new StateOfOrganizationComponentImpl(id);
@@ -1005,8 +1005,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a StateOfParty with an String.
      *
-     * @param id the String.
-     * @return a StateOfParty instance.
+     * @param id The ID of the StateOfParty.
+     * @return A StateOfParty instance.
      */
     public static StateOfParty createStateOfParty(final String id) {
         return new StateOfPartyImpl(id);
@@ -1015,8 +1015,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a StateOfPerson with an String.
      *
-     * @param id the String.
-     * @return a StateOfPerson instance.
+     * @param id The ID of the StateOfPerson.
+     * @return A StateOfPerson instance.
      */
     public static StateOfPerson createStateOfPerson(final String id) {
         return new StateOfPersonImpl(id);
@@ -1025,8 +1025,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a StateOfPhysicalObject with an String.
      *
-     * @param id the String.
-     * @return a StateOfPhysicalObject instance.
+     * @param id The ID of the StateOfPhysicalObject.
+     * @return A StateOfPhysicalObject instance.
      */
     public static StateOfPhysicalObject createStateOfPhysicalObject(final String id) {
         return new StateOfPhysicalObjectImpl(id);
@@ -1035,8 +1035,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a StateOfPosition with an String.
      *
-     * @param id the String.
-     * @return a StateOfPosition instance.
+     * @param id The ID of the StateOfPosition.
+     * @return A StateOfPosition instance.
      */
     public static StateOfPosition createStateOfPosition(final String id) {
         return new StateOfPositionImpl(id);
@@ -1045,8 +1045,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a StateOfSalesProductInstance with an String.
      *
-     * @param id the String.
-     * @return a StateOfSalesProductInstance instance.
+     * @param id The ID of the StateOfSalesProductInstance.
+     * @return A StateOfSalesProductInstance instance.
      */
     public static StateOfSalesProductInstance createStateOfSalesProductInstance(final String id) {
         return new StateOfSalesProductInstanceImpl(id);
@@ -1055,8 +1055,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a StateOfSign with an String.
      *
-     * @param id the String.
-     * @return a StateOfSign instance.
+     * @param id The ID of the StateOfSign.
+     * @return A StateOfSign instance.
      */
     public static StateOfSign createStateOfSign(final String id) {
         return new StateOfSignImpl(id);
@@ -1065,8 +1065,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a StateOfSociallyConstructedActivity with an String.
      *
-     * @param id the String.
-     * @return a StateOfSociallyConstructedActivity instance.
+     * @param id The ID of the StateOfSociallyConstructedActivity.
+     * @return A StateOfSociallyConstructedActivity instance.
      */
     public static StateOfSociallyConstructedActivity createStateOfSociallyConstructedActivity(final String id) {
         return new StateOfSociallyConstructedActivityImpl(id);
@@ -1075,8 +1075,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a StateOfSociallyConstructedObject with an String.
      *
-     * @param id the String.
-     * @return a StateOfSociallyConstructedObject instance.
+     * @param id The ID of the StateOfSociallyConstructedObject.
+     * @return A StateOfSociallyConstructedObject instance.
      */
     public static StateOfSociallyConstructedObject createStateOfSociallyConstructedObject(final String id) {
         return new StateOfSociallyConstructedObjectImpl(id);
@@ -1085,8 +1085,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a StateOfSystem with an String.
      *
-     * @param id the String.
-     * @return a StateOfSystem instance.
+     * @param id The ID of the StateOfSystem.
+     * @return A StateOfSystem instance.
      */
     public static StateOfSystem createStateOfSystem(final String id) {
         return new StateOfSystemImpl(id);
@@ -1095,8 +1095,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a StateOfSystemComponent with an String.
      *
-     * @param id the String.
-     * @return a StateOfSystemComponent instance.
+     * @param id The ID of the StateOfSystemComponent.
+     * @return A StateOfSystemComponent instance.
      */
     public static StateOfSystemComponent createStateOfSystemComponent(final String id) {
         return new StateOfSystemComponentImpl(id);
@@ -1105,8 +1105,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a System with an String.
      *
-     * @param id the String.
-     * @return a System instance.
+     * @param id The ID of the System.
+     * @return A System instance.
      */
     public static uk.gov.gchq.hqdm.model.System createSystem(final String id) {
         return new SystemImpl(id);
@@ -1115,8 +1115,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a SystemComponent with an String.
      *
-     * @param id the String.
-     * @return a SystemComponent instance.
+     * @param id The ID of the SystemComponent.
+     * @return A SystemComponent instance.
      */
     public static SystemComponent createSystemComponent(final String id) {
         return new SystemComponentImpl(id);
@@ -1125,8 +1125,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a Thing with an String.
      *
-     * @param id the String.
-     * @return a Thing instance.
+     * @param id The ID of the Thing.
+     * @return A Thing instance.
      */
     public static Thing createThing(final String id) {
         return new ThingImpl(id);
@@ -1135,8 +1135,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a TransferOfOwnership with an String.
      *
-     * @param id the String.
-     * @return a TransferOfOwnership instance.
+     * @param id The ID of the TransferOfOwnership.
+     * @return A TransferOfOwnership instance.
      */
     public static TransferOfOwnership createTransferOfOwnership(final String id) {
         return new TransferOfOwnershipImpl(id);
@@ -1145,8 +1145,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a TransferOfOwnershipOfMoney with an String.
      *
-     * @param id the String.
-     * @return a TransferOfOwnershipOfMoney instance.
+     * @param id The ID of the TransferOfOwnershipOfMoney.
+     * @return A TransferOfOwnershipOfMoney instance.
      */
     public static TransferOfOwnershipOfMoney createTransferOfOwnershipOfMoney(final String id) {
         return new TransferOfOwnershipOfMoneyImpl(id);
@@ -1155,8 +1155,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a Transferee with an String.
      *
-     * @param id the String.
-     * @return a Transferee instance.
+     * @param id The ID of the Transferee.
+     * @return A Transferee instance.
      */
     public static Transferee createTransferee(final String id) {
         return new TransfereeImpl(id);
@@ -1165,8 +1165,8 @@ public class SpatioTemporalExtentServices {
     /**
      * Create a Transferor with an String.
      *
-     * @param id the String.
-     * @return a Transferor instance.
+     * @param id The ID of the Transferor.
+     * @return A Transferor instance.
      */
     public static Transferor createTransferor(final String id) {
         return new TransferorImpl(id);

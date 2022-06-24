@@ -30,10 +30,10 @@ import uk.gov.gchq.hqdm.rdf.iri.RDFS;
 public class IriTest {
 
     /**
-     * Test creating a new IRI successfully.
+     * Test creating a new IRI successfully with IRI address.
      */
     @Test
-    public void testCreateIriSuccess1() {
+    public void testCreateIriSuccess() {
         final var iri = new IRI("http://www.w3.org/1999/02/22-rdf-syntax-ns#type");
 
         assertEquals(RDFS.RDF_TYPE.getIri(), iri.getIri());
@@ -42,10 +42,10 @@ public class IriTest {
     }
 
     /**
-     * Test creating a new IRI successfully.
+     * Test creating a new IRI successfully with IriBase and resource .
      */
     @Test
-    public void testCreateIriSuccess2() {
+    public void testCreateIriWithIriBaseSuccess() {
         final var iri = new IRI(new IriBase("rdf", "http://www.w3.org/1999/02/22-rdf-syntax-ns#"), "type");
 
         assertEquals(RDFS.RDF_TYPE.getIri(), iri.getIri());

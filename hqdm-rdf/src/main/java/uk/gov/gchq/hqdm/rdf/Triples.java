@@ -31,8 +31,8 @@ public abstract class Triples {
     /**
      * Convert Thing to triples.
      *
-     * @param thing the {@link Thing} to convert.
-     * @return a String of RDF triples.
+     * @param thing The {@link Thing} to convert.
+     * @return A String of RDF triples.
      */
     public static String toTriples(final Thing thing) {
         final StringBuilder builder = new StringBuilder();
@@ -54,8 +54,8 @@ public abstract class Triples {
     /**
      * Convert an Object to a Triple String.
      *
-     * @param object the Object to convert.
-     * @return {@link String}
+     * @param object The Object to convert.
+     * @return {@link String}.
      */
     private static String toTripleString(final Object object) {
         final String stringValue = object.toString();

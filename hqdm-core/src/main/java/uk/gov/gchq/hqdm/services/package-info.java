@@ -13,12 +13,6 @@
  */
 
 /**
- * Classes for constructing HQDM objects as RDF triples.
+ * Services for creating HQDM objects and relationships.
  */
-module uk.gov.gchq.hqdm.rdf {
-    exports uk.gov.gchq.hqdm.rdf.exception;
-    exports uk.gov.gchq.hqdm.rdf.iri;
-    exports uk.gov.gchq.hqdm.rdf;
-
-    requires transitive uk.gov.gchq.hqdm.core;
-}
+package uk.gov.gchq.hqdm.services;

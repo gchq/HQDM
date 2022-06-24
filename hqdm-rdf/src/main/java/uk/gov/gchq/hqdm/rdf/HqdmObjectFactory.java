@@ -107,7 +107,7 @@ public final class HqdmObjectFactory {
      */
     private static <T extends Thing> java.lang.Class<T>[] irisToClasses(final List<IRI> iris) {
         final List<java.lang.Class<? extends Thing>> classes = new ArrayList<>(3);
-        //
+
         // It will be a small list so just iterate it.
         for (final IRI iri : iris) {
             classes.add(iriToClassMap.getOrDefault(iri, Thing.class));
@@ -364,10 +364,10 @@ public final class HqdmObjectFactory {
     /**
      * Create a {@link Thing} of the correct type.
      *
-     * @param typeName the HQDM type name, e.g. spatio_temporal_extent
-     * @param iri      the {@link IRI} for the object id.
-     * @return a {@link Thing}
-     * @throws HqdmException if the typeName is not valid.
+     * @param typeName The HQDM type name, e.g. spatio_temporal_extent
+     * @param iri      The {@link IRI} for the object id.
+     * @return A {@link Thing}.
+     * @throws HqdmException If the typeName is not valid.
      */
     private static Thing mapToThing(final String typeName, final IRI iri) {
 
