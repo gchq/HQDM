@@ -22,8 +22,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+import uk.gov.gchq.hqdm.exception.HqdmException;
 import uk.gov.gchq.hqdm.model.*;
-import uk.gov.gchq.hqdm.rdf.exception.HqdmException;
 import uk.gov.gchq.hqdm.rdf.iri.HQDM;
 import uk.gov.gchq.hqdm.rdf.iri.HqdmIri;
 import uk.gov.gchq.hqdm.rdf.iri.IRI;

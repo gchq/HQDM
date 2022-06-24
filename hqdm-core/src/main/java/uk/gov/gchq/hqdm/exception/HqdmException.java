@@ -12,7 +12,7 @@
  * the License.
  */
 
-package uk.gov.gchq.hqdm.rdf.exception;
+package uk.gov.gchq.hqdm.exception;
 
 /**
  * Superclass of exceptions arising from HQDM code.

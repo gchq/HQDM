@@ -23,9 +23,9 @@ import java.util.Set;
 
 import org.junit.Test;
 
+import uk.gov.gchq.hqdm.exception.HqdmException;
 import uk.gov.gchq.hqdm.model.Participant;
 import uk.gov.gchq.hqdm.model.Person;
-import uk.gov.gchq.hqdm.rdf.exception.HqdmException;
 import uk.gov.gchq.hqdm.rdf.iri.HQDM;
 import uk.gov.gchq.hqdm.rdf.iri.HqdmIri;
 import uk.gov.gchq.hqdm.rdf.iri.IRI;
