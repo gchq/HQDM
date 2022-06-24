@@ -30,6 +30,7 @@ import uk.gov.gchq.hqdm.rdf.iri.HQDM;
 import uk.gov.gchq.hqdm.rdf.iri.HqdmIri;
 import uk.gov.gchq.hqdm.rdf.iri.IRI;
 import uk.gov.gchq.hqdm.rdf.iri.RDFS;
+import uk.gov.gchq.hqdm.rdf.util.Pair;
 
 /**
  * Tests for the {@link HqdmObjectFactory}.
@@ -78,7 +79,7 @@ public class HqdmObjectFactoryTest {
                 List.of(new Pair<>(RDFS.RDF_TYPE.getIri(), HQDM.PERSON.getIri()),
                         new Pair<>(HQDM.ENTITY_NAME.getIri(), personId),
                         new Pair<>(HQDM.MEMBER_OF_KIND.getIri(), "PERSON_KIND")));
-        //
+
         // Assert the values are correct.
         assertNotNull(person);
         assertEquals(Set.of(personId), person.value(HQDM.ENTITY_NAME.getIri()));
@@ -99,7 +100,7 @@ public class HqdmObjectFactoryTest {
                 List.of(new Pair<>(RDFS.RDF_TYPE.getIri(), HQDM.PERSON.getIri()),
                         new Pair<>(RDFS.RDF_TYPE.getIri(), HQDM.PARTICIPANT.getIri()),
                         new Pair<>(HQDM.ENTITY_NAME.getIri(), personId)));
-        //
+
         // Assert the values are correct.
         assertNotNull(person);
         assertTrue(person instanceof Person);

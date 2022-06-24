@@ -12,7 +12,7 @@
  * the License.
  */
 
-package uk.gov.gchq.hqdm.iri;
+package uk.gov.gchq.hqdm.rdf.iri;
 
 import static org.junit.Assert.assertEquals;
 
@@ -20,9 +20,6 @@ import org.junit.Test;
 
 import uk.gov.gchq.hqdm.rdf.HqdmObjectFactory;
 import uk.gov.gchq.hqdm.rdf.exception.IriException;
-import uk.gov.gchq.hqdm.rdf.iri.IRI;
-import uk.gov.gchq.hqdm.rdf.iri.IriBase;
-import uk.gov.gchq.hqdm.rdf.iri.RDFS;
 
 /**
  * Tests for the {@link HqdmObjectFactory}.

@@ -12,7 +12,7 @@
  * the License.
  */
 
-package uk.gov.gchq.hqdm.rdf;
+package uk.gov.gchq.hqdm.rdf.util;
 
 /**
  * A utility Pair with Left (L) and Right (R) values. L the type of the Left element. R the type of

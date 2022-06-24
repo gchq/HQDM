@@ -27,6 +27,7 @@ import uk.gov.gchq.hqdm.model.*;
 import uk.gov.gchq.hqdm.rdf.iri.HQDM;
 import uk.gov.gchq.hqdm.rdf.iri.HqdmIri;
 import uk.gov.gchq.hqdm.rdf.iri.IRI;
+import uk.gov.gchq.hqdm.rdf.util.Pair;
 import uk.gov.gchq.hqdm.services.ClassServices;
 import uk.gov.gchq.hqdm.services.DynamicObjects;
 import uk.gov.gchq.hqdm.services.RelationshipServices;

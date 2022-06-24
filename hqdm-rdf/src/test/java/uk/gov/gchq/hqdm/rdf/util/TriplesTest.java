@@ -11,14 +11,14 @@
  * or implied. See the License for the specific language governing permissions and limitations under
  * the License.
  */
-package uk.gov.gchq.hqdm.rdf;
+package uk.gov.gchq.hqdm.rdf.util;
 
 import static org.junit.Assert.assertEquals;
 
 import java.util.List;
 
 import org.junit.Test;
-
+import uk.gov.gchq.hqdm.rdf.HqdmObjectFactory;
 import uk.gov.gchq.hqdm.rdf.iri.HQDM;
 import uk.gov.gchq.hqdm.rdf.iri.IRI;
 import uk.gov.gchq.hqdm.rdf.iri.RDFS;
@@ -52,7 +52,7 @@ public class TriplesTest {
 
         // Convert the object to a triples string.
         final var triples = Triples.toTriples(person);
-        //
+
         // Assert the values are correct.
         assertEquals(EXPECTED1, triples);
     }

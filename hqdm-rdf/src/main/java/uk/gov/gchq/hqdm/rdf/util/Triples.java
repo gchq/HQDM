@@ -12,7 +12,7 @@
  * the License.
  */
 
-package uk.gov.gchq.hqdm.rdf;
+package uk.gov.gchq.hqdm.rdf.util;
 
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
