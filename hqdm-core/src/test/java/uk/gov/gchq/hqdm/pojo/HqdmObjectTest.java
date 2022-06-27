@@ -44,8 +44,7 @@ public class HqdmObjectTest {
 
         endEvent.addValue("HQDM.PART_OF_POSSIBLE_WORLD", possibleWorld.getId());
 
-        final SpatioTemporalExtent object1 =
-                new SpatioTemporalExtentImpl("Object1");
+        final SpatioTemporalExtent object1 = new SpatioTemporalExtentImpl("Object1");
 
         object1.addValue("HQDM.BEGINNING", beginEvent.getId());
         object1.addValue("HQDM.ENDING", endEvent.getId());
@@ -57,24 +56,22 @@ public class HqdmObjectTest {
 
     @Test
     public void testDeleteValueFromThing() {
-        final var t = new ThingImpl("test");
+        final var thing = new ThingImpl("test");
 
         // Add a predicate and confirm it is present.
-        t.addValue("testpredicate", "testvalue");
-        Assert.assertTrue(t.hasThisValue("testpredicate", "testvalue"));
+        thing.addValue("test-predicate", "test-value");
+        Assert.assertTrue(thing.hasThisValue("test-predicate", "test-value"));
 
-        // Delete a non-existent predicate and make sure the test predicate
-        // is still present.
-        t.removeValue("testpredicate2", "testvalue2");
-        Assert.assertTrue(t.hasThisValue("testpredicate", "testvalue"));
+        // Delete a non-existent predicate and make sure the test predicate is still present.
+        thing.removeValue("test-predicate-2", "test-value-2");
+        Assert.assertTrue(thing.hasThisValue("test-predicate", "test-value"));
 
-        // Delete a non-existent value for the predicate and make sure
-        // the test value is still present.
-        t.removeValue("testpredicate", "testvalue3");
-        Assert.assertTrue(t.hasThisValue("testpredicate", "testvalue"));
+        // Delete a non-existent value for the predicate and make sure the test value is still present.
+        thing.removeValue("test-predicate", "test-value-3");
+        Assert.assertTrue(thing.hasThisValue("test-predicate", "test-value"));
 
         // Remove the test predicate and make sure it is no longer present.
-        t.removeValue("testpredicate", "testvalue");
-        Assert.assertFalse(t.hasThisValue("testpredicate", "testvalue"));
+        thing.removeValue("test-predicate", "test-value");
+        Assert.assertFalse(thing.hasThisValue("test-predicate", "test-value"));
     }
 }

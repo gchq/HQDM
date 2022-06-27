@@ -29,38 +29,32 @@ public abstract class Triples {
     private static final Pattern DATE_TIME_PATTERN = Pattern.compile("\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}.*");
 
     /**
-     * Convert Thing to triples.
+     * Convert a thing to triples.
      *
      * @param thing The {@link Thing} to convert.
-     * @return A String of RDF triples.
+     * @return A string of RDF triples.
      */
     public static String toTriples(final Thing thing) {
-        final StringBuilder builder = new StringBuilder();
-        builder.append('<');
-        builder.append(thing.getId());
-        builder.append('>');
-        builder.append(' ');
+        final String predicatesString = thing.getPredicates().entrySet().stream().map(predicate -> {
+            final String predicateString = "<" + predicate.getKey().toString() + "> ";
 
-        final String predicatesStr = thing.getPredicates().entrySet().stream().map(v -> {
-            final String predicate = "<" + v.getKey().toString() + "> ";
-            return v.getValue().stream().map(vv -> predicate + toTripleString(vv)).collect(Collectors.joining(";\n"));
+            return predicate.getValue().stream().map(value -> predicateString + toTripleString(value))
+                    .collect(Collectors.joining(";\n"));
         }).collect(Collectors.joining(";\n"));
 
-        builder.append(predicatesStr);
-        builder.append(".\n");
-        return builder.toString();
+        return '<' + thing.getId() + "> " + predicatesString + ".\n";
     }
 
     /**
-     * Convert an Object to a Triple String.
+     * Convert an object to a triple string.
      *
-     * @param object The Object to convert.
+     * @param object The object to convert.
      * @return {@link String}.
      */
     private static String toTripleString(final Object object) {
         final String stringValue = object.toString();
         if (object instanceof IRI) {
-            return "<" + stringValue + ">";
+            return '<' + stringValue + '>';
         } else if (DATE_TIME_PATTERN.matcher(stringValue).matches()) {
             return "\"" + object + "\"^^<http://www.w3.org/2001/XMLSchema#dateTime>";
         } else if (DATE_PATTERN.matcher(stringValue).matches()) {

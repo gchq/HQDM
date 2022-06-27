@@ -65,7 +65,6 @@ public final class HqdmObjectFactory {
      */
     public static Thing create(final String iri, final List<Pair<String, String>> pairs) throws HqdmException {
         try {
-
             final List<IRI> iris = new ArrayList<>();
             for (final Pair<String, String> pair : pairs.stream()
                     .filter(pair -> pair.getLeft().equals(RDF_TYPE.toString()))
@@ -75,7 +74,6 @@ public final class HqdmObjectFactory {
             }
 
             if (!iris.isEmpty()) {
-
                 final Thing result;
 
                 if (iris.size() == 1) {
@@ -363,12 +361,12 @@ public final class HqdmObjectFactory {
     }
 
     /**
-     * Create a {@link Thing} of the correct type.
+     * Create a {@link Thing} of the specified type.
      *
      * @param typeName The HQDM type name, e.g. spatio_temporal_extent
-     * @param iri      The {@link IRI} for the object id.
+     * @param iri      The {@link IRI} of the object.
      * @return A {@link Thing}.
-     * @throws HqdmException If the typeName is not valid.
+     * @throws HqdmException If the typeName is invalid.
      */
     private static Thing mapToThing(final String typeName, final IRI iri) {
 
