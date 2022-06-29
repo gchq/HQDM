@@ -15,7 +15,7 @@
 package uk.gov.gchq.hqdm.model.impl;
 
 import uk.gov.gchq.hqdm.model.FunctionalSystem;
-import uk.gov.gchq.hqdm.model.HqdmObject;
+import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of FunctionalSystem.
