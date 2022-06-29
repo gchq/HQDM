@@ -18,6 +18,5 @@
 module uk.gov.gchq.hqdm.core {
     exports uk.gov.gchq.hqdm.exception;
     exports uk.gov.gchq.hqdm.model;
-    exports uk.gov.gchq.hqdm.pojo;
     exports uk.gov.gchq.hqdm.services;
 }
