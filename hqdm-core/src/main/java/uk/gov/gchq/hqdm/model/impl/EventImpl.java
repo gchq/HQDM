@@ -14,8 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.Event;
+import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of Event.
@@ -29,5 +29,4 @@ public class EventImpl extends HqdmObject implements Event {
     public EventImpl(final String id) {
         super(id);
     }
-
 }

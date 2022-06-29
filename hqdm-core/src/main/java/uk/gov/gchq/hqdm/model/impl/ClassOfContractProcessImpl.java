@@ -14,8 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.ClassOfContractProcess;
+import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of ClassOfContractProcess.
@@ -29,5 +29,4 @@ public class ClassOfContractProcessImpl extends HqdmObject implements ClassOfCon
     public ClassOfContractProcessImpl(final String id) {
         super(id);
     }
-
 }

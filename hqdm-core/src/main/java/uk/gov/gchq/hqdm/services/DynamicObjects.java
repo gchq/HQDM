@@ -25,51 +25,41 @@ import uk.gov.gchq.hqdm.model.impl.ThingImpl;
 import uk.gov.gchq.hqdm.pojo.Top;
 
 /**
- * Services to create dynamic proxies.
+ * Service for creating dynamic proxies.
  */
 public class DynamicObjects {
 
     /**
-     * Try to create a Proxy that implements the set of specified interfaces.
+     * Create a Proxy that implements the set of specified interfaces.
      *
-     * @param <T> The subtypes of {@link Thing} that we want to implement.
-     * @param <U> The subtype of {@link Thing} that we want to return.
-     * @param id the {@link Thing} id {@link String}
-     * @param returnType the type to cast the return value to.
-     * @param c the array of classes we need to implement.
-     * @return an object of type U.
-    */
-    public static <T extends Thing, U extends Thing> U create(
-            final String id, 
-            final java.lang.Class<U> returnType, 
-            final java.lang.Class<T>[] c) {
-        
-        return (U) implementInterfaces((T) new ThingImpl(id), returnType, c);
+     * @param <T>        The subtypes of {@link Thing} to implement.
+     * @param <U>        The subtype of {@link Thing} to return.
+     * @param id         ID of the {@link Thing} to create.
+     * @param returnType The type to cast the return value to.
+     * @param classes    The array of classes to implement.
+     * @return An object of type U.
+     */
+    public static <T extends Thing, U extends Thing> U create(final String id, final java.lang.Class<U> returnType,
+            final java.lang.Class<T>[] classes) {
+
+        return (U) implementInterfaces((T) new ThingImpl(id), returnType, classes);
     }
 
     /**
-     * Try to create a Proxy that implements the set of specified interfaces,
-     * for an existing object.
+     * Create a Proxy that implements the set of specified interfaces, for an existing object.
      *
-     * @param <T> The subtypes of {@link Thing} that we want to implement.
-     * @param <U> The subtype of {@link Thing} that we want to return.
-     * @param t the {@link Thing} to delegate the interfaces to.
-     * @param returnType the type to cast the return value to.
-     * @param c the array of classes we need to implement.
-     * @return a U
-    */
-    public static <T extends Thing, U extends Thing> U implementInterfaces(
-            final T t, 
-            final java.lang.Class<U> returnType, 
-            final java.lang.Class<T>[] c) {
-        
+     * @param <T>        The subtypes of {@link Thing} to implement.
+     * @param <U>        The subtype of {@link Thing} to return.
+     * @param thing      The {@link Thing} to delegate the interfaces to.
+     * @param returnType The type to cast the return value to.
+     * @param classes    The array of classes to implement.
+     * @return An object of type U.
+     */
+    public static <T extends Thing, U extends Thing> U implementInterfaces(final T thing,
+            final java.lang.Class<U> returnType, final java.lang.Class<T>[] classes) {
         try {
-        
-            return (U) Proxy.newProxyInstance(
-                        ClassServices.class.getClassLoader(), 
-                        c, 
-                        new ThingHandler(t));
-        
+            return (U) Proxy.newProxyInstance(ClassServices.class.getClassLoader(), classes, new ThingHandler(thing));
+
         } catch (final Exception e) {
             return null;
         }
@@ -77,21 +67,20 @@ public class DynamicObjects {
 
     /**
      * Proxy method calls to {@link Object}.
-     *
-     * */
+     */
     private static class ThingHandler implements InvocationHandler {
 
-        // The methods to be proxied.
+        /** The methods to be proxied. */
         private final Map<String, Method> methods = new HashMap<>();
 
-        // The object to be proxied.
+        /** The object to be proxied. */
         private Object target;
 
         /**
          * Constructor accepting the thing to be proxied.
          *
-         * @param target the Object to be proxied.
-        */
+         * @param target The Object to be proxied.
+         */
         public ThingHandler(final Object target) {
             this.target = target;
 
@@ -103,11 +92,9 @@ public class DynamicObjects {
 
         /**
          * Call the requested method.
-         *
-         * */
+         */
         @Override
-        public Object invoke(final Object proxy, final Method method, final Object[] args)
-            throws Throwable {
+        public Object invoke(final Object proxy, final Method method, final Object[] args) throws Throwable {
             return methods.get(method.getName()).invoke(target, args);
         }
     }

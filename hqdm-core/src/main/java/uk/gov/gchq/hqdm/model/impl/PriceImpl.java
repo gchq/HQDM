@@ -14,8 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.Price;
+import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of Price.
@@ -29,5 +29,4 @@ public class PriceImpl extends HqdmObject implements Price {
     public PriceImpl(final String id) {
         super(id);
     }
-
 }

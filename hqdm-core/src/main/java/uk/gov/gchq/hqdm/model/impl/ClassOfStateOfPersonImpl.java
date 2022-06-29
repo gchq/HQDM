@@ -14,8 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.ClassOfStateOfPerson;
+import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of ClassOfStateOfPerson.
@@ -29,5 +29,4 @@ public class ClassOfStateOfPersonImpl extends HqdmObject implements ClassOfState
     public ClassOfStateOfPersonImpl(final String id) {
         super(id);
     }
-
 }

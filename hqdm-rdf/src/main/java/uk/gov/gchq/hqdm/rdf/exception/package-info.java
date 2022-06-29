@@ -13,6 +13,6 @@
  */
 
 /**
- * Exceptions arising from HQDM code.
+ * Exceptions arising from HQDM-RDF code.
  */
 package uk.gov.gchq.hqdm.rdf.exception;

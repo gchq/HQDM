@@ -14,8 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.AgreeContract;
+import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of AgreeContract.
@@ -29,5 +29,4 @@ public class AgreeContractImpl extends HqdmObject implements AgreeContract {
     public AgreeContractImpl(final String id) {
         super(id);
     }
-
 }

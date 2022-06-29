@@ -18,7 +18,5 @@ package uk.gov.gchq.hqdm.model;
  * A {@link ClassOfStateOfBiologicalObject} and {@link ClassOfPhysicalObject} that is
  * {@link BiologicalObject} or any of its subsets.
  */
-public interface ClassOfBiologicalObject extends
-        ClassOfStateOfBiologicalObject,
-        ClassOfPhysicalObject {
+public interface ClassOfBiologicalObject extends ClassOfStateOfBiologicalObject, ClassOfPhysicalObject {
 }

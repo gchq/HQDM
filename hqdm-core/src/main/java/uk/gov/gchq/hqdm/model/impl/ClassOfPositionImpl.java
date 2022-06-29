@@ -14,8 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.ClassOfPosition;
+import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of ClassOfPosition.
@@ -29,5 +29,4 @@ public class ClassOfPositionImpl extends HqdmObject implements ClassOfPosition {
     public ClassOfPositionImpl(final String id) {
         super(id);
     }
-
 }

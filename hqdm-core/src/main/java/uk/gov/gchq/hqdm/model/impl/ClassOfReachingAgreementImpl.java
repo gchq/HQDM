@@ -14,8 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.ClassOfReachingAgreement;
+import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of ClassOfReachingAgreement.
@@ -29,5 +29,4 @@ public class ClassOfReachingAgreementImpl extends HqdmObject implements ClassOfR
     public ClassOfReachingAgreementImpl(final String id) {
         super(id);
     }
-
 }

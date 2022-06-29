@@ -14,14 +14,13 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.ClassOfOrdinaryBiologicalObject;
+import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of ClassOfOrdinaryBiologicalObject.
  */
-public class ClassOfOrdinaryBiologicalObjectImpl extends HqdmObject
-        implements ClassOfOrdinaryBiologicalObject {
+public class ClassOfOrdinaryBiologicalObjectImpl extends HqdmObject implements ClassOfOrdinaryBiologicalObject {
     /**
      * Constructs a new ClassOfOrdinaryBiologicalObject.
      *
@@ -30,5 +29,4 @@ public class ClassOfOrdinaryBiologicalObjectImpl extends HqdmObject
     public ClassOfOrdinaryBiologicalObjectImpl(final String id) {
         super(id);
     }
-
 }

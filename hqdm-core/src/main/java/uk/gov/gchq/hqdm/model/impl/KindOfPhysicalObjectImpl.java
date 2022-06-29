@@ -14,8 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.KindOfPhysicalObject;
+import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of KindOfPhysicalObject.
@@ -29,5 +29,4 @@ public class KindOfPhysicalObjectImpl extends HqdmObject implements KindOfPhysic
     public KindOfPhysicalObjectImpl(final String id) {
         super(id);
     }
-
 }

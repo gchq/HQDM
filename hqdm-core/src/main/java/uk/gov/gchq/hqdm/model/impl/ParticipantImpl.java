@@ -14,8 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.Participant;
+import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of Participant.
@@ -29,5 +29,4 @@ public class ParticipantImpl extends HqdmObject implements Participant {
     public ParticipantImpl(final String id) {
         super(id);
     }
-
 }

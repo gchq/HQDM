@@ -14,8 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.ClassOfSign;
+import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of ClassOfSign.
@@ -29,5 +29,4 @@ public class ClassOfSignImpl extends HqdmObject implements ClassOfSign {
     public ClassOfSignImpl(final String id) {
         super(id);
     }
-
 }

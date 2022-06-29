@@ -32,7 +32,7 @@ public class IRI {
     /**
      * Constructs a new IRI from a base namespace and resource name.
      *
-     * @param base IRI base namespace.
+     * @param base     IRI base namespace.
      * @param resource Resource name.
      */
     public IRI(final IriBase base, final String resource) {

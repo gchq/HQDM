@@ -14,14 +14,13 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.InstalledFunctionalSystemComponent;
+import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of InstalledFunctionalSystemComponent.
  */
-public class InstalledFunctionalSystemComponentImpl extends HqdmObject
-        implements InstalledFunctionalSystemComponent {
+public class InstalledFunctionalSystemComponentImpl extends HqdmObject implements InstalledFunctionalSystemComponent {
     /**
      * Constructs a new InstalledFunctionalSystemComponent.
      *
@@ -30,5 +29,4 @@ public class InstalledFunctionalSystemComponentImpl extends HqdmObject
     public InstalledFunctionalSystemComponentImpl(final String id) {
         super(id);
     }
-
 }

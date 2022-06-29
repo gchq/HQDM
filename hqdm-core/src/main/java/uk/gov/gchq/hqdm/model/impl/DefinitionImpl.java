@@ -14,8 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.Definition;
+import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of Definition.
@@ -29,5 +29,4 @@ public class DefinitionImpl extends HqdmObject implements Definition {
     public DefinitionImpl(final String id) {
         super(id);
     }
-
 }

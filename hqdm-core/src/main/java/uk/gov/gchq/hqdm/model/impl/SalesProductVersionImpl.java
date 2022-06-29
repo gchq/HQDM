@@ -14,8 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.SalesProductVersion;
+import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of SalesProductVersion.
@@ -29,5 +29,4 @@ public class SalesProductVersionImpl extends HqdmObject implements SalesProductV
     public SalesProductVersionImpl(final String id) {
         super(id);
     }
-
 }

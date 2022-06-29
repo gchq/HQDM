@@ -14,14 +14,13 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.IntentionallyConstructedObject;
+import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of IntentionallyConstructedObject.
  */
-public class IntentionallyConstructedObjectImpl extends HqdmObject
-        implements IntentionallyConstructedObject {
+public class IntentionallyConstructedObjectImpl extends HqdmObject implements IntentionallyConstructedObject {
     /**
      * Constructs a new IntentionallyConstructedObject.
      *
@@ -30,5 +29,4 @@ public class IntentionallyConstructedObjectImpl extends HqdmObject
     public IntentionallyConstructedObjectImpl(final String id) {
         super(id);
     }
-
 }

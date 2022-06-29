@@ -14,8 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.ClassOfStateOfSociallyConstructedActivity;
+import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of ClassOfStateOfSociallyConstructedActivity.
@@ -30,5 +30,4 @@ public class ClassOfStateOfSociallyConstructedActivityImpl extends HqdmObject
     public ClassOfStateOfSociallyConstructedActivityImpl(final String id) {
         super(id);
     }
-
 }

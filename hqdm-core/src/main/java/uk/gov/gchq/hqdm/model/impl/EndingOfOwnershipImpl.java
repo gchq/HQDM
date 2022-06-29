@@ -14,8 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.EndingOfOwnership;
+import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of EndingOfOwnership.
@@ -29,5 +29,4 @@ public class EndingOfOwnershipImpl extends HqdmObject implements EndingOfOwnersh
     public EndingOfOwnershipImpl(final String id) {
         super(id);
     }
-
 }

@@ -14,8 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.ProductOffering;
+import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of ProductOffering.
@@ -29,5 +29,4 @@ public class ProductOfferingImpl extends HqdmObject implements ProductOffering {
     public ProductOfferingImpl(final String id) {
         super(id);
     }
-
 }

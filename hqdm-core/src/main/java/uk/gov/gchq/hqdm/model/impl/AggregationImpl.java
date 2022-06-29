@@ -14,8 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.Aggregation;
+import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of Aggregation.
@@ -29,5 +29,4 @@ public class AggregationImpl extends HqdmObject implements Aggregation {
     public AggregationImpl(final String id) {
         super(id);
     }
-
 }

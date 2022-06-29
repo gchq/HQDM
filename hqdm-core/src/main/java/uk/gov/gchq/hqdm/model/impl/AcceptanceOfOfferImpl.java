@@ -14,8 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.AcceptanceOfOffer;
+import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of AcceptanceOfOffer.
@@ -29,5 +29,4 @@ public class AcceptanceOfOfferImpl extends HqdmObject implements AcceptanceOfOff
     public AcceptanceOfOfferImpl(final String id) {
         super(id);
     }
-
 }

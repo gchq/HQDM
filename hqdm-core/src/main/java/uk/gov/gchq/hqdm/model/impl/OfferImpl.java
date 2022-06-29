@@ -14,8 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.Offer;
+import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of Offer.
@@ -29,5 +29,4 @@ public class OfferImpl extends HqdmObject implements Offer {
     public OfferImpl(final String id) {
         super(id);
     }
-
 }

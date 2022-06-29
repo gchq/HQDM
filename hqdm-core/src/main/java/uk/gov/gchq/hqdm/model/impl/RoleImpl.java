@@ -14,8 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.Role;
+import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of Role.
@@ -29,5 +29,4 @@ public class RoleImpl extends HqdmObject implements Role {
     public RoleImpl(final String id) {
         super(id);
     }
-
 }

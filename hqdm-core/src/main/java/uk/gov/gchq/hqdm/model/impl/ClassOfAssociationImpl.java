@@ -14,8 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.ClassOfAssociation;
+import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of ClassOfAssociation.
@@ -29,5 +29,4 @@ public class ClassOfAssociationImpl extends HqdmObject implements ClassOfAssocia
     public ClassOfAssociationImpl(final String id) {
         super(id);
     }
-
 }

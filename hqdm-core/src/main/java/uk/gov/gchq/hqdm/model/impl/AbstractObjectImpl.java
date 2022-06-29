@@ -14,8 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.AbstractObject;
+import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of AbstractObject.
@@ -29,5 +29,4 @@ public class AbstractObjectImpl extends HqdmObject implements AbstractObject {
     public AbstractObjectImpl(final String id) {
         super(id);
     }
-
 }

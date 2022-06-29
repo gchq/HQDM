@@ -14,14 +14,13 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.ClassOfStateOfOrganizationComponent;
+import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of ClassOfStateOfOrganizationComponent.
  */
-public class ClassOfStateOfOrganizationComponentImpl extends HqdmObject
-        implements ClassOfStateOfOrganizationComponent {
+public class ClassOfStateOfOrganizationComponentImpl extends HqdmObject implements ClassOfStateOfOrganizationComponent {
     /**
      * Constructs a new ClassOfStateOfOrganizationComponent.
      *
@@ -30,5 +29,4 @@ public class ClassOfStateOfOrganizationComponentImpl extends HqdmObject
     public ClassOfStateOfOrganizationComponentImpl(final String id) {
         super(id);
     }
-
 }

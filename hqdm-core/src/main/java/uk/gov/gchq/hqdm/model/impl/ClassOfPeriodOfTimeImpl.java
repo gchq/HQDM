@@ -14,8 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.ClassOfPeriodOfTime;
+import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of ClassOfPeriodOfTime.
@@ -29,5 +29,4 @@ public class ClassOfPeriodOfTimeImpl extends HqdmObject implements ClassOfPeriod
     public ClassOfPeriodOfTimeImpl(final String id) {
         super(id);
     }
-
 }

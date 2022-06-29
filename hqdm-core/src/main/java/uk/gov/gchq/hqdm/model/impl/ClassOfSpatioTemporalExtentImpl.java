@@ -15,12 +15,12 @@
 package uk.gov.gchq.hqdm.model.impl;
 
 import uk.gov.gchq.hqdm.model.ClassOfSpatioTemporalExtent;
+import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of ClassOfSpatioTemporalExtent.
  */
-public class ClassOfSpatioTemporalExtentImpl extends HqdmObject
-        implements ClassOfSpatioTemporalExtent {
+public class ClassOfSpatioTemporalExtentImpl extends HqdmObject implements ClassOfSpatioTemporalExtent {
     /**
      * Constructs a new ClassOfSpatioTemporalExtent.
      *
@@ -29,5 +29,4 @@ public class ClassOfSpatioTemporalExtentImpl extends HqdmObject
     public ClassOfSpatioTemporalExtentImpl(final String id) {
         super(id);
     }
-
 }

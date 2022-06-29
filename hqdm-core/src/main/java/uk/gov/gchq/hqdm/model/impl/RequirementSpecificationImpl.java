@@ -14,8 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.RequirementSpecification;
+import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of RequirementSpecification.
@@ -29,5 +29,4 @@ public class RequirementSpecificationImpl extends HqdmObject implements Requirem
     public RequirementSpecificationImpl(final String id) {
         super(id);
     }
-
 }

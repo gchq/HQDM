@@ -14,8 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.KindOfIntentionallyConstructedObject;
+import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of KindOfIntentionallyConstructedObject.
@@ -30,5 +30,4 @@ public class KindOfIntentionallyConstructedObjectImpl extends HqdmObject
     public KindOfIntentionallyConstructedObjectImpl(final String id) {
         super(id);
     }
-
 }

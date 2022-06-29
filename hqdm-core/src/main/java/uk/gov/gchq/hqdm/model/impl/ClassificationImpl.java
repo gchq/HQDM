@@ -14,8 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.Classification;
+import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of Classification.
@@ -29,5 +29,4 @@ public class ClassificationImpl extends HqdmObject implements Classification {
     public ClassificationImpl(final String id) {
         super(id);
     }
-
 }

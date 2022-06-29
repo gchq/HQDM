@@ -14,8 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.Relationship;
+import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of Relationship.
@@ -29,5 +29,4 @@ public class RelationshipImpl extends HqdmObject implements Relationship {
     public RelationshipImpl(final String id) {
         super(id);
     }
-
 }

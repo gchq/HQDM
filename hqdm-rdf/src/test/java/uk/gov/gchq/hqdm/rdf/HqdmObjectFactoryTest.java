@@ -23,13 +23,14 @@ import java.util.Set;
 
 import org.junit.Test;
 
+import uk.gov.gchq.hqdm.exception.HqdmException;
 import uk.gov.gchq.hqdm.model.Participant;
 import uk.gov.gchq.hqdm.model.Person;
-import uk.gov.gchq.hqdm.rdf.exception.HqdmException;
 import uk.gov.gchq.hqdm.rdf.iri.HQDM;
 import uk.gov.gchq.hqdm.rdf.iri.HqdmIri;
 import uk.gov.gchq.hqdm.rdf.iri.IRI;
 import uk.gov.gchq.hqdm.rdf.iri.RDFS;
+import uk.gov.gchq.hqdm.rdf.util.Pair;
 
 /**
  * Tests for the {@link HqdmObjectFactory}.
@@ -38,8 +39,7 @@ public class HqdmObjectFactoryTest {
 
     /**
      * Test creating a new HQDM Object successfully.
-     *
-     * */
+     */
     @Test
     public void testCreateNewObjectSuccess() {
         final var personId = "person1";
@@ -57,8 +57,7 @@ public class HqdmObjectFactoryTest {
 
     /**
      * Test creating a new HQDM Object that fails.
-     *
-     * */
+     */
     @Test(expected = HqdmException.class)
     public void testCreateNewObjectFail() {
         final var personId = "person1";
@@ -70,19 +69,17 @@ public class HqdmObjectFactoryTest {
 
     /**
      * Test successfully creating an object with a list of predicates.
-     *
-     * */
+     */
     @Test
     public void testCreateObjectWithPredicatesSuccess() {
         final var personId = "person1";
         final var personIri = new IRI(HQDM.HQDM, personId);
 
-        final var person = HqdmObjectFactory.create(personIri.getIri(), List.of(
-                    new Pair<>(RDFS.RDF_TYPE.getIri(), HQDM.PERSON.getIri()),
-                    new Pair<>(HQDM.ENTITY_NAME.getIri(), personId),
-                    new Pair<>(HQDM.MEMBER_OF_KIND.getIri(), "PERSON_KIND")
-                    ));
-        //
+        final var person = HqdmObjectFactory.create(personIri.getIri(),
+                List.of(new Pair<>(RDFS.RDF_TYPE.getIri(), HQDM.PERSON.getIri()),
+                        new Pair<>(HQDM.ENTITY_NAME.getIri(), personId),
+                        new Pair<>(HQDM.MEMBER_OF_KIND.getIri(), "PERSON_KIND")));
+
         // Assert the values are correct.
         assertNotNull(person);
         assertEquals(Set.of(personId), person.value(HQDM.ENTITY_NAME.getIri()));
@@ -91,21 +88,19 @@ public class HqdmObjectFactoryTest {
     }
 
     /**
-     * Test successfully creating an object with a list of predicates and 
-     * multiple HQDM interfaces as rdf:type.
-     *
-     * */
+     * Test successfully creating an object with a list of predicates and multiple HQDM interfaces as
+     * rdf:type.
+     */
     @Test
     public void testCreateObjectWithMultipleInterfacesSuccess() {
         final var personId = "person1";
         final var personIri = new IRI(HQDM.HQDM, personId);
 
-        final var person = HqdmObjectFactory.create(personIri.getIri(), List.of(
-                    new Pair<>(RDFS.RDF_TYPE.getIri(), HQDM.PERSON.getIri()),
-                    new Pair<>(RDFS.RDF_TYPE.getIri(), HQDM.PARTICIPANT.getIri()),
-                    new Pair<>(HQDM.ENTITY_NAME.getIri(), personId)
-                    ));
-        //
+        final var person = HqdmObjectFactory.create(personIri.getIri(),
+                List.of(new Pair<>(RDFS.RDF_TYPE.getIri(), HQDM.PERSON.getIri()),
+                        new Pair<>(RDFS.RDF_TYPE.getIri(), HQDM.PARTICIPANT.getIri()),
+                        new Pair<>(HQDM.ENTITY_NAME.getIri(), personId)));
+
         // Assert the values are correct.
         assertNotNull(person);
         assertTrue(person instanceof Person);
@@ -113,5 +108,4 @@ public class HqdmObjectFactoryTest {
         assertEquals(Set.of(personId), person.value(HQDM.ENTITY_NAME.getIri()));
         assertEquals(personIri.getIri(), person.getId());
     }
-
 }

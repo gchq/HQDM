@@ -20,19 +20,19 @@ package uk.gov.gchq.hqdm.rdf.exception;
 public class IriException extends RuntimeException {
 
     /**
-     * Constructs a new IriException with null as its detail message. The cause is not initialized,
-     * and may subsequently be initialized by a call to {@link #initCause(Throwable)}.
+     * Constructs a new IriException with null as its detail message. The cause is not initialized, and
+     * may subsequently be initialized by a call to {@link #initCause(Throwable)}.
      */
     public IriException() {
         super();
     }
 
     /**
-     * Constructs a new IriException with the specified detail message. The cause is not
-     * initialized, and may subsequently be initialized by a call to {@link #initCause(Throwable)}.
+     * Constructs a new IriException with the specified detail message. The cause is not initialized,
+     * and may subsequently be initialized by a call to {@link #initCause(Throwable)}.
      *
      * @param message The detail message. The detail message is saved for later retrieval by the
-     *        {@link #getMessage()} method.
+     *                {@link #getMessage()} method.
      */
     public IriException(final String message) {
         super(message);
@@ -42,9 +42,9 @@ public class IriException extends RuntimeException {
      * Constructs a new IriException with the specified cause and a detail message of (cause==null ?
      * null : cause.toString()) (which typically contains the class and detail message of cause).
      *
-     * @param cause The cause (which is saved for later retrieval by the {@link #getCause()}
-     *        method). (A {@code null} value is permitted, and indicates that the cause is
-     *        nonexistent or unknown.)
+     * @param cause The cause (which is saved for later retrieval by the {@link #getCause()} method). (A
+     *              {@code null} value is permitted, and indicates that the cause is nonexistent or
+     *              unknown.)
      */
     public IriException(final Throwable cause) {
         super(cause);
@@ -54,10 +54,10 @@ public class IriException extends RuntimeException {
      * Constructs a new IriException with the specified detail message and cause.
      *
      * @param message The detail message (which is saved for later retrieval by the
-     *        {@link #getMessage()} method).
-     * @param cause The cause (which is saved for later retrieval by the {@link #getCause()}
-     *        method). (A {@code null} value is permitted, and indicates that the cause is
-     *        nonexistent or unknown.)
+     *                {@link #getMessage()} method).
+     * @param cause   The cause (which is saved for later retrieval by the {@link #getCause()} method).
+     *                (A {@code null} value is permitted, and indicates that the cause is nonexistent or
+     *                unknown.)
      */
     public IriException(final String message, final Throwable cause) {
         super(message, cause);

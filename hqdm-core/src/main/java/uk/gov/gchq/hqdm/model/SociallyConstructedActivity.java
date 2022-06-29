@@ -17,7 +17,5 @@ package uk.gov.gchq.hqdm.model;
 /**
  * Any {@link SociallyConstructedObject} that is also an {@link Activity}.
  */
-public interface SociallyConstructedActivity extends
-        Activity,
-        SociallyConstructedObject {
+public interface SociallyConstructedActivity extends Activity, SociallyConstructedObject {
 }

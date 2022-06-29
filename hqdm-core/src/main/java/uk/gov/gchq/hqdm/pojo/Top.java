@@ -23,16 +23,16 @@ import java.util.Set;
 public interface Top {
 
     /**
-     * Get the String of the HQDM object.
+     * Get the ID of the HQDM object.
      *
-     * @return String of the HQDM object.
+     * @return ID of the HQDM object.
      */
     String getId();
 
     /**
-     * Set the String of the HQDM object.
+     * Set the ID of the HQDM object.
      *
-     * @param id String of the HQDM object.
+     * @param id ID of the HQDM object.
      */
     void setId(String id);
 
@@ -51,86 +51,86 @@ public interface Top {
     void setPredicates(Map<String, Set<Object>> predicates);
 
     /**
+     * Get predicate value(s) by predicate String.
+     *
+     * @param predicateId Predicate ID.
+     * @return Set of predicate values (Strings or string-literals).
+     */
+    Set<Object> value(String predicateId);
+
+    /**
      * Add predicate and object String reference to entity.
      *
-     * @param predicateId Predicate String.
-     * @param objectId String of the object.
+     * @param predicateId Predicate ID.
+     * @param objectId    ID of the object.
      */
     void addValue(String predicateId, String objectId);
 
     /**
      * Add predicate String and string value to object.
      *
-     * @param predicateId Predicate String.
-     * @param value String value.
+     * @param predicateId Predicate ID.
+     * @param value       String value.
      */
     void addStringValue(String predicateId, String value);
 
     /**
      * Add predicate String and real number value to object.
      *
-     * @param predicateId Predicate String.
-     * @param value Real number value.
+     * @param predicateId Predicate ID.
+     * @param value       Real number value.
      */
     void addRealValue(String predicateId, double value);
 
     /**
-     * Get predicate value(s) by predicate String.
+     * Remove a predicate value.
      *
-     * @param predicateId Predicate String.
-     * @return Set of predicate values (Strings or string-literals).
+     * @param predicateId The ID of the predicate.
+     * @param value       The {@link String} value to be removed.
      */
-    Set<Object> value(String predicateId);
+    void removeValue(String predicateId, String value);
 
     /**
      * Does the entity have a given predicate.
      *
-     * @param predicateId Predicate String.
-     * @return True if has predicate value.
+     * @param predicateId Predicate ID.
+     * @return {@code true} if has predicate value.
      */
     boolean hasValue(String predicateId);
 
     /**
-     * Does the entity have a given predicate and String value.
+     * Does the entity have a given predicate and object value.
      *
-     * @param predicateId Predicate String.
-     * @param value Object String.
-     * @return True if has this String value.
+     * @param predicateId Predicate ID.
+     * @param objectId    ID of the object.
+     * @return {@code true} if has this object value.
      */
-    boolean hasThisValue(String predicateId, String value);
+    boolean hasThisValue(String predicateId, String objectId);
 
     /**
      * Does the entity have a given predicate and string value.
      *
-     * @param predicateId Predicate String.
-     * @param value String value.
-     * @return True if has this string value.
+     * @param predicateId Predicate ID.
+     * @param value       String value.
+     * @return {@code true} if has this string value.
      */
     boolean hasThisStringValue(String predicateId, String value);
 
     /**
      * Does the entity have a given predicate and string value (case-insensitive).
      *
-     * @param predicateId Predicate String.
-     * @param value Case-insensitive string value.
-     * @return True if has this string value.
+     * @param predicateId Predicate ID.
+     * @param value       Case-insensitive string value.
+     * @return {@code true} if has this string value.
      */
     boolean hasThisStringValueIgnoreCase(String predicateId, String value);
 
     /**
      * Does the entity have a given predicate and string value.
      *
-     * @param predicateId Predicate String.
-     * @param value String value.
-     * @return True if has fuzzy string value.
+     * @param predicateId Predicate ID.
+     * @param value       String value.
+     * @return {@code true} if has fuzzy string value.
      */
     boolean hasThisStringValueFuzzy(String predicateId, String value);
-
-    /**
-     * Remove a predicate value.
-     *
-     * @param predicateId the id {@link String} of the predicate.
-     * @param value the value {@link String} to be removed.
-    */
-    void removeValue(String predicateId, String value);
 }

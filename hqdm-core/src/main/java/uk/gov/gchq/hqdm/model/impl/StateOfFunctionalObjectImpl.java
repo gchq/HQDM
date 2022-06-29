@@ -14,8 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.StateOfFunctionalObject;
+import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of StateOfFunctionalObject.
@@ -29,5 +29,4 @@ public class StateOfFunctionalObjectImpl extends HqdmObject implements StateOfFu
     public StateOfFunctionalObjectImpl(final String id) {
         super(id);
     }
-
 }

@@ -14,8 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.Person;
+import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of Person.
@@ -29,5 +29,4 @@ public class PersonImpl extends HqdmObject implements Person {
     public PersonImpl(final String id) {
         super(id);
     }
-
 }

@@ -14,8 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.ClassOfStateOfActivity;
+import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of ClassOfStateOfActivity.
@@ -29,5 +29,4 @@ public class ClassOfStateOfActivityImpl extends HqdmObject implements ClassOfSta
     public ClassOfStateOfActivityImpl(final String id) {
         super(id);
     }
-
 }

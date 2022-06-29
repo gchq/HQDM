@@ -14,8 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.Employment;
+import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of Employment.
@@ -29,5 +29,4 @@ public class EmploymentImpl extends HqdmObject implements Employment {
     public EmploymentImpl(final String id) {
         super(id);
     }
-
 }

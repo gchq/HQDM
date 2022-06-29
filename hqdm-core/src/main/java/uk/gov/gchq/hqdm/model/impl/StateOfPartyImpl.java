@@ -14,8 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.StateOfParty;
+import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of StateOfParty.
@@ -29,5 +29,4 @@ public class StateOfPartyImpl extends HqdmObject implements StateOfParty {
     public StateOfPartyImpl(final String id) {
         super(id);
     }
-
 }

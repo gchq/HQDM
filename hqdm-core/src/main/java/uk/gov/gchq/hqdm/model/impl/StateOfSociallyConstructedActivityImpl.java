@@ -14,14 +14,13 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.StateOfSociallyConstructedActivity;
+import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of StateOfSociallyConstructedActivity.
  */
-public class StateOfSociallyConstructedActivityImpl extends HqdmObject
-        implements StateOfSociallyConstructedActivity {
+public class StateOfSociallyConstructedActivityImpl extends HqdmObject implements StateOfSociallyConstructedActivity {
     /**
      * Constructs a new StateOfSociallyConstructedActivity.
      *
@@ -30,5 +29,4 @@ public class StateOfSociallyConstructedActivityImpl extends HqdmObject
     public StateOfSociallyConstructedActivityImpl(final String id) {
         super(id);
     }
-
 }

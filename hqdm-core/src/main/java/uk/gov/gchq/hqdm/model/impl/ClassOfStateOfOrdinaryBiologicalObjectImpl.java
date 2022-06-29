@@ -14,8 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.ClassOfStateOfOrdinaryBiologicalObject;
+import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of ClassOfStateOfOrdinaryBiologicalObject.
@@ -30,5 +30,4 @@ public class ClassOfStateOfOrdinaryBiologicalObjectImpl extends HqdmObject
     public ClassOfStateOfOrdinaryBiologicalObjectImpl(final String id) {
         super(id);
     }
-
 }

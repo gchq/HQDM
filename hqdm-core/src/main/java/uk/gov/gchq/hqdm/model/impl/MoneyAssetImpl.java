@@ -14,8 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.MoneyAsset;
+import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of MoneyAsset.
@@ -29,5 +29,4 @@ public class MoneyAssetImpl extends HqdmObject implements MoneyAsset {
     public MoneyAssetImpl(final String id) {
         super(id);
     }
-
 }

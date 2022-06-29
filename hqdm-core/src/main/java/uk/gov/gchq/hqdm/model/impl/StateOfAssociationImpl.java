@@ -14,8 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.StateOfAssociation;
+import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of StateOfAssociation.
@@ -29,5 +29,4 @@ public class StateOfAssociationImpl extends HqdmObject implements StateOfAssocia
     public StateOfAssociationImpl(final String id) {
         super(id);
     }
-
 }

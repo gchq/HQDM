@@ -14,8 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.ClassOfParticipant;
+import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of ClassOfParticipant.
@@ -29,5 +29,4 @@ public class ClassOfParticipantImpl extends HqdmObject implements ClassOfPartici
     public ClassOfParticipantImpl(final String id) {
         super(id);
     }
-
 }

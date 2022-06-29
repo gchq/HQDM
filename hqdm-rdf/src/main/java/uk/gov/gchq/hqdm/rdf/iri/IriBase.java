@@ -28,12 +28,13 @@ public class IriBase {
     /**
      * Constructs a new blank IriBase.
      */
-    public IriBase() {}
+    public IriBase() {
+    }
 
     /**
      * Constructs a new IriBase with a prefix and namespace.
      *
-     * @param prefix Prefix label for the vocabulary.
+     * @param prefix    Prefix label for the vocabulary.
      * @param namespace URL of the namespace.
      */
     public IriBase(final String prefix, final String namespace) {

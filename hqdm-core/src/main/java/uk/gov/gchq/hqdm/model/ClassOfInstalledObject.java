@@ -19,7 +19,5 @@ package uk.gov.gchq.hqdm.model;
  * {@link ClassOfStateOfOrdinaryPhysicalObject} that is {@link InstalledObject} or any of its
  * subsets.
  */
-public interface ClassOfInstalledObject extends
-        ClassOfStateOfSystemComponent,
-        ClassOfStateOfOrdinaryPhysicalObject {
+public interface ClassOfInstalledObject extends ClassOfStateOfSystemComponent, ClassOfStateOfOrdinaryPhysicalObject {
 }

@@ -14,8 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.Composition;
+import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of Composition.
@@ -29,5 +29,4 @@ public class CompositionImpl extends HqdmObject implements Composition {
     public CompositionImpl(final String id) {
         super(id);
     }
-
 }

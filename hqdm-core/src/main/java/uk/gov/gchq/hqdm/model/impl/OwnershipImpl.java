@@ -14,8 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.Ownership;
+import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of Ownership.
@@ -29,5 +29,4 @@ public class OwnershipImpl extends HqdmObject implements Ownership {
     public OwnershipImpl(final String id) {
         super(id);
     }
-
 }

@@ -18,7 +18,6 @@ package uk.gov.gchq.hqdm.model;
  * A {@link ClassOfIntentionallyConstructedObject} that is {@link SociallyConstructedObject} or any
  * of its subsets.
  */
-public interface ClassOfSociallyConstructedObject extends
-        ClassOfIntentionallyConstructedObject,
-        ClassOfStateOfSociallyConstructedObject {
+public interface ClassOfSociallyConstructedObject
+                extends ClassOfIntentionallyConstructedObject, ClassOfStateOfSociallyConstructedObject {
 }

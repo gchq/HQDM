@@ -14,8 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.UnitOfMeasure;
+import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of UnitOfMeasure.
@@ -29,5 +29,4 @@ public class UnitOfMeasureImpl extends HqdmObject implements UnitOfMeasure {
     public UnitOfMeasureImpl(final String id) {
         super(id);
     }
-
 }

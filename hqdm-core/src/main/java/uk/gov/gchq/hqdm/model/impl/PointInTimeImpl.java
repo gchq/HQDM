@@ -14,8 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.PointInTime;
+import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of PointInTime.
@@ -29,5 +29,4 @@ public class PointInTimeImpl extends HqdmObject implements PointInTime {
     public PointInTimeImpl(final String id) {
         super(id);
     }
-
 }

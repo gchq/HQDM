@@ -14,8 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.System;
+import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of System.
@@ -29,5 +29,4 @@ public class SystemImpl extends HqdmObject implements System {
     public SystemImpl(final String id) {
         super(id);
     }
-
 }

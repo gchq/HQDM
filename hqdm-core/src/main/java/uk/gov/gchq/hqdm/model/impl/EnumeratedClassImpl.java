@@ -14,8 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.EnumeratedClass;
+import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of EnumeratedClass.
@@ -29,5 +29,4 @@ public class EnumeratedClassImpl extends HqdmObject implements EnumeratedClass {
     public EnumeratedClassImpl(final String id) {
         super(id);
     }
-
 }

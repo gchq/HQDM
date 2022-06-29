@@ -14,8 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.SpatioTemporalExtent;
+import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of SpatioTemporalExtent.
@@ -29,5 +29,4 @@ public class SpatioTemporalExtentImpl extends HqdmObject implements SpatioTempor
     public SpatioTemporalExtentImpl(final String id) {
         super(id);
     }
-
 }

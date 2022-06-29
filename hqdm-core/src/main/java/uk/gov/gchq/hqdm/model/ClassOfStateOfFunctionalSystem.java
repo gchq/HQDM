@@ -18,7 +18,5 @@ package uk.gov.gchq.hqdm.model;
  * A {@link ClassOfStateOfOrdinaryFunctionalObject} that is also a {@link ClassOfStateOfSystem} that
  * is {@link StateOfFunctionalSystem} or any of its subsets.
  */
-public interface ClassOfStateOfFunctionalSystem extends
-        ClassOfStateOfOrdinaryFunctionalObject,
-        ClassOfStateOfSystem {
+public interface ClassOfStateOfFunctionalSystem extends ClassOfStateOfOrdinaryFunctionalObject, ClassOfStateOfSystem {
 }

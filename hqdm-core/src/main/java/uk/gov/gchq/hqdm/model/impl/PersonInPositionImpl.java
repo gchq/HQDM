@@ -14,8 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.PersonInPosition;
+import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of PersonInPosition.
@@ -29,5 +29,4 @@ public class PersonInPositionImpl extends HqdmObject implements PersonInPosition
     public PersonInPositionImpl(final String id) {
         super(id);
     }
-
 }

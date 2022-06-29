@@ -19,7 +19,5 @@ package uk.gov.gchq.hqdm.model;
  * {@code temporal_part_of} an {@link OrdinaryPhysicalObject} from when it is installed as a
  * {@link SystemComponent} to when it is removed.
  */
-public interface InstalledObject extends
-        StateOfOrdinaryPhysicalObject,
-        StateOfSystemComponent {
+public interface InstalledObject extends StateOfOrdinaryPhysicalObject, StateOfSystemComponent {
 }

@@ -14,8 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.AmountOfMoney;
+import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of AmountOfMoney.
@@ -29,5 +29,4 @@ public class AmountOfMoneyImpl extends HqdmObject implements AmountOfMoney {
     public AmountOfMoneyImpl(final String id) {
         super(id);
     }
-
 }

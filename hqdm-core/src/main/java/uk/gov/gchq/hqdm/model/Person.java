@@ -18,8 +18,5 @@ package uk.gov.gchq.hqdm.model;
  * A {@link BiologicalSystem} that is also, a {@link StateOfPerson}, and a {@link Party} that is a
  * human being.
  */
-public interface Person extends
-        BiologicalSystem,
-        StateOfPerson,
-        Party {
+public interface Person extends BiologicalSystem, StateOfPerson, Party {
 }

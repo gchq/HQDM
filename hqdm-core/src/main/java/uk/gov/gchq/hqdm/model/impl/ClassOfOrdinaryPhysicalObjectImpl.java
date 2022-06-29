@@ -14,14 +14,13 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.ClassOfOrdinaryPhysicalObject;
+import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of ClassOfOrdinaryPhysicalObject.
  */
-public class ClassOfOrdinaryPhysicalObjectImpl extends HqdmObject
-        implements ClassOfOrdinaryPhysicalObject {
+public class ClassOfOrdinaryPhysicalObjectImpl extends HqdmObject implements ClassOfOrdinaryPhysicalObject {
     /**
      * Constructs a new ClassOfOrdinaryPhysicalObject.
      *
@@ -30,5 +29,4 @@ public class ClassOfOrdinaryPhysicalObjectImpl extends HqdmObject
     public ClassOfOrdinaryPhysicalObjectImpl(final String id) {
         super(id);
     }
-
 }

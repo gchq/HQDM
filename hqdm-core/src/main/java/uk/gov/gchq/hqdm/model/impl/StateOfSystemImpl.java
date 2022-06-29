@@ -14,8 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.StateOfSystem;
+import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of StateOfSystem.
@@ -29,5 +29,4 @@ public class StateOfSystemImpl extends HqdmObject implements StateOfSystem {
     public StateOfSystemImpl(final String id) {
         super(id);
     }
-
 }

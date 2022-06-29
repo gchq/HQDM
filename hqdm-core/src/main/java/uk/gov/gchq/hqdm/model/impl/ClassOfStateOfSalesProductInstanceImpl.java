@@ -14,14 +14,13 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.ClassOfStateOfSalesProductInstance;
+import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of ClassOfStateOfSalesProductInstance.
  */
-public class ClassOfStateOfSalesProductInstanceImpl extends HqdmObject
-        implements ClassOfStateOfSalesProductInstance {
+public class ClassOfStateOfSalesProductInstanceImpl extends HqdmObject implements ClassOfStateOfSalesProductInstance {
     /**
      * Constructs a new ClassOfStateOfSalesProductInstance.
      *
@@ -30,5 +29,4 @@ public class ClassOfStateOfSalesProductInstanceImpl extends HqdmObject
     public ClassOfStateOfSalesProductInstanceImpl(final String id) {
         super(id);
     }
-
 }

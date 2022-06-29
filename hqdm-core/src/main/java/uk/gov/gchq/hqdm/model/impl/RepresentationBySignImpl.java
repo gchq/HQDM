@@ -14,8 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.RepresentationBySign;
+import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of RepresentationBySign.
@@ -29,5 +29,4 @@ public class RepresentationBySignImpl extends HqdmObject implements Representati
     public RepresentationBySignImpl(final String id) {
         super(id);
     }
-
 }

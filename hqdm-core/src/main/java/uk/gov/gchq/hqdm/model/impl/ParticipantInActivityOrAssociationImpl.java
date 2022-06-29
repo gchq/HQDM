@@ -14,14 +14,13 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.ParticipantInActivityOrAssociation;
+import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of ParticipantInActivityOrAssociation.
  */
-public class ParticipantInActivityOrAssociationImpl extends HqdmObject
-        implements ParticipantInActivityOrAssociation {
+public class ParticipantInActivityOrAssociationImpl extends HqdmObject implements ParticipantInActivityOrAssociation {
     /**
      * Constructs a new ParticipantInActivityOrAssociation.
      *
@@ -30,5 +29,4 @@ public class ParticipantInActivityOrAssociationImpl extends HqdmObject
     public ParticipantInActivityOrAssociationImpl(final String id) {
         super(id);
     }
-
 }

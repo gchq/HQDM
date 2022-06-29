@@ -14,8 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.FunctionalObject;
+import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of FunctionalObject.
@@ -29,5 +29,4 @@ public class FunctionalObjectImpl extends HqdmObject implements FunctionalObject
     public FunctionalObjectImpl(final String id) {
         super(id);
     }
-
 }

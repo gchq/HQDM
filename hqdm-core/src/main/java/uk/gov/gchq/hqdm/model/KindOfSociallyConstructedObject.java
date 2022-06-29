@@ -19,7 +19,6 @@ package uk.gov.gchq.hqdm.model;
  * {@link KindOfIntentionallyConstructedObject} where each {@link KindOfSociallyConstructedObject}
  * has members that are of the same kind.
  */
-public interface KindOfSociallyConstructedObject extends
-        ClassOfSociallyConstructedObject,
-        KindOfIntentionallyConstructedObject {
+public interface KindOfSociallyConstructedObject
+                extends ClassOfSociallyConstructedObject, KindOfIntentionallyConstructedObject {
 }

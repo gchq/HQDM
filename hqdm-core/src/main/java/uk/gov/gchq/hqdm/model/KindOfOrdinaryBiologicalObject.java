@@ -19,8 +19,6 @@ package uk.gov.gchq.hqdm.model;
  * {@link KindOfBiologicalObject} where each {@code member_of} a
  * {@link KindOfOrdinaryBiologicalObject} is of the same kind.
  */
-public interface KindOfOrdinaryBiologicalObject extends
-        ClassOfOrdinaryBiologicalObject,
-        KindOfBiologicalObject,
-        KindOfOrdinaryPhysicalObject {
+public interface KindOfOrdinaryBiologicalObject
+                extends ClassOfOrdinaryBiologicalObject, KindOfBiologicalObject, KindOfOrdinaryPhysicalObject {
 }

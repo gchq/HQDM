@@ -14,14 +14,13 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.KindOfBiologicalSystemComponent;
+import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of KindOfBiologicalSystemComponent.
  */
-public class KindOfBiologicalSystemComponentImpl extends HqdmObject
-        implements KindOfBiologicalSystemComponent {
+public class KindOfBiologicalSystemComponentImpl extends HqdmObject implements KindOfBiologicalSystemComponent {
     /**
      * Constructs a new KindOfBiologicalSystemComponent.
      *
@@ -30,5 +29,4 @@ public class KindOfBiologicalSystemComponentImpl extends HqdmObject
     public KindOfBiologicalSystemComponentImpl(final String id) {
         super(id);
     }
-
 }

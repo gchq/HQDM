@@ -14,8 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.KindOfPerson;
+import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of KindOfPerson.
@@ -29,5 +29,4 @@ public class KindOfPersonImpl extends HqdmObject implements KindOfPerson {
     public KindOfPersonImpl(final String id) {
         super(id);
     }
-
 }

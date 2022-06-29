@@ -17,7 +17,5 @@ package uk.gov.gchq.hqdm.model;
 /**
  * An {@link Individual} that is a complete spatio-temporal history of some possible world.
  */
-public interface PossibleWorld extends
-        Individual,
-        PeriodOfTime {
+public interface PossibleWorld extends Individual, PeriodOfTime {
 }

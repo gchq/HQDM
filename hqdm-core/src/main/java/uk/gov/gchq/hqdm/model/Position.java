@@ -23,7 +23,5 @@ package uk.gov.gchq.hqdm.model;
  * to be the case.
  * </P>
  */
-public interface Position extends
-        OrganizationComponent,
-        StateOfPosition {
+public interface Position extends OrganizationComponent, StateOfPosition {
 }

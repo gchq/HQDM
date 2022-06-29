@@ -14,8 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.KindOfAssociation;
+import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of KindOfAssociation.
@@ -29,5 +29,4 @@ public class KindOfAssociationImpl extends HqdmObject implements KindOfAssociati
     public KindOfAssociationImpl(final String id) {
         super(id);
     }
-
 }

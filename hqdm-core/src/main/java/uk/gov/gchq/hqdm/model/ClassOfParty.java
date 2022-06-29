@@ -17,7 +17,5 @@ package uk.gov.gchq.hqdm.model;
 /**
  * A {@link ClassOfSystem} that is {@link Party} or any of its subtypes.
  */
-public interface ClassOfParty extends
-        ClassOfSystem,
-        ClassOfStateOfParty {
+public interface ClassOfParty extends ClassOfSystem, ClassOfStateOfParty {
 }

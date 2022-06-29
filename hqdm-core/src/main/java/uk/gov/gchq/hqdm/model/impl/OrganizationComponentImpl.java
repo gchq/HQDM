@@ -14,8 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.OrganizationComponent;
+import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of OrganizationComponent.
@@ -29,5 +29,4 @@ public class OrganizationComponentImpl extends HqdmObject implements Organizatio
     public OrganizationComponentImpl(final String id) {
         super(id);
     }
-
 }

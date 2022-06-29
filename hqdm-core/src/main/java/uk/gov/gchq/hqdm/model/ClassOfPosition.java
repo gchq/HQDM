@@ -18,7 +18,5 @@ package uk.gov.gchq.hqdm.model;
  * A {@link ClassOfStateOfPosition} that is also a {@link ClassOfOrganizationComponent} that is
  * {@link Position} or any of its subsets.
  */
-public interface ClassOfPosition extends
-        ClassOfStateOfPosition,
-        ClassOfOrganizationComponent {
+public interface ClassOfPosition extends ClassOfStateOfPosition, ClassOfOrganizationComponent {
 }

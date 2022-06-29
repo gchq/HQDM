@@ -14,8 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.KindOfPosition;
+import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of KindOfPosition.
@@ -29,5 +29,4 @@ public class KindOfPositionImpl extends HqdmObject implements KindOfPosition {
     public KindOfPositionImpl(final String id) {
         super(id);
     }
-
 }

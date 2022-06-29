@@ -14,8 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.ExchangeOfGoodsAndMoney;
+import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of ExchangeOfGoodsAndMoney.
@@ -29,5 +29,4 @@ public class ExchangeOfGoodsAndMoneyImpl extends HqdmObject implements ExchangeO
     public ExchangeOfGoodsAndMoneyImpl(final String id) {
         super(id);
     }
-
 }

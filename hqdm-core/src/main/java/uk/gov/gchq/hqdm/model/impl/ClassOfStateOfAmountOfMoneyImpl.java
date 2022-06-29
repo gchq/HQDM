@@ -14,14 +14,13 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.ClassOfStateOfAmountOfMoney;
+import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of ClassOfStateOfAmountOfMoney.
  */
-public class ClassOfStateOfAmountOfMoneyImpl extends HqdmObject
-        implements ClassOfStateOfAmountOfMoney {
+public class ClassOfStateOfAmountOfMoneyImpl extends HqdmObject implements ClassOfStateOfAmountOfMoney {
     /**
      * Constructs a new ClassOfStateOfAmountOfMoney.
      *
@@ -30,5 +29,4 @@ public class ClassOfStateOfAmountOfMoneyImpl extends HqdmObject
     public ClassOfStateOfAmountOfMoneyImpl(final String id) {
         super(id);
     }
-
 }

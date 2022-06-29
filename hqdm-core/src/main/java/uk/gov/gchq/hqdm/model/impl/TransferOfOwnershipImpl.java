@@ -14,8 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.TransferOfOwnership;
+import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of TransferOfOwnership.
@@ -29,5 +29,4 @@ public class TransferOfOwnershipImpl extends HqdmObject implements TransferOfOwn
     public TransferOfOwnershipImpl(final String id) {
         super(id);
     }
-
 }

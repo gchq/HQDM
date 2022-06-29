@@ -14,8 +14,8 @@
 
 package uk.gov.gchq.hqdm.model.impl;
 
-
 import uk.gov.gchq.hqdm.model.KindOfOrganization;
+import uk.gov.gchq.hqdm.pojo.HqdmObject;
 
 /**
  * An implementation of KindOfOrganization.
@@ -29,5 +29,4 @@ public class KindOfOrganizationImpl extends HqdmObject implements KindOfOrganiza
     public KindOfOrganizationImpl(final String id) {
         super(id);
     }
-
 }
