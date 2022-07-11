@@ -39,7 +39,7 @@
 
   <module name="LineLength">
     <property name="fileExtensions" value="java" />
-    <property name="max" value="100" />
+    <property name="max" value="120" />
     <property name="ignorePattern" value="^package.*|^import.*|a href|href|http://|https://|ftp://" />
   </module>
 
@@ -59,7 +59,6 @@
       <property name="allowNonPrintableEscapes" value="true" />
     </module>
     <module name="UnusedImports" />
-    <module name="AvoidStarImport" />
     <module name="OneTopLevelClass" />
     <module name="NoLineWrap">
       <property name="tokens" value="PACKAGE_DEF, IMPORT, STATIC_IMPORT" />

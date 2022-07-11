@@ -5,6 +5,6 @@
   <suppress checks="Indentation|HiddenField" files=".java" />
   <suppress checks="MethodName" files="impl/*" />
   <suppress checks="ConstantName" files="HQDM.java" />
-  <suppress checks="AbbreviationAsWordInName" files="IRI.java|HQDM.java|RDFS.java" />
+  <suppress checks="AbbreviationAsWordInName" files="IRI.java|HQDM.java|RDFS.java|UID.java" />
   <suppress checks="TypeName" files="Function_.java" />
 </suppressions>
