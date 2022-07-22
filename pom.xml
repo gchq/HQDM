@@ -16,7 +16,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>uk.gov.gchq.hqdm</groupId>
     <artifactId>hqdm</artifactId>
-    <version>1.1-SNAPSHOT</version>
+    <version>1.1.0</version>
     <packaging>pom</packaging>
     <name>HQDM</name>
     <description />
@@ -46,7 +46,7 @@
             <dependency>
                 <groupId>uk.gov.gchq.hqdm</groupId>
                 <artifactId>hqdm-core</artifactId>
-                <version>1.1-SNAPSHOT</version>
+                <version>1.1.0</version>
             </dependency>
             <dependency>
                 <groupId>junit</groupId>

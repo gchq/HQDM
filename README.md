@@ -23,7 +23,7 @@ The HQDM Java object library can be incorporated into other maven projects using
 <dependency>
   <groupId>uk.gov.gchq.hqdm</groupId>
   <artifactId>hqdm</artifactId>
-  <version>1.0</version>
+  <version>1.1.0</version>
 </dependency>
 ```
 
